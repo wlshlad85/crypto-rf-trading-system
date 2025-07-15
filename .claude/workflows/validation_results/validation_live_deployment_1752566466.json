@@ -1,0 +1,40 @@
+{
+  "template_id": "live_deployment_1752566466",
+  "template_name": "Live Trading Deployment",
+  "validation_level": "comprehensive",
+  "overall_result": "warning",
+  "validation_score": 0.8,
+  "issues": [
+    {
+      "issue_id": "performance_issue",
+      "severity": "warning",
+      "category": "performance",
+      "message": "Performance concern: time\\.sleep\\s*\\(\\s*\\d{2,}",
+      "step_id": "live_trading_session",
+      "line_number": null,
+      "suggestion": "Optimize code for better performance"
+    },
+    {
+      "issue_id": "excessive_total_time",
+      "severity": "warning",
+      "category": "performance",
+      "message": "Total estimated time exceeds 24 hours: 1455 minutes",
+      "step_id": null,
+      "line_number": null,
+      "suggestion": "Consider parallel execution or optimization"
+    }
+  ],
+  "performance_metrics": {
+    "validation_time_ms": 1.0979175567626953,
+    "issues_count": 2,
+    "steps_validated": 2
+  },
+  "trading_relevance_score": 0.4515800203873598,
+  "code_quality_score": 0.875,
+  "validation_time_ms": 1.0979175567626953,
+  "timestamp": "2025-07-15T09:01:06.742672",
+  "recommendations": [
+    "Optimize performance by reducing complexity and adding parallel execution",
+    "Add comprehensive monitoring and alerting for live deployment"
+  ]
+}

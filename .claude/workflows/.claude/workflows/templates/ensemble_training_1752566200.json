@@ -1,0 +1,152 @@
+{
+  "workflow_id": "ensemble_training_1752566200",
+  "workflow_name": "Ensemble Model Training",
+  "workflow_type": "WorkflowType.ENSEMBLE_TRAINING",
+  "description": "Train ensemble of models with meta-learning for improved trading predictions",
+  "steps": [
+    {
+      "step_id": "ensemble_data_prep",
+      "step_name": "Feature Engineering for Ensemble",
+      "step_type": "code",
+      "description": "Prepare features for ensemble model training",
+      "code_template": "# Ensemble Data Preparation\ndef prepare_ensemble_features(market_data, technical_indicators, \n                            fundamental_data=None):\n    \"\"\"Prepare comprehensive features for ensemble models\"\"\"\n    import pandas as pd\n    import numpy as np\n    \n    # Combine all features\n    features = market_data.copy()\n    \n    # Add technical indicators\n    for indicator, values in technical_indicators.items():\n        features[f'tech_{indicator}'] = values\n    \n    # Add fundamental data if available\n    if fundamental_data is not None:\n        for fund_feature, values in fundamental_data.items():\n            features[f'fund_{fund_feature}'] = values\n    \n    # Feature engineering\n    features['returns'] = features['close'].pct_change()\n    features['volatility'] = features['returns'].rolling(20).std()\n    features['momentum'] = features['close'] / features['close'].shift(10) - 1\n    \n    # Remove NaN values\n    features = features.dropna()\n    \n    return features\n",
+      "required_context": [
+        "market_data",
+        "technical_indicators"
+      ],
+      "dependencies": [
+        "pandas",
+        "numpy"
+      ],
+      "validation_checks": [
+        "Check feature quality",
+        "Verify no data leakage"
+      ],
+      "estimated_time_minutes": 20,
+      "complexity_level": "WorkflowComplexity.INTERMEDIATE",
+      "trading_stage": "DATA_INGESTION"
+    },
+    {
+      "step_id": "base_model_training",
+      "step_name": "Train Base Models",
+      "step_type": "code",
+      "description": "Train multiple base models for ensemble",
+      "code_template": "# Base Model Training\ndef train_base_models(X_train, y_train, model_configs):\n    \"\"\"Train multiple base models for ensemble\"\"\"\n    from sklearn.ensemble import RandomForestRegressor\n    from sklearn.linear_model import Ridge\n    from sklearn.svm import SVR\n    from sklearn.model_selection import cross_val_score\n    \n    base_models = {}\n    \n    # Random Forest\n    rf_config = model_configs.get('random_forest', {})\n    rf_model = RandomForestRegressor(\n        n_estimators=rf_config.get('n_estimators', 100),\n        max_depth=rf_config.get('max_depth', 10),\n        random_state=42\n    )\n    \n    # Ridge Regression\n    ridge_config = model_configs.get('ridge', {})\n    ridge_model = Ridge(\n        alpha=ridge_config.get('alpha', 1.0)\n    )\n    \n    # Support Vector Regression\n    svr_config = model_configs.get('svr', {})\n    svr_model = SVR(\n        C=svr_config.get('C', 1.0),\n        kernel=svr_config.get('kernel', 'rbf')\n    )\n    \n    models = {\n        'random_forest': rf_model,\n        'ridge': ridge_model,\n        'svr': svr_model\n    }\n    \n    # Train and evaluate each model\n    for name, model in models.items():\n        print(f\"Training {name}...\")\n        \n        # Cross-validation\n        cv_scores = cross_val_score(model, X_train, y_train, cv=5, \n                                   scoring='neg_mean_squared_error')\n        print(f\"{name} CV Score: {cv_scores.mean():.4f} (+/- {cv_scores.std() * 2:.4f})\")\n        \n        # Train final model\n        model.fit(X_train, y_train)\n        base_models[name] = model\n    \n    return base_models\n",
+      "required_context": [
+        "X_train",
+        "y_train",
+        "model_configs"
+      ],
+      "dependencies": [
+        "scikit-learn"
+      ],
+      "validation_checks": [
+        "Check model performance",
+        "Validate cross-validation"
+      ],
+      "estimated_time_minutes": 30,
+      "complexity_level": "WorkflowComplexity.ADVANCED",
+      "trading_stage": "SIGNAL_GENERATION"
+    },
+    {
+      "step_id": "meta_learning",
+      "step_name": "Meta-Model Training",
+      "step_type": "code",
+      "description": "Train meta-model to combine base model predictions",
+      "code_template": "# Meta-Learning\ndef train_meta_model(base_models, X_train, y_train, X_val, y_val):\n    \"\"\"Train meta-model to combine base model predictions\"\"\"\n    from sklearn.linear_model import LinearRegression\n    from sklearn.metrics import mean_squared_error\n    import numpy as np\n    \n    # Generate base model predictions on validation set\n    base_predictions = np.zeros((len(X_val), len(base_models)))\n    \n    for i, (name, model) in enumerate(base_models.items()):\n        base_predictions[:, i] = model.predict(X_val)\n    \n    # Train meta-model\n    meta_model = LinearRegression()\n    meta_model.fit(base_predictions, y_val)\n    \n    # Evaluate ensemble performance\n    ensemble_predictions = meta_model.predict(base_predictions)\n    ensemble_mse = mean_squared_error(y_val, ensemble_predictions)\n    \n    print(f\"Ensemble MSE: {ensemble_mse:.4f}\")\n    \n    # Compare with individual models\n    for i, (name, model) in enumerate(base_models.items()):\n        individual_mse = mean_squared_error(y_val, base_predictions[:, i])\n        print(f\"{name} MSE: {individual_mse:.4f}\")\n    \n    return meta_model, ensemble_predictions\n",
+      "required_context": [
+        "base_models",
+        "X_train",
+        "y_train",
+        "X_val",
+        "y_val"
+      ],
+      "dependencies": [
+        "scikit-learn",
+        "numpy"
+      ],
+      "validation_checks": [
+        "Check ensemble performance",
+        "Validate meta-model"
+      ],
+      "estimated_time_minutes": 20,
+      "complexity_level": "WorkflowComplexity.ADVANCED",
+      "trading_stage": "SIGNAL_GENERATION"
+    }
+  ],
+  "prerequisites": [
+    "Market data",
+    "Technical indicators",
+    "Target labels"
+  ],
+  "expected_outputs": [
+    "Trained ensemble model",
+    "Performance metrics",
+    "Model weights"
+  ],
+  "performance_targets": {
+    "training_time": "< 10 minutes",
+    "accuracy_improvement": "> 5%",
+    "cv_score": "> 0.52"
+  },
+  "risk_considerations": [
+    "Ensemble may overfit to training data",
+    "Requires careful validation",
+    "Meta-model can be sensitive to base model quality"
+  ],
+  "complexity_level": "WorkflowComplexity.ADVANCED",
+  "estimated_total_time_minutes": 70,
+  "created_timestamp": "2025-07-15 08:56:40.646955",
+  "cgrag_context_used": {
+    "workflow_type": "ensemble_training",
+    "existing_implementations": [
+      {
+        "pattern": "ensemble_ml",
+        "confidence": 0.7,
+        "location": "workflow_template_engine.py",
+        "complexity": 0.19
+      },
+      {
+        "pattern": "random_forest",
+        "confidence": 0.7,
+        "location": "workflow_template_engine.py",
+        "complexity": 0.19
+      },
+      {
+        "pattern": "meta_learning",
+        "confidence": 0.7,
+        "location": "workflow_template_engine.py",
+        "complexity": 0.19
+      },
+      {
+        "pattern": "model_training",
+        "confidence": 0.7,
+        "location": "workflow_template_engine.py",
+        "complexity": 0.19
+      },
+      {
+        "pattern": "cross_validation",
+        "confidence": 0.7,
+        "location": "workflow_template_engine.py",
+        "complexity": 0.19
+      },
+      {
+        "pattern": "hyperparameter_tuning",
+        "confidence": 0.7,
+        "location": "workflow_template_engine.py",
+        "complexity": 0.19
+      }
+    ],
+    "required_dependencies": [],
+    "performance_baseline": {
+      "latency_target": "< 10ms",
+      "accuracy_target": "> 52%",
+      "uptime_target": "99.9%",
+      "memory_limit": "< 4GB"
+    },
+    "complexity_assessment": "WorkflowComplexity.INTERMEDIATE",
+    "context_confidence": 0.7,
+    "recommended_approach": "CUSTOM_IMPLEMENTATION",
+    "cgrag_context": "\n# Advanced Context Analysis: Train ensemble model for crypto prediction How to implement ensemble_training in crypto trading system\n\n## Analysis Summary\n- **Confidence**: 0.82\n- **Primary Modules**: 1\n- **Dependencies**: 0\n- **Retrieval Time**: 0.3ms\n- **Total Content**: 5 tokens\n- **Cache Hit**: No\n\n## Primary Modules & Context\n\n### 1. workflow_template_engine.py\nNo context found for trading_strategies\n\n---\n*Retrieved in 0.3ms with 82% confidence*\n"
+  }
+}

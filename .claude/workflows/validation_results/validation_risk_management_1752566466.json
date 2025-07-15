@@ -1,0 +1,31 @@
+{
+  "template_id": "risk_management_1752566466",
+  "template_name": "Risk Management System",
+  "validation_level": "comprehensive",
+  "overall_result": "warning",
+  "validation_score": 0.9,
+  "issues": [
+    {
+      "issue_id": "excessive_total_time",
+      "severity": "warning",
+      "category": "performance",
+      "message": "Total estimated time exceeds 24 hours: 1480 minutes",
+      "step_id": null,
+      "line_number": null,
+      "suggestion": "Consider parallel execution or optimization"
+    }
+  ],
+  "performance_metrics": {
+    "validation_time_ms": 1.6279220581054688,
+    "issues_count": 1,
+    "steps_validated": 3
+  },
+  "trading_relevance_score": 0.30328449366977656,
+  "code_quality_score": 0.9,
+  "validation_time_ms": 1.6279220581054688,
+  "timestamp": "2025-07-15T09:01:06.744326",
+  "recommendations": [
+    "Optimize performance by reducing complexity and adding parallel execution",
+    "Implement additional risk validation checks and limits"
+  ]
+}

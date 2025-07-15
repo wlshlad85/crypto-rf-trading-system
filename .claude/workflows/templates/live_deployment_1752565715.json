@@ -1,0 +1,128 @@
+{
+  "workflow_id": "live_deployment_1752565715",
+  "workflow_name": "Live Trading Deployment",
+  "workflow_type": "WorkflowType.LIVE_DEPLOYMENT",
+  "description": "Deploy trading system for live execution with comprehensive monitoring",
+  "steps": [
+    {
+      "step_id": "pre_deployment_validation",
+      "step_name": "Pre-Deployment Validation",
+      "step_type": "validation",
+      "description": "Validate system readiness for live trading",
+      "code_template": "# Pre-Deployment Validation\ndef validate_system_readiness(models, risk_config, data_pipeline):\n    \"\"\"Validate system components before live deployment\"\"\"\n    \n    validation_results = {\n        'models': False,\n        'risk_config': False,\n        'data_pipeline': False,\n        'overall': False\n    }\n    \n    # Model validation\n    if models and all(hasattr(model, 'predict') for model in models.values()):\n        validation_results['models'] = True\n        print(\"\u2705 Models validated\")\n    else:\n        print(\"\u274c Model validation failed\")\n    \n    # Risk configuration validation\n    required_risk_params = ['stop_loss', 'position_limit', 'max_drawdown']\n    if all(param in risk_config for param in required_risk_params):\n        validation_results['risk_config'] = True\n        print(\"\u2705 Risk configuration validated\")\n    else:\n        print(\"\u274c Risk configuration validation failed\")\n    \n    # Data pipeline validation\n    if hasattr(data_pipeline, 'fetch_data') and hasattr(data_pipeline, 'validate_data'):\n        validation_results['data_pipeline'] = True\n        print(\"\u2705 Data pipeline validated\")\n    else:\n        print(\"\u274c Data pipeline validation failed\")\n    \n    # Overall validation\n    validation_results['overall'] = all(validation_results.values())\n    \n    return validation_results\n",
+      "required_context": [
+        "models",
+        "risk_config",
+        "data_pipeline"
+      ],
+      "dependencies": [],
+      "validation_checks": [
+        "Model availability",
+        "Risk parameters",
+        "Data pipeline"
+      ],
+      "estimated_time_minutes": 15,
+      "complexity_level": "WorkflowComplexity.INTERMEDIATE",
+      "trading_stage": "MONITORING"
+    },
+    {
+      "step_id": "live_trading_session",
+      "step_name": "Live Trading Execution",
+      "step_type": "execution",
+      "description": "Execute live trading session with continuous monitoring",
+      "code_template": "# Live Trading Session\ndef execute_live_trading(models, risk_manager, data_fetcher, \n                        session_duration_hours=24):\n    \"\"\"Execute live trading session\"\"\"\n    import time\n    from datetime import datetime, timedelta\n    \n    session_start = datetime.now()\n    session_end = session_start + timedelta(hours=session_duration_hours)\n    \n    print(f\"\ud83d\ude80 Live trading session started: {session_start}\")\n    print(f\"\ud83d\udcc5 Session will end: {session_end}\")\n    \n    portfolio_value = 100000  # Starting portfolio\n    positions = {}\n    trade_log = []\n    \n    try:\n        while datetime.now() < session_end:\n            # Fetch latest data\n            market_data = data_fetcher.fetch_latest_data()\n            \n            # Generate predictions\n            predictions = {}\n            for model_name, model in models.items():\n                predictions[model_name] = model.predict(market_data)\n            \n            # Ensemble prediction\n            ensemble_prediction = sum(predictions.values()) / len(predictions)\n            \n            # Risk assessment\n            risk_assessment = risk_manager.assess_risk(\n                prediction=ensemble_prediction,\n                current_positions=positions,\n                portfolio_value=portfolio_value\n            )\n            \n            # Generate trading signal\n            if risk_assessment['safe_to_trade']:\n                signal = 'BUY' if ensemble_prediction > 0.6 else 'SELL' if ensemble_prediction < 0.4 else 'HOLD'\n                \n                if signal != 'HOLD':\n                    trade_info = {\n                        'timestamp': datetime.now(),\n                        'signal': signal,\n                        'prediction': ensemble_prediction,\n                        'portfolio_value': portfolio_value\n                    }\n                    trade_log.append(trade_info)\n                    print(f\"\ud83d\udcc8 {signal} signal generated at {datetime.now()}\")\n            \n            # Sleep for next iteration (5 minutes)\n            time.sleep(300)\n    \n    except KeyboardInterrupt:\n        print(\"\\n\ud83d\uded1 Trading session interrupted by user\")\n    except Exception as e:\n        print(f\"\u274c Trading session error: {e}\")\n    \n    finally:\n        print(f\"\ud83d\udcca Session ended: {datetime.now()}\")\n        print(f\"\ud83d\udcc8 Total trades: {len(trade_log)}\")\n        print(f\"\ud83d\udcb0 Final portfolio value: ${portfolio_value:,.2f}\")\n        \n        return trade_log\n",
+      "required_context": [
+        "models",
+        "risk_manager",
+        "data_fetcher"
+      ],
+      "dependencies": [
+        "datetime",
+        "time"
+      ],
+      "validation_checks": [
+        "Monitor performance",
+        "Check risk limits",
+        "Validate trades"
+      ],
+      "estimated_time_minutes": 1440,
+      "complexity_level": "WorkflowComplexity.EXPERT",
+      "trading_stage": "ORDER_EXECUTION"
+    }
+  ],
+  "prerequisites": [
+    "Trained models",
+    "Risk management system",
+    "Data pipeline"
+  ],
+  "expected_outputs": [
+    "Trade log",
+    "Performance metrics",
+    "Risk reports"
+  ],
+  "performance_targets": {
+    "uptime": "> 99.9%",
+    "latency": "< 10ms",
+    "accuracy": "> 52%"
+  },
+  "risk_considerations": [
+    "Real money at risk",
+    "Market conditions can change rapidly",
+    "System failures can cause losses"
+  ],
+  "complexity_level": "WorkflowComplexity.EXPERT",
+  "estimated_total_time_minutes": 1455,
+  "created_timestamp": "2025-07-15 08:48:35.597210",
+  "cgrag_context_used": {
+    "workflow_type": "live_deployment",
+    "existing_implementations": [
+      {
+        "pattern": "live_trading",
+        "confidence": 0.7,
+        "location": "workflow_template_engine.py",
+        "complexity": 1.0
+      },
+      {
+        "pattern": "real_time",
+        "confidence": 0.7,
+        "location": "workflow_template_engine.py",
+        "complexity": 1.0
+      },
+      {
+        "pattern": "order_execution",
+        "confidence": 0.7,
+        "location": "workflow_template_engine.py",
+        "complexity": 1.0
+      },
+      {
+        "pattern": "paper_trading",
+        "confidence": 0.7,
+        "location": "paper_trading.py",
+        "complexity": 1.0
+      },
+      {
+        "pattern": "continuous_monitoring",
+        "confidence": 0.7,
+        "location": "workflow_template_engine.py",
+        "complexity": 1.0
+      },
+      {
+        "pattern": "error_handling",
+        "confidence": 0.7,
+        "location": "workflow_template_engine.py",
+        "complexity": 1.0
+      }
+    ],
+    "required_dependencies": [],
+    "performance_baseline": {
+      "latency_target": "< 10ms",
+      "accuracy_target": "> 52%",
+      "uptime_target": "99.9%",
+      "memory_limit": "< 4GB"
+    },
+    "complexity_assessment": "WorkflowComplexity.ADVANCED",
+    "context_confidence": 0.7,
+    "recommended_approach": "CUSTOM_IMPLEMENTATION",
+    "cgrag_context": "\n# Advanced Context Analysis: Deploy trading system for 24h paper trading How to implement live_deployment in crypto trading system\n\n## Analysis Summary\n- **Confidence**: 1.00\n- **Primary Modules**: 3\n- **Dependencies**: 0\n- **Retrieval Time**: 3.6ms\n- **Total Content**: 2,766 tokens\n- **Cache Hit**: No\n\n## Primary Modules & Context\n\n### 1. paper_trading/minute_paper_trader.py\n# Trading Strategies Context\n\n## Overview\nImplementation of 15+ algorithmic trading strategies with ML optimization for cryptocurrency markets. Focuses on momentum, mean reversion, and ensemble-based approaches with institutional-grade risk management integration.\n\n## Critical Files\n- `strategies/long_short_strategy.py` - Core long/short logic with position management\n- `strategies/minute_trading_strategies.py` - High-frequency trading strategies\n- `enhanced_rf_ensemble.py` - ML ensemble prediction and signal generation\n- `ultrathink/strategy_selector.py` - Adaptive strategy selection framework\n- `ultrathink/decision_framework.py` - Real-time decision making engine\n\n## Strategy Categories\n\n### 1. Momentum-Based Strategies\n- **Trend Following**: Captures sustained price movements\n- **Breakout Detection**: Identifies key resistance/support breaks\n- **Momentum Threshold**: 1.78%/hr for trade execution (currently active)\n- **Risk Controls**: Dynamic stop-loss based on volatility\n\n### 2. Mean Reversion Strategies  \n- **Statistical Arbitrage**: Exploits price deviations from mean\n- **Pairs Trading**: Relative value between correlated assets\n- **Bollinger Band Reversals**: Overbought/oversold conditions\n- **RSI-based Entries**: Contrarian signals at extremes\n\n### 3. ML-Enhanced Strategies\n- **Random Forest Ensemble**: 4-model voting system (entry/position/exit/profit)\n- **HMM Regime Detection**: Strategy adaptation based on market regimes\n- **Feature-based Signals**: 78+ engineered ...\n\n### 2. paper_trading.py\n# Trading Strategies Context\n\n## Overview\nImplementation of 15+ algorithmic trading strategies with ML optimization for cryptocurrency markets. Focuses on momentum, mean reversion, and ensemble-based approaches with institutional-grade risk management integration.\n\n## Critical Files\n- `strategies/long_short_strategy.py` - Core long/short logic with position management\n- `strategies/minute_trading_strategies.py` - High-frequency trading strategies\n- `enhanced_rf_ensemble.py` - ML ensemble prediction and signal generation\n- `ultrathink/strategy_selector.py` - Adaptive strategy selection framework\n- `ultrathink/decision_framework.py` - Real-time decision making engine\n\n## Strategy Categories\n\n### 1. Momentum-Based Strategies\n- **Trend Following**: Captures sustained price movements\n- **Breakout Detection**: Identifies key resistance/support breaks\n- **Momentum Threshold**: 1.78%/hr for trade execution (currently active)\n- **Risk Controls**: Dynamic stop-loss based on volatility\n\n### 2. Mean Reversion Strategies  \n- **Statistical Arbitrage**: Exploits price deviations from mean\n- **Pairs Trading**: Relative value between correlated assets\n- **Bollinger Band Reversals**: Overbought/oversold conditions\n- **RSI-based Entries**: Contrarian signals at extremes\n\n### 3. ML-Enhanced Strategies\n- **Random Forest Ensemble**: 4-model voting system (entry/position/exit/profit)\n- **HMM Regime Detection**: Strategy adaptation based on market regimes\n- **Feature-based Signals**: 78+ engineered ...\n\n### 3. monitor_24hr_trading.py\n# Trading Strategies Context\n\n## Overview\nImplementation of 15+ algorithmic trading strategies with ML optimization for cryptocurrency markets. Focuses on momentum, mean reversion, and ensemble-based approaches with institutional-grade risk management integration.\n\n## Critical Files\n- `strategies/long_short_strategy.py` - Core long/short logic with position management\n- `strategies/minute_trading_strategies.py` - High-frequency trading strategies\n- `enhanced_rf_ensemble.py` - ML ensemble prediction and signal generation\n- `ultrathink/strategy_selector.py` - Adaptive strategy selection framework\n- `ultrathink/decision_framework.py` - Real-time decision making engine\n\n## Strategy Categories\n\n### 1. Momentum-Based Strategies\n- **Trend Following**: Captures sustained price movements\n- **Breakout Detection**: Identifies key resistance/support breaks\n- **Momentum Threshold**: 1.78%/hr for trade execution (currently active)\n- **Risk Controls**: Dynamic stop-loss based on volatility\n\n### 2. Mean Reversion Strategies  \n- **Statistical Arbitrage**: Exploits price deviations from mean\n- **Pairs Trading**: Relative value between correlated assets\n- **Bollinger Band Reversals**: Overbought/oversold conditions\n- **RSI-based Entries**: Contrarian signals at extremes\n\n### 3. ML-Enhanced Strategies\n- **Random Forest Ensemble**: 4-model voting system (entry/position/exit/profit)\n- **HMM Regime Detection**: Strategy adaptation based on market regimes\n- **Feature-based Signals**: 78+ engineered ...\n\n---\n*Retrieved in 3.6ms with 100% confidence*\n"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "template_id": "strategy_backtesting_1752566466",
+  "template_name": "Strategy Backtesting System",
+  "validation_level": "comprehensive",
+  "overall_result": "warning",
+  "validation_score": 0.9,
+  "issues": [
+    {
+      "issue_id": "performance_issue",
+      "severity": "warning",
+      "category": "performance",
+      "message": "Performance concern: \\.iterrows\\s*\\(\\s*\\)",
+      "step_id": "backtest_execution",
+      "line_number": null,
+      "suggestion": "Optimize code for better performance"
+    }
+  ],
+  "performance_metrics": {
+    "validation_time_ms": 1.7936229705810547,
+    "issues_count": 1,
+    "steps_validated": 3
+  },
+  "trading_relevance_score": 0.25707926207018766,
+  "code_quality_score": 0.8833333333333333,
+  "validation_time_ms": 1.7936229705810547,
+  "timestamp": "2025-07-15T09:01:06.746140",
+  "recommendations": [
+    "Optimize performance by reducing complexity and adding parallel execution"
+  ]
+}

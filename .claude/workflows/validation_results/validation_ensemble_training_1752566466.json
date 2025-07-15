@@ -1,0 +1,18 @@
+{
+  "template_id": "ensemble_training_1752566466",
+  "template_name": "Ensemble Model Training",
+  "validation_level": "comprehensive",
+  "overall_result": "pass",
+  "validation_score": 1.0,
+  "issues": [],
+  "performance_metrics": {
+    "validation_time_ms": 0.9741783142089844,
+    "issues_count": 0,
+    "steps_validated": 3
+  },
+  "trading_relevance_score": 0.1793291460119932,
+  "code_quality_score": 0.9,
+  "validation_time_ms": 0.9741783142089844,
+  "timestamp": "2025-07-15T09:01:06.741555",
+  "recommendations": []
+}

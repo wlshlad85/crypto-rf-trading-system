@@ -1,0 +1,18 @@
+{
+  "template_id": "kelly_optimization_1752566466",
+  "template_name": "Kelly Criterion Position Sizing",
+  "validation_level": "comprehensive",
+  "overall_result": "pass",
+  "validation_score": 1.0,
+  "issues": [],
+  "performance_metrics": {
+    "validation_time_ms": 1.6186237335205078,
+    "issues_count": 0,
+    "steps_validated": 3
+  },
+  "trading_relevance_score": 0.427273511512642,
+  "code_quality_score": 0.8333333333333334,
+  "validation_time_ms": 1.6186237335205078,
+  "timestamp": "2025-07-15T09:01:06.740555",
+  "recommendations": []
+}

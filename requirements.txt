@@ -42,6 +42,11 @@ ipykernel>=6.0.0
 # Optional: GPU acceleration
 # xgboost>=1.6.0  # Uncomment if you want to use XGBoost
 
+# Context Management (CGRAG)
+tree-sitter>=0.24.0
+tree-sitter-python>=0.23.6
+networkx>=3.0  # For semantic graph building
+
 # Development tools
 black>=22.0.0
 flake8>=5.0.0

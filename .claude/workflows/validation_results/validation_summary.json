@@ -1,0 +1,15 @@
+{
+  "total_templates": 5,
+  "validation_summary": {
+    "passed": 2,
+    "warnings": 3,
+    "errors": 0,
+    "failed": 0
+  },
+  "average_scores": {
+    "validation": 0.9199999999999999,
+    "trading_relevance": 0.3237092867303918,
+    "code_quality": 0.8783333333333333
+  },
+  "generated_at": "2025-07-15T09:01:06.747411"
+}

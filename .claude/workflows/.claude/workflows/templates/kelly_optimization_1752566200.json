@@ -1,0 +1,145 @@
+{
+  "workflow_id": "kelly_optimization_1752566200",
+  "workflow_name": "Kelly Criterion Position Sizing",
+  "workflow_type": "WorkflowType.KELLY_OPTIMIZATION",
+  "description": "Optimize position sizing using Kelly criterion for risk-adjusted returns",
+  "steps": [
+    {
+      "step_id": "kelly_data_prep",
+      "step_name": "Historical Data Preparation",
+      "step_type": "code",
+      "description": "Prepare historical trading data for Kelly criterion analysis",
+      "code_template": "# Kelly Criterion Data Preparation\ndef prepare_kelly_data(historical_data):\n    \"\"\"Prepare data for Kelly criterion calculation\"\"\"\n    import pandas as pd\n    import numpy as np\n    \n    # Calculate returns\n    returns = historical_data['close'].pct_change().dropna()\n    \n    # Identify winning and losing trades\n    winning_trades = returns[returns > 0]\n    losing_trades = returns[returns < 0]\n    \n    # Calculate win rate and average win/loss\n    win_rate = len(winning_trades) / len(returns)\n    avg_win = winning_trades.mean()\n    avg_loss = abs(losing_trades.mean())\n    \n    kelly_data = {\n        'returns': returns,\n        'win_rate': win_rate,\n        'avg_win': avg_win,\n        'avg_loss': avg_loss,\n        'total_trades': len(returns)\n    }\n    \n    return kelly_data\n",
+      "required_context": [
+        "historical_data",
+        "price_data"
+      ],
+      "dependencies": [
+        "pandas",
+        "numpy"
+      ],
+      "validation_checks": [
+        "Check data quality",
+        "Verify return calculations"
+      ],
+      "estimated_time_minutes": 15,
+      "complexity_level": "WorkflowComplexity.INTERMEDIATE",
+      "trading_stage": "DATA_INGESTION"
+    },
+    {
+      "step_id": "kelly_calculation",
+      "step_name": "Kelly Fraction Calculation",
+      "step_type": "code",
+      "description": "Calculate optimal Kelly fraction for position sizing",
+      "code_template": "# Kelly Fraction Calculation\ndef calculate_kelly_fraction(win_rate, avg_win, avg_loss, fractional=0.25):\n    \"\"\"Calculate Kelly fraction for position sizing\"\"\"\n    \n    # Basic Kelly formula: f = (bp - q) / b\n    # where b = avg_win/avg_loss, p = win_rate, q = 1 - win_rate\n    \n    if avg_loss == 0:\n        raise ValueError(\"Average loss cannot be zero\")\n    \n    b = avg_win / avg_loss  # odds\n    p = win_rate  # probability of win\n    q = 1 - win_rate  # probability of loss\n    \n    # Kelly fraction\n    kelly_fraction = (b * p - q) / b\n    \n    # Apply fractional Kelly to reduce risk\n    fractional_kelly = kelly_fraction * fractional\n    \n    # Ensure non-negative\n    fractional_kelly = max(0, fractional_kelly)\n    \n    kelly_results = {\n        'kelly_fraction': kelly_fraction,\n        'fractional_kelly': fractional_kelly,\n        'edge': b * p - q,\n        'odds': b,\n        'recommended_fraction': min(fractional_kelly, 0.25)  # Cap at 25%\n    }\n    \n    return kelly_results\n",
+      "required_context": [
+        "win_rate",
+        "avg_win",
+        "avg_loss"
+      ],
+      "dependencies": [],
+      "validation_checks": [
+        "Validate Kelly fraction",
+        "Check edge > 0"
+      ],
+      "estimated_time_minutes": 10,
+      "complexity_level": "WorkflowComplexity.INTERMEDIATE",
+      "trading_stage": "RISK_ASSESSMENT"
+    },
+    {
+      "step_id": "position_sizing",
+      "step_name": "Position Size Calculation",
+      "step_type": "code",
+      "description": "Calculate optimal position size using Kelly fraction",
+      "code_template": "# Position Sizing with Kelly\ndef calculate_position_size(kelly_fraction, portfolio_value, current_price, \n                          max_position_pct=0.5):\n    \"\"\"Calculate position size using Kelly criterion\"\"\"\n    \n    # Kelly-based position value\n    kelly_position_value = portfolio_value * kelly_fraction\n    \n    # Apply maximum position limit\n    max_position_value = portfolio_value * max_position_pct\n    position_value = min(kelly_position_value, max_position_value)\n    \n    # Calculate number of shares/units\n    position_size = position_value / current_price\n    \n    position_info = {\n        'position_size': position_size,\n        'position_value': position_value,\n        'kelly_fraction_used': kelly_fraction,\n        'position_pct': position_value / portfolio_value,\n        'max_position_reached': position_value >= max_position_value\n    }\n    \n    return position_info\n",
+      "required_context": [
+        "kelly_fraction",
+        "portfolio_value",
+        "current_price"
+      ],
+      "dependencies": [],
+      "validation_checks": [
+        "Check position limits",
+        "Validate position size"
+      ],
+      "estimated_time_minutes": 10,
+      "complexity_level": "WorkflowComplexity.SIMPLE",
+      "trading_stage": "RISK_ASSESSMENT"
+    }
+  ],
+  "prerequisites": [
+    "Historical trading data",
+    "Portfolio value",
+    "Current price"
+  ],
+  "expected_outputs": [
+    "Optimal position size",
+    "Risk metrics",
+    "Kelly fraction"
+  ],
+  "performance_targets": {
+    "execution_time": "< 1 second",
+    "accuracy": "> 95%",
+    "risk_reduction": "> 20%"
+  },
+  "risk_considerations": [
+    "Kelly fraction can be volatile",
+    "Requires accurate win/loss estimates",
+    "May suggest large positions in favorable conditions"
+  ],
+  "complexity_level": "WorkflowComplexity.INTERMEDIATE",
+  "estimated_total_time_minutes": 35,
+  "created_timestamp": "2025-07-15 08:56:40.644076",
+  "cgrag_context_used": {
+    "workflow_type": "kelly_optimization",
+    "existing_implementations": [
+      {
+        "pattern": "kelly_criterion",
+        "confidence": 0.7,
+        "location": "workflow_template_engine.py",
+        "complexity": 0.19
+      },
+      {
+        "pattern": "position_sizing",
+        "confidence": 0.7,
+        "location": "workflow_template_engine.py",
+        "complexity": 0.19
+      },
+      {
+        "pattern": "optimal_f",
+        "confidence": 0.7,
+        "location": "workflow_template_engine.py",
+        "complexity": 0.19
+      },
+      {
+        "pattern": "fractional_kelly",
+        "confidence": 0.7,
+        "location": "workflow_template_engine.py",
+        "complexity": 0.19
+      },
+      {
+        "pattern": "risk_management",
+        "confidence": 0.7,
+        "location": "workflow_template_engine.py",
+        "complexity": 0.19
+      },
+      {
+        "pattern": "portfolio_optimization",
+        "confidence": 0.7,
+        "location": "workflow_template_engine.py",
+        "complexity": 0.19
+      }
+    ],
+    "required_dependencies": [],
+    "performance_baseline": {
+      "latency_target": "< 10ms",
+      "accuracy_target": "> 52%",
+      "uptime_target": "99.9%",
+      "memory_limit": "< 4GB"
+    },
+    "complexity_assessment": "WorkflowComplexity.INTERMEDIATE",
+    "context_confidence": 0.7,
+    "recommended_approach": "CUSTOM_IMPLEMENTATION",
+    "cgrag_context": "\n# Advanced Context Analysis: Optimize position sizing for BTC trading How to implement kelly_optimization in crypto trading system\n\n## Analysis Summary\n- **Confidence**: 0.82\n- **Primary Modules**: 1\n- **Dependencies**: 0\n- **Retrieval Time**: 0.4ms\n- **Total Content**: 5 tokens\n- **Cache Hit**: No\n\n## Primary Modules & Context\n\n### 1. workflow_template_engine.py\nNo context found for trading_strategies\n\n---\n*Retrieved in 0.4ms with 82% confidence*\n"
+  }
+}
