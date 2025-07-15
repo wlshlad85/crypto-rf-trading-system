@@ -38,7 +38,7 @@ import certifi
 # Import existing components
 import sys
 sys.path.append('/home/richardw/crypto_rf_trading_system')
-from phase2b.advanced_risk_management import RiskManager, RiskConfig
+from phase2b.advanced_risk_management import AdvancedRiskManager as RiskManager, RiskConfig
 from optimization.circuit_breakers import CircuitBreaker
 
 class OrderType(Enum):

@@ -38,11 +38,11 @@ import numpy as np
 from contextlib import asynccontextmanager
 
 # Import our trading components
-from real_money_trader import (
+from production.real_money_trader import (
     OrderRequest, OrderSide, OrderType, OrderStatus, 
     ExchangeType, AuditLogger, SecurityConfig
 )
-from exchange_integrations import ExchangeRouter, MarketData
+from production.exchange_integrations import ExchangeRouter, MarketData
 
 class OrderEvent(Enum):
     CREATED = "created"

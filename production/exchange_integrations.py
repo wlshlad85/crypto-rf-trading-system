@@ -42,7 +42,7 @@ import websockets
 import backoff
 
 # Import our trading components
-from real_money_trader import ExchangeType, OrderRequest, OrderSide, OrderType, OrderStatus
+from production.real_money_trader import ExchangeType, OrderRequest, OrderSide, OrderType, OrderStatus
 
 class ConnectionStatus(Enum):
     CONNECTED = "connected"

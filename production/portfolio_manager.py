@@ -48,9 +48,9 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # Import our trading components
-from real_money_trader import AuditLogger, ExchangeType
-from exchange_integrations import ExchangeRouter, MarketData
-from order_management import OrderManager, ManagedOrder, OrderExecution
+from production.real_money_trader import AuditLogger, ExchangeType
+from production.exchange_integrations import ExchangeRouter, MarketData
+from production.order_management import OrderManager, ManagedOrder, OrderExecution
 
 class AssetClass(Enum):
     CRYPTOCURRENCY = "cryptocurrency"

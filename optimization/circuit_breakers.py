@@ -23,7 +23,7 @@ import os
 # Add parent directory for imports
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from performance_profiler import PerformanceProfiler, profile
+from optimization.performance_profiler import PerformanceProfiler, profile
 
 
 class CircuitState(Enum):
