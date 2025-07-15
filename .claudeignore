@@ -1,0 +1,195 @@
+# ULTRATHINK Crypto Trading System - Smart .claudeignore
+# Optimized for context management efficiency and trading system requirements
+
+# =============================================================================
+# BINARY AND COMPILED FILES (High Priority Exclusion)
+# =============================================================================
+# Python bytecode and cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ML Model binaries (large, not useful for context)
+*.pkl
+*.joblib
+*.h5
+*.hdf5
+*.model
+
+# =============================================================================
+# LARGE DATA FILES (Memory/Token Optimization)
+# =============================================================================
+# Raw market data (can be multi-gigabyte)
+*.csv
+*.parquet
+*.feather
+*.arrow
+
+# Data directories with large files
+data/raw/**
+data/processed/**
+data/4h_training/**
+data/cache_minute/**
+data/cached_data/**
+
+# Phase data processing outputs
+phase1/data/processed/**
+phase1/data/raw/**
+phase2/enhanced_features_*.csv
+
+# =============================================================================
+# LIVE TRADING LOGS (Constantly Changing)
+# =============================================================================
+# All log files - they change constantly and overwhelm context
+logs/**/*.log
+*.log
+
+# Specific trading session logs
+btc_24hr_*.log
+enhanced_24hr_*.log
+meta_deploy_*.log
+crypto_rf_trading*.log
+debug_optimization.log
+
+# =============================================================================
+# RESULTS AND OUTPUTS (Generated Content)
+# =============================================================================
+# Result files and outputs (keep configs, exclude results)
+*_results_*.json
+*_results_*.png
+*_output.log
+
+# Backtest and optimization results
+results/**
+fast_backtest_results_*
+fast_optimization_results_*
+active_trading_results_*
+paper_trading_results_*
+quick_intensive_training_*.json
+quick_intensive_training_*.png
+
+# Phase-specific results
+phase1/cpcv_results/**
+phase1/walkforward_results/**
+phase2/fractional_results/**
+phase2b/ensemble_training_results.json
+phase2b/hmm_regime_analysis.json
+
+# Meta optimization results
+meta_optim/deployment_logs/**
+meta_optim/meta_logs/**
+
+# =============================================================================
+# VISUALIZATION AND MEDIA (Large, Non-Essential for Context)
+# =============================================================================
+# Charts and visualizations
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+
+# Reports (keep .md, exclude generated reports)
+*.html
+BTC_Trading_Report_*.pdf
+Final_BTC_Trading_Report.html
+
+# =============================================================================
+# TEMPORARY AND CACHE FILES
+# =============================================================================
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-*
+
+# =============================================================================
+# SENSITIVE INFORMATION (Security)
+# =============================================================================
+# API keys and credentials
+.env
+.env.*
+*_credentials.json
+api_keys.py
+secrets.json
+*.key
+*.pem
+
+# Trading secrets
+trading_secrets.*
+broker_config.*
+
+# =============================================================================
+# KEEP THESE CRITICAL FILES (Explicit Inclusion Comments)
+# =============================================================================
+# ✅ INCLUDE: .claude/** - Our new context management system
+# ✅ INCLUDE: *.py - All Python source code
+# ✅ INCLUDE: *.md - All documentation including context files
+# ✅ INCLUDE: configs/*.json - Configuration files (not results)
+# ✅ INCLUDE: requirements.txt - Dependencies
+# ✅ INCLUDE: *.sh - Shell scripts
+# ✅ INCLUDE: CLAUDE.md - Master context file
+
+# =============================================================================
+# TRADING SYSTEM SPECIFIC EXCLUSIONS
+# =============================================================================
+# Session data (keep structure, exclude data)
+btc_24hr_session_*.json
+btc_demo_results_*.json
+
+# Analysis outputs (keep source, exclude outputs)
+analysis/ml_features.csv
+analysis/trading_cycles.csv
+
+# Model artifacts but not source
+crypto_rf_trader/models/*.joblib
+crypto_rf_trader/models/*.pkl
+models/enhanced_rf_models.pkl
+phase2b/ensemble_meta_learning_model.pkl
+phase2b/hmm_regime_detector.pkl
+
+# Crypto-specific files
+crypto_rf_strategy.pine
+crypto_rf_results.png
+
+# =============================================================================
+# PERFORMANCE MONITORING EXCLUSIONS
+# =============================================================================
+# Exclude large monitoring files but keep the monitoring source code
+*_analysis.png
+*_dashboard.png
+*_overview.png
+correlation_analysis.png
+feature_analysis.png
+intraday_analysis.png
+market_analysis.png
+risk_analysis.png
+live_system_status.png
+live_trading_dashboard.png
+self_optimization_dashboard.png
+
+# =============================================================================
+# DOCUMENTATION THAT SHOULD BE PRESERVED
+# =============================================================================
+# These files are explicitly NOT ignored (documentation for future reference):
+# - CLAUDE.md (master context)
+# - .claude/contexts/*.md (module-specific contexts)
+# - .claude/templates/* (context templates)
+# - README*.md (project documentation)
+# - *.md files in general (documentation)
+# - All .py source files (trading logic)
+# - configs/*.json (system configuration)
+# - requirements.txt (dependencies)
+
+# END OF ULTRATHINK .claudeignore
