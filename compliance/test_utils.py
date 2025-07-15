@@ -140,6 +140,10 @@ class MockPortfolioManager:
             for pos in self.positions.values()
         )
         return self.total_value + position_value
+    
+    def get_total_portfolio_value(self) -> Decimal:
+        """Get total portfolio value (alias for compatibility)."""
+        return self.get_portfolio_value()
         
     def update_position(self, symbol: str, quantity: Decimal, price: Decimal):
         """Update position (mock implementation)."""

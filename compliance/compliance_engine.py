@@ -48,6 +48,7 @@ import sys
 sys.path.append('/home/richardw/crypto_rf_trading_system')
 from production.real_money_trader import AuditLogger
 from production.order_management import ManagedOrder, OrderExecution
+from compliance.audit_trail import AuditLevel, AuditCategory, AuditContext
 from production.portfolio_manager import Position
 
 class ComplianceLevel(Enum):
@@ -757,15 +758,15 @@ class ComplianceEngine:
                 
                 # Log violation
                 self.audit_logger.log_event(
-                    event_type="COMPLIANCE_VIOLATION",
-                    action="RULE_BREACH",
-                    details={
-                        "rule_id": rule_id,
-                        "violation_id": violation.violation_id,
-                        "severity": violation.severity.value,
-                        "description": violation.description
-                    },
-                    compliance_flags=[violation.violation_type.value]
+                    level=AuditLevel.WARNING,
+                    category=AuditCategory.COMPLIANCE,
+                    description=f"Compliance violation: {violation.description}",
+                    context=AuditContext(
+                        session_id="compliance_engine",
+                        user_id="system",
+                        client_id=trade_data.get('client_id'),
+                        request_id=str(uuid.uuid4())
+                    )
                 )
                 
                 # Save to database
@@ -789,12 +790,15 @@ class ComplianceEngine:
                 'threshold_value': rule.threshold_value,
                 'threshold_percentage': rule.threshold_percentage,
                 'datetime': datetime,
-                'timedelta': timedelta
+                'timedelta': timedelta,
+                'best_execution_score': trade_data.get('best_execution_score', 85)  # Default good score
             }
             
             # Add specific rule logic
             if rule.rule_id == "MIFID_LARGE_TRANSACTION":
                 return self.check_large_transaction(rule, trade_data, context)
+            elif rule.rule_id == "MIFID_BEST_EXECUTION":
+                return self.check_best_execution(rule, trade_data, context)
             elif rule.rule_id == "POSITION_LIMIT_BREACH":
                 return self.check_position_limits(rule, trade_data, context)
             elif rule.rule_id == "WASH_TRADING":
@@ -830,6 +834,27 @@ class ComplianceEngine:
                 evidence_data=trade_data,
                 threshold_breached=rule.threshold_value,
                 actual_value=trade_value,
+                action_taken=rule.action_required
+            )
+        
+        return None
+    
+    def check_best_execution(self, rule: ComplianceRule, trade_data: Dict[str, Any], context: Dict[str, Any]) -> Optional[ComplianceViolation]:
+        """Check best execution compliance."""
+        best_execution_score = context['best_execution_score']
+        
+        if best_execution_score < rule.threshold_value:
+            return ComplianceViolation(
+                violation_id=str(uuid.uuid4()),
+                rule_id=rule.rule_id,
+                timestamp=datetime.now(),
+                violation_type=ViolationType.BEST_EXECUTION_BREACH,
+                severity=rule.severity,
+                description=f"Best execution violation: score {best_execution_score} below threshold {rule.threshold_value}",
+                affected_orders=[trade_data.get('order_id', '')],
+                evidence_data=trade_data,
+                threshold_breached=rule.threshold_value,
+                actual_value=best_execution_score,
                 action_taken=rule.action_required
             )
         

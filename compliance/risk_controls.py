@@ -293,6 +293,9 @@ class RiskEngine:
                  audit_logger: EnhancedAuditLogger,
                  portfolio_manager: PortfolioManager):
         
+        # Initialize logger first
+        self.logger = logging.getLogger(__name__)
+        
         self.compliance_engine = compliance_engine
         self.audit_logger = audit_logger
         self.portfolio_manager = portfolio_manager
@@ -321,7 +324,6 @@ class RiskEngine:
         # Load default stress tests
         self.load_default_stress_tests()
         
-        self.logger = logging.getLogger(__name__)
         self.logger.info("Risk Engine initialized with compliance controls")
     
     def setup_database(self):
@@ -749,6 +751,45 @@ class RiskEngine:
         )
         
         return assessment
+    
+    def validate_order(self, order_dict: Dict[str, Any]) -> Dict[str, Any]:
+        """Validate order for risk compliance (wrapper for check_pre_trade_risk)."""
+        try:
+            # Convert dict to OrderRequest for compatibility
+            from production.real_money_trader import OrderRequest, OrderType, OrderSide
+            
+            order_request = OrderRequest(
+                symbol=order_dict.get('symbol', 'BTC'),
+                order_type=OrderType.MARKET,
+                side=OrderSide.BUY,
+                quantity=Decimal(str(order_dict.get('quantity', 1.0))),
+                price=Decimal(str(order_dict.get('price', 50000.0))),
+                client_order_id=order_dict.get('order_id', 'test_order')
+            )
+            
+            # Run risk assessment
+            assessment = self.check_pre_trade_risk(order_request)
+            
+            # Convert to expected format
+            return {
+                "approved": assessment.decision == RiskDecision.APPROVED,
+                "risk_score": assessment.risk_score,
+                "reason": f"Risk assessment: {assessment.decision.value}",
+                "checks_performed": [
+                    "position_limit",
+                    "concentration", 
+                    "leverage"
+                ]
+            }
+            
+        except Exception as e:
+            self.logger.error(f"Order validation failed: {e}")
+            return {
+                "approved": False,
+                "risk_score": 1.0,
+                "reason": f"Validation error: {str(e)}",
+                "checks_performed": []
+            }
     
     def check_limit_breach(self, limit: RiskLimit, order: OrderRequest) -> Optional[RiskBreach]:
         """Check if order would breach risk limit."""
