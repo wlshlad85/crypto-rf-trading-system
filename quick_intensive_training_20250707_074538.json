@@ -1,0 +1,51 @@
+{
+  "config": {
+    "iterations": 50,
+    "models_per_crypto": 3,
+    "early_stopping": 5
+  },
+  "metrics": {
+    "bitcoin": {
+      "test_r2": -0.13997137553834849,
+      "total_return": 6.19092983132874,
+      "sharpe_ratio": 3.036504362668667,
+      "trades": 45,
+      "final_value": 10619.092983132874,
+      "best_iteration": 5
+    },
+    "ethereum": {
+      "test_r2": -0.07366843314214777,
+      "total_return": 7.893031572409481,
+      "sharpe_ratio": 7.315642305533669,
+      "trades": 78,
+      "final_value": 10789.303157240947,
+      "best_iteration": 3
+    },
+    "solana": {
+      "test_r2": -0.10190120738768438,
+      "total_return": 8.82424041872465,
+      "sharpe_ratio": -1.7657611725636222,
+      "trades": 51,
+      "final_value": 10882.424041872464,
+      "best_iteration": 10
+    }
+  },
+  "training_results": {
+    "bitcoin": {
+      "best_score": -0.09928975692473396,
+      "best_iteration": 5
+    },
+    "ethereum": {
+      "best_score": -0.0636744938015994,
+      "best_iteration": 3
+    },
+    "solana": {
+      "best_score": -0.0177705307181677,
+      "best_iteration": 10
+    }
+  },
+  "ensemble_performance": {
+    "average_return": 7.63606727415429,
+    "average_sharpe": 2.862128498546238
+  }
+}

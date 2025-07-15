@@ -1,0 +1,811 @@
+2025-07-05 07:38:48,367 - __main__ - INFO - Starting Crypto Random Forest Trading System
+2025-07-05 07:38:48,368 - __main__ - INFO - Execution mode: data
+2025-07-05 07:38:48,368 - __main__ - INFO - Starting data fetching process
+2025-07-05 07:38:48,369 - data.data_fetcher - INFO - Fetching data for 9 symbols
+2025-07-05 07:38:48,580 - data.data_fetcher - ERROR - CoinGecko API error 401 for bitcoin
+2025-07-05 07:38:48,582 - data.data_fetcher - WARNING - No data retrieved for bitcoin
+2025-07-05 07:38:51,205 - data.data_fetcher - ERROR - CoinGecko API error 401 for ethereum
+2025-07-05 07:38:51,206 - data.data_fetcher - WARNING - No data retrieved for ethereum
+2025-07-05 07:38:53,488 - data.data_fetcher - ERROR - CoinGecko API error 401 for tether
+2025-07-05 07:38:53,489 - data.data_fetcher - WARNING - No data retrieved for tether
+2025-07-05 07:38:55,720 - data.data_fetcher - ERROR - CoinGecko API error 401 for solana
+2025-07-05 07:38:55,721 - data.data_fetcher - WARNING - No data retrieved for solana
+2025-07-05 07:38:58,122 - data.data_fetcher - ERROR - CoinGecko API error 401 for binancecoin
+2025-07-05 07:38:58,123 - data.data_fetcher - WARNING - No data retrieved for binancecoin
+2025-07-05 07:39:00,701 - data.data_fetcher - ERROR - CoinGecko API error 401 for usd-coin
+2025-07-05 07:39:00,701 - data.data_fetcher - WARNING - No data retrieved for usd-coin
+2025-07-05 07:39:02,800 - data.data_fetcher - ERROR - CoinGecko API error 429 for ripple
+2025-07-05 07:39:02,801 - data.data_fetcher - WARNING - No data retrieved for ripple
+2025-07-05 07:39:05,201 - data.data_fetcher - ERROR - CoinGecko API error 429 for dogecoin
+2025-07-05 07:39:05,202 - data.data_fetcher - WARNING - No data retrieved for dogecoin
+2025-07-05 07:39:07,602 - data.data_fetcher - ERROR - CoinGecko API error 429 for cardano
+2025-07-05 07:39:07,603 - data.data_fetcher - WARNING - No data retrieved for cardano
+2025-07-05 07:39:07,603 - data.data_fetcher - INFO - Successfully fetched data for 0 symbols
+2025-07-05 07:39:07,603 - __main__ - ERROR - Execution failed: No data fetched. Check API configuration and network connection.
+2025-07-05 07:50:25,368 - __main__ - INFO - Starting Crypto Random Forest Trading System
+2025-07-05 07:50:25,368 - __main__ - INFO - Execution mode: data
+2025-07-05 07:50:25,368 - __main__ - INFO - Starting data fetching process
+2025-07-05 07:50:25,368 - data.yfinance_fetcher - INFO - Fetching data for 9 symbols using yfinance
+2025-07-05 07:50:25,368 - data.yfinance_fetcher - INFO - Fetching bitcoin (BTC-USD) data - period: 2y, interval: 1h
+2025-07-05 07:50:25,931 - data.yfinance_fetcher - INFO - Fetched 17543 records for bitcoin
+2025-07-05 07:50:26,432 - data.yfinance_fetcher - INFO - Fetching ethereum (ETH-USD) data - period: 2y, interval: 1h
+2025-07-05 07:50:26,856 - data.yfinance_fetcher - INFO - Fetched 17542 records for ethereum
+2025-07-05 07:50:27,357 - data.yfinance_fetcher - INFO - Fetching tether (USDT-USD) data - period: 2y, interval: 1h
+2025-07-05 07:50:27,911 - data.yfinance_fetcher - INFO - Fetched 17534 records for tether
+2025-07-05 07:50:28,412 - data.yfinance_fetcher - INFO - Fetching solana (SOL-USD) data - period: 2y, interval: 1h
+2025-07-05 07:50:28,959 - data.yfinance_fetcher - INFO - Fetched 17542 records for solana
+2025-07-05 07:50:29,460 - data.yfinance_fetcher - INFO - Fetching binancecoin (BNB-USD) data - period: 2y, interval: 1h
+2025-07-05 07:50:29,916 - data.yfinance_fetcher - INFO - Fetched 17543 records for binancecoin
+2025-07-05 07:50:30,417 - data.yfinance_fetcher - INFO - Fetching usd-coin (USDC-USD) data - period: 2y, interval: 1h
+2025-07-05 07:50:30,989 - data.yfinance_fetcher - INFO - Fetched 17543 records for usd-coin
+2025-07-05 07:50:31,490 - data.yfinance_fetcher - INFO - Fetching ripple (XRP-USD) data - period: 2y, interval: 1h
+2025-07-05 07:50:32,104 - data.yfinance_fetcher - INFO - Fetched 17543 records for ripple
+2025-07-05 07:50:32,605 - data.yfinance_fetcher - INFO - Fetching dogecoin (DOGE-USD) data - period: 2y, interval: 1h
+2025-07-05 07:50:33,072 - data.yfinance_fetcher - INFO - Fetched 17536 records for dogecoin
+2025-07-05 07:50:33,573 - data.yfinance_fetcher - INFO - Fetching cardano (ADA-USD) data - period: 2y, interval: 1h
+2025-07-05 07:50:34,112 - data.yfinance_fetcher - INFO - Fetched 17543 records for cardano
+2025-07-05 07:50:34,112 - data.yfinance_fetcher - INFO - Successfully fetched data for 9 symbols
+2025-07-05 07:50:34,231 - data.yfinance_fetcher - INFO - Combined data shape: (17543, 82)
+2025-07-05 07:50:34,362 - data.yfinance_fetcher - INFO - Clean data shape: (17543, 82)
+2025-07-05 07:50:34,362 - __main__ - INFO - Fetched data shape: (17543, 82)
+2025-07-05 07:50:34,362 - __main__ - INFO - Date range: 2023-07-05 06:00:00+00:00 to 2025-07-05 06:00:00+00:00
+2025-07-05 07:50:34,363 - __main__ - INFO - Data fetched successfully. Shape: (17543, 82)
+2025-07-05 07:55:00,938 - __main__ - INFO - Starting Crypto Random Forest Trading System
+2025-07-05 07:55:00,938 - __main__ - INFO - Execution mode: full
+2025-07-05 07:55:00,938 - __main__ - INFO - Starting full pipeline execution
+2025-07-05 07:55:00,938 - __main__ - INFO - Starting data fetching process
+2025-07-05 07:55:00,939 - data.yfinance_fetcher - INFO - Fetching data for 9 symbols using yfinance
+2025-07-05 07:55:00,939 - data.yfinance_fetcher - INFO - Fetching bitcoin (BTC-USD) data - period: 2y, interval: 1h
+2025-07-05 07:55:01,734 - data.yfinance_fetcher - INFO - Fetched 17543 records for bitcoin
+2025-07-05 07:55:02,235 - data.yfinance_fetcher - INFO - Fetching ethereum (ETH-USD) data - period: 2y, interval: 1h
+2025-07-05 07:55:02,643 - data.yfinance_fetcher - INFO - Fetched 17542 records for ethereum
+2025-07-05 07:55:03,144 - data.yfinance_fetcher - INFO - Fetching tether (USDT-USD) data - period: 2y, interval: 1h
+2025-07-05 07:55:03,550 - data.yfinance_fetcher - INFO - Fetched 17534 records for tether
+2025-07-05 07:55:04,051 - data.yfinance_fetcher - INFO - Fetching solana (SOL-USD) data - period: 2y, interval: 1h
+2025-07-05 07:55:04,498 - data.yfinance_fetcher - INFO - Fetched 17542 records for solana
+2025-07-05 07:55:04,999 - data.yfinance_fetcher - INFO - Fetching binancecoin (BNB-USD) data - period: 2y, interval: 1h
+2025-07-05 07:55:05,462 - data.yfinance_fetcher - INFO - Fetched 17543 records for binancecoin
+2025-07-05 07:55:05,963 - data.yfinance_fetcher - INFO - Fetching usd-coin (USDC-USD) data - period: 2y, interval: 1h
+2025-07-05 07:55:06,317 - data.yfinance_fetcher - INFO - Fetched 17543 records for usd-coin
+2025-07-05 07:55:06,818 - data.yfinance_fetcher - INFO - Fetching ripple (XRP-USD) data - period: 2y, interval: 1h
+2025-07-05 07:55:07,228 - data.yfinance_fetcher - INFO - Fetched 17543 records for ripple
+2025-07-05 07:55:07,729 - data.yfinance_fetcher - INFO - Fetching dogecoin (DOGE-USD) data - period: 2y, interval: 1h
+2025-07-05 07:55:08,204 - data.yfinance_fetcher - INFO - Fetched 17536 records for dogecoin
+2025-07-05 07:55:08,705 - data.yfinance_fetcher - INFO - Fetching cardano (ADA-USD) data - period: 2y, interval: 1h
+2025-07-05 07:55:09,186 - data.yfinance_fetcher - INFO - Fetched 17543 records for cardano
+2025-07-05 07:55:09,187 - data.yfinance_fetcher - INFO - Successfully fetched data for 9 symbols
+2025-07-05 07:55:09,286 - data.yfinance_fetcher - INFO - Combined data shape: (17543, 82)
+2025-07-05 07:55:09,549 - data.yfinance_fetcher - INFO - Clean data shape: (17543, 82)
+2025-07-05 07:55:09,549 - __main__ - INFO - Fetched data shape: (17543, 82)
+2025-07-05 07:55:09,550 - __main__ - INFO - Date range: 2023-07-05 06:00:00+00:00 to 2025-07-05 06:00:00+00:00
+2025-07-05 07:55:09,550 - __main__ - INFO - Starting feature engineering
+2025-07-05 07:55:09,551 - features.feature_engineering - INFO - Starting feature generation
+2025-07-05 07:55:09,552 - features.feature_engineering - INFO - Generating features for binancecoin
+2025-07-05 07:55:17,493 - features.feature_engineering - INFO - Generating features for bitcoin
+2025-07-05 07:55:25,387 - features.feature_engineering - INFO - Generating features for cardano
+2025-07-05 07:55:33,605 - features.feature_engineering - INFO - Generating features for dogecoin
+2025-07-05 07:55:41,052 - features.feature_engineering - INFO - Generating features for ethereum
+2025-07-05 07:55:48,954 - features.feature_engineering - INFO - Generating features for ripple
+2025-07-05 07:55:56,875 - features.feature_engineering - INFO - Generating features for solana
+2025-07-05 07:56:05,021 - features.feature_engineering - INFO - Generating features for tether
+2025-07-05 07:56:12,954 - features.feature_engineering - INFO - Generating features for usd-coin
+2025-07-05 07:56:26,729 - features.feature_engineering - INFO - Generated 652 features
+2025-07-05 07:56:26,729 - __main__ - INFO - Generated features shape: (17543, 652)
+2025-07-05 07:56:26,729 - __main__ - INFO - Preparing ensemble Random Forest model
+2025-07-05 07:56:26,730 - __main__ - INFO - Starting model training
+2025-07-05 07:56:26,730 - __main__ - ERROR - Pipeline execution failed: 'EnsembleRandomForestModel' object has no attribute 'create_targets'
+2025-07-05 07:56:26,730 - __main__ - ERROR - Execution failed: 'EnsembleRandomForestModel' object has no attribute 'create_targets'
+2025-07-05 07:56:38,269 - __main__ - INFO - Starting Crypto Random Forest Trading System
+2025-07-05 07:56:38,269 - __main__ - INFO - Execution mode: full
+2025-07-05 07:56:38,269 - __main__ - INFO - Starting full pipeline execution
+2025-07-05 07:56:38,270 - __main__ - INFO - Starting data fetching process
+2025-07-05 07:56:38,270 - data.yfinance_fetcher - INFO - Fetching data for 9 symbols using yfinance
+2025-07-05 07:56:38,270 - data.yfinance_fetcher - INFO - Fetching bitcoin (BTC-USD) data - period: 2y, interval: 1h
+2025-07-05 07:56:39,112 - data.yfinance_fetcher - INFO - Fetched 17543 records for bitcoin
+2025-07-05 07:56:39,613 - data.yfinance_fetcher - INFO - Fetching ethereum (ETH-USD) data - period: 2y, interval: 1h
+2025-07-05 07:56:39,947 - data.yfinance_fetcher - INFO - Fetched 17542 records for ethereum
+2025-07-05 07:56:40,448 - data.yfinance_fetcher - INFO - Fetching tether (USDT-USD) data - period: 2y, interval: 1h
+2025-07-05 07:56:40,887 - data.yfinance_fetcher - INFO - Fetched 17534 records for tether
+2025-07-05 07:56:41,381 - data.yfinance_fetcher - INFO - Fetching solana (SOL-USD) data - period: 2y, interval: 1h
+2025-07-05 07:56:41,939 - data.yfinance_fetcher - INFO - Fetched 17542 records for solana
+2025-07-05 07:56:42,440 - data.yfinance_fetcher - INFO - Fetching binancecoin (BNB-USD) data - period: 2y, interval: 1h
+2025-07-05 07:56:42,905 - data.yfinance_fetcher - INFO - Fetched 17543 records for binancecoin
+2025-07-05 07:56:43,406 - data.yfinance_fetcher - INFO - Fetching usd-coin (USDC-USD) data - period: 2y, interval: 1h
+2025-07-05 07:56:43,799 - data.yfinance_fetcher - INFO - Fetched 17543 records for usd-coin
+2025-07-05 07:56:44,300 - data.yfinance_fetcher - INFO - Fetching ripple (XRP-USD) data - period: 2y, interval: 1h
+2025-07-05 07:56:44,827 - data.yfinance_fetcher - INFO - Fetched 17543 records for ripple
+2025-07-05 07:56:45,328 - data.yfinance_fetcher - INFO - Fetching dogecoin (DOGE-USD) data - period: 2y, interval: 1h
+2025-07-05 07:56:45,746 - data.yfinance_fetcher - INFO - Fetched 17536 records for dogecoin
+2025-07-05 07:56:46,247 - data.yfinance_fetcher - INFO - Fetching cardano (ADA-USD) data - period: 2y, interval: 1h
+2025-07-05 07:56:46,786 - data.yfinance_fetcher - INFO - Fetched 17543 records for cardano
+2025-07-05 07:56:46,786 - data.yfinance_fetcher - INFO - Successfully fetched data for 9 symbols
+2025-07-05 07:56:46,889 - data.yfinance_fetcher - INFO - Combined data shape: (17543, 82)
+2025-07-05 07:56:46,918 - data.yfinance_fetcher - INFO - Clean data shape: (17543, 82)
+2025-07-05 07:56:46,919 - __main__ - INFO - Fetched data shape: (17543, 82)
+2025-07-05 07:56:46,919 - __main__ - INFO - Date range: 2023-07-05 06:00:00+00:00 to 2025-07-05 06:00:00+00:00
+2025-07-05 07:56:46,922 - __main__ - INFO - Starting feature engineering
+2025-07-05 07:56:46,922 - features.feature_engineering - INFO - Starting feature generation
+2025-07-05 07:56:46,925 - features.feature_engineering - INFO - Generating features for binancecoin
+2025-07-05 07:56:55,083 - features.feature_engineering - INFO - Generating features for bitcoin
+2025-07-05 07:57:03,941 - features.feature_engineering - INFO - Generating features for cardano
+2025-07-05 07:57:11,935 - features.feature_engineering - INFO - Generating features for dogecoin
+2025-07-05 07:57:20,447 - features.feature_engineering - INFO - Generating features for ethereum
+2025-07-05 07:57:28,350 - features.feature_engineering - INFO - Generating features for ripple
+2025-07-05 07:57:36,923 - features.feature_engineering - INFO - Generating features for solana
+2025-07-05 07:57:45,859 - features.feature_engineering - INFO - Generating features for tether
+2025-07-05 07:57:53,468 - features.feature_engineering - INFO - Generating features for usd-coin
+2025-07-05 07:58:05,188 - features.feature_engineering - INFO - Generated 652 features
+2025-07-05 07:58:05,188 - __main__ - INFO - Generated features shape: (17543, 652)
+2025-07-05 07:58:05,188 - __main__ - INFO - Preparing single Random Forest model
+2025-07-05 07:58:05,188 - __main__ - INFO - Starting model training
+2025-07-05 07:58:06,358 - __main__ - ERROR - Pipeline execution failed: 'bitcoin_target'
+2025-07-05 07:58:06,359 - __main__ - ERROR - Execution failed: 'bitcoin_target'
+2025-07-05 13:59:19,363 - __main__ - INFO - Starting Crypto Random Forest Trading System
+2025-07-05 13:59:19,363 - __main__ - INFO - Execution mode: full
+2025-07-05 13:59:19,364 - __main__ - INFO - Starting full pipeline execution
+2025-07-05 13:59:19,364 - __main__ - INFO - Starting data fetching process
+2025-07-05 13:59:19,364 - data.yfinance_fetcher - INFO - Fetching data for 9 symbols using yfinance
+2025-07-05 13:59:19,364 - data.yfinance_fetcher - INFO - Fetching bitcoin (BTC-USD) data - period: 2y, interval: 1h
+2025-07-05 13:59:20,131 - data.yfinance_fetcher - INFO - Fetched 17531 records for bitcoin
+2025-07-05 13:59:20,632 - data.yfinance_fetcher - INFO - Fetching ethereum (ETH-USD) data - period: 2y, interval: 1h
+2025-07-05 13:59:21,007 - data.yfinance_fetcher - INFO - Fetched 17530 records for ethereum
+2025-07-05 13:59:21,508 - data.yfinance_fetcher - INFO - Fetching tether (USDT-USD) data - period: 2y, interval: 1h
+2025-07-05 13:59:21,890 - data.yfinance_fetcher - INFO - Fetched 17522 records for tether
+2025-07-05 13:59:22,391 - data.yfinance_fetcher - INFO - Fetching solana (SOL-USD) data - period: 2y, interval: 1h
+2025-07-05 13:59:22,723 - data.yfinance_fetcher - INFO - Fetched 17530 records for solana
+2025-07-05 13:59:23,224 - data.yfinance_fetcher - INFO - Fetching binancecoin (BNB-USD) data - period: 2y, interval: 1h
+2025-07-05 13:59:23,622 - data.yfinance_fetcher - INFO - Fetched 17531 records for binancecoin
+2025-07-05 13:59:24,122 - data.yfinance_fetcher - INFO - Fetching usd-coin (USDC-USD) data - period: 2y, interval: 1h
+2025-07-05 13:59:24,464 - data.yfinance_fetcher - INFO - Fetched 17531 records for usd-coin
+2025-07-05 13:59:24,965 - data.yfinance_fetcher - INFO - Fetching ripple (XRP-USD) data - period: 2y, interval: 1h
+2025-07-05 13:59:25,340 - data.yfinance_fetcher - INFO - Fetched 17531 records for ripple
+2025-07-05 13:59:25,841 - data.yfinance_fetcher - INFO - Fetching dogecoin (DOGE-USD) data - period: 2y, interval: 1h
+2025-07-05 13:59:26,195 - data.yfinance_fetcher - INFO - Fetched 17524 records for dogecoin
+2025-07-05 13:59:26,695 - data.yfinance_fetcher - INFO - Fetching cardano (ADA-USD) data - period: 2y, interval: 1h
+2025-07-05 13:59:27,071 - data.yfinance_fetcher - INFO - Fetched 17531 records for cardano
+2025-07-05 13:59:27,071 - data.yfinance_fetcher - INFO - Successfully fetched data for 9 symbols
+2025-07-05 13:59:27,215 - data.yfinance_fetcher - INFO - Combined data shape: (17531, 82)
+2025-07-05 13:59:27,246 - data.yfinance_fetcher - INFO - Clean data shape: (17531, 82)
+2025-07-05 13:59:27,246 - __main__ - INFO - Fetched data shape: (17531, 82)
+2025-07-05 13:59:27,246 - __main__ - INFO - Date range: 2023-07-06 00:00:00+00:00 to 2025-07-05 12:00:00+00:00
+2025-07-05 13:59:27,249 - __main__ - INFO - Starting feature engineering
+2025-07-05 13:59:27,249 - features.feature_engineering - INFO - Starting feature generation
+2025-07-05 13:59:27,251 - features.feature_engineering - INFO - Generating features for binancecoin
+2025-07-05 13:59:35,654 - features.feature_engineering - INFO - Generating features for bitcoin
+2025-07-05 13:59:42,169 - features.feature_engineering - INFO - Generating features for cardano
+2025-07-05 13:59:48,769 - features.feature_engineering - INFO - Generating features for dogecoin
+2025-07-05 13:59:55,372 - features.feature_engineering - INFO - Generating features for ethereum
+2025-07-05 14:00:02,357 - features.feature_engineering - INFO - Generating features for ripple
+2025-07-05 14:00:10,232 - features.feature_engineering - INFO - Generating features for solana
+2025-07-05 14:00:16,833 - features.feature_engineering - INFO - Generating features for tether
+2025-07-05 14:00:23,243 - features.feature_engineering - INFO - Generating features for usd-coin
+2025-07-05 14:00:32,577 - features.feature_engineering - INFO - Generated 652 features
+2025-07-05 14:00:32,578 - __main__ - INFO - Generated features shape: (17531, 652)
+2025-07-05 14:00:32,579 - __main__ - INFO - Preparing single Random Forest model
+2025-07-05 14:00:32,580 - __main__ - INFO - Starting model training
+2025-07-05 14:00:33,996 - __main__ - ERROR - Pipeline execution failed: 'bitcoin_target'
+2025-07-05 14:00:33,997 - __main__ - ERROR - Execution failed: 'bitcoin_target'
+2025-07-05 19:08:22,095 - __main__ - INFO - Starting Crypto Random Forest Trading System
+2025-07-05 19:08:22,096 - __main__ - INFO - Execution mode: full
+2025-07-05 19:08:22,096 - __main__ - INFO - Starting full pipeline execution
+2025-07-05 19:08:22,096 - __main__ - INFO - Starting data fetching process
+2025-07-05 19:08:22,096 - data.yfinance_fetcher - INFO - Fetching data for 9 symbols using yfinance
+2025-07-05 19:08:22,096 - data.yfinance_fetcher - INFO - Fetching bitcoin (BTC-USD) data - period: 2y, interval: 1h
+2025-07-05 19:08:22,927 - data.yfinance_fetcher - INFO - Fetched 17537 records for bitcoin
+2025-07-05 19:08:23,428 - data.yfinance_fetcher - INFO - Fetching ethereum (ETH-USD) data - period: 2y, interval: 1h
+2025-07-05 19:08:23,778 - data.yfinance_fetcher - INFO - Fetched 17536 records for ethereum
+2025-07-05 19:08:24,279 - data.yfinance_fetcher - INFO - Fetching tether (USDT-USD) data - period: 2y, interval: 1h
+2025-07-05 19:08:24,825 - data.yfinance_fetcher - INFO - Fetched 17528 records for tether
+2025-07-05 19:08:25,326 - data.yfinance_fetcher - INFO - Fetching solana (SOL-USD) data - period: 2y, interval: 1h
+2025-07-05 19:08:25,810 - data.yfinance_fetcher - INFO - Fetched 17536 records for solana
+2025-07-05 19:08:26,311 - data.yfinance_fetcher - INFO - Fetching binancecoin (BNB-USD) data - period: 2y, interval: 1h
+2025-07-05 19:08:26,700 - data.yfinance_fetcher - INFO - Fetched 17537 records for binancecoin
+2025-07-05 19:08:27,200 - data.yfinance_fetcher - INFO - Fetching usd-coin (USDC-USD) data - period: 2y, interval: 1h
+2025-07-05 19:08:27,589 - data.yfinance_fetcher - INFO - Fetched 17537 records for usd-coin
+2025-07-05 19:08:28,090 - data.yfinance_fetcher - INFO - Fetching ripple (XRP-USD) data - period: 2y, interval: 1h
+2025-07-05 19:08:28,543 - data.yfinance_fetcher - INFO - Fetched 17537 records for ripple
+2025-07-05 19:08:29,044 - data.yfinance_fetcher - INFO - Fetching dogecoin (DOGE-USD) data - period: 2y, interval: 1h
+2025-07-05 19:08:29,418 - data.yfinance_fetcher - INFO - Fetched 17530 records for dogecoin
+2025-07-05 19:08:29,919 - data.yfinance_fetcher - INFO - Fetching cardano (ADA-USD) data - period: 2y, interval: 1h
+2025-07-05 19:08:30,465 - data.yfinance_fetcher - INFO - Fetched 17537 records for cardano
+2025-07-05 19:08:30,466 - data.yfinance_fetcher - INFO - Successfully fetched data for 9 symbols
+2025-07-05 19:08:30,855 - data.yfinance_fetcher - INFO - Combined data shape: (17537, 82)
+2025-07-05 19:08:30,923 - data.yfinance_fetcher - INFO - Clean data shape: (17537, 82)
+2025-07-05 19:08:30,923 - __main__ - INFO - Fetched data shape: (17537, 82)
+2025-07-05 19:08:30,924 - __main__ - INFO - Date range: 2023-07-06 00:00:00+00:00 to 2025-07-05 18:00:00+00:00
+2025-07-05 19:08:30,928 - __main__ - INFO - Starting feature engineering
+2025-07-05 19:08:30,928 - features.feature_engineering - INFO - Starting feature generation
+2025-07-05 19:08:30,933 - features.feature_engineering - INFO - Generating features for binancecoin
+2025-07-05 19:08:40,990 - features.feature_engineering - INFO - Generating features for bitcoin
+2025-07-05 19:08:49,542 - features.feature_engineering - INFO - Generating features for cardano
+2025-07-05 19:08:57,324 - features.feature_engineering - INFO - Generating features for dogecoin
+2025-07-05 19:09:08,166 - features.feature_engineering - INFO - Generating features for ethereum
+2025-07-05 19:09:16,742 - features.feature_engineering - INFO - Generating features for ripple
+2025-07-05 19:09:26,917 - features.feature_engineering - INFO - Generating features for solana
+2025-07-05 19:09:35,371 - features.feature_engineering - INFO - Generating features for tether
+2025-07-05 19:09:44,615 - features.feature_engineering - INFO - Generating features for usd-coin
+2025-07-05 19:10:04,793 - features.feature_engineering - INFO - Generated 652 features
+2025-07-05 19:10:04,794 - __main__ - INFO - Generated features shape: (17537, 652)
+2025-07-05 19:10:04,794 - __main__ - INFO - Preparing single Random Forest model
+2025-07-05 19:10:04,794 - __main__ - INFO - Starting model training
+2025-07-05 19:10:14,674 - models.random_forest_model - INFO - Prepared data shape: X=(17531, 651), y=17531
+2025-07-05 19:10:14,675 - __main__ - INFO - Performing hyperparameter tuning
+2025-07-05 19:10:14,676 - models.random_forest_model - INFO - Starting hyperparameter tuning with optuna
+2025-07-05 19:10:36,806 - __main__ - INFO - Starting Crypto Random Forest Trading System
+2025-07-05 19:10:36,806 - __main__ - INFO - Execution mode: full
+2025-07-05 19:10:36,806 - __main__ - INFO - Starting full pipeline execution
+2025-07-05 19:10:36,806 - __main__ - INFO - Starting data fetching process
+2025-07-05 19:10:36,807 - data.yfinance_fetcher - INFO - Fetching data for 9 symbols using yfinance
+2025-07-05 19:10:36,807 - data.yfinance_fetcher - INFO - Fetching bitcoin (BTC-USD) data - period: 2y, interval: 1h
+2025-07-05 19:10:40,312 - data.yfinance_fetcher - INFO - Fetched 17537 records for bitcoin
+2025-07-05 19:10:40,812 - data.yfinance_fetcher - INFO - Fetching ethereum (ETH-USD) data - period: 2y, interval: 1h
+2025-07-05 19:10:41,265 - data.yfinance_fetcher - INFO - Fetched 17536 records for ethereum
+2025-07-05 19:10:41,766 - data.yfinance_fetcher - INFO - Fetching tether (USDT-USD) data - period: 2y, interval: 1h
+2025-07-05 19:10:42,203 - data.yfinance_fetcher - INFO - Fetched 17528 records for tether
+2025-07-05 19:10:42,704 - data.yfinance_fetcher - INFO - Fetching solana (SOL-USD) data - period: 2y, interval: 1h
+2025-07-05 19:10:43,155 - data.yfinance_fetcher - INFO - Fetched 17536 records for solana
+2025-07-05 19:10:43,656 - data.yfinance_fetcher - INFO - Fetching binancecoin (BNB-USD) data - period: 2y, interval: 1h
+2025-07-05 19:10:44,085 - data.yfinance_fetcher - INFO - Fetched 17537 records for binancecoin
+2025-07-05 19:10:44,587 - data.yfinance_fetcher - INFO - Fetching usd-coin (USDC-USD) data - period: 2y, interval: 1h
+2025-07-05 19:10:45,006 - data.yfinance_fetcher - INFO - Fetched 17537 records for usd-coin
+2025-07-05 19:10:45,507 - data.yfinance_fetcher - INFO - Fetching ripple (XRP-USD) data - period: 2y, interval: 1h
+2025-07-05 19:10:45,964 - data.yfinance_fetcher - INFO - Fetched 17537 records for ripple
+2025-07-05 19:10:46,464 - data.yfinance_fetcher - INFO - Fetching dogecoin (DOGE-USD) data - period: 2y, interval: 1h
+2025-07-05 19:10:46,930 - data.yfinance_fetcher - INFO - Fetched 17530 records for dogecoin
+2025-07-05 19:10:47,431 - data.yfinance_fetcher - INFO - Fetching cardano (ADA-USD) data - period: 2y, interval: 1h
+2025-07-05 19:10:47,897 - data.yfinance_fetcher - INFO - Fetched 17537 records for cardano
+2025-07-05 19:10:47,898 - data.yfinance_fetcher - INFO - Successfully fetched data for 9 symbols
+2025-07-05 19:10:48,009 - data.yfinance_fetcher - INFO - Combined data shape: (17537, 82)
+2025-07-05 19:10:48,047 - data.yfinance_fetcher - INFO - Clean data shape: (17537, 82)
+2025-07-05 19:10:48,047 - __main__ - INFO - Fetched data shape: (17537, 82)
+2025-07-05 19:10:48,047 - __main__ - INFO - Date range: 2023-07-06 00:00:00+00:00 to 2025-07-05 18:00:00+00:00
+2025-07-05 19:10:48,050 - __main__ - INFO - Starting feature engineering
+2025-07-05 19:10:48,051 - features.feature_engineering - INFO - Starting feature generation
+2025-07-05 19:10:48,053 - features.feature_engineering - INFO - Generating features for binancecoin
+2025-07-05 19:10:56,630 - features.feature_engineering - INFO - Generating features for bitcoin
+2025-07-05 19:11:06,003 - features.feature_engineering - INFO - Generating features for cardano
+2025-07-05 19:11:16,364 - features.feature_engineering - INFO - Generating features for dogecoin
+2025-07-05 19:11:25,858 - features.feature_engineering - INFO - Generating features for ethereum
+2025-07-05 19:11:35,930 - features.feature_engineering - INFO - Generating features for ripple
+2025-07-05 19:11:46,154 - features.feature_engineering - INFO - Generating features for solana
+2025-07-05 19:11:56,712 - features.feature_engineering - INFO - Generating features for tether
+2025-07-05 19:12:09,903 - features.feature_engineering - INFO - Generating features for usd-coin
+2025-07-05 19:12:21,041 - features.feature_engineering - INFO - Generated 652 features
+2025-07-05 19:12:21,042 - __main__ - INFO - Generated features shape: (17537, 652)
+2025-07-05 19:12:21,042 - __main__ - INFO - Preparing single Random Forest model
+2025-07-05 19:12:21,042 - __main__ - INFO - Starting model training
+2025-07-05 19:12:21,897 - models.random_forest_model - INFO - Prepared data shape: X=(17531, 651), y=17531
+2025-07-05 19:12:21,897 - models.random_forest_model - INFO - Starting model training
+2025-07-05 19:12:28,833 - models.random_forest_model - INFO - Training completed. Val R2: -0.2408
+2025-07-05 19:12:28,835 - models.random_forest_model - INFO - Starting walk-forward validation
+2025-07-05 19:12:48,019 - __main__ - INFO - Starting Crypto Random Forest Trading System
+2025-07-05 19:12:48,019 - __main__ - INFO - Execution mode: train
+2025-07-05 19:12:48,019 - __main__ - INFO - Starting data fetching process
+2025-07-05 19:12:48,019 - data.yfinance_fetcher - INFO - Fetching data for 9 symbols using yfinance
+2025-07-05 19:12:48,020 - data.yfinance_fetcher - INFO - Fetching bitcoin (BTC-USD) data - period: 2y, interval: 1h
+2025-07-05 19:12:48,626 - data.yfinance_fetcher - INFO - Fetched 17537 records for bitcoin
+2025-07-05 19:12:49,127 - data.yfinance_fetcher - INFO - Fetching ethereum (ETH-USD) data - period: 2y, interval: 1h
+2025-07-05 19:12:49,555 - data.yfinance_fetcher - INFO - Fetched 17536 records for ethereum
+2025-07-05 19:12:50,056 - data.yfinance_fetcher - INFO - Fetching tether (USDT-USD) data - period: 2y, interval: 1h
+2025-07-05 19:12:50,435 - data.yfinance_fetcher - INFO - Fetched 17528 records for tether
+2025-07-05 19:12:50,936 - data.yfinance_fetcher - INFO - Fetching solana (SOL-USD) data - period: 2y, interval: 1h
+2025-07-05 19:12:51,388 - data.yfinance_fetcher - INFO - Fetched 17536 records for solana
+2025-07-05 19:12:51,889 - data.yfinance_fetcher - INFO - Fetching binancecoin (BNB-USD) data - period: 2y, interval: 1h
+2025-07-05 19:12:52,246 - data.yfinance_fetcher - INFO - Fetched 17537 records for binancecoin
+2025-07-05 19:12:52,747 - data.yfinance_fetcher - INFO - Fetching usd-coin (USDC-USD) data - period: 2y, interval: 1h
+2025-07-05 19:12:53,082 - data.yfinance_fetcher - INFO - Fetched 17537 records for usd-coin
+2025-07-05 19:12:53,583 - data.yfinance_fetcher - INFO - Fetching ripple (XRP-USD) data - period: 2y, interval: 1h
+2025-07-05 19:12:54,012 - data.yfinance_fetcher - INFO - Fetched 17537 records for ripple
+2025-07-05 19:12:54,513 - data.yfinance_fetcher - INFO - Fetching dogecoin (DOGE-USD) data - period: 2y, interval: 1h
+2025-07-05 19:12:55,025 - data.yfinance_fetcher - INFO - Fetched 17530 records for dogecoin
+2025-07-05 19:12:55,526 - data.yfinance_fetcher - INFO - Fetching cardano (ADA-USD) data - period: 2y, interval: 1h
+2025-07-05 19:12:55,946 - data.yfinance_fetcher - INFO - Fetched 17537 records for cardano
+2025-07-05 19:12:55,947 - data.yfinance_fetcher - INFO - Successfully fetched data for 9 symbols
+2025-07-05 19:12:56,046 - data.yfinance_fetcher - INFO - Combined data shape: (17537, 82)
+2025-07-05 19:12:56,076 - data.yfinance_fetcher - INFO - Clean data shape: (17537, 82)
+2025-07-05 19:12:56,077 - __main__ - INFO - Fetched data shape: (17537, 82)
+2025-07-05 19:12:56,077 - __main__ - INFO - Date range: 2023-07-06 00:00:00+00:00 to 2025-07-05 18:00:00+00:00
+2025-07-05 19:12:56,080 - __main__ - INFO - Starting feature engineering
+2025-07-05 19:12:56,080 - features.feature_engineering - INFO - Starting feature generation
+2025-07-05 19:12:56,082 - features.feature_engineering - INFO - Generating features for binancecoin
+2025-07-05 19:13:03,542 - features.feature_engineering - INFO - Generating features for bitcoin
+2025-07-05 19:13:11,187 - features.feature_engineering - INFO - Generating features for cardano
+2025-07-05 19:13:21,014 - features.feature_engineering - INFO - Generating features for dogecoin
+2025-07-05 19:13:28,777 - features.feature_engineering - INFO - Generating features for ethereum
+2025-07-05 19:13:36,121 - features.feature_engineering - INFO - Generating features for ripple
+2025-07-05 19:13:44,048 - features.feature_engineering - INFO - Generating features for solana
+2025-07-05 19:13:53,432 - features.feature_engineering - INFO - Generating features for tether
+2025-07-05 19:14:01,144 - features.feature_engineering - INFO - Generating features for usd-coin
+2025-07-05 19:14:10,588 - features.feature_engineering - INFO - Generated 652 features
+2025-07-05 19:14:10,588 - __main__ - INFO - Generated features shape: (17537, 652)
+2025-07-05 19:14:10,588 - __main__ - INFO - Preparing single Random Forest model
+2025-07-05 19:14:10,588 - __main__ - INFO - Starting model training
+2025-07-05 19:14:11,384 - models.random_forest_model - INFO - Prepared data shape: X=(17531, 651), y=17531
+2025-07-05 19:14:11,385 - models.random_forest_model - INFO - Starting model training
+2025-07-05 19:14:19,221 - models.random_forest_model - INFO - Training completed. Val R2: -0.2408
+2025-07-05 19:14:19,223 - models.random_forest_model - INFO - Starting walk-forward validation
+2025-07-08 18:46:28,381 - __main__ - INFO - Starting Crypto Random Forest Trading System
+2025-07-08 18:46:28,381 - __main__ - INFO - Execution mode: data
+2025-07-08 18:46:28,382 - __main__ - INFO - Starting data fetching process
+2025-07-08 18:46:28,382 - data.yfinance_fetcher - INFO - Fetching data for 9 symbols using yfinance
+2025-07-08 18:46:28,382 - data.yfinance_fetcher - INFO - Fetching bitcoin (BTC-USD) data - period: 2y, interval: 1h
+2025-07-08 18:46:29,020 - data.yfinance_fetcher - INFO - Fetched 17543 records for bitcoin
+2025-07-08 18:46:29,521 - data.yfinance_fetcher - INFO - Fetching ethereum (ETH-USD) data - period: 2y, interval: 1h
+2025-07-08 18:46:29,826 - data.yfinance_fetcher - INFO - Fetched 17542 records for ethereum
+2025-07-08 18:46:30,327 - data.yfinance_fetcher - INFO - Fetching tether (USDT-USD) data - period: 2y, interval: 1h
+2025-07-08 18:46:30,758 - data.yfinance_fetcher - INFO - Fetched 17534 records for tether
+2025-07-08 18:46:31,259 - data.yfinance_fetcher - INFO - Fetching solana (SOL-USD) data - period: 2y, interval: 1h
+2025-07-08 18:46:31,664 - data.yfinance_fetcher - INFO - Fetched 17542 records for solana
+2025-07-08 18:46:32,165 - data.yfinance_fetcher - INFO - Fetching binancecoin (BNB-USD) data - period: 2y, interval: 1h
+2025-07-08 18:46:32,682 - data.yfinance_fetcher - INFO - Fetched 17543 records for binancecoin
+2025-07-08 18:46:33,182 - data.yfinance_fetcher - INFO - Fetching usd-coin (USDC-USD) data - period: 2y, interval: 1h
+2025-07-08 18:46:33,560 - data.yfinance_fetcher - INFO - Fetched 17543 records for usd-coin
+2025-07-08 18:46:34,061 - data.yfinance_fetcher - INFO - Fetching ripple (XRP-USD) data - period: 2y, interval: 1h
+2025-07-08 18:46:34,500 - data.yfinance_fetcher - INFO - Fetched 17543 records for ripple
+2025-07-08 18:46:35,000 - data.yfinance_fetcher - INFO - Fetching dogecoin (DOGE-USD) data - period: 2y, interval: 1h
+2025-07-08 18:46:35,423 - data.yfinance_fetcher - INFO - Fetched 17536 records for dogecoin
+2025-07-08 18:46:35,924 - data.yfinance_fetcher - INFO - Fetching cardano (ADA-USD) data - period: 2y, interval: 1h
+2025-07-08 18:46:36,325 - data.yfinance_fetcher - INFO - Fetched 17543 records for cardano
+2025-07-08 18:46:36,325 - data.yfinance_fetcher - INFO - Successfully fetched data for 9 symbols
+2025-07-08 18:46:36,401 - data.yfinance_fetcher - INFO - Combined data shape: (17543, 82)
+2025-07-08 18:46:36,422 - data.yfinance_fetcher - INFO - Clean data shape: (17543, 82)
+2025-07-08 18:46:36,422 - __main__ - INFO - Fetched data shape: (17543, 82)
+2025-07-08 18:46:36,423 - __main__ - INFO - Date range: 2023-07-08 17:00:00+00:00 to 2025-07-08 17:00:00+00:00
+2025-07-08 18:46:36,425 - __main__ - INFO - Data fetched successfully. Shape: (17543, 82)
+2025-07-08 18:46:57,279 - __main__ - INFO - Starting Crypto Random Forest Trading System
+2025-07-08 18:46:57,279 - __main__ - INFO - Execution mode: train
+2025-07-08 18:46:57,279 - __main__ - INFO - Starting data fetching process
+2025-07-08 18:46:57,279 - data.yfinance_fetcher - INFO - Fetching data for 9 symbols using yfinance
+2025-07-08 18:46:57,279 - data.yfinance_fetcher - INFO - Fetching bitcoin (BTC-USD) data - period: 2y, interval: 1h
+2025-07-08 18:46:57,786 - data.yfinance_fetcher - INFO - Fetched 17543 records for bitcoin
+2025-07-08 18:46:58,287 - data.yfinance_fetcher - INFO - Fetching ethereum (ETH-USD) data - period: 2y, interval: 1h
+2025-07-08 18:46:58,649 - data.yfinance_fetcher - INFO - Fetched 17542 records for ethereum
+2025-07-08 18:46:59,150 - data.yfinance_fetcher - INFO - Fetching tether (USDT-USD) data - period: 2y, interval: 1h
+2025-07-08 18:46:59,602 - data.yfinance_fetcher - INFO - Fetched 17534 records for tether
+2025-07-08 18:47:00,103 - data.yfinance_fetcher - INFO - Fetching solana (SOL-USD) data - period: 2y, interval: 1h
+2025-07-08 18:47:00,470 - data.yfinance_fetcher - INFO - Fetched 17542 records for solana
+2025-07-08 18:47:00,972 - data.yfinance_fetcher - INFO - Fetching binancecoin (BNB-USD) data - period: 2y, interval: 1h
+2025-07-08 18:47:01,359 - data.yfinance_fetcher - INFO - Fetched 17543 records for binancecoin
+2025-07-08 18:47:01,860 - data.yfinance_fetcher - INFO - Fetching usd-coin (USDC-USD) data - period: 2y, interval: 1h
+2025-07-08 18:47:02,214 - data.yfinance_fetcher - INFO - Fetched 17543 records for usd-coin
+2025-07-08 18:47:02,715 - data.yfinance_fetcher - INFO - Fetching ripple (XRP-USD) data - period: 2y, interval: 1h
+2025-07-08 18:47:03,160 - data.yfinance_fetcher - INFO - Fetched 17543 records for ripple
+2025-07-08 18:47:03,661 - data.yfinance_fetcher - INFO - Fetching dogecoin (DOGE-USD) data - period: 2y, interval: 1h
+2025-07-08 18:47:04,085 - data.yfinance_fetcher - INFO - Fetched 17536 records for dogecoin
+2025-07-08 18:47:04,586 - data.yfinance_fetcher - INFO - Fetching cardano (ADA-USD) data - period: 2y, interval: 1h
+2025-07-08 18:47:05,039 - data.yfinance_fetcher - INFO - Fetched 17543 records for cardano
+2025-07-08 18:47:05,040 - data.yfinance_fetcher - INFO - Successfully fetched data for 9 symbols
+2025-07-08 18:47:05,113 - data.yfinance_fetcher - INFO - Combined data shape: (17543, 82)
+2025-07-08 18:47:05,144 - data.yfinance_fetcher - INFO - Clean data shape: (17543, 82)
+2025-07-08 18:47:05,144 - __main__ - INFO - Fetched data shape: (17543, 82)
+2025-07-08 18:47:05,144 - __main__ - INFO - Date range: 2023-07-08 17:00:00+00:00 to 2025-07-08 17:00:00+00:00
+2025-07-08 18:47:05,147 - __main__ - INFO - Starting feature engineering
+2025-07-08 18:47:05,147 - features.feature_engineering - INFO - Starting feature generation
+2025-07-08 18:47:05,150 - features.feature_engineering - INFO - Generating features for binancecoin
+2025-07-08 18:47:11,442 - features.feature_engineering - INFO - Generating features for bitcoin
+2025-07-08 18:47:17,606 - features.feature_engineering - INFO - Generating features for cardano
+2025-07-08 18:47:24,062 - features.feature_engineering - INFO - Generating features for dogecoin
+2025-07-08 18:47:30,104 - features.feature_engineering - INFO - Generating features for ethereum
+2025-07-08 18:47:36,367 - features.feature_engineering - INFO - Generating features for ripple
+2025-07-08 18:47:42,777 - features.feature_engineering - INFO - Generating features for solana
+2025-07-08 18:47:48,971 - features.feature_engineering - INFO - Generating features for tether
+2025-07-08 18:47:55,449 - features.feature_engineering - INFO - Generating features for usd-coin
+2025-07-08 18:48:02,433 - features.feature_engineering - INFO - Generated 652 features
+2025-07-08 18:48:02,433 - __main__ - INFO - Generated features shape: (17543, 652)
+2025-07-08 18:48:02,434 - __main__ - INFO - Preparing ensemble Random Forest model
+2025-07-08 18:48:02,434 - __main__ - INFO - Starting model training
+2025-07-08 18:48:02,873 - models.random_forest_model - INFO - Prepared data shape: X=(17537, 651), y=17537
+2025-07-08 18:48:02,873 - models.random_forest_model - INFO - Training ensemble of 5 models
+2025-07-08 18:48:02,873 - models.random_forest_model - INFO - Training model 1/5
+2025-07-08 18:48:02,958 - models.random_forest_model - INFO - Starting model training
+2025-07-08 18:48:07,350 - models.random_forest_model - INFO - Training completed. Val R2: 0.1113
+2025-07-08 18:48:07,351 - models.random_forest_model - INFO - Training model 2/5
+2025-07-08 18:48:07,432 - models.random_forest_model - INFO - Starting model training
+2025-07-08 18:48:12,886 - models.random_forest_model - INFO - Training completed. Val R2: 0.0976
+2025-07-08 18:48:12,887 - models.random_forest_model - INFO - Training model 3/5
+2025-07-08 18:48:12,950 - models.random_forest_model - INFO - Starting model training
+2025-07-08 18:48:17,288 - models.random_forest_model - INFO - Training completed. Val R2: 0.1208
+2025-07-08 18:48:17,289 - models.random_forest_model - INFO - Training model 4/5
+2025-07-08 18:48:17,351 - models.random_forest_model - INFO - Starting model training
+2025-07-08 18:48:22,431 - models.random_forest_model - INFO - Training completed. Val R2: 0.0916
+2025-07-08 18:48:22,431 - models.random_forest_model - INFO - Training model 5/5
+2025-07-08 18:48:22,489 - models.random_forest_model - INFO - Starting model training
+2025-07-08 18:48:27,818 - models.random_forest_model - INFO - Training completed. Val R2: 0.0964
+2025-07-08 18:48:27,825 - models.random_forest_model - INFO - Starting walk-forward validation for ensemble
+2025-07-08 18:48:27,825 - __main__ - ERROR - Execution failed: CryptoRandomForestModel.walk_forward_validation() takes 3 positional arguments but 4 were given
+2025-07-08 18:49:20,246 - __main__ - INFO - Starting Crypto Random Forest Trading System
+2025-07-08 18:49:20,246 - __main__ - INFO - Execution mode: train
+2025-07-08 18:49:20,247 - __main__ - INFO - Starting data fetching process
+2025-07-08 18:49:20,247 - data.yfinance_fetcher - INFO - Fetching data for 9 symbols using yfinance
+2025-07-08 18:49:20,247 - data.yfinance_fetcher - INFO - Fetching bitcoin (BTC-USD) data - period: 2y, interval: 1h
+2025-07-08 18:49:20,977 - data.yfinance_fetcher - INFO - Fetched 17543 records for bitcoin
+2025-07-08 18:49:21,377 - data.yfinance_fetcher - INFO - Fetching ethereum (ETH-USD) data - period: 2y, interval: 1h
+2025-07-08 18:49:21,834 - data.yfinance_fetcher - INFO - Fetched 17542 records for ethereum
+2025-07-08 18:49:22,335 - data.yfinance_fetcher - INFO - Fetching tether (USDT-USD) data - period: 2y, interval: 1h
+2025-07-08 18:49:22,814 - data.yfinance_fetcher - INFO - Fetched 17534 records for tether
+2025-07-08 18:49:23,315 - data.yfinance_fetcher - INFO - Fetching solana (SOL-USD) data - period: 2y, interval: 1h
+2025-07-08 18:49:23,701 - data.yfinance_fetcher - INFO - Fetched 17542 records for solana
+2025-07-08 18:49:24,201 - data.yfinance_fetcher - INFO - Fetching binancecoin (BNB-USD) data - period: 2y, interval: 1h
+2025-07-08 18:49:24,570 - data.yfinance_fetcher - INFO - Fetched 17543 records for binancecoin
+2025-07-08 18:49:25,071 - data.yfinance_fetcher - INFO - Fetching usd-coin (USDC-USD) data - period: 2y, interval: 1h
+2025-07-08 18:49:25,539 - data.yfinance_fetcher - INFO - Fetched 17543 records for usd-coin
+2025-07-08 18:49:26,040 - data.yfinance_fetcher - INFO - Fetching ripple (XRP-USD) data - period: 2y, interval: 1h
+2025-07-08 18:49:26,466 - data.yfinance_fetcher - INFO - Fetched 17543 records for ripple
+2025-07-08 18:49:26,966 - data.yfinance_fetcher - INFO - Fetching dogecoin (DOGE-USD) data - period: 2y, interval: 1h
+2025-07-08 18:49:27,394 - data.yfinance_fetcher - INFO - Fetched 17536 records for dogecoin
+2025-07-08 18:49:27,894 - data.yfinance_fetcher - INFO - Fetching cardano (ADA-USD) data - period: 2y, interval: 1h
+2025-07-08 18:49:28,267 - data.yfinance_fetcher - INFO - Fetched 17543 records for cardano
+2025-07-08 18:49:28,267 - data.yfinance_fetcher - INFO - Successfully fetched data for 9 symbols
+2025-07-08 18:49:28,328 - data.yfinance_fetcher - INFO - Combined data shape: (17543, 82)
+2025-07-08 18:49:28,353 - data.yfinance_fetcher - INFO - Clean data shape: (17543, 82)
+2025-07-08 18:49:28,353 - __main__ - INFO - Fetched data shape: (17543, 82)
+2025-07-08 18:49:28,353 - __main__ - INFO - Date range: 2023-07-08 17:00:00+00:00 to 2025-07-08 17:00:00+00:00
+2025-07-08 18:49:28,354 - __main__ - INFO - Starting feature engineering
+2025-07-08 18:49:28,354 - features.feature_engineering - INFO - Starting feature generation
+2025-07-08 18:49:28,356 - features.feature_engineering - INFO - Generating features for binancecoin
+2025-07-08 18:49:34,653 - features.feature_engineering - INFO - Generating features for bitcoin
+2025-07-08 18:49:41,046 - features.feature_engineering - INFO - Generating features for cardano
+2025-07-08 18:49:47,127 - features.feature_engineering - INFO - Generating features for dogecoin
+2025-07-08 18:49:53,328 - features.feature_engineering - INFO - Generating features for ethereum
+2025-07-08 18:49:59,327 - features.feature_engineering - INFO - Generating features for ripple
+2025-07-08 18:50:05,554 - features.feature_engineering - INFO - Generating features for solana
+2025-07-08 18:50:11,579 - features.feature_engineering - INFO - Generating features for tether
+2025-07-08 18:50:17,492 - features.feature_engineering - INFO - Generating features for usd-coin
+2025-07-08 18:50:24,272 - features.feature_engineering - INFO - Generated 652 features
+2025-07-08 18:50:24,272 - __main__ - INFO - Generated features shape: (17543, 652)
+2025-07-08 18:50:24,272 - __main__ - INFO - Preparing ensemble Random Forest model
+2025-07-08 18:50:24,272 - __main__ - INFO - Starting model training
+2025-07-08 18:50:24,791 - models.random_forest_model - INFO - Prepared data shape: X=(17537, 651), y=17537
+2025-07-08 18:50:24,791 - models.random_forest_model - INFO - Training ensemble of 5 models
+2025-07-08 18:50:24,791 - models.random_forest_model - INFO - Training model 1/5
+2025-07-08 18:50:24,874 - models.random_forest_model - INFO - Starting model training
+2025-07-08 18:50:29,528 - models.random_forest_model - INFO - Training completed. Val R2: 0.1244
+2025-07-08 18:50:29,530 - models.random_forest_model - INFO - Training model 2/5
+2025-07-08 18:50:29,604 - models.random_forest_model - INFO - Starting model training
+2025-07-08 18:50:34,143 - models.random_forest_model - INFO - Training completed. Val R2: 0.1120
+2025-07-08 18:50:34,144 - models.random_forest_model - INFO - Training model 3/5
+2025-07-08 18:50:34,203 - models.random_forest_model - INFO - Starting model training
+2025-07-08 18:50:39,575 - models.random_forest_model - INFO - Training completed. Val R2: 0.1090
+2025-07-08 18:50:39,577 - models.random_forest_model - INFO - Training model 4/5
+2025-07-08 18:50:39,646 - models.random_forest_model - INFO - Starting model training
+2025-07-08 18:50:44,864 - models.random_forest_model - INFO - Training completed. Val R2: 0.0946
+2025-07-08 18:50:44,864 - models.random_forest_model - INFO - Training model 5/5
+2025-07-08 18:50:44,924 - models.random_forest_model - INFO - Starting model training
+2025-07-08 18:50:49,810 - models.random_forest_model - INFO - Training completed. Val R2: 0.1011
+2025-07-08 18:50:49,815 - models.random_forest_model - INFO - Starting walk-forward validation for ensemble
+2025-07-08 18:50:49,816 - models.random_forest_model - INFO - Starting walk-forward validation
+2025-07-08 18:51:26,483 - models.random_forest_model - INFO - Walk-forward validation completed. Avg R2: -0.6338
+2025-07-08 18:51:26,484 - models.random_forest_model - INFO - Starting walk-forward validation
+2025-07-08 18:52:02,796 - models.random_forest_model - INFO - Walk-forward validation completed. Avg R2: -0.6338
+2025-07-08 18:52:02,798 - models.random_forest_model - INFO - Starting walk-forward validation
+2025-07-08 18:52:38,889 - models.random_forest_model - INFO - Walk-forward validation completed. Avg R2: -0.6338
+2025-07-08 18:52:38,891 - models.random_forest_model - INFO - Starting walk-forward validation
+2025-07-08 18:53:15,266 - models.random_forest_model - INFO - Walk-forward validation completed. Avg R2: -0.6338
+2025-07-08 18:53:15,267 - models.random_forest_model - INFO - Starting walk-forward validation
+2025-07-08 18:53:52,678 - models.random_forest_model - INFO - Walk-forward validation completed. Avg R2: -0.6338
+2025-07-08 18:53:52,679 - models.random_forest_model - INFO - Starting walk-forward validation
+2025-07-08 19:00:34,879 - __main__ - INFO - Starting Crypto Random Forest Trading System
+2025-07-08 19:00:34,879 - __main__ - INFO - Execution mode: backtest
+2025-07-08 19:00:34,879 - __main__ - INFO - Starting data fetching process
+2025-07-08 19:00:34,879 - data.yfinance_fetcher - INFO - Fetching data for 9 symbols using yfinance
+2025-07-08 19:00:34,879 - data.yfinance_fetcher - INFO - Fetching bitcoin (BTC-USD) data - period: 2y, interval: 1h
+2025-07-08 19:00:35,397 - data.yfinance_fetcher - INFO - Fetched 17542 records for bitcoin
+2025-07-08 19:00:35,897 - data.yfinance_fetcher - INFO - Fetching ethereum (ETH-USD) data - period: 2y, interval: 1h
+2025-07-08 19:00:36,258 - data.yfinance_fetcher - INFO - Fetched 17541 records for ethereum
+2025-07-08 19:00:36,759 - data.yfinance_fetcher - INFO - Fetching tether (USDT-USD) data - period: 2y, interval: 1h
+2025-07-08 19:00:37,134 - data.yfinance_fetcher - INFO - Fetched 17533 records for tether
+2025-07-08 19:00:37,635 - data.yfinance_fetcher - INFO - Fetching solana (SOL-USD) data - period: 2y, interval: 1h
+2025-07-08 19:00:38,134 - data.yfinance_fetcher - INFO - Fetched 17541 records for solana
+2025-07-08 19:00:38,635 - data.yfinance_fetcher - INFO - Fetching binancecoin (BNB-USD) data - period: 2y, interval: 1h
+2025-07-08 19:00:38,990 - data.yfinance_fetcher - INFO - Fetched 17542 records for binancecoin
+2025-07-08 19:00:39,491 - data.yfinance_fetcher - INFO - Fetching usd-coin (USDC-USD) data - period: 2y, interval: 1h
+2025-07-08 19:00:39,863 - data.yfinance_fetcher - INFO - Fetched 17542 records for usd-coin
+2025-07-08 19:00:40,364 - data.yfinance_fetcher - INFO - Fetching ripple (XRP-USD) data - period: 2y, interval: 1h
+2025-07-08 19:00:40,760 - data.yfinance_fetcher - INFO - Fetched 17542 records for ripple
+2025-07-08 19:00:41,262 - data.yfinance_fetcher - INFO - Fetching dogecoin (DOGE-USD) data - period: 2y, interval: 1h
+2025-07-08 19:00:41,821 - data.yfinance_fetcher - INFO - Fetched 17535 records for dogecoin
+2025-07-08 19:00:42,322 - data.yfinance_fetcher - INFO - Fetching cardano (ADA-USD) data - period: 2y, interval: 1h
+2025-07-08 19:00:42,869 - data.yfinance_fetcher - INFO - Fetched 17542 records for cardano
+2025-07-08 19:00:42,869 - data.yfinance_fetcher - INFO - Successfully fetched data for 9 symbols
+2025-07-08 19:00:42,929 - data.yfinance_fetcher - INFO - Combined data shape: (17542, 82)
+2025-07-08 19:00:42,952 - data.yfinance_fetcher - INFO - Clean data shape: (17542, 82)
+2025-07-08 19:00:42,952 - __main__ - INFO - Fetched data shape: (17542, 82)
+2025-07-08 19:00:42,953 - __main__ - INFO - Date range: 2023-07-08 18:00:00+00:00 to 2025-07-08 17:00:00+00:00
+2025-07-08 19:00:42,955 - __main__ - INFO - Starting feature engineering
+2025-07-08 19:00:42,955 - features.feature_engineering - INFO - Starting feature generation
+2025-07-08 19:00:42,957 - features.feature_engineering - INFO - Generating features for binancecoin
+2025-07-08 19:00:49,774 - features.feature_engineering - INFO - Generating features for bitcoin
+2025-07-08 19:00:56,002 - features.feature_engineering - INFO - Generating features for cardano
+2025-07-08 19:01:02,580 - features.feature_engineering - INFO - Generating features for dogecoin
+2025-07-08 19:04:57,317 - main - INFO - Starting data fetching process
+2025-07-08 19:04:57,317 - data.yfinance_fetcher - INFO - Fetching data for 3 symbols using yfinance
+2025-07-08 19:04:57,317 - data.yfinance_fetcher - INFO - Fetching bitcoin (BTC-USD) data - period: 1mo, interval: 1h
+2025-07-08 19:04:57,604 - data.yfinance_fetcher - INFO - Fetched 721 records for bitcoin
+2025-07-08 19:04:58,105 - data.yfinance_fetcher - INFO - Fetching ethereum (ETH-USD) data - period: 1mo, interval: 1h
+2025-07-08 19:04:58,205 - data.yfinance_fetcher - INFO - Fetched 721 records for ethereum
+2025-07-08 19:04:58,706 - data.yfinance_fetcher - INFO - Fetching solana (SOL-USD) data - period: 1mo, interval: 1h
+2025-07-08 19:04:58,798 - data.yfinance_fetcher - INFO - Fetched 721 records for solana
+2025-07-08 19:04:58,798 - data.yfinance_fetcher - INFO - Successfully fetched data for 3 symbols
+2025-07-08 19:04:58,805 - data.yfinance_fetcher - INFO - Combined data shape: (721, 28)
+2025-07-08 19:04:58,807 - data.yfinance_fetcher - INFO - Clean data shape: (721, 28)
+2025-07-08 19:04:58,807 - main - INFO - Fetched data shape: (721, 28)
+2025-07-08 19:04:58,807 - main - INFO - Date range: 2025-06-08 18:00:00+00:00 to 2025-07-08 18:00:00+00:00
+2025-07-08 19:04:58,807 - main - INFO - Starting feature engineering
+2025-07-08 19:04:58,807 - features.feature_engineering - INFO - Starting feature generation
+2025-07-08 19:04:58,807 - features.feature_engineering - INFO - Generating features for bitcoin (1/3)
+2025-07-08 19:04:59,096 - features.feature_engineering - INFO - Generating features for ethereum (2/3)
+2025-07-08 19:04:59,352 - features.feature_engineering - INFO - Generating features for solana (3/3)
+2025-07-08 19:04:59,651 - features.feature_engineering - INFO - Generated 199 features
+2025-07-08 19:04:59,651 - main - INFO - Generated features shape: (721, 199)
+2025-07-08 19:04:59,651 - main - INFO - Preparing single Random Forest model
+2025-07-08 19:04:59,651 - main - INFO - Starting model training
+2025-07-08 19:04:59,692 - models.random_forest_model - INFO - Prepared data shape: X=(715, 198), y=715
+2025-07-08 19:04:59,692 - models.random_forest_model - INFO - Starting model training
+2025-07-08 19:04:59,980 - models.random_forest_model - INFO - Training completed. Val R2: -0.1948
+2025-07-08 19:04:59,980 - models.random_forest_model - INFO - Starting walk-forward validation
+2025-07-08 19:05:00,809 - models.random_forest_model - INFO - Walk-forward validation completed. Avg R2: -0.1740
+2025-07-08 19:05:00,810 - main - INFO - Training completed. Validation R2: -0.1740
+2025-07-08 19:05:00,810 - main - INFO - Preparing ensemble Random Forest model
+2025-07-08 19:05:00,811 - main - INFO - Starting model training
+2025-07-08 19:05:00,851 - models.random_forest_model - INFO - Prepared data shape: X=(715, 198), y=715
+2025-07-08 19:05:00,851 - models.random_forest_model - INFO - Training ensemble of 3 models
+2025-07-08 19:05:00,851 - models.random_forest_model - INFO - Training model 1/3
+2025-07-08 19:05:00,854 - models.random_forest_model - INFO - Starting model training
+2025-07-08 19:05:01,158 - models.random_forest_model - INFO - Training completed. Val R2: 0.5855
+2025-07-08 19:05:01,159 - models.random_forest_model - INFO - Training model 2/3
+2025-07-08 19:05:01,167 - models.random_forest_model - INFO - Starting model training
+2025-07-08 19:05:01,430 - models.random_forest_model - INFO - Training completed. Val R2: 0.5759
+2025-07-08 19:05:01,431 - models.random_forest_model - INFO - Training model 3/3
+2025-07-08 19:05:01,440 - models.random_forest_model - INFO - Starting model training
+2025-07-08 19:05:01,782 - models.random_forest_model - INFO - Training completed. Val R2: 0.5549
+2025-07-08 19:05:01,783 - models.random_forest_model - INFO - Starting walk-forward validation for ensemble
+2025-07-08 19:05:01,783 - models.random_forest_model - INFO - Starting walk-forward validation
+2025-07-08 19:05:02,646 - models.random_forest_model - INFO - Walk-forward validation completed. Avg R2: -0.1120
+2025-07-08 19:05:02,647 - models.random_forest_model - INFO - Starting walk-forward validation
+2025-07-08 19:05:03,599 - models.random_forest_model - INFO - Walk-forward validation completed. Avg R2: -0.1120
+2025-07-08 19:05:03,600 - models.random_forest_model - INFO - Starting walk-forward validation
+2025-07-08 19:05:04,557 - models.random_forest_model - INFO - Walk-forward validation completed. Avg R2: -0.1120
+2025-07-08 19:05:04,558 - models.random_forest_model - INFO - Starting walk-forward validation
+2025-07-08 19:05:05,553 - models.random_forest_model - INFO - Walk-forward validation completed. Avg R2: -0.1120
+2025-07-08 19:05:05,554 - main - INFO - Training completed. Validation R2: -0.1120
+2025-07-08 19:05:23,911 - main - INFO - Starting data fetching process
+2025-07-08 19:05:23,911 - data.yfinance_fetcher - INFO - Fetching data for 3 symbols using yfinance
+2025-07-08 19:05:23,911 - data.yfinance_fetcher - INFO - Fetching bitcoin (BTC-USD) data - period: 1mo, interval: 1h
+2025-07-08 19:05:24,169 - data.yfinance_fetcher - INFO - Fetched 721 records for bitcoin
+2025-07-08 19:05:24,669 - data.yfinance_fetcher - INFO - Fetching ethereum (ETH-USD) data - period: 1mo, interval: 1h
+2025-07-08 19:05:24,757 - data.yfinance_fetcher - INFO - Fetched 721 records for ethereum
+2025-07-08 19:05:25,258 - data.yfinance_fetcher - INFO - Fetching solana (SOL-USD) data - period: 1mo, interval: 1h
+2025-07-08 19:05:25,339 - data.yfinance_fetcher - INFO - Fetched 721 records for solana
+2025-07-08 19:05:25,339 - data.yfinance_fetcher - INFO - Successfully fetched data for 3 symbols
+2025-07-08 19:05:25,346 - data.yfinance_fetcher - INFO - Combined data shape: (721, 28)
+2025-07-08 19:05:25,348 - data.yfinance_fetcher - INFO - Clean data shape: (721, 28)
+2025-07-08 19:05:25,348 - main - INFO - Fetched data shape: (721, 28)
+2025-07-08 19:05:25,349 - main - INFO - Date range: 2025-06-08 18:00:00+00:00 to 2025-07-08 18:00:00+00:00
+2025-07-08 19:05:25,349 - main - INFO - Starting feature engineering
+2025-07-08 19:05:25,349 - features.feature_engineering - INFO - Starting feature generation
+2025-07-08 19:05:25,349 - features.feature_engineering - INFO - Generating features for bitcoin (1/3)
+2025-07-08 19:05:26,503 - features.feature_engineering - INFO - Generating features for ethereum (2/3)
+2025-07-08 19:05:26,753 - features.feature_engineering - INFO - Generating features for solana (3/3)
+2025-07-08 19:05:27,100 - features.feature_engineering - INFO - Generated 199 features
+2025-07-08 19:05:27,100 - main - INFO - Generated features shape: (721, 199)
+2025-07-08 19:05:27,100 - main - INFO - Preparing single Random Forest model
+2025-07-08 19:05:27,100 - main - INFO - Starting model training
+2025-07-08 19:05:27,145 - models.random_forest_model - INFO - Prepared data shape: X=(715, 198), y=715
+2025-07-08 19:05:27,145 - models.random_forest_model - INFO - Starting model training
+2025-07-08 19:05:27,467 - models.random_forest_model - INFO - Training completed. Val R2: -0.1948
+2025-07-08 19:05:27,467 - models.random_forest_model - INFO - Starting walk-forward validation
+2025-07-08 19:05:28,367 - models.random_forest_model - INFO - Walk-forward validation completed. Avg R2: -0.1740
+2025-07-08 19:05:28,368 - main - INFO - Training completed. Validation R2: -0.1740
+2025-07-08 19:05:28,369 - main - INFO - Preparing ensemble Random Forest model
+2025-07-08 19:05:28,369 - main - INFO - Starting model training
+2025-07-08 19:05:28,415 - models.random_forest_model - INFO - Prepared data shape: X=(715, 198), y=715
+2025-07-08 19:05:28,415 - models.random_forest_model - INFO - Training ensemble of 3 models
+2025-07-08 19:05:28,415 - models.random_forest_model - INFO - Training model 1/3
+2025-07-08 19:05:28,418 - models.random_forest_model - INFO - Starting model training
+2025-07-08 19:05:28,687 - models.random_forest_model - INFO - Training completed. Val R2: 0.6303
+2025-07-08 19:05:28,687 - models.random_forest_model - INFO - Training model 2/3
+2025-07-08 19:05:28,697 - models.random_forest_model - INFO - Starting model training
+2025-07-08 19:05:29,027 - models.random_forest_model - INFO - Training completed. Val R2: 0.4391
+2025-07-08 19:05:29,027 - models.random_forest_model - INFO - Training model 3/3
+2025-07-08 19:05:29,036 - models.random_forest_model - INFO - Starting model training
+2025-07-08 19:05:29,333 - models.random_forest_model - INFO - Training completed. Val R2: 0.5390
+2025-07-08 19:05:29,334 - models.random_forest_model - INFO - Starting walk-forward validation for ensemble
+2025-07-08 19:05:29,335 - models.random_forest_model - INFO - Starting walk-forward validation
+2025-07-08 19:05:30,234 - models.random_forest_model - INFO - Walk-forward validation completed. Avg R2: -0.1120
+2025-07-08 19:05:30,235 - models.random_forest_model - INFO - Starting walk-forward validation
+2025-07-08 19:05:31,108 - models.random_forest_model - INFO - Walk-forward validation completed. Avg R2: -0.1120
+2025-07-08 19:05:31,109 - models.random_forest_model - INFO - Starting walk-forward validation
+2025-07-08 19:05:32,011 - models.random_forest_model - INFO - Walk-forward validation completed. Avg R2: -0.1120
+2025-07-08 19:05:32,012 - models.random_forest_model - INFO - Starting walk-forward validation
+2025-07-08 19:05:32,857 - models.random_forest_model - INFO - Walk-forward validation completed. Avg R2: -0.1120
+2025-07-08 19:05:32,858 - main - INFO - Training completed. Validation R2: -0.1120
+2025-07-08 19:05:32,858 - main - INFO - Starting backtest
+2025-07-08 19:05:32,859 - backtesting.backtest_engine - INFO - Starting walk-forward backtest
+2025-07-08 19:05:32,859 - backtesting.backtest_engine - INFO - Starting backtest
+2025-07-08 19:05:32,862 - backtesting.backtest_engine - ERROR - Error in period 1: Cannot compare tz-naive and tz-aware datetime-like objects
+2025-07-08 19:05:32,863 - backtesting.backtest_engine - INFO - Starting backtest
+2025-07-08 19:05:32,864 - backtesting.backtest_engine - ERROR - Error in period 2: Cannot compare tz-naive and tz-aware datetime-like objects
+2025-07-08 19:05:32,864 - backtesting.backtest_engine - INFO - Starting backtest
+2025-07-08 19:05:32,865 - backtesting.backtest_engine - ERROR - Error in period 3: Cannot compare tz-naive and tz-aware datetime-like objects
+2025-07-08 19:05:32,866 - backtesting.backtest_engine - INFO - Starting backtest
+2025-07-08 19:05:32,866 - backtesting.backtest_engine - ERROR - Error in period 4: Cannot compare tz-naive and tz-aware datetime-like objects
+2025-07-08 19:05:32,867 - main - INFO - Backtest completed
+2025-07-08 19:05:32,867 - main - INFO - Generating report in results/report_20250708_190532
+2025-07-08 19:05:33,911 - utils.visualization - INFO - Portfolio performance chart saved to results/report_20250708_190532/portfolio_performance.png
+2025-07-08 19:05:34,531 - utils.visualization - INFO - Returns analysis chart saved to results/report_20250708_190532/returns_analysis.png
+2025-07-08 19:05:34,775 - utils.visualization - INFO - Correlation matrix saved to results/report_20250708_190532/correlation_matrix.png
+2025-07-08 19:05:34,861 - utils.visualization - INFO - Performance dashboard saved to results/report_20250708_190532/performance_dashboard.png
+2025-07-08 19:05:34,862 - main - INFO - Results saved to results/report_20250708_190532/backtest_results.json
+2025-07-08 19:05:34,958 - models.random_forest_model - INFO - Ensemble model saved to results/report_20250708_190532/trained_model.joblib
+2025-07-08 19:05:34,958 - main - INFO - Report generated successfully in results/report_20250708_190532
+2025-07-08 19:21:21,808 - __main__ - INFO - Starting Crypto Random Forest Trading System
+2025-07-08 19:21:21,808 - __main__ - INFO - Execution mode: full
+2025-07-08 19:21:21,809 - __main__ - INFO - Starting full pipeline execution
+2025-07-08 19:21:21,809 - __main__ - INFO - Starting data fetching process
+2025-07-08 19:21:21,809 - data.yfinance_fetcher - INFO - Fetching data for 3 symbols using yfinance
+2025-07-08 19:21:21,810 - data.yfinance_fetcher - INFO - Fetching bitcoin (BTC-USD) data - period: 1mo, interval: 1h
+2025-07-08 19:21:22,232 - data.yfinance_fetcher - INFO - Fetched 721 records for bitcoin
+2025-07-08 19:21:22,733 - data.yfinance_fetcher - INFO - Fetching ethereum (ETH-USD) data - period: 1mo, interval: 1h
+2025-07-08 19:21:22,816 - data.yfinance_fetcher - INFO - Fetched 721 records for ethereum
+2025-07-08 19:21:23,317 - data.yfinance_fetcher - INFO - Fetching solana (SOL-USD) data - period: 1mo, interval: 1h
+2025-07-08 19:21:23,393 - data.yfinance_fetcher - INFO - Fetched 721 records for solana
+2025-07-08 19:21:23,394 - data.yfinance_fetcher - INFO - Successfully fetched data for 3 symbols
+2025-07-08 19:21:23,400 - data.yfinance_fetcher - INFO - Combined data shape: (721, 28)
+2025-07-08 19:21:23,402 - data.yfinance_fetcher - INFO - Clean data shape: (721, 28)
+2025-07-08 19:21:23,403 - __main__ - INFO - Fetched data shape: (721, 28)
+2025-07-08 19:21:23,403 - __main__ - INFO - Date range: 2025-06-08 18:00:00+00:00 to 2025-07-08 18:00:00+00:00
+2025-07-08 19:21:23,403 - __main__ - INFO - Starting feature engineering
+2025-07-08 19:21:23,403 - features.feature_engineering - INFO - Starting feature generation
+2025-07-08 19:21:23,403 - features.feature_engineering - INFO - Generating features for bitcoin (1/3)
+2025-07-08 19:21:23,660 - features.feature_engineering - INFO - Generating features for ethereum (2/3)
+2025-07-08 19:21:23,907 - features.feature_engineering - INFO - Generating features for solana (3/3)
+2025-07-08 19:21:24,244 - features.feature_engineering - INFO - Generated 199 features
+2025-07-08 19:21:24,244 - __main__ - INFO - Generated features shape: (721, 199)
+2025-07-08 19:21:24,244 - __main__ - INFO - Preparing single Random Forest model
+2025-07-08 19:21:24,244 - __main__ - INFO - Starting model training
+2025-07-08 19:21:24,282 - models.random_forest_model - INFO - Prepared data shape: X=(715, 198), y=715
+2025-07-08 19:21:24,283 - models.random_forest_model - INFO - Starting model training
+2025-07-08 19:21:24,602 - models.random_forest_model - INFO - Training completed. Val R2: -0.1992
+2025-07-08 19:21:24,602 - models.random_forest_model - INFO - Starting walk-forward validation
+2025-07-08 19:21:25,462 - models.random_forest_model - INFO - Walk-forward validation completed. Avg R2: -0.1751
+2025-07-08 19:21:25,463 - __main__ - INFO - Training completed. Validation R2: -0.1751
+2025-07-08 19:21:25,464 - __main__ - INFO - Starting backtest
+2025-07-08 19:21:25,464 - backtesting.backtest_engine - INFO - Starting walk-forward backtest
+2025-07-08 19:21:25,465 - backtesting.backtest_engine - INFO - Starting backtest
+2025-07-08 19:21:25,467 - backtesting.backtest_engine - ERROR - Error in period 1: Cannot compare tz-naive and tz-aware datetime-like objects
+2025-07-08 19:21:25,468 - backtesting.backtest_engine - INFO - Starting backtest
+2025-07-08 19:21:25,469 - backtesting.backtest_engine - ERROR - Error in period 2: Cannot compare tz-naive and tz-aware datetime-like objects
+2025-07-08 19:21:25,469 - backtesting.backtest_engine - INFO - Starting backtest
+2025-07-08 19:21:25,470 - backtesting.backtest_engine - ERROR - Error in period 3: Cannot compare tz-naive and tz-aware datetime-like objects
+2025-07-08 19:21:25,471 - backtesting.backtest_engine - INFO - Starting backtest
+2025-07-08 19:21:25,471 - backtesting.backtest_engine - ERROR - Error in period 4: Cannot compare tz-naive and tz-aware datetime-like objects
+2025-07-08 19:21:25,472 - __main__ - INFO - Backtest completed
+2025-07-08 19:21:25,472 - __main__ - INFO - Generating report in results/report_20250708_192125
+2025-07-08 19:21:26,332 - utils.visualization - INFO - Portfolio performance chart saved to results/report_20250708_192125/portfolio_performance.png
+2025-07-08 19:21:27,054 - utils.visualization - INFO - Returns analysis chart saved to results/report_20250708_192125/returns_analysis.png
+2025-07-08 19:21:27,308 - utils.visualization - INFO - Correlation matrix saved to results/report_20250708_192125/correlation_matrix.png
+2025-07-08 19:21:27,383 - utils.visualization - INFO - Performance dashboard saved to results/report_20250708_192125/performance_dashboard.png
+2025-07-08 19:21:27,384 - __main__ - INFO - Results saved to results/report_20250708_192125/backtest_results.json
+2025-07-08 19:21:27,421 - models.random_forest_model - INFO - Model saved to results/report_20250708_192125/trained_model.joblib
+2025-07-08 19:21:27,421 - __main__ - INFO - Report generated successfully in results/report_20250708_192125
+2025-07-08 19:21:27,421 - __main__ - INFO - Full pipeline completed successfully
+2025-07-08 19:21:27,421 - __main__ - INFO - Pipeline completed successfully!
+2025-07-08 19:21:27,421 - __main__ - INFO - Generated files:
+2025-07-08 19:21:27,421 - __main__ - INFO -   portfolio_performance: results/report_20250708_192125/portfolio_performance.png
+2025-07-08 19:21:27,421 - __main__ - INFO -   returns_analysis: results/report_20250708_192125/returns_analysis.png
+2025-07-08 19:21:27,421 - __main__ - INFO -   correlation_matrix: results/report_20250708_192125/correlation_matrix.png
+2025-07-08 19:21:27,421 - __main__ - INFO -   performance_dashboard: results/report_20250708_192125/performance_dashboard.png
+2025-07-08 19:21:27,421 - __main__ - INFO -   backtest_results: results/report_20250708_192125/backtest_results.json
+2025-07-08 19:21:27,421 - __main__ - INFO -   model: results/report_20250708_192125/trained_model.joblib
+2025-07-08 19:24:21,267 - __main__ - INFO - Starting Crypto Random Forest Trading System
+2025-07-08 19:24:21,267 - __main__ - INFO - Execution mode: full
+2025-07-08 19:24:21,267 - __main__ - INFO - Starting full pipeline execution
+2025-07-08 19:24:21,267 - __main__ - INFO - Starting data fetching process
+2025-07-08 19:24:21,267 - data.yfinance_fetcher - INFO - Fetching data for 9 symbols using yfinance
+2025-07-08 19:24:21,268 - data.yfinance_fetcher - INFO - Fetching bitcoin (BTC-USD) data - period: 2y, interval: 1h
+2025-07-08 19:24:21,831 - data.yfinance_fetcher - INFO - Fetched 17543 records for bitcoin
+2025-07-08 19:24:22,331 - data.yfinance_fetcher - INFO - Fetching ethereum (ETH-USD) data - period: 2y, interval: 1h
+2025-07-08 19:24:22,629 - data.yfinance_fetcher - INFO - Fetched 17542 records for ethereum
+2025-07-08 19:24:23,130 - data.yfinance_fetcher - INFO - Fetching tether (USDT-USD) data - period: 2y, interval: 1h
+2025-07-08 19:24:23,496 - data.yfinance_fetcher - INFO - Fetched 17534 records for tether
+2025-07-08 19:24:23,997 - data.yfinance_fetcher - INFO - Fetching solana (SOL-USD) data - period: 2y, interval: 1h
+2025-07-08 19:24:24,348 - data.yfinance_fetcher - INFO - Fetched 17542 records for solana
+2025-07-08 19:24:24,849 - data.yfinance_fetcher - INFO - Fetching binancecoin (BNB-USD) data - period: 2y, interval: 1h
+2025-07-08 19:24:25,197 - data.yfinance_fetcher - INFO - Fetched 17543 records for binancecoin
+2025-07-08 19:24:25,698 - data.yfinance_fetcher - INFO - Fetching usd-coin (USDC-USD) data - period: 2y, interval: 1h
+2025-07-08 19:24:26,109 - data.yfinance_fetcher - INFO - Fetched 17543 records for usd-coin
+2025-07-08 19:24:26,609 - data.yfinance_fetcher - INFO - Fetching ripple (XRP-USD) data - period: 2y, interval: 1h
+2025-07-08 19:24:26,968 - data.yfinance_fetcher - INFO - Fetched 17543 records for ripple
+2025-07-08 19:24:27,469 - data.yfinance_fetcher - INFO - Fetching dogecoin (DOGE-USD) data - period: 2y, interval: 1h
+2025-07-08 19:24:27,857 - data.yfinance_fetcher - INFO - Fetched 17536 records for dogecoin
+2025-07-08 19:24:28,358 - data.yfinance_fetcher - INFO - Fetching cardano (ADA-USD) data - period: 2y, interval: 1h
+2025-07-08 19:24:28,791 - data.yfinance_fetcher - INFO - Fetched 17543 records for cardano
+2025-07-08 19:24:28,791 - data.yfinance_fetcher - INFO - Successfully fetched data for 9 symbols
+2025-07-08 19:24:28,916 - data.yfinance_fetcher - INFO - Combined data shape: (17543, 82)
+2025-07-08 19:24:28,940 - data.yfinance_fetcher - INFO - Clean data shape: (17543, 82)
+2025-07-08 19:24:28,940 - __main__ - INFO - Fetched data shape: (17543, 82)
+2025-07-08 19:24:28,940 - __main__ - INFO - Date range: 2023-07-08 18:00:00+00:00 to 2025-07-08 18:00:00+00:00
+2025-07-08 19:24:28,941 - __main__ - INFO - Starting feature engineering
+2025-07-08 19:24:28,941 - features.feature_engineering - INFO - Starting feature generation
+2025-07-08 19:24:28,942 - features.feature_engineering - INFO - Generating features for binancecoin (1/9)
+2025-07-08 19:24:36,122 - features.feature_engineering - INFO - Generating features for bitcoin (2/9)
+2025-07-08 19:24:42,068 - features.feature_engineering - INFO - Generating features for cardano (3/9)
+2025-07-08 19:24:48,006 - features.feature_engineering - INFO - Generating features for dogecoin (4/9)
+2025-07-08 19:24:54,325 - features.feature_engineering - INFO - Generating features for ethereum (5/9)
+2025-07-08 19:25:00,318 - features.feature_engineering - INFO - Generating features for ripple (6/9)
+2025-07-08 19:25:07,543 - features.feature_engineering - INFO - Generating features for solana (7/9)
+2025-07-08 19:25:13,463 - features.feature_engineering - INFO - Generating features for tether (8/9)
+2025-07-08 19:25:19,310 - features.feature_engineering - INFO - Generating features for usd-coin (9/9)
+2025-07-08 19:25:25,931 - features.feature_engineering - INFO - Generated 652 features
+2025-07-08 19:25:25,931 - __main__ - INFO - Generated features shape: (17543, 652)
+2025-07-08 19:25:25,931 - __main__ - INFO - Preparing ensemble Random Forest model
+2025-07-08 19:25:25,931 - __main__ - INFO - Starting model training
+2025-07-08 19:25:26,420 - models.random_forest_model - INFO - Prepared data shape: X=(17537, 651), y=17537
+2025-07-08 19:25:26,421 - __main__ - INFO - Performing hyperparameter tuning
+2025-07-08 19:25:26,421 - models.random_forest_model - INFO - Starting hyperparameter tuning for ensemble with optuna
+2025-07-08 19:25:26,421 - models.random_forest_model - INFO - Starting hyperparameter tuning with optuna
+2025-07-08 19:31:52,588 - __main__ - INFO - Starting Crypto Random Forest Trading System
+2025-07-08 19:31:52,588 - __main__ - INFO - Execution mode: full
+2025-07-08 19:31:52,588 - __main__ - INFO - Starting full pipeline execution
+2025-07-08 19:31:52,588 - __main__ - INFO - Starting data fetching process
+2025-07-08 19:31:52,588 - data.yfinance_fetcher - INFO - Fetching data for 1 symbols using yfinance
+2025-07-08 19:31:52,588 - data.yfinance_fetcher - INFO - Fetching bitcoin (BTC-USD) data - period: 2y, interval: 1h
+2025-07-08 19:31:53,182 - data.yfinance_fetcher - INFO - Fetched 17543 records for bitcoin
+2025-07-08 19:31:53,182 - data.yfinance_fetcher - INFO - Successfully fetched data for 1 symbols
+2025-07-08 19:31:53,188 - data.yfinance_fetcher - INFO - Combined data shape: (17543, 10)
+2025-07-08 19:31:53,193 - data.yfinance_fetcher - INFO - Clean data shape: (17543, 10)
+2025-07-08 19:31:53,194 - __main__ - INFO - Fetched data shape: (17543, 10)
+2025-07-08 19:31:53,194 - __main__ - INFO - Date range: 2023-07-08 18:00:00+00:00 to 2025-07-08 18:00:00+00:00
+2025-07-08 19:31:53,194 - __main__ - INFO - Starting feature engineering
+2025-07-08 19:31:53,194 - features.feature_engineering - INFO - Starting feature generation
+2025-07-08 19:31:53,194 - features.feature_engineering - INFO - Generating features for bitcoin (1/1)
+2025-07-08 19:31:59,068 - features.feature_engineering - INFO - Generated 79 features
+2025-07-08 19:31:59,068 - __main__ - INFO - Generated features shape: (17543, 79)
+2025-07-08 19:31:59,068 - __main__ - INFO - Preparing ensemble Random Forest model
+2025-07-08 19:31:59,068 - __main__ - INFO - Starting model training
+2025-07-08 19:31:59,136 - models.random_forest_model - INFO - Prepared data shape: X=(17537, 78), y=17537
+2025-07-08 19:31:59,136 - __main__ - INFO - Performing hyperparameter tuning
+2025-07-08 19:31:59,136 - models.random_forest_model - INFO - Starting hyperparameter tuning for ensemble with optuna
+2025-07-08 19:31:59,136 - models.random_forest_model - INFO - Starting hyperparameter tuning with optuna
+2025-07-08 19:35:56,636 - __main__ - INFO - Starting Crypto Random Forest Trading System
+2025-07-08 19:35:56,636 - __main__ - INFO - Execution mode: full
+2025-07-08 19:35:56,636 - __main__ - INFO - Starting full pipeline execution
+2025-07-08 19:35:56,636 - __main__ - INFO - Starting data fetching process
+2025-07-08 19:35:56,636 - data.yfinance_fetcher - INFO - Fetching data for 1 symbols using yfinance
+2025-07-08 19:35:56,636 - data.yfinance_fetcher - WARNING - 5-minute data limited to 60 days, adjusting period
+2025-07-08 19:35:56,636 - data.yfinance_fetcher - INFO - Fetching bitcoin (BTC-USD) data - period: 60d, interval: 5m
+2025-07-08 19:35:57,286 - data.yfinance_fetcher - INFO - Fetched 17215 records for bitcoin
+2025-07-08 19:35:57,286 - data.yfinance_fetcher - INFO - Successfully fetched data for 1 symbols
+2025-07-08 19:35:57,292 - data.yfinance_fetcher - INFO - Combined data shape: (17215, 10)
+2025-07-08 19:35:57,298 - data.yfinance_fetcher - INFO - Clean data shape: (17215, 10)
+2025-07-08 19:35:57,298 - __main__ - INFO - Fetched data shape: (17215, 10)
+2025-07-08 19:35:57,298 - __main__ - INFO - Date range: 2025-05-10 00:00:00+00:00 to 2025-07-08 18:30:00+00:00
+2025-07-08 19:35:57,298 - __main__ - INFO - Starting feature engineering
+2025-07-08 19:35:57,298 - features.feature_engineering - INFO - Starting feature generation
+2025-07-08 19:35:57,299 - features.feature_engineering - INFO - Generating features for bitcoin (1/1)
+2025-07-08 19:36:04,448 - __main__ - ERROR - Pipeline execution failed: 'bitcoin_volatility_24h'
+2025-07-08 19:36:04,448 - __main__ - ERROR - Execution failed: 'bitcoin_volatility_24h'
+2025-07-08 19:37:22,120 - __main__ - INFO - Starting Crypto Random Forest Trading System
+2025-07-08 19:37:22,120 - __main__ - INFO - Execution mode: full
+2025-07-08 19:37:22,120 - __main__ - INFO - Starting full pipeline execution
+2025-07-08 19:37:22,120 - __main__ - INFO - Starting data fetching process
+2025-07-08 19:37:22,121 - data.yfinance_fetcher - INFO - Fetching data for 1 symbols using yfinance
+2025-07-08 19:37:22,121 - data.yfinance_fetcher - WARNING - 5-minute data limited to 60 days, adjusting period
+2025-07-08 19:37:22,121 - data.yfinance_fetcher - INFO - Fetching bitcoin (BTC-USD) data - period: 60d, interval: 5m
+2025-07-08 19:37:22,774 - data.yfinance_fetcher - INFO - Fetched 17216 records for bitcoin
+2025-07-08 19:37:22,774 - data.yfinance_fetcher - INFO - Successfully fetched data for 1 symbols
+2025-07-08 19:37:22,780 - data.yfinance_fetcher - INFO - Combined data shape: (17216, 10)
+2025-07-08 19:37:22,786 - data.yfinance_fetcher - INFO - Clean data shape: (17216, 10)
+2025-07-08 19:37:22,786 - __main__ - INFO - Fetched data shape: (17216, 10)
+2025-07-08 19:37:22,786 - __main__ - INFO - Date range: 2025-05-10 00:00:00+00:00 to 2025-07-08 18:35:00+00:00
+2025-07-08 19:37:22,786 - __main__ - INFO - Starting feature engineering
+2025-07-08 19:37:22,786 - features.feature_engineering - INFO - Starting feature generation
+2025-07-08 19:37:22,787 - features.feature_engineering - INFO - Generating features for bitcoin (1/1)
+2025-07-08 19:37:28,913 - features.feature_engineering - INFO - Generated 79 features
+2025-07-08 19:37:28,914 - __main__ - INFO - Generated features shape: (17216, 79)
+2025-07-08 19:37:28,914 - __main__ - INFO - Preparing ensemble Random Forest model
+2025-07-08 19:37:28,914 - __main__ - INFO - Starting model training
+2025-07-08 19:37:28,970 - models.random_forest_model - INFO - Prepared data shape: X=(17213, 78), y=17213
+2025-07-08 19:37:28,970 - __main__ - INFO - Performing hyperparameter tuning
+2025-07-08 19:37:28,970 - models.random_forest_model - INFO - Starting hyperparameter tuning for ensemble with optuna
+2025-07-08 19:37:28,970 - models.random_forest_model - INFO - Starting hyperparameter tuning with optuna

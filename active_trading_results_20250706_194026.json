@@ -1,0 +1,566 @@
+{
+  "portfolio": {
+    "initial_value": 10000,
+    "final_value": 11401.837064998505,
+    "total_return": 14.018370649985034,
+    "cash": 222.19892628657118,
+    "positions": {
+      "bitcoin": 0.03168455583474441,
+      "ethereum": 0.03337927896179249,
+      "solana": 39.91841297217358
+    },
+    "position_values": {
+      "bitcoin": 4047.5515046679757,
+      "ethereum": 79.45111114217178,
+      "solana": 7052.635522901786
+    }
+  },
+  "trades": [
+    {
+      "timestamp": "2025-07-06 19:40:20.436645",
+      "symbol": "bitcoin",
+      "action": "BUY",
+      "quantity": 0.012737264223390284,
+      "price": 109913.71266594966,
+      "value": 1400.0
+    },
+    {
+      "timestamp": "2025-07-06 19:40:20.436645",
+      "symbol": "ethereum",
+      "action": "BUY",
+      "quantity": 0.4508902781436715,
+      "price": 2483.9746037796,
+      "value": 1120.0
+    },
+    {
+      "timestamp": "2025-07-06 19:40:20.436645",
+      "symbol": "solana",
+      "action": "BUY",
+      "quantity": 6.015265226635657,
+      "price": 148.95436298178552,
+      "value": 896.0
+    },
+    {
+      "timestamp": "2025-07-07 01:40:20.702483",
+      "symbol": "bitcoin",
+      "action": "BUY",
+      "quantity": 0.006434502844473017,
+      "price": 111399.43789374542,
+      "value": 716.8000000000001
+    },
+    {
+      "timestamp": "2025-07-07 01:40:20.702483",
+      "symbol": "ethereum",
+      "action": "BUY",
+      "quantity": 0.2313012328436438,
+      "price": 2479.1912820786256,
+      "value": 573.4399999999999
+    },
+    {
+      "timestamp": "2025-07-07 01:40:20.702483",
+      "symbol": "solana",
+      "action": "BUY",
+      "quantity": 3.081721338571587,
+      "price": 148.8622589778467,
+      "value": 458.75199999999995
+    },
+    {
+      "timestamp": "2025-07-07 07:40:20.959941",
+      "symbol": "bitcoin",
+      "action": "BUY",
+      "quantity": 0.003300067399005717,
+      "price": 111210.33470727735,
+      "value": 367.0016
+    },
+    {
+      "timestamp": "2025-07-07 07:40:20.959941",
+      "symbol": "ethereum",
+      "action": "BUY",
+      "quantity": 0.11549275067931117,
+      "price": 2542.1619822290227,
+      "value": 293.60128
+    },
+    {
+      "timestamp": "2025-07-07 07:40:20.959941",
+      "symbol": "solana",
+      "action": "BUY",
+      "quantity": 1.5494986619865003,
+      "price": 151.5851738128486,
+      "value": 234.881024
+    },
+    {
+      "timestamp": "2025-07-07 13:40:21.232017",
+      "symbol": "ethereum",
+      "action": "SELL",
+      "quantity": 0.4769558607937886,
+      "price": 2523.265515779164,
+      "value": 1203.4862760897342
+    },
+    {
+      "timestamp": "2025-07-07 13:40:21.232017",
+      "symbol": "solana",
+      "action": "BUY",
+      "quantity": 2.814380565346324,
+      "price": 152.29002065156214,
+      "value": 428.6020744179468
+    },
+    {
+      "timestamp": "2025-07-07 19:40:21.496132",
+      "symbol": "ethereum",
+      "action": "SELL",
+      "quantity": 0.28617351647627315,
+      "price": 2515.3071045384318,
+      "value": 719.8142791235158
+    },
+    {
+      "timestamp": "2025-07-07 19:40:21.496132",
+      "symbol": "solana",
+      "action": "BUY",
+      "quantity": 3.190214161882132,
+      "price": 152.60559030050723,
+      "value": 486.84451535906067
+    },
+    {
+      "timestamp": "2025-07-08 01:40:21.757975",
+      "symbol": "ethereum",
+      "action": "SELL",
+      "quantity": 0.1717041098857639,
+      "price": 2446.6971956322914,
+      "value": 420.1079641360373
+    },
+    {
+      "timestamp": "2025-07-08 01:40:21.757975",
+      "symbol": "solana",
+      "action": "BUY",
+      "quantity": 2.997823869647753,
+      "price": 157.94697277198358,
+      "value": 473.49720511445605
+    },
+    {
+      "timestamp": "2025-07-08 07:40:22.031885",
+      "symbol": "ethereum",
+      "action": "SELL",
+      "quantity": 0.10302246593145832,
+      "price": 2452.5024847799773,
+      "value": 252.6628536850621
+    },
+    {
+      "timestamp": "2025-07-08 07:40:22.031885",
+      "symbol": "solana",
+      "action": "BUY",
+      "quantity": 2.7536665511207037,
+      "price": 155.9122453130158,
+      "value": 429.3303348285773
+    },
+    {
+      "timestamp": "2025-07-08 13:40:22.308820",
+      "symbol": "ethereum",
+      "action": "SELL",
+      "quantity": 0.061813479558875,
+      "price": 2458.541970933176,
+      "value": 151.97103386491412
+    },
+    {
+      "timestamp": "2025-07-08 13:40:22.308820",
+      "symbol": "solana",
+      "action": "BUY",
+      "quantity": 2.3751723776638585,
+      "price": 157.40267028684445,
+      "value": 373.8584746358447
+    },
+    {
+      "timestamp": "2025-07-08 19:40:22.574214",
+      "symbol": "ethereum",
+      "action": "SELL",
+      "quantity": 0.037088087735324994,
+      "price": 2463.385827789685,
+      "value": 91.36226970702003
+    },
+    {
+      "timestamp": "2025-07-08 19:40:22.574214",
+      "symbol": "solana",
+      "action": "BUY",
+      "quantity": 1.9553141309978614,
+      "price": 162.30600936132998,
+      "value": 317.3592336500797
+    },
+    {
+      "timestamp": "2025-07-09 01:40:22.841786",
+      "symbol": "ethereum",
+      "action": "SELL",
+      "quantity": 0.022252852641194996,
+      "price": 2470.3292366365845,
+      "value": 54.97187247810964
+    },
+    {
+      "timestamp": "2025-07-09 01:40:22.841786",
+      "symbol": "solana",
+      "action": "BUY",
+      "quantity": 1.5726141785360868,
+      "price": 168.43404124860336,
+      "value": 264.88176141568573
+    },
+    {
+      "timestamp": "2025-07-09 07:40:23.115553",
+      "symbol": "solana",
+      "action": "BUY",
+      "quantity": 1.280965565265375,
+      "price": 165.42631189984294,
+      "value": 211.90540913254856
+    },
+    {
+      "timestamp": "2025-07-09 13:40:23.376804",
+      "symbol": "solana",
+      "action": "BUY",
+      "quantity": 1.0241912634659567,
+      "price": 165.52018490409012,
+      "value": 169.52432730603883
+    },
+    {
+      "timestamp": "2025-07-09 19:40:23.638385",
+      "symbol": "solana",
+      "action": "BUY",
+      "quantity": 0.8198988802636124,
+      "price": 165.4099854377493,
+      "value": 135.61946184483108
+    },
+    {
+      "timestamp": "2025-07-10 01:40:23.899416",
+      "symbol": "solana",
+      "action": "BUY",
+      "quantity": 0.6382941079071013,
+      "price": 169.9773946396126,
+      "value": 108.49556947586484
+    },
+    {
+      "timestamp": "2025-07-10 07:40:24.164578",
+      "symbol": "solana",
+      "action": "BUY",
+      "quantity": 0.5087707767015023,
+      "price": 170.60031659722407,
+      "value": 86.79645558069188
+    },
+    {
+      "timestamp": "2025-07-10 13:40:24.427640",
+      "symbol": "solana",
+      "action": "BUY",
+      "quantity": 0.4099650246604797,
+      "price": 169.37338623473846,
+      "value": 69.4371644645535
+    },
+    {
+      "timestamp": "2025-07-10 19:40:24.690007",
+      "symbol": "solana",
+      "action": "BUY",
+      "quantity": 0.3248598372483915,
+      "price": 170.99599643389848,
+      "value": 55.549731571642795
+    }
+  ],
+  "predictions": [
+    {
+      "symbol": "bitcoin",
+      "prediction": 0.003643685160876306,
+      "timestamp": "2025-07-06 19:40:20.491903"
+    },
+    {
+      "symbol": "ethereum",
+      "prediction": 0.0030706628330188714,
+      "timestamp": "2025-07-06 19:40:20.548101"
+    },
+    {
+      "symbol": "solana",
+      "prediction": 0.00379921506427069,
+      "timestamp": "2025-07-06 19:40:20.601691"
+    },
+    {
+      "symbol": "bitcoin",
+      "prediction": 0.0036436851608763043,
+      "timestamp": "2025-07-06 19:40:20.754496"
+    },
+    {
+      "symbol": "ethereum",
+      "prediction": 0.003070662833018872,
+      "timestamp": "2025-07-06 19:40:20.807227"
+    },
+    {
+      "symbol": "solana",
+      "prediction": 0.003799215064270691,
+      "timestamp": "2025-07-06 19:40:20.859513"
+    },
+    {
+      "symbol": "bitcoin",
+      "prediction": 0.0036436851608763056,
+      "timestamp": "2025-07-06 19:40:21.022206"
+    },
+    {
+      "symbol": "ethereum",
+      "prediction": 0.0030706628330188705,
+      "timestamp": "2025-07-06 19:40:21.078748"
+    },
+    {
+      "symbol": "solana",
+      "prediction": 0.00379921506427069,
+      "timestamp": "2025-07-06 19:40:21.131644"
+    },
+    {
+      "symbol": "bitcoin",
+      "prediction": 0.0036436851608763047,
+      "timestamp": "2025-07-06 19:40:21.286385"
+    },
+    {
+      "symbol": "ethereum",
+      "prediction": 0.0030706628330188705,
+      "timestamp": "2025-07-06 19:40:21.342297"
+    },
+    {
+      "symbol": "solana",
+      "prediction": 0.00379921506427069,
+      "timestamp": "2025-07-06 19:40:21.394816"
+    },
+    {
+      "symbol": "bitcoin",
+      "prediction": 0.003643685160876304,
+      "timestamp": "2025-07-06 19:40:21.550658"
+    },
+    {
+      "symbol": "ethereum",
+      "prediction": 0.0030706628330188696,
+      "timestamp": "2025-07-06 19:40:21.603542"
+    },
+    {
+      "symbol": "solana",
+      "prediction": 0.0037992150642706906,
+      "timestamp": "2025-07-06 19:40:21.656677"
+    },
+    {
+      "symbol": "bitcoin",
+      "prediction": 0.0036436851608763056,
+      "timestamp": "2025-07-06 19:40:21.814064"
+    },
+    {
+      "symbol": "ethereum",
+      "prediction": 0.00307066283301887,
+      "timestamp": "2025-07-06 19:40:21.873902"
+    },
+    {
+      "symbol": "solana",
+      "prediction": 0.003799215064270691,
+      "timestamp": "2025-07-06 19:40:21.930616"
+    },
+    {
+      "symbol": "bitcoin",
+      "prediction": 0.0036436851608763056,
+      "timestamp": "2025-07-06 19:40:22.084857"
+    },
+    {
+      "symbol": "ethereum",
+      "prediction": 0.00307066283301887,
+      "timestamp": "2025-07-06 19:40:22.151090"
+    },
+    {
+      "symbol": "solana",
+      "prediction": 0.00379921506427069,
+      "timestamp": "2025-07-06 19:40:22.207451"
+    },
+    {
+      "symbol": "bitcoin",
+      "prediction": 0.0036436851608763056,
+      "timestamp": "2025-07-06 19:40:22.362335"
+    },
+    {
+      "symbol": "ethereum",
+      "prediction": 0.003070662833018872,
+      "timestamp": "2025-07-06 19:40:22.415433"
+    },
+    {
+      "symbol": "solana",
+      "prediction": 0.0037992150642706906,
+      "timestamp": "2025-07-06 19:40:22.472772"
+    },
+    {
+      "symbol": "bitcoin",
+      "prediction": 0.0036436851608763047,
+      "timestamp": "2025-07-06 19:40:22.632154"
+    },
+    {
+      "symbol": "ethereum",
+      "prediction": 0.0030706628330188696,
+      "timestamp": "2025-07-06 19:40:22.686711"
+    },
+    {
+      "symbol": "solana",
+      "prediction": 0.0037992150642706906,
+      "timestamp": "2025-07-06 19:40:22.740733"
+    },
+    {
+      "symbol": "bitcoin",
+      "prediction": 0.003643685160876306,
+      "timestamp": "2025-07-06 19:40:22.898088"
+    },
+    {
+      "symbol": "ethereum",
+      "prediction": 0.0030706628330188722,
+      "timestamp": "2025-07-06 19:40:22.956624"
+    },
+    {
+      "symbol": "solana",
+      "prediction": 0.00379921506427069,
+      "timestamp": "2025-07-06 19:40:23.014089"
+    },
+    {
+      "symbol": "bitcoin",
+      "prediction": 0.003643685160876306,
+      "timestamp": "2025-07-06 19:40:23.168962"
+    },
+    {
+      "symbol": "ethereum",
+      "prediction": 0.0030706628330188722,
+      "timestamp": "2025-07-06 19:40:23.222201"
+    },
+    {
+      "symbol": "solana",
+      "prediction": 0.003799215064270691,
+      "timestamp": "2025-07-06 19:40:23.275326"
+    },
+    {
+      "symbol": "bitcoin",
+      "prediction": 0.0036436851608763056,
+      "timestamp": "2025-07-06 19:40:23.427935"
+    },
+    {
+      "symbol": "ethereum",
+      "prediction": 0.0030706628330188714,
+      "timestamp": "2025-07-06 19:40:23.481994"
+    },
+    {
+      "symbol": "solana",
+      "prediction": 0.003799215064270691,
+      "timestamp": "2025-07-06 19:40:23.536866"
+    },
+    {
+      "symbol": "bitcoin",
+      "prediction": 0.0036436851608763056,
+      "timestamp": "2025-07-06 19:40:23.688835"
+    },
+    {
+      "symbol": "ethereum",
+      "prediction": 0.0030706628330188714,
+      "timestamp": "2025-07-06 19:40:23.741838"
+    },
+    {
+      "symbol": "solana",
+      "prediction": 0.0037992150642706906,
+      "timestamp": "2025-07-06 19:40:23.798112"
+    },
+    {
+      "symbol": "bitcoin",
+      "prediction": 0.0036436851608763047,
+      "timestamp": "2025-07-06 19:40:23.952162"
+    },
+    {
+      "symbol": "ethereum",
+      "prediction": 0.0030706628330188714,
+      "timestamp": "2025-07-06 19:40:24.007943"
+    },
+    {
+      "symbol": "solana",
+      "prediction": 0.00379921506427069,
+      "timestamp": "2025-07-06 19:40:24.063548"
+    },
+    {
+      "symbol": "bitcoin",
+      "prediction": 0.003643685160876306,
+      "timestamp": "2025-07-06 19:40:24.217301"
+    },
+    {
+      "symbol": "ethereum",
+      "prediction": 0.00307066283301887,
+      "timestamp": "2025-07-06 19:40:24.272463"
+    },
+    {
+      "symbol": "solana",
+      "prediction": 0.0037992150642706906,
+      "timestamp": "2025-07-06 19:40:24.326485"
+    },
+    {
+      "symbol": "bitcoin",
+      "prediction": 0.0036436851608763043,
+      "timestamp": "2025-07-06 19:40:24.478938"
+    },
+    {
+      "symbol": "ethereum",
+      "prediction": 0.0030706628330188705,
+      "timestamp": "2025-07-06 19:40:24.533676"
+    },
+    {
+      "symbol": "solana",
+      "prediction": 0.003799215064270692,
+      "timestamp": "2025-07-06 19:40:24.588593"
+    },
+    {
+      "symbol": "bitcoin",
+      "prediction": 0.0036436851608763056,
+      "timestamp": "2025-07-06 19:40:24.749033"
+    },
+    {
+      "symbol": "ethereum",
+      "prediction": 0.00307066283301887,
+      "timestamp": "2025-07-06 19:40:24.803412"
+    },
+    {
+      "symbol": "solana",
+      "prediction": 0.0037992150642706906,
+      "timestamp": "2025-07-06 19:40:24.858438"
+    },
+    {
+      "symbol": "bitcoin",
+      "prediction": 0.003643685160876306,
+      "timestamp": "2025-07-06 19:40:25.010285"
+    },
+    {
+      "symbol": "ethereum",
+      "prediction": 0.0030706628330188722,
+      "timestamp": "2025-07-06 19:40:25.073162"
+    },
+    {
+      "symbol": "solana",
+      "prediction": 0.003799215064270691,
+      "timestamp": "2025-07-06 19:40:25.138704"
+    },
+    {
+      "symbol": "bitcoin",
+      "prediction": 0.003643685160876306,
+      "timestamp": "2025-07-06 19:40:25.297533"
+    },
+    {
+      "symbol": "ethereum",
+      "prediction": 0.003070662833018874,
+      "timestamp": "2025-07-06 19:40:25.351257"
+    },
+    {
+      "symbol": "solana",
+      "prediction": 0.0037992150642706906,
+      "timestamp": "2025-07-06 19:40:25.403745"
+    },
+    {
+      "symbol": "bitcoin",
+      "prediction": 0.0036436851608763056,
+      "timestamp": "2025-07-06 19:40:25.562163"
+    },
+    {
+      "symbol": "ethereum",
+      "prediction": 0.0030706628330188705,
+      "timestamp": "2025-07-06 19:40:25.616652"
+    },
+    {
+      "symbol": "solana",
+      "prediction": 0.0037992150642706906,
+      "timestamp": "2025-07-06 19:40:25.673681"
+    }
+  ],
+  "performance": {
+    "total_trades": 30,
+    "total_predictions": 60
+  }
+}

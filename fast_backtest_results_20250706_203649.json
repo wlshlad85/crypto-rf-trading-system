@@ -1,0 +1,23 @@
+{
+  "metrics": {
+    "total_return": 0.00974715003512272,
+    "sharpe_ratio": 0.5024209425532693,
+    "sortino_ratio": 0.6525106203159494,
+    "max_drawdown": -0.08293848553050054,
+    "win_rate": 0.49923664122137407,
+    "total_trades": 43,
+    "buy_trades": 25,
+    "sell_trades": 18,
+    "avg_return": 1.9235793423836615e-05,
+    "volatility": 0.0029774759469499675
+  },
+  "benchmarks": {
+    "buy_hold_btc": 0.00626697341524407,
+    "buy_hold_eth": -0.0040771417143185,
+    "buy_hold_sol": -0.027207157355021105,
+    "equal_weight": -0.008339108551365215
+  },
+  "trade_count": 43,
+  "test_period": "2025-06-09 12:00:00+00:00 to 2025-07-06 19:00:00+00:00",
+  "final_value": 10097.471500351226
+}

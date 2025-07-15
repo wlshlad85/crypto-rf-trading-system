@@ -1,0 +1,22 @@
+{
+  "feature_counts": {
+    "original": 6,
+    "timeframe_specific": 120,
+    "correlation": 180,
+    "attention": 4,
+    "regime": 180,
+    "regime_dependent": 0
+  },
+  "total_features": 490,
+  "data_quality": {
+    "total_samples": 500,
+    "complete_samples": 58,
+    "completeness_ratio": 0.116
+  },
+  "timeframe_summary": {
+    "short": 166,
+    "medium": 166,
+    "long": 166,
+    "macro": 166
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "transformation_summary": {
+    "log_price": {
+      "original_stationary": "False",
+      "transformed_stationary": "False",
+      "stationarity_improved": "False",
+      "memory_preservation_ratio": 1.0001003134455895,
+      "optimal_d": 0.1
+    }
+  },
+  "stationarity_improvement": {},
+  "memory_preservation": {},
+  "data_quality": {}
+}

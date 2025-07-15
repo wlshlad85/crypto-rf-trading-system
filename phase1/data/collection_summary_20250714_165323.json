@@ -1,0 +1,171 @@
+{
+  "collection_time": "2025-07-14T16:53:19.890391",
+  "symbols": [
+    "BTC-USD"
+  ],
+  "intervals": [
+    "4h",
+    "1h",
+    "1d"
+  ],
+  "success_count": 1,
+  "failure_count": 2,
+  "quality_reports": {
+    "BTC-USD_4h": {
+      "symbol": "BTC-USD",
+      "validation_time": "2025-07-14T16:53:20.273324",
+      "total_records": 4320,
+      "date_range": {
+        "start": "2023-07-25T00:00:00+00:00",
+        "end": "2025-07-13T20:00:00+00:00"
+      },
+      "quality_checks": {
+        "completeness": {
+          "expected_periods": 4320,
+          "actual_periods": 4320,
+          "completeness_ratio": 1.0,
+          "passed": true
+        },
+        "price_validation": {
+          "no_negative_prices": "True",
+          "high_low_relationship": "True",
+          "ohlc_relationship": "True",
+          "no_extreme_moves": "True",
+          "passed": true
+        },
+        "volume_validation": {
+          "no_negative_volume": "True",
+          "sufficient_volume": "False",
+          "no_zero_volume_streaks": "False",
+          "passed": false
+        },
+        "gap_analysis": {
+          "total_gaps": 0,
+          "largest_gap_hours": 0,
+          "gap_positions": [],
+          "passed": true
+        },
+        "statistical_validation": {
+          "return_mean": 0.00037819971271469636,
+          "return_std": 0.010200154999277636,
+          "return_skewness": 0.10166028039513864,
+          "return_kurtosis": 7.251784114221468,
+          "autocorrelation": -0.020378746222625994,
+          "reasonable_volatility": "True",
+          "finite_moments": true,
+          "reasonable_skewness": "True",
+          "reasonable_kurtosis": "True",
+          "passed": true
+        }
+      },
+      "passed_validation": false,
+      "issues": []
+    },
+    "BTC-USD_1h": {
+      "symbol": "BTC-USD",
+      "validation_time": "2025-07-14T16:53:21.581065",
+      "total_records": 17278,
+      "date_range": {
+        "start": "2023-07-25T00:00:00+00:00",
+        "end": "2025-07-13T23:00:00+00:00"
+      },
+      "quality_checks": {
+        "completeness": {
+          "expected_periods": 17280,
+          "actual_periods": 17278,
+          "completeness_ratio": 0.9998842592592593,
+          "passed": true
+        },
+        "price_validation": {
+          "no_negative_prices": "True",
+          "high_low_relationship": "True",
+          "ohlc_relationship": "True",
+          "no_extreme_moves": "True",
+          "passed": true
+        },
+        "volume_validation": {
+          "no_negative_volume": "True",
+          "sufficient_volume": "False",
+          "no_zero_volume_streaks": "False",
+          "passed": false
+        },
+        "gap_analysis": {
+          "total_gaps": 2,
+          "largest_gap_hours": 2.0,
+          "gap_positions": [
+            "2023-10-24 16:00:00+00:00",
+            "2025-01-02 15:00:00+00:00"
+          ],
+          "passed": true
+        },
+        "statistical_validation": {
+          "return_mean": 9.477708195557558e-05,
+          "return_std": 0.005143702098815184,
+          "return_skewness": -0.016629772306676383,
+          "return_kurtosis": 11.42583655446862,
+          "autocorrelation": -0.012332581134770995,
+          "reasonable_volatility": "True",
+          "finite_moments": true,
+          "reasonable_skewness": "True",
+          "reasonable_kurtosis": "True",
+          "passed": true
+        }
+      },
+      "passed_validation": false,
+      "issues": []
+    },
+    "BTC-USD_1d": {
+      "symbol": "BTC-USD",
+      "validation_time": "2025-07-14T16:53:22.692733",
+      "total_records": 2021,
+      "date_range": {
+        "start": "2020-01-01T00:00:00+00:00",
+        "end": "2025-07-13T00:00:00+00:00"
+      },
+      "quality_checks": {
+        "completeness": {
+          "expected_periods": 2021,
+          "actual_periods": 2021,
+          "completeness_ratio": 1.0,
+          "passed": true
+        },
+        "price_validation": {
+          "no_negative_prices": "True",
+          "high_low_relationship": "True",
+          "ohlc_relationship": "True",
+          "no_extreme_moves": "True",
+          "passed": true
+        },
+        "volume_validation": {
+          "no_negative_volume": "True",
+          "sufficient_volume": "True",
+          "no_zero_volume_streaks": true,
+          "passed": true
+        },
+        "gap_analysis": {
+          "total_gaps": 0,
+          "largest_gap_hours": 0,
+          "gap_positions": [],
+          "passed": true
+        },
+        "statistical_validation": {
+          "return_mean": 0.0019362110706246495,
+          "return_std": 0.03276459811239395,
+          "return_skewness": -0.4931647158359574,
+          "return_kurtosis": 11.200030663402378,
+          "autocorrelation": -0.060145029288132985,
+          "reasonable_volatility": "True",
+          "finite_moments": true,
+          "reasonable_skewness": "True",
+          "reasonable_kurtosis": "True",
+          "passed": true
+        }
+      },
+      "passed_validation": true,
+      "issues": []
+    }
+  },
+  "saved_files": [
+    "BTC-USD_1d"
+  ]
+}

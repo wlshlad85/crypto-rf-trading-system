@@ -1,0 +1,594 @@
+[2025-07-13 14:05:40] 🚀 24-Hour BTC Paper Trading Session Initialized
+[2025-07-13 14:05:40] 💰 Initial Capital: $100,000.00
+[2025-07-13 14:05:40] 📝 Log file: logs/24hr_trading/btc_24hr_20250713_140540.log
+[2025-07-13 14:05:40] 🕐 Session will run until: 2025-07-14 14:05:40
+[2025-07-13 14:05:40] ⏱️ Update interval: 300 seconds
+[2025-07-13 14:05:40] Press Ctrl+C to stop early and generate report
+
+[2025-07-13 14:05:40] ⏳ Next update in 300s... (24.0 hours remaining)
+[2025-07-13 14:10:55] 🟢 BUY 0.253484 BTC @ $118,350.64 ($30,000.00) - SIGNAL
+[2025-07-13 14:10:55] ⏳ Next update in 300s... (23.9 hours remaining)
+[2025-07-13 14:16:10] 🟢 BUY 0.084574 BTC @ $118,192.48 ($9,995.99) - SIGNAL
+[2025-07-13 14:16:10] ⏳ Next update in 300s... (23.8 hours remaining)
+[2025-07-13 14:21:25] 🟢 BUY 0.084542 BTC @ $118,266.84 ($9,998.50) - SIGNAL
+[2025-07-13 14:21:25] ⏳ Next update in 300s... (23.7 hours remaining)
+[2025-07-13 14:26:40] 🟢 BUY 0.084520 BTC @ $118,328.12 ($10,001.09) - SIGNAL
+[2025-07-13 14:26:40] ⏳ Next update in 300s... (23.6 hours remaining)
+[2025-07-13 14:31:55] 🟢 BUY 0.084514 BTC @ $118,350.34 ($10,002.22) - SIGNAL
+[2025-07-13 14:31:55] ⏳ Next update in 300s... (23.6 hours remaining)
+[2025-07-13 14:37:09] 🟢 BUY 0.084472 BTC @ $118,547.45 ($10,013.88) - SIGNAL
+[2025-07-13 14:37:09] ⏳ Next update in 300s... (23.5 hours remaining)
+[2025-07-13 14:42:23] 🟢 BUY 0.084467 BTC @ $118,580.66 ($10,016.13) - SIGNAL
+[2025-07-13 14:42:23] ⏳ Next update in 300s... (23.4 hours remaining)
+[2025-07-13 14:47:37] 🟢 BUY 0.084069 BTC @ $118,619.02 ($9,972.18) - SIGNAL
+[2025-07-13 14:47:37] ⏳ Next update in 300s... (23.3 hours remaining)
+[2025-07-13 14:52:50] ⏳ Next update in 300s... (23.2 hours remaining)
+[2025-07-13 14:58:04] ⏳ Next update in 300s... (23.1 hours remaining)
+[2025-07-13 15:03:17] 
+📊 PORTFOLIO STATUS - Hour 1.0/24
+[2025-07-13 15:03:17] 💰 Total Value: $100,209.13
+[2025-07-13 15:03:17] 📈 Return: +0.21%
+[2025-07-13 15:03:17] 💵 Cash: $0.00
+[2025-07-13 15:03:17] ₿ BTC Position: 0.844641 BTC ($100,209.13)
+[2025-07-13 15:03:17] 💲 BTC Price: $118,641.12
+[2025-07-13 15:03:17] 📊 Position P&L: +0.21%
+[2025-07-13 15:03:17] 📝 Total Trades: 8
+[2025-07-13 15:03:17] ------------------------------------------------------------
+[2025-07-13 15:03:17] ⏳ Next update in 300s... (23.0 hours remaining)
+[2025-07-13 15:08:30] ⏳ Next update in 300s... (23.0 hours remaining)
+[2025-07-13 15:13:42] ⏳ Next update in 300s... (22.9 hours remaining)
+[2025-07-13 15:18:55] ⏳ Next update in 300s... (22.8 hours remaining)
+[2025-07-13 15:24:07] 🔴 SELL 0.844641 BTC @ $119,206.73 ($100,686.87) - SIGNAL
+[2025-07-13 15:24:07] ⏳ Next update in 300s... (22.7 hours remaining)
+[2025-07-13 15:29:19] ⏳ Next update in 300s... (22.6 hours remaining)
+[2025-07-13 15:34:31] ⏳ Next update in 300s... (22.5 hours remaining)
+[2025-07-13 15:39:43] ⏳ Next update in 300s... (22.4 hours remaining)
+[2025-07-13 15:44:55] ⏳ Next update in 300s... (22.3 hours remaining)
+[2025-07-13 15:50:07] 🟢 BUY 0.254566 BTC @ $118,657.15 ($30,206.06) - SIGNAL
+[2025-07-13 15:50:07] ⏳ Next update in 300s... (22.3 hours remaining)
+[2025-07-13 15:55:18] 🟢 BUY 0.084889 BTC @ $118,590.16 ($10,066.98) - SIGNAL
+[2025-07-13 15:55:18] ⏳ Next update in 300s... (22.2 hours remaining)
+[2025-07-13 16:00:29] 🟢 BUY 0.084819 BTC @ $118,753.61 ($10,072.53) - SIGNAL
+[2025-07-13 16:00:29] ⏳ Next update in 300s... (22.1 hours remaining)
+[2025-07-13 16:05:39] 🟢 BUY 0.084769 BTC @ $118,894.39 ($10,078.50) - SIGNAL
+[2025-07-13 16:05:39] 
+📊 PORTFOLIO STATUS - Hour 2.0/24
+[2025-07-13 16:05:39] 💰 Total Value: $100,785.03
+[2025-07-13 16:05:39] 📈 Return: +0.79%
+[2025-07-13 16:05:39] 💵 Cash: $40,262.79
+[2025-07-13 16:05:39] ₿ BTC Position: 0.509042 BTC ($60,522.23)
+[2025-07-13 16:05:39] 💲 BTC Price: $118,894.39
+[2025-07-13 16:05:39] 📊 Position P&L: +0.16%
+[2025-07-13 16:05:39] 📝 Total Trades: 13
+[2025-07-13 16:05:39] ------------------------------------------------------------
+[2025-07-13 16:05:39] ⏳ Next update in 300s... (22.0 hours remaining)
+[2025-07-13 16:10:50] 🟢 BUY 0.084761 BTC @ $118,921.39 ($10,079.88) - SIGNAL
+[2025-07-13 16:10:50] ⏳ Next update in 300s... (21.9 hours remaining)
+[2025-07-13 16:16:00] 🟢 BUY 0.084738 BTC @ $119,028.28 ($10,086.22) - SIGNAL
+[2025-07-13 16:16:00] ⏳ Next update in 300s... (21.8 hours remaining)
+[2025-07-13 16:21:10] 🟢 BUY 0.084733 BTC @ $119,064.36 ($10,088.67) - SIGNAL
+[2025-07-13 16:21:10] ⏳ Next update in 300s... (21.7 hours remaining)
+[2025-07-13 16:26:19] 🟢 BUY 0.084141 BTC @ $118,943.44 ($10,008.02) - SIGNAL
+[2025-07-13 16:26:19] ⏳ Next update in 300s... (21.7 hours remaining)
+[2025-07-13 16:31:27] ⏳ Next update in 300s... (21.6 hours remaining)
+[2025-07-13 16:36:31] ⏳ Next update in 300s... (21.5 hours remaining)
+[2025-07-13 16:41:34] ⏳ Next update in 300s... (21.4 hours remaining)
+[2025-07-13 16:46:37] ⏳ Next update in 300s... (21.3 hours remaining)
+[2025-07-13 16:51:40] ⏳ Next update in 300s... (21.2 hours remaining)
+[2025-07-13 16:56:43] ⏳ Next update in 300s... (21.1 hours remaining)
+[2025-07-13 17:01:46] ⏳ Next update in 300s... (21.1 hours remaining)
+[2025-07-13 17:06:48] 
+📊 PORTFOLIO STATUS - Hour 3.0/24
+[2025-07-13 17:06:48] 💰 Total Value: $100,605.75
+[2025-07-13 17:06:48] 📈 Return: +0.61%
+[2025-07-13 17:06:48] 💵 Cash: $0.00
+[2025-07-13 17:06:48] ₿ BTC Position: 0.847415 BTC ($100,605.75)
+[2025-07-13 17:06:48] 💲 BTC Price: $118,720.79
+[2025-07-13 17:06:48] 📊 Position P&L: -0.08%
+[2025-07-13 17:06:48] 📝 Total Trades: 17
+[2025-07-13 17:06:48] ------------------------------------------------------------
+[2025-07-13 17:06:48] ⏳ Next update in 300s... (21.0 hours remaining)
+[2025-07-13 17:11:51] ⏳ Next update in 300s... (20.9 hours remaining)
+[2025-07-13 17:16:53] ⏳ Next update in 300s... (20.8 hours remaining)
+[2025-07-13 17:21:56] ⏳ Next update in 300s... (20.7 hours remaining)
+[2025-07-13 17:26:58] ⏳ Next update in 300s... (20.6 hours remaining)
+[2025-07-13 17:32:00] ⏳ Next update in 300s... (20.6 hours remaining)
+[2025-07-13 17:37:02] ⏳ Next update in 300s... (20.5 hours remaining)
+[2025-07-13 17:42:04] ⏳ Next update in 300s... (20.4 hours remaining)
+[2025-07-13 17:47:06] ⏳ Next update in 300s... (20.3 hours remaining)
+[2025-07-13 17:52:08] ⏳ Next update in 300s... (20.2 hours remaining)
+[2025-07-13 17:57:09] ⏳ Next update in 300s... (20.1 hours remaining)
+[2025-07-13 18:02:11] ⏳ Next update in 300s... (20.1 hours remaining)
+[2025-07-13 18:07:13] 
+📊 PORTFOLIO STATUS - Hour 4.0/24
+[2025-07-13 18:07:13] 💰 Total Value: $100,397.18
+[2025-07-13 18:07:13] 📈 Return: +0.40%
+[2025-07-13 18:07:13] 💵 Cash: $0.00
+[2025-07-13 18:07:13] ₿ BTC Position: 0.847415 BTC ($100,397.18)
+[2025-07-13 18:07:13] 💲 BTC Price: $118,474.66
+[2025-07-13 18:07:13] 📊 Position P&L: -0.29%
+[2025-07-13 18:07:13] 📝 Total Trades: 17
+[2025-07-13 18:07:13] ------------------------------------------------------------
+[2025-07-13 18:07:13] 💾 Session data saved to: btc_24hr_session_20250713_180713.json
+[2025-07-13 18:07:13] ⏳ Next update in 300s... (20.0 hours remaining)
+[2025-07-13 18:12:14] ⏳ Next update in 300s... (19.9 hours remaining)
+[2025-07-13 18:17:16] 🔴 SELL 0.847415 BTC @ $118,681.34 ($100,572.32) - SIGNAL
+[2025-07-13 18:17:16] ⏳ Next update in 300s... (19.8 hours remaining)
+[2025-07-13 18:22:17] ⏳ Next update in 300s... (19.7 hours remaining)
+[2025-07-13 18:27:18] ⏳ Next update in 300s... (19.6 hours remaining)
+[2025-07-13 18:32:20] ⏳ Next update in 300s... (19.6 hours remaining)
+[2025-07-13 18:37:21] ⏳ Next update in 300s... (19.5 hours remaining)
+[2025-07-13 18:42:22] ⏳ Next update in 300s... (19.4 hours remaining)
+[2025-07-13 18:47:23] ⏳ Next update in 300s... (19.3 hours remaining)
+[2025-07-13 18:52:24] ⏳ Next update in 300s... (19.2 hours remaining)
+[2025-07-13 18:57:25] ⏳ Next update in 300s... (19.1 hours remaining)
+[2025-07-13 19:02:25] ⏳ Next update in 300s... (19.1 hours remaining)
+[2025-07-13 19:07:26] 
+📊 PORTFOLIO STATUS - Hour 5.0/24
+[2025-07-13 19:07:26] 💰 Total Value: $100,572.32
+[2025-07-13 19:07:26] 📈 Return: +0.57%
+[2025-07-13 19:07:26] 💵 Cash: $100,572.32
+[2025-07-13 19:07:26] ₿ BTC Position: 0.000000 BTC ($0.00)
+[2025-07-13 19:07:26] 💲 BTC Price: $118,655.55
+[2025-07-13 19:07:26] 📝 Total Trades: 18
+[2025-07-13 19:07:26] ------------------------------------------------------------
+[2025-07-13 19:07:26] ⏳ Next update in 300s... (19.0 hours remaining)
+[2025-07-13 19:12:27] ⏳ Next update in 300s... (18.9 hours remaining)
+[2025-07-13 19:17:27] ⏳ Next update in 300s... (18.8 hours remaining)
+[2025-07-13 19:22:27] ⏳ Next update in 300s... (18.7 hours remaining)
+[2025-07-13 19:27:27] ⏳ Next update in 300s... (18.6 hours remaining)
+[2025-07-13 19:32:27] ⏳ Next update in 300s... (18.6 hours remaining)
+[2025-07-13 19:37:37] 🟢 BUY 0.253525 BTC @ $119,008.80 ($30,171.70) - SIGNAL
+[2025-07-13 19:37:37] ⏳ Next update in 300s... (18.5 hours remaining)
+[2025-07-13 19:42:49] 🟢 BUY 0.084557 BTC @ $118,911.77 ($10,054.77) - SIGNAL
+[2025-07-13 19:42:49] ⏳ Next update in 300s... (18.4 hours remaining)
+[2025-07-13 19:48:03] 🟢 BUY 0.084550 BTC @ $118,927.48 ($10,055.30) - SIGNAL
+[2025-07-13 19:48:03] ⏳ Next update in 300s... (18.3 hours remaining)
+[2025-07-13 19:53:17] 🟢 BUY 0.084520 BTC @ $119,010.32 ($10,058.80) - SIGNAL
+[2025-07-13 19:53:17] ⏳ Next update in 300s... (18.2 hours remaining)
+[2025-07-13 19:58:31] 🟢 BUY 0.084514 BTC @ $119,034.76 ($10,060.04) - SIGNAL
+[2025-07-13 19:58:31] ⏳ Next update in 300s... (18.1 hours remaining)
+[2025-07-13 20:03:46] 🟢 BUY 0.084515 BTC @ $119,026.13 ($10,059.53) - SIGNAL
+[2025-07-13 20:03:46] ⏳ Next update in 300s... (18.0 hours remaining)
+[2025-07-13 20:09:01] 
+📊 PORTFOLIO STATUS - Hour 6.1/24
+[2025-07-13 20:09:01] 💰 Total Value: $100,622.18
+[2025-07-13 20:09:01] 📈 Return: +0.62%
+[2025-07-13 20:09:01] 💵 Cash: $20,112.17
+[2025-07-13 20:09:01] ₿ BTC Position: 0.676181 BTC ($80,510.02)
+[2025-07-13 20:09:01] 💲 BTC Price: $119,065.84
+[2025-07-13 20:09:01] 📊 Position P&L: +0.06%
+[2025-07-13 20:09:01] 📝 Total Trades: 24
+[2025-07-13 20:09:01] ------------------------------------------------------------
+[2025-07-13 20:09:01] ⏳ Next update in 300s... (17.9 hours remaining)
+[2025-07-13 20:14:17] 🟢 BUY 0.084506 BTC @ $119,090.10 ($10,063.86) - SIGNAL
+[2025-07-13 20:14:17] ⏳ Next update in 300s... (17.9 hours remaining)
+[2025-07-13 20:19:32] ⏳ Next update in 300s... (17.8 hours remaining)
+[2025-07-13 20:24:48] ⏳ Next update in 300s... (17.7 hours remaining)
+[2025-07-13 20:30:04] 🔴 SELL 0.760687 BTC @ $119,302.62 ($90,751.95) - SIGNAL
+[2025-07-13 20:30:04] ⏳ Next update in 300s... (17.6 hours remaining)
+[2025-07-13 20:35:20] ⏳ Next update in 300s... (17.5 hours remaining)
+[2025-07-13 20:40:35] 🟢 BUY 0.253686 BTC @ $119,202.66 ($30,240.08) - SIGNAL
+[2025-07-13 20:40:35] ⏳ Next update in 300s... (17.4 hours remaining)
+[2025-07-13 20:45:51] 🟢 BUY 0.084624 BTC @ $119,078.42 ($10,076.87) - SIGNAL
+[2025-07-13 20:45:51] ⏳ Next update in 300s... (17.3 hours remaining)
+[2025-07-13 20:51:07] 🟢 BUY 0.084615 BTC @ $119,098.78 ($10,077.56) - SIGNAL
+[2025-07-13 20:51:07] ⏳ Next update in 300s... (17.2 hours remaining)
+[2025-07-13 20:56:22] 🟢 BUY 0.084604 BTC @ $119,130.64 ($10,078.91) - SIGNAL
+[2025-07-13 20:56:22] ⏳ Next update in 300s... (17.2 hours remaining)
+[2025-07-13 21:01:38] 🟢 BUY 0.084634 BTC @ $119,025.65 ($10,073.58) - SIGNAL
+[2025-07-13 21:01:38] ⏳ Next update in 300s... (17.1 hours remaining)
+[2025-07-13 21:06:53] 🟢 BUY 0.084664 BTC @ $118,885.72 ($10,065.30) - SIGNAL
+[2025-07-13 21:06:53] ⏳ Next update in 300s... (17.0 hours remaining)
+[2025-07-13 21:12:09] 🟢 BUY 0.084652 BTC @ $118,964.03 ($10,070.60) - SIGNAL
+[2025-07-13 21:12:09] 
+📊 PORTFOLIO STATUS - Hour 7.1/24
+[2025-07-13 21:12:09] 💰 Total Value: $100,705.96
+[2025-07-13 21:12:09] 📈 Return: +0.71%
+[2025-07-13 21:12:09] 💵 Cash: $10,117.36
+[2025-07-13 21:12:09] ₿ BTC Position: 0.761479 BTC ($90,588.60)
+[2025-07-13 21:12:09] 💲 BTC Price: $118,964.03
+[2025-07-13 21:12:09] 📊 Position P&L: -0.10%
+[2025-07-13 21:12:09] 📝 Total Trades: 33
+[2025-07-13 21:12:09] ------------------------------------------------------------
+[2025-07-13 21:12:09] ⏳ Next update in 300s... (16.9 hours remaining)
+[2025-07-13 21:17:24] 🟢 BUY 0.084649 BTC @ $119,015.62 ($10,074.52) - SIGNAL
+[2025-07-13 21:17:24] ⏳ Next update in 300s... (16.8 hours remaining)
+[2025-07-13 21:22:39] ⏳ Next update in 300s... (16.7 hours remaining)
+[2025-07-13 21:27:54] ⏳ Next update in 300s... (16.6 hours remaining)
+[2025-07-13 21:33:09] ⏳ Next update in 300s... (16.5 hours remaining)
+[2025-07-13 21:38:23] ⏳ Next update in 300s... (16.5 hours remaining)
+[2025-07-13 21:43:38] ⏳ Next update in 300s... (16.4 hours remaining)
+[2025-07-13 21:48:52] ⏳ Next update in 300s... (16.3 hours remaining)
+[2025-07-13 21:54:06] ⏳ Next update in 300s... (16.2 hours remaining)
+[2025-07-13 21:59:19] ⏳ Next update in 300s... (16.1 hours remaining)
+[2025-07-13 22:04:33] ⏳ Next update in 300s... (16.0 hours remaining)
+[2025-07-13 22:09:46] ⏳ Next update in 300s... (15.9 hours remaining)
+[2025-07-13 22:14:59] 
+📊 PORTFOLIO STATUS - Hour 8.2/24
+[2025-07-13 22:14:59] 💰 Total Value: $100,678.10
+[2025-07-13 22:14:59] 📈 Return: +0.68%
+[2025-07-13 22:14:59] 💵 Cash: $42.84
+[2025-07-13 22:14:59] ₿ BTC Position: 0.846128 BTC ($100,635.26)
+[2025-07-13 22:14:59] 💲 BTC Price: $118,936.27
+[2025-07-13 22:14:59] 📊 Position P&L: -0.12%
+[2025-07-13 22:14:59] 📝 Total Trades: 34
+[2025-07-13 22:14:59] ------------------------------------------------------------
+[2025-07-13 22:14:59] 💾 Session data saved to: btc_24hr_session_20250713_221459.json
+[2025-07-13 22:14:59] ⏳ Next update in 300s... (15.8 hours remaining)
+[2025-07-13 22:20:12] ⏳ Next update in 300s... (15.8 hours remaining)
+[2025-07-13 22:25:24] ⏳ Next update in 300s... (15.7 hours remaining)
+[2025-07-13 22:30:36] ⏳ Next update in 300s... (15.6 hours remaining)
+[2025-07-13 22:35:48] ⏳ Next update in 300s... (15.5 hours remaining)
+[2025-07-13 22:41:00] ⏳ Next update in 300s... (15.4 hours remaining)
+[2025-07-13 22:46:11] ⏳ Next update in 300s... (15.3 hours remaining)
+[2025-07-13 22:51:22] 🔴 SELL 0.846128 BTC @ $118,887.61 ($100,594.09) - SIGNAL
+[2025-07-13 22:51:22] ⏳ Next update in 300s... (15.2 hours remaining)
+[2025-07-13 22:56:33] ⏳ Next update in 300s... (15.2 hours remaining)
+[2025-07-13 23:01:44] ⏳ Next update in 300s... (15.1 hours remaining)
+[2025-07-13 23:06:55] ⏳ Next update in 300s... (15.0 hours remaining)
+[2025-07-13 23:12:05] ⏳ Next update in 300s... (14.9 hours remaining)
+[2025-07-13 23:17:15] 
+📊 PORTFOLIO STATUS - Hour 9.2/24
+[2025-07-13 23:17:15] 💰 Total Value: $100,636.93
+[2025-07-13 23:17:15] 📈 Return: +0.64%
+[2025-07-13 23:17:15] 💵 Cash: $100,636.93
+[2025-07-13 23:17:15] ₿ BTC Position: 0.000000 BTC ($0.00)
+[2025-07-13 23:17:15] 💲 BTC Price: $118,487.91
+[2025-07-13 23:17:15] 📝 Total Trades: 35
+[2025-07-13 23:17:15] ------------------------------------------------------------
+[2025-07-13 23:17:15] ⏳ Next update in 300s... (14.8 hours remaining)
+[2025-07-13 23:22:25] ⏳ Next update in 300s... (14.7 hours remaining)
+[2025-07-13 23:27:34] ⏳ Next update in 300s... (14.6 hours remaining)
+[2025-07-13 23:32:41] ⏳ Next update in 300s... (14.5 hours remaining)
+[2025-07-13 23:37:45] ⏳ Next update in 300s... (14.5 hours remaining)
+[2025-07-13 23:42:48] ⏳ Next update in 300s... (14.4 hours remaining)
+[2025-07-13 23:47:51] ⏳ Next update in 300s... (14.3 hours remaining)
+[2025-07-13 23:52:54] ⏳ Next update in 300s... (14.2 hours remaining)
+[2025-07-13 23:57:57] ⏳ Next update in 300s... (14.1 hours remaining)
+[2025-07-14 00:03:00] ⏳ Next update in 300s... (14.0 hours remaining)
+[2025-07-14 00:08:03] ⏳ Next update in 300s... (14.0 hours remaining)
+[2025-07-14 00:13:05] ⏳ Next update in 300s... (13.9 hours remaining)
+[2025-07-14 00:18:08] 
+📊 PORTFOLIO STATUS - Hour 10.2/24
+[2025-07-14 00:18:08] 💰 Total Value: $100,636.93
+[2025-07-14 00:18:08] 📈 Return: +0.64%
+[2025-07-14 00:18:08] 💵 Cash: $100,636.93
+[2025-07-14 00:18:08] ₿ BTC Position: 0.000000 BTC ($0.00)
+[2025-07-14 00:18:08] 💲 BTC Price: $118,652.57
+[2025-07-14 00:18:08] 📝 Total Trades: 35
+[2025-07-14 00:18:08] ------------------------------------------------------------
+[2025-07-14 00:18:08] ⏳ Next update in 300s... (13.8 hours remaining)
+[2025-07-14 00:23:10] ⏳ Next update in 300s... (13.7 hours remaining)
+[2025-07-14 00:28:12] ⏳ Next update in 300s... (13.6 hours remaining)
+[2025-07-14 00:33:14] ⏳ Next update in 300s... (13.5 hours remaining)
+[2025-07-14 00:38:16] ⏳ Next update in 300s... (13.5 hours remaining)
+[2025-07-14 00:43:18] ⏳ Next update in 300s... (13.4 hours remaining)
+[2025-07-14 00:48:20] ⏳ Next update in 300s... (13.3 hours remaining)
+[2025-07-14 00:53:22] ⏳ Next update in 300s... (13.2 hours remaining)
+[2025-07-14 00:58:24] ⏳ Next update in 300s... (13.1 hours remaining)
+[2025-07-14 01:03:25] 🟢 BUY 0.253543 BTC @ $119,076.86 ($30,191.08) - SIGNAL
+[2025-07-14 01:03:25] ⏳ Next update in 300s... (13.0 hours remaining)
+[2025-07-14 01:08:27] 🟢 BUY 0.084538 BTC @ $119,029.91 ($10,062.50) - SIGNAL
+[2025-07-14 01:08:27] ⏳ Next update in 300s... (13.0 hours remaining)
+[2025-07-14 01:13:29] 🟢 BUY 0.084539 BTC @ $119,025.60 ($10,062.36) - SIGNAL
+[2025-07-14 01:13:29] ⏳ Next update in 300s... (12.9 hours remaining)
+[2025-07-14 01:18:30] 🟢 BUY 0.084492 BTC @ $119,160.14 ($10,068.04) - SIGNAL
+[2025-07-14 01:18:30] 
+📊 PORTFOLIO STATUS - Hour 11.2/24
+[2025-07-14 01:18:30] 💰 Total Value: $100,680.43
+[2025-07-14 01:18:30] 📈 Return: +0.68%
+[2025-07-14 01:18:30] 💵 Cash: $40,252.95
+[2025-07-14 01:18:30] ₿ BTC Position: 0.507112 BTC ($60,427.48)
+[2025-07-14 01:18:30] 💲 BTC Price: $119,160.14
+[2025-07-14 01:18:30] 📊 Position P&L: +0.07%
+[2025-07-14 01:18:30] 📝 Total Trades: 39
+[2025-07-14 01:18:30] ------------------------------------------------------------
+[2025-07-14 01:18:30] ⏳ Next update in 300s... (12.8 hours remaining)
+[2025-07-14 01:23:31] 🟢 BUY 0.084515 BTC @ $119,076.29 ($10,063.79) - SIGNAL
+[2025-07-14 01:23:31] ⏳ Next update in 300s... (12.7 hours remaining)
+[2025-07-14 01:28:32] ⏳ Next update in 300s... (12.6 hours remaining)
+[2025-07-14 01:33:34] 🟢 BUY 0.084503 BTC @ $119,137.25 ($10,067.40) - SIGNAL
+[2025-07-14 01:33:34] ⏳ Next update in 300s... (12.5 hours remaining)
+[2025-07-14 01:38:35] 🟢 BUY 0.084500 BTC @ $119,156.26 ($10,068.68) - SIGNAL
+[2025-07-14 01:38:35] ⏳ Next update in 300s... (12.5 hours remaining)
+[2025-07-14 01:43:36] ⏳ Next update in 300s... (12.4 hours remaining)
+[2025-07-14 01:48:37] 🟢 BUY 0.084201 BTC @ $119,393.45 ($10,053.08) - SIGNAL
+[2025-07-14 01:48:37] ⏳ Next update in 300s... (12.3 hours remaining)
+[2025-07-14 01:53:37] ⏳ Next update in 300s... (12.2 hours remaining)
+[2025-07-14 01:58:38] ⏳ Next update in 300s... (12.1 hours remaining)
+[2025-07-14 02:03:39] ⏳ Next update in 300s... (12.0 hours remaining)
+[2025-07-14 02:08:39] ⏳ Next update in 300s... (12.0 hours remaining)
+[2025-07-14 02:13:39] ⏳ Next update in 300s... (11.9 hours remaining)
+[2025-07-14 02:18:40] 
+📊 PORTFOLIO STATUS - Hour 12.2/24
+[2025-07-14 02:18:40] 💰 Total Value: $100,571.21
+[2025-07-14 02:18:40] 📈 Return: +0.57%
+[2025-07-14 02:18:40] 💵 Cash: $0.00
+[2025-07-14 02:18:40] ₿ BTC Position: 0.844831 BTC ($100,571.21)
+[2025-07-14 02:18:40] 💲 BTC Price: $119,043.05
+[2025-07-14 02:18:40] 📊 Position P&L: -0.07%
+[2025-07-14 02:18:40] 📝 Total Trades: 43
+[2025-07-14 02:18:40] ------------------------------------------------------------
+[2025-07-14 02:18:40] 💾 Session data saved to: btc_24hr_session_20250714_021840.json
+[2025-07-14 02:18:40] ⏳ Next update in 300s... (11.8 hours remaining)
+[2025-07-14 02:23:40] ⏳ Next update in 300s... (11.7 hours remaining)
+[2025-07-14 02:28:40] ⏳ Next update in 300s... (11.6 hours remaining)
+[2025-07-14 02:33:40] ⏳ Next update in 300s... (11.5 hours remaining)
+[2025-07-14 02:38:40] ⏳ Next update in 300s... (11.4 hours remaining)
+[2025-07-14 02:43:40] 🔴 SELL 0.844831 BTC @ $119,117.70 ($100,634.27) - SIGNAL
+[2025-07-14 02:43:40] ⏳ Next update in 300s... (11.4 hours remaining)
+[2025-07-14 02:48:40] ⏳ Next update in 300s... (11.3 hours remaining)
+[2025-07-14 02:53:40] ⏳ Next update in 300s... (11.2 hours remaining)
+[2025-07-14 02:58:40] ⏳ Next update in 300s... (11.1 hours remaining)
+[2025-07-14 03:03:40] ⏳ Next update in 300s... (11.0 hours remaining)
+[2025-07-14 03:08:40] ⏳ Next update in 300s... (10.9 hours remaining)
+[2025-07-14 03:13:40] 🟢 BUY 0.253476 BTC @ $119,105.03 ($30,190.28) - SIGNAL
+[2025-07-14 03:13:40] ⏳ Next update in 300s... (10.9 hours remaining)
+[2025-07-14 03:18:39] 🟢 BUY 0.084472 BTC @ $119,144.78 ($10,064.43) - SIGNAL
+[2025-07-14 03:18:39] 
+📊 PORTFOLIO STATUS - Hour 13.2/24
+[2025-07-14 03:18:39] 💰 Total Value: $100,644.35
+[2025-07-14 03:18:39] 📈 Return: +0.64%
+[2025-07-14 03:18:39] 💵 Cash: $60,379.56
+[2025-07-14 03:18:39] ₿ BTC Position: 0.337948 BTC ($40,264.79)
+[2025-07-14 03:18:39] 💲 BTC Price: $119,144.78
+[2025-07-14 03:18:39] 📊 Position P&L: +0.03%
+[2025-07-14 03:18:39] 📝 Total Trades: 46
+[2025-07-14 03:18:39] ------------------------------------------------------------
+[2025-07-14 03:18:39] ⏳ Next update in 300s... (10.8 hours remaining)
+[2025-07-14 03:23:39] 🟢 BUY 0.084430 BTC @ $119,244.14 ($10,067.79) - SIGNAL
+[2025-07-14 03:23:39] ⏳ Next update in 300s... (10.7 hours remaining)
+[2025-07-14 03:28:46] 🔴 SELL 0.422379 BTC @ $119,796.32 ($50,599.39) - SIGNAL
+[2025-07-14 03:28:46] ⏳ Next update in 300s... (10.6 hours remaining)
+[2025-07-14 03:33:58] ⏳ Next update in 300s... (10.5 hours remaining)
+[2025-07-14 03:39:11] ⏳ Next update in 300s... (10.4 hours remaining)
+[2025-07-14 03:44:26] ⏳ Next update in 300s... (10.4 hours remaining)
+[2025-07-14 03:49:40] ⏳ Next update in 300s... (10.3 hours remaining)
+[2025-07-14 03:54:55] 🟢 BUY 0.253043 BTC @ $119,637.12 ($30,273.35) - SIGNAL
+[2025-07-14 03:54:55] ⏳ Next update in 300s... (10.2 hours remaining)
+[2025-07-14 04:00:10] 🟢 BUY 0.084322 BTC @ $119,689.56 ($10,092.44) - SIGNAL
+[2025-07-14 04:00:10] ⏳ Next update in 300s... (10.1 hours remaining)
+[2025-07-14 04:05:26] ⏳ Next update in 300s... (10.0 hours remaining)
+[2025-07-14 04:10:41] ⏳ Next update in 300s... (9.9 hours remaining)
+[2025-07-14 04:15:58] ⏳ Next update in 300s... (9.8 hours remaining)
+[2025-07-14 04:21:13] 
+📊 PORTFOLIO STATUS - Hour 14.3/24
+[2025-07-14 04:21:13] 💰 Total Value: $100,987.91
+[2025-07-14 04:21:13] 📈 Return: +0.99%
+[2025-07-14 04:21:13] 💵 Cash: $60,545.37
+[2025-07-14 04:21:13] ₿ BTC Position: 0.337365 BTC ($40,442.55)
+[2025-07-14 04:21:13] 💲 BTC Price: $119,877.75
+[2025-07-14 04:21:13] 📊 Position P&L: +0.19%
+[2025-07-14 04:21:13] 📝 Total Trades: 50
+[2025-07-14 04:21:13] ------------------------------------------------------------
+[2025-07-14 04:21:13] ⏳ Next update in 300s... (9.7 hours remaining)
+[2025-07-14 04:26:29] ⏳ Next update in 300s... (9.7 hours remaining)
+[2025-07-14 04:31:45] ⏳ Next update in 300s... (9.6 hours remaining)
+[2025-07-14 04:37:00] 🟢 BUY 0.084234 BTC @ $119,898.81 ($10,099.50) - SIGNAL
+[2025-07-14 04:37:00] ⏳ Next update in 300s... (9.5 hours remaining)
+[2025-07-14 04:42:16] 🟢 BUY 0.084205 BTC @ $119,980.99 ($10,102.97) - SIGNAL
+[2025-07-14 04:42:16] ⏳ Next update in 300s... (9.4 hours remaining)
+[2025-07-14 04:47:32] 🔴 SELL 0.505803 BTC @ $120,894.67 ($61,148.91) - SIGNAL
+[2025-07-14 04:47:32] ⏳ Next update in 300s... (9.3 hours remaining)
+[2025-07-14 04:52:47] ⏳ Next update in 300s... (9.2 hours remaining)
+[2025-07-14 04:58:03] ⏳ Next update in 300s... (9.1 hours remaining)
+[2025-07-14 05:03:18] ⏳ Next update in 300s... (9.0 hours remaining)
+[2025-07-14 05:08:33] ⏳ Next update in 300s... (9.0 hours remaining)
+[2025-07-14 05:13:48] 🟢 BUY 0.252371 BTC @ $120,645.88 ($30,447.54) - SIGNAL
+[2025-07-14 05:13:48] ⏳ Next update in 300s... (8.9 hours remaining)
+[2025-07-14 05:19:04] ⏳ Next update in 300s... (8.8 hours remaining)
+[2025-07-14 05:24:18] 🟢 BUY 0.083976 BTC @ $120,950.32 ($10,156.86) - SIGNAL
+[2025-07-14 05:24:18] 
+📊 PORTFOLIO STATUS - Hour 15.3/24
+[2025-07-14 05:24:18] 💰 Total Value: $101,568.64
+[2025-07-14 05:24:18] 📈 Return: +1.57%
+[2025-07-14 05:24:18] 💵 Cash: $60,887.40
+[2025-07-14 05:24:18] ₿ BTC Position: 0.336347 BTC ($40,681.24)
+[2025-07-14 05:24:18] 💲 BTC Price: $120,950.32
+[2025-07-14 05:24:18] 📊 Position P&L: +0.19%
+[2025-07-14 05:24:18] 📝 Total Trades: 55
+[2025-07-14 05:24:18] ------------------------------------------------------------
+[2025-07-14 05:24:18] ⏳ Next update in 300s... (8.7 hours remaining)
+[2025-07-14 05:29:33] ⏳ Next update in 300s... (8.6 hours remaining)
+[2025-07-14 05:34:47] 🟢 BUY 0.083967 BTC @ $120,970.41 ($10,157.54) - SIGNAL
+[2025-07-14 05:34:47] ⏳ Next update in 300s... (8.5 hours remaining)
+[2025-07-14 05:40:01] ⏳ Next update in 300s... (8.4 hours remaining)
+[2025-07-14 05:45:16] ⏳ Next update in 300s... (8.3 hours remaining)
+[2025-07-14 05:50:29] ⏳ Next update in 300s... (8.3 hours remaining)
+[2025-07-14 05:55:42] 🟢 BUY 0.083852 BTC @ $121,302.10 ($10,171.48) - SIGNAL
+[2025-07-14 05:55:42] ⏳ Next update in 300s... (8.2 hours remaining)
+[2025-07-14 06:00:56] ⏳ Next update in 300s... (8.1 hours remaining)
+[2025-07-14 06:06:08] 🟢 BUY 0.083877 BTC @ $121,213.76 ($10,167.03) - SIGNAL
+[2025-07-14 06:06:08] ⏳ Next update in 300s... (8.0 hours remaining)
+[2025-07-14 06:11:21] ⏳ Next update in 300s... (7.9 hours remaining)
+[2025-07-14 06:16:33] ⏳ Next update in 300s... (7.8 hours remaining)
+[2025-07-14 06:21:45] ⏳ Next update in 300s... (7.7 hours remaining)
+[2025-07-14 06:26:57] 🔴 SELL 0.588043 BTC @ $122,490.23 ($72,029.54) - SIGNAL
+[2025-07-14 06:26:57] 
+📊 PORTFOLIO STATUS - Hour 16.4/24
+[2025-07-14 06:26:57] 💰 Total Value: $102,420.89
+[2025-07-14 06:26:57] 📈 Return: +2.42%
+[2025-07-14 06:26:57] 💵 Cash: $102,420.89
+[2025-07-14 06:26:57] ₿ BTC Position: 0.000000 BTC ($0.00)
+[2025-07-14 06:26:57] 💲 BTC Price: $122,490.23
+[2025-07-14 06:26:57] 📝 Total Trades: 59
+[2025-07-14 06:26:57] ------------------------------------------------------------
+[2025-07-14 06:26:57] 💾 Session data saved to: btc_24hr_session_20250714_062657.json
+[2025-07-14 06:26:57] ⏳ Next update in 300s... (7.6 hours remaining)
+[2025-07-14 06:32:09] ⏳ Next update in 300s... (7.6 hours remaining)
+[2025-07-14 06:37:20] ⏳ Next update in 300s... (7.5 hours remaining)
+[2025-07-14 06:42:31] ⏳ Next update in 300s... (7.4 hours remaining)
+[2025-07-14 06:47:42] ⏳ Next update in 300s... (7.3 hours remaining)
+[2025-07-14 06:52:53] 🟢 BUY 0.251919 BTC @ $121,968.88 ($30,726.27) - SIGNAL
+[2025-07-14 06:52:53] ⏳ Next update in 300s... (7.2 hours remaining)
+[2025-07-14 06:58:03] ⏳ Next update in 300s... (7.1 hours remaining)
+[2025-07-14 07:03:13] ⏳ Next update in 300s... (7.0 hours remaining)
+[2025-07-14 07:08:23] 🟢 BUY 0.083849 BTC @ $122,226.78 ($10,248.59) - SIGNAL
+[2025-07-14 07:08:23] ⏳ Next update in 300s... (7.0 hours remaining)
+[2025-07-14 07:13:33] 🟢 BUY 0.083899 BTC @ $122,105.96 ($10,244.53) - SIGNAL
+[2025-07-14 07:13:33] ⏳ Next update in 300s... (6.9 hours remaining)
+[2025-07-14 07:18:41] 🟢 BUY 0.083869 BTC @ $122,192.79 ($10,248.17) - SIGNAL
+[2025-07-14 07:18:41] ⏳ Next update in 300s... (6.8 hours remaining)
+[2025-07-14 07:23:44] 🟢 BUY 0.083831 BTC @ $122,329.68 ($10,255.07) - SIGNAL
+[2025-07-14 07:23:44] ⏳ Next update in 300s... (6.7 hours remaining)
+[2025-07-14 07:28:48] 🟢 BUY 0.083815 BTC @ $122,409.41 ($10,259.75) - SIGNAL
+[2025-07-14 07:28:48] 
+📊 PORTFOLIO STATUS - Hour 17.4/24
+[2025-07-14 07:28:48] 💰 Total Value: $102,597.49
+[2025-07-14 07:28:48] 📈 Return: +2.60%
+[2025-07-14 07:28:48] 💵 Cash: $20,438.52
+[2025-07-14 07:28:48] ₿ BTC Position: 0.671182 BTC ($82,158.98)
+[2025-07-14 07:28:48] 💲 BTC Price: $122,409.41
+[2025-07-14 07:28:48] 📊 Position P&L: +0.22%
+[2025-07-14 07:28:48] 📝 Total Trades: 65
+[2025-07-14 07:28:48] ------------------------------------------------------------
+[2025-07-14 07:28:48] ⏳ Next update in 300s... (6.6 hours remaining)
+[2025-07-14 07:33:51] 🟢 BUY 0.083847 BTC @ $122,173.47 ($10,243.91) - SIGNAL
+[2025-07-14 07:33:51] ⏳ Next update in 300s... (6.5 hours remaining)
+[2025-07-14 07:38:54] 🟢 BUY 0.083420 BTC @ $122,207.83 ($10,194.61) - SIGNAL
+[2025-07-14 07:38:54] ⏳ Next update in 300s... (6.4 hours remaining)
+[2025-07-14 07:43:56] ⏳ Next update in 300s... (6.4 hours remaining)
+[2025-07-14 07:48:59] ⏳ Next update in 300s... (6.3 hours remaining)
+[2025-07-14 07:54:02] ⏳ Next update in 300s... (6.2 hours remaining)
+[2025-07-14 07:59:04] ⏳ Next update in 300s... (6.1 hours remaining)
+[2025-07-14 08:04:07] ⏳ Next update in 300s... (6.0 hours remaining)
+[2025-07-14 08:09:09] ⏳ Next update in 300s... (5.9 hours remaining)
+[2025-07-14 08:14:12] ⏳ Next update in 300s... (5.9 hours remaining)
+[2025-07-14 08:19:14] ⏳ Next update in 300s... (5.8 hours remaining)
+[2025-07-14 08:24:16] ⏳ Next update in 300s... (5.7 hours remaining)
+[2025-07-14 08:29:18] 
+📊 PORTFOLIO STATUS - Hour 18.4/24
+[2025-07-14 08:29:18] 💰 Total Value: $102,588.43
+[2025-07-14 08:29:18] 📈 Return: +2.59%
+[2025-07-14 08:29:18] 💵 Cash: $0.00
+[2025-07-14 08:29:18] ₿ BTC Position: 0.838449 BTC ($102,588.43)
+[2025-07-14 08:29:18] 💲 BTC Price: $122,354.95
+[2025-07-14 08:29:18] 📊 Position P&L: +0.16%
+[2025-07-14 08:29:18] 📝 Total Trades: 67
+[2025-07-14 08:29:18] ------------------------------------------------------------
+[2025-07-14 08:29:18] ⏳ Next update in 300s... (5.6 hours remaining)
+[2025-07-14 08:34:20] ⏳ Next update in 300s... (5.5 hours remaining)
+[2025-07-14 08:39:22] ⏳ Next update in 300s... (5.4 hours remaining)
+[2025-07-14 08:44:24] 🔴 SELL 0.838449 BTC @ $123,077.63 ($103,194.36) - SIGNAL
+[2025-07-14 08:44:24] ⏳ Next update in 300s... (5.4 hours remaining)
+[2025-07-14 08:49:25] ⏳ Next update in 300s... (5.3 hours remaining)
+[2025-07-14 08:54:27] ⏳ Next update in 300s... (5.2 hours remaining)
+[2025-07-14 08:59:28] ⏳ Next update in 300s... (5.1 hours remaining)
+[2025-07-14 09:04:30] 🟢 BUY 0.252461 BTC @ $122,626.00 ($30,958.31) - SIGNAL
+[2025-07-14 09:04:30] ⏳ Next update in 300s... (5.0 hours remaining)
+[2025-07-14 09:09:32] 🟢 BUY 0.084213 BTC @ $122,501.92 ($10,316.30) - SIGNAL
+[2025-07-14 09:09:32] ⏳ Next update in 300s... (4.9 hours remaining)
+[2025-07-14 09:14:33] 🟢 BUY 0.084259 BTC @ $122,392.31 ($10,312.61) - SIGNAL
+[2025-07-14 09:14:33] ⏳ Next update in 300s... (4.9 hours remaining)
+[2025-07-14 09:19:34] 🟢 BUY 0.084258 BTC @ $122,393.02 ($10,312.64) - SIGNAL
+[2025-07-14 09:19:34] ⏳ Next update in 300s... (4.8 hours remaining)
+[2025-07-14 09:24:35] 🟢 BUY 0.084273 BTC @ $122,338.83 ($10,309.91) - SIGNAL
+[2025-07-14 09:24:35] ⏳ Next update in 300s... (4.7 hours remaining)
+[2025-07-14 09:29:36] 🟢 BUY 0.084266 BTC @ $122,372.17 ($10,311.87) - SIGNAL
+[2025-07-14 09:29:36] 
+📊 PORTFOLIO STATUS - Hour 19.4/24
+[2025-07-14 09:29:36] 💰 Total Value: $103,118.71
+[2025-07-14 09:29:36] 📈 Return: +3.12%
+[2025-07-14 09:29:36] 💵 Cash: $20,672.72
+[2025-07-14 09:29:36] ₿ BTC Position: 0.673732 BTC ($82,445.99)
+[2025-07-14 09:29:36] 💲 BTC Price: $122,372.17
+[2025-07-14 09:29:36] 📊 Position P&L: -0.09%
+[2025-07-14 09:29:36] 📝 Total Trades: 74
+[2025-07-14 09:29:36] ------------------------------------------------------------
+[2025-07-14 09:29:36] ⏳ Next update in 300s... (4.6 hours remaining)
+[2025-07-14 09:34:37] 🟢 BUY 0.084241 BTC @ $122,557.87 ($10,324.38) - SIGNAL
+[2025-07-14 09:34:37] ⏳ Next update in 300s... (4.5 hours remaining)
+[2025-07-14 09:39:37] 🟢 BUY 0.084244 BTC @ $122,515.23 ($10,321.15) - SIGNAL
+[2025-07-14 09:39:37] ⏳ Next update in 300s... (4.4 hours remaining)
+[2025-07-14 09:44:38] ⏳ Next update in 300s... (4.4 hours remaining)
+[2025-07-14 09:49:39] ⏳ Next update in 300s... (4.3 hours remaining)
+[2025-07-14 09:54:39] ⏳ Next update in 300s... (4.2 hours remaining)
+[2025-07-14 09:59:39] ⏳ Next update in 300s... (4.1 hours remaining)
+[2025-07-14 10:04:40] ⏳ Next update in 300s... (4.0 hours remaining)
+[2025-07-14 10:09:40] ⏳ Next update in 300s... (3.9 hours remaining)
+[2025-07-14 10:14:40] ⏳ Next update in 300s... (3.8 hours remaining)
+[2025-07-14 10:19:40] ⏳ Next update in 300s... (3.8 hours remaining)
+[2025-07-14 10:24:49] ⏳ Next update in 300s... (3.7 hours remaining)
+[2025-07-14 10:30:00] 
+📊 PORTFOLIO STATUS - Hour 20.4/24
+[2025-07-14 10:30:00] 💰 Total Value: $102,882.71
+[2025-07-14 10:30:00] 📈 Return: +2.88%
+[2025-07-14 10:30:00] 💵 Cash: $27.18
+[2025-07-14 10:30:00] ₿ BTC Position: 0.842216 BTC ($102,855.53)
+[2025-07-14 10:30:00] 💲 BTC Price: $122,124.84
+[2025-07-14 10:30:00] 📊 Position P&L: -0.30%
+[2025-07-14 10:30:00] 📝 Total Trades: 76
+[2025-07-14 10:30:00] ------------------------------------------------------------
+[2025-07-14 10:30:00] 💾 Session data saved to: btc_24hr_session_20250714_103000.json
+[2025-07-14 10:30:00] ⏳ Next update in 300s... (3.6 hours remaining)
+[2025-07-14 10:35:13] ⏳ Next update in 300s... (3.5 hours remaining)
+[2025-07-14 10:40:26] 🔴 SELL 0.842216 BTC @ $122,046.38 ($102,789.45) - SIGNAL
+[2025-07-14 10:40:26] ⏳ Next update in 300s... (3.4 hours remaining)
+[2025-07-14 10:45:41] ⏳ Next update in 300s... (3.3 hours remaining)
+[2025-07-14 10:50:56] ⏳ Next update in 300s... (3.2 hours remaining)
+[2025-07-14 10:56:12] ⏳ Next update in 300s... (3.2 hours remaining)
+[2025-07-14 11:01:27] ⏳ Next update in 300s... (3.1 hours remaining)
+[2025-07-14 11:06:44] ⏳ Next update in 300s... (3.0 hours remaining)
+[2025-07-14 11:12:00] ⏳ Next update in 300s... (2.9 hours remaining)
+[2025-07-14 11:17:16] ⏳ Next update in 300s... (2.8 hours remaining)
+[2025-07-14 11:22:33] ⏳ Next update in 300s... (2.7 hours remaining)
+[2025-07-14 11:27:49] ⏳ Next update in 300s... (2.6 hours remaining)
+[2025-07-14 11:33:05] 
+📊 PORTFOLIO STATUS - Hour 21.5/24
+[2025-07-14 11:33:05] 💰 Total Value: $102,816.63
+[2025-07-14 11:33:05] 📈 Return: +2.82%
+[2025-07-14 11:33:05] 💵 Cash: $102,816.63
+[2025-07-14 11:33:05] ₿ BTC Position: 0.000000 BTC ($0.00)
+[2025-07-14 11:33:05] 💲 BTC Price: $121,943.36
+[2025-07-14 11:33:05] 📝 Total Trades: 77
+[2025-07-14 11:33:05] ------------------------------------------------------------
+[2025-07-14 11:33:05] ⏳ Next update in 300s... (2.5 hours remaining)
+[2025-07-14 11:38:20] ⏳ Next update in 300s... (2.5 hours remaining)
+[2025-07-14 11:43:36] ⏳ Next update in 300s... (2.4 hours remaining)
+[2025-07-14 11:48:52] ⏳ Next update in 300s... (2.3 hours remaining)
+[2025-07-14 11:54:07] ⏳ Next update in 300s... (2.2 hours remaining)
+[2025-07-14 11:59:22] ⏳ Next update in 300s... (2.1 hours remaining)
+[2025-07-14 12:04:37] ⏳ Next update in 300s... (2.0 hours remaining)
+[2025-07-14 12:09:52] ⏳ Next update in 300s... (1.9 hours remaining)
+[2025-07-14 12:15:07] ⏳ Next update in 300s... (1.8 hours remaining)
+[2025-07-14 12:20:21] ⏳ Next update in 300s... (1.8 hours remaining)
+[2025-07-14 12:25:35] ⏳ Next update in 300s... (1.7 hours remaining)
+[2025-07-14 12:30:49] ⏳ Next update in 300s... (1.6 hours remaining)
+[2025-07-14 12:36:03] 🟢 BUY 0.254172 BTC @ $121,354.99 ($30,844.99) - SIGNAL
+[2025-07-14 12:36:03] 
+📊 PORTFOLIO STATUS - Hour 22.5/24
+[2025-07-14 12:36:03] 💰 Total Value: $102,816.63
+[2025-07-14 12:36:03] 📈 Return: +2.82%
+[2025-07-14 12:36:03] 💵 Cash: $71,971.64
+[2025-07-14 12:36:03] ₿ BTC Position: 0.254172 BTC ($30,844.99)
+[2025-07-14 12:36:03] 💲 BTC Price: $121,354.99
+[2025-07-14 12:36:03] 📊 Position P&L: +0.00%
+[2025-07-14 12:36:03] 📝 Total Trades: 78
+[2025-07-14 12:36:03] ------------------------------------------------------------
+[2025-07-14 12:36:03] ⏳ Next update in 300s... (1.5 hours remaining)
+[2025-07-14 12:41:16] 🔴 SELL 0.254172 BTC @ $121,617.13 ($30,911.62) - SIGNAL
+[2025-07-14 12:41:16] ⏳ Next update in 300s... (1.4 hours remaining)
+[2025-07-14 12:46:30] ⏳ Next update in 300s... (1.3 hours remaining)
+[2025-07-14 12:51:43] ⏳ Next update in 300s... (1.2 hours remaining)
+[2025-07-14 12:56:55] ⏳ Next update in 300s... (1.1 hours remaining)
+[2025-07-14 13:02:08] ⏳ Next update in 300s... (1.1 hours remaining)
+[2025-07-14 13:07:20] ⏳ Next update in 300s... (1.0 hours remaining)
+[2025-07-14 13:12:32] ⏳ Next update in 300s... (0.9 hours remaining)
+[2025-07-14 13:17:44] ⏳ Next update in 300s... (0.8 hours remaining)
+[2025-07-14 13:22:55] ⏳ Next update in 300s... (0.7 hours remaining)
+[2025-07-14 13:28:07] ⏳ Next update in 300s... (0.6 hours remaining)
+[2025-07-14 13:33:18] ⏳ Next update in 300s... (0.5 hours remaining)
+[2025-07-14 13:38:29] 
+📊 PORTFOLIO STATUS - Hour 23.5/24
+[2025-07-14 13:38:29] 💰 Total Value: $102,883.26
+[2025-07-14 13:38:29] 📈 Return: +2.88%
+[2025-07-14 13:38:29] 💵 Cash: $102,883.26
+[2025-07-14 13:38:29] ₿ BTC Position: 0.000000 BTC ($0.00)
+[2025-07-14 13:38:29] 💲 BTC Price: $121,731.88
+[2025-07-14 13:38:29] 📝 Total Trades: 79
+[2025-07-14 13:38:29] ------------------------------------------------------------
+[2025-07-14 13:38:29] ⏳ Next update in 300s... (0.5 hours remaining)
+[2025-07-14 13:43:40] ⏳ Next update in 300s... (0.4 hours remaining)
+[2025-07-14 13:48:51] ⏳ Next update in 300s... (0.3 hours remaining)
+[2025-07-14 13:54:01] ⏳ Next update in 300s... (0.2 hours remaining)

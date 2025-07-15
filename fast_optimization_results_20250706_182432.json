@@ -1,0 +1,56 @@
+{
+  "hyperparameters": {
+    "best_params": {
+      "n_estimators": 250,
+      "max_depth": 13,
+      "min_samples_split": 7,
+      "min_samples_leaf": 3,
+      "max_features": "log2"
+    },
+    "best_score": 8.753210402462672,
+    "n_trials": 15
+  },
+  "features": {
+    "results": {
+      "50": -1.0461860039279571,
+      "100": -0.6578058762065981,
+      "200": -0.4121547410108466
+    },
+    "best_count": 200
+  },
+  "targets": {
+    "results": {
+      "returns_3h": -0.29724827899976636,
+      "returns_6h": -0.41061083140889987,
+      "returns_12h": -0.39066030465060453
+    },
+    "best_target": "returns_3h"
+  },
+  "ensemble": {
+    "results": {
+      "3": 0.8078921384114006,
+      "5": 0.8114696882934109
+    },
+    "best_size": 5
+  },
+  "strategy": {
+    "results": {
+      "0.7_0.3": {
+        "total_return": 0.07380221283626232,
+        "sharpe_ratio": 8.049386059141627,
+        "win_rate": 0.329608938547486
+      },
+      "0.75_0.25": {
+        "total_return": 0.03994483155782946,
+        "sharpe_ratio": 5.05678918891216,
+        "win_rate": 0.2681564245810056
+      },
+      "0.8_0.2": {
+        "total_return": 0.12172395610841313,
+        "sharpe_ratio": 17.096510493110035,
+        "win_rate": 0.24022346368715083
+      }
+    },
+    "best_thresholds": "0.8_0.2"
+  }
+}

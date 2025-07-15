@@ -1,0 +1,15 @@
+{
+  "portfolio": {
+    "initial_value": 10000,
+    "final_value": 10000.0,
+    "total_return": 0.0,
+    "cash": 10000.0,
+    "positions": {},
+    "position_values": {}
+  },
+  "trades": [],
+  "performance": {
+    "total_trades": 0,
+    "win_rate": 0.0
+  }
+}

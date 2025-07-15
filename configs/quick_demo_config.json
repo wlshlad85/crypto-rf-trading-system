@@ -1,0 +1,104 @@
+{
+  "data": {
+    "symbols": [
+      "bitcoin",
+      "ethereum", 
+      "solana"
+    ],
+    "coingecko_api_key": "",
+    "coinmarketcap_api_key": "",
+    "vs_currency": "usd",
+    "days": 30,
+    "interval": "hourly",
+    "cache_dir": "data/cached_data",
+    "cache_expiry_hours": 1,
+    "requests_per_minute": 25,
+    "data_source": "yfinance"
+  },
+  "features": {
+    "rsi_period": 14,
+    "macd_fast": 12,
+    "macd_slow": 26,
+    "macd_signal": 9,
+    "bb_period": 20,
+    "bb_std": 2.0,
+    "atr_period": 14,
+    "ema_periods": [
+      12,
+      26
+    ],
+    "sma_periods": [
+      20,
+      50
+    ],
+    "volume_sma_period": 20,
+    "obv_period": 10,
+    "return_periods": [
+      1,
+      6,
+      12
+    ],
+    "volatility_periods": [
+      24,
+      168
+    ],
+    "correlation_period": 168,
+    "max_features": 30,
+    "feature_importance_threshold": 0.01
+  },
+  "model": {
+    "n_estimators": 100,
+    "max_depth": 8,
+    "min_samples_split": 5,
+    "min_samples_leaf": 2,
+    "max_features": "sqrt",
+    "bootstrap": true,
+    "n_jobs": -1,
+    "random_state": 42,
+    "use_grid_search": false,
+    "cv_folds": 3,
+    "scoring": "neg_mean_squared_error",
+    "test_size": 0.2,
+    "validation_size": 0.2,
+    "walk_forward_splits": 5,
+    "target_horizon": 6,
+    "target_type": "returns"
+  },
+  "strategy": {
+    "long_threshold": 0.6,
+    "short_threshold": 0.4,
+    "max_position_size": 0.20,
+    "min_position_size": 0.05,
+    "position_sizing_method": "equal_weight",
+    "rebalancing_frequency": "weekly",
+    "rebalancing_threshold": 0.05,
+    "max_portfolio_leverage": 1.5,
+    "stop_loss_pct": 0.08,
+    "take_profit_pct": 0.15,
+    "max_drawdown_pct": 0.15,
+    "transaction_cost_pct": 0.001,
+    "slippage_pct": 0.0005
+  },
+  "backtest": {
+    "start_date": "2024-11-01",
+    "end_date": "2024-12-31",
+    "initial_capital": 10000.0,
+    "benchmark_symbol": "bitcoin",
+    "risk_free_rate": 0.02,
+    "save_results": true,
+    "results_dir": "results",
+    "plot_results": true
+  },
+  "system": {
+    "log_level": "INFO",
+    "log_file": "crypto_rf_trading.log",
+    "n_jobs": -1,
+    "memory_limit_gb": 4.0,
+    "data_dir": "data",
+    "models_dir": "models",
+    "results_dir": "results",
+    "enable_alerts": false,
+    "alert_email": "",
+    "random_seed": 42
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "best_parameters": {
+    "model": {
+      "n_estimators": 225,
+      "max_depth": 28,
+      "min_samples_split": 19,
+      "min_samples_leaf": 9,
+      "max_features": "log2",
+      "bootstrap": false,
+      "n_features": 50,
+      "target": "solana_6h"
+    },
+    "trading": {
+      "buy_threshold": 0.65,
+      "sell_threshold": 0.15,
+      "position_size": 0.35,
+      "stop_loss": 0.01,
+      "take_profit": 0.03
+    },
+    "multi_objective": {
+      "n_estimators": 175,
+      "max_depth": 16,
+      "min_samples_split": 3,
+      "min_samples_leaf": 4,
+      "max_features": "sqrt",
+      "buy_threshold": 0.6,
+      "sell_threshold": 0.4,
+      "position_size": 0.25
+    }
+  },
+  "optimization_results": {
+    "model": {
+      "best_params": {
+        "n_estimators": 225,
+        "max_depth": 28,
+        "min_samples_split": 19,
+        "min_samples_leaf": 9,
+        "max_features": "log2",
+        "bootstrap": false,
+        "n_features": 50,
+        "target": "solana_6h"
+      },
+      "best_score": -100.0
+    },
+    "trading": {
+      "best_params": {
+        "buy_threshold": 0.65,
+        "sell_threshold": 0.15,
+        "position_size": 0.35,
+        "stop_loss": 0.01,
+        "take_profit": 0.03
+      },
+      "best_score": 7.256225119710581
+    },
+    "multi_objective": {
+      "best_params": {
+        "n_estimators": 175,
+        "max_depth": 16,
+        "min_samples_split": 3,
+        "min_samples_leaf": 4,
+        "max_features": "sqrt",
+        "buy_threshold": 0.6,
+        "sell_threshold": 0.4,
+        "position_size": 0.25
+      },
+      "best_return": -10.0,
+      "best_sharpe": -10.0
+    },
+    "validation": {
+      "bitcoin": {
+        "r2_score": -4.642025493242436,
+        "total_return": 146.8742216596065,
+        "sharpe_ratio": 2.3433082204185545,
+        "predictions": 1302
+      },
+      "ethereum": {
+        "r2_score": -1.9554925887318326,
+        "total_return": 68.7147409071269,
+        "sharpe_ratio": 0.5553414924727346,
+        "predictions": 1302
+      },
+      "solana": {
+        "r2_score": -1.0900496060469553,
+        "total_return": -284.91468016801076,
+        "sharpe_ratio": -2.161679100381082,
+        "predictions": 1302
+      }
+    }
+  }
+}

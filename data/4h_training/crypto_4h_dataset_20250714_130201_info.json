@@ -1,0 +1,82 @@
+{
+  "total_features": 69,
+  "price_features": [
+    "open",
+    "high",
+    "low",
+    "close",
+    "volume"
+  ],
+  "technical_indicators": [
+    "sma_10",
+    "sma_20",
+    "sma_50",
+    "ema_12",
+    "ema_26",
+    "macd",
+    "macd_signal",
+    "macd_histogram",
+    "rsi",
+    "bb_middle",
+    "bb_upper",
+    "bb_lower",
+    "bb_width",
+    "bb_position",
+    "volume_sma",
+    "price_vs_sma10",
+    "price_vs_sma20",
+    "price_vs_sma50"
+  ],
+  "engineered_features": [
+    "momentum_1",
+    "momentum_4",
+    "momentum_12",
+    "volatility",
+    "trend_strength",
+    "momentum_2h",
+    "momentum_6h",
+    "momentum_12h",
+    "momentum_24h",
+    "future_volatility",
+    "high_volatility",
+    "trend_continues"
+  ],
+  "target_variables": [
+    "price_up_1h",
+    "movement_1h",
+    "price_up_2h",
+    "movement_2h",
+    "price_up_4h",
+    "movement_4h",
+    "price_up_8h",
+    "movement_8h",
+    "high_volatility"
+  ],
+  "symbols": [
+    "MATIC",
+    "AVAX",
+    "BCH",
+    "DOT",
+    "DOGE",
+    "ETC",
+    "ADA",
+    "XMR",
+    "FIL",
+    "TRX",
+    "SOL",
+    "ATOM",
+    "LTC",
+    "LINK",
+    "ETH",
+    "BTC",
+    "UNI",
+    "XRP",
+    "XLM",
+    "BNB"
+  ],
+  "date_range": {
+    "start": "2024-07-21 04:00:00+00:00",
+    "end": "2025-07-13 20:00:00+00:00",
+    "total_periods": 19247
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "hyperparameters": {
+    "best_params": {
+      "n_estimators": 300,
+      "max_depth": 15,
+      "min_samples_split": 10,
+      "min_samples_leaf": 4,
+      "max_features": "sqrt"
+    },
+    "best_score": 6.801276035967698,
+    "n_trials": 15
+  },
+  "features": {
+    "results": {
+      "50": -1.3860172300094917,
+      "100": -0.7364641441173272,
+      "200": -0.6800821943799866
+    },
+    "best_count": 200
+  },
+  "targets": {
+    "results": {
+      "returns_3h": -0.3878270551001075,
+      "returns_6h": -0.4180927893437838,
+      "returns_12h": -0.5932058495182664
+    },
+    "best_target": "returns_3h"
+  },
+  "ensemble": {
+    "results": {
+      "3": 0.8258492143215687,
+      "5": 0.8325998932533205
+    },
+    "best_size": 5
+  },
+  "strategy": {
+    "results": {
+      

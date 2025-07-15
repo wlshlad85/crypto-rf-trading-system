@@ -1,0 +1,26 @@
+2025-07-13 03:15:46,856 - MinuteBacktest - INFO - Logging initialized. Log file: logs/minute_backtest_20250713_031546.log
+2025-07-13 03:15:46,856 - MinuteBacktest - INFO - Running in test mode with reduced scope
+2025-07-13 03:15:46,856 - MinuteBacktest - INFO - ================================================================================
+2025-07-13 03:15:46,856 - MinuteBacktest - INFO - STARTING 6-MONTH MINUTE-LEVEL CRYPTOCURRENCY BACKTESTING
+2025-07-13 03:15:46,856 - MinuteBacktest - INFO - ================================================================================
+2025-07-13 03:15:46,856 - MinuteBacktest - INFO - Start time: 2025-07-13 03:15:46.856654
+2025-07-13 03:15:46,856 - MinuteBacktest - INFO - Symbols: ['BTC-USD', 'ETH-USD']
+2025-07-13 03:15:46,856 - MinuteBacktest - INFO - Period: 1 months
+2025-07-13 03:15:46,857 - MinuteBacktest - INFO - Initial capital: $50,000
+2025-07-13 03:15:46,857 - MinuteBacktest - INFO - 
+============================================================
+2025-07-13 03:15:46,857 - MinuteBacktest - INFO - STEP 1: DATA COLLECTION
+2025-07-13 03:15:46,857 - MinuteBacktest - INFO - ============================================================
+2025-07-13 03:15:46,857 - MinuteBacktest - INFO - Initializing minute data manager...
+2025-07-13 03:15:46,857 - MinuteBacktest - ERROR - Critical error in backtesting pipeline: 'MinuteDataManager' object has no attribute 'cache_dir'
+2025-07-13 03:15:46,857 - MinuteBacktest - ERROR - Full traceback:
+Traceback (most recent call last):
+  File "/home/richardw/crypto_rf_trading_system/run_minute_backtest.py", line 218, in run_complete_backtest
+    data_dict = self._fetch_minute_data()
+  File "/home/richardw/crypto_rf_trading_system/run_minute_backtest.py", line 274, in _fetch_minute_data
+    self.data_manager = MinuteDataManager(cache_dir=self.config['data']['cache_dir'])
+  File "/home/richardw/crypto_rf_trading_system/data/minute_data_manager.py", line 37, in __init__
+    self.config = config or self._get_default_config()
+  File "/home/richardw/crypto_rf_trading_system/data/minute_data_manager.py", line 60, in _get_default_config
+    config.cache_dir = str(self.cache_dir)
+AttributeError: 'MinuteDataManager' object has no attribute 'cache_dir'

@@ -1,0 +1,15 @@
+{
+  "collection_time": "2025-07-14T16:52:06.316583",
+  "symbols": [
+    "BTC-USD"
+  ],
+  "intervals": [
+    "4h",
+    "1h",
+    "1d"
+  ],
+  "success_count": 0,
+  "failure_count": 3,
+  "quality_reports": {},
+  "saved_files": []
+}

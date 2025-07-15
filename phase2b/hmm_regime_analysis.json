@@ -1,0 +1,87 @@
+{
+  "config": {
+    "n_states": 3,
+    "state_names": [
+      "Bull_Market",
+      "Sideways_Market",
+      "Bear_Market"
+    ],
+    "observation_features": [
+      "returns",
+      "volatility",
+      "volume_ratio"
+    ]
+  },
+  "analysis": {
+    "regime_statistics": {
+      "Bull_Market": {
+        "periods": 862,
+        "proportion": 0.862,
+        "avg_probability": 0.29254472436103,
+        "avg_return": 0.002157871063723527,
+        "volatility": 0.04444567982082979,
+        "sharpe_ratio": 0.048550749418669596
+      },
+      "Sideways_Market": {
+        "periods": 99,
+        "proportion": 0.099,
+        "avg_probability": 0.4152630309446452,
+        "avg_return": 0.0034092868447189095,
+        "volatility": 0.034897941592785205,
+        "sharpe_ratio": 0.09769306409246054
+      },
+      "Bear_Market": {
+        "periods": 39,
+        "proportion": 0.039,
+        "avg_probability": 0.2921922443924351,
+        "avg_return": 0.013427302815743935,
+        "volatility": 0.09457815178225829,
+        "sharpe_ratio": 0.14197045049745552
+      }
+    },
+    "transition_matrix": [
+      [
+        0.9790940766549385,
+        0.016260162601624127,
+        0.004645760743321179
+      ],
+      [
+        0.16161616161599837,
+        0.7676767676759922,
+        0.07070707070699929
+      ],
+      [
+        0.07692307692287968,
+        0.20512820512767915,
+        0.717948717946877
+      ]
+    ],
+    "feature_importance": {
+      "Bull_Market": {
+        "returns": 1.0232397900815706,
+        "volatility": 0.6257891705556593,
+        "volume_ratio": 1.0963435863223097
+      },
+      "Sideways_Market": {
+        "returns": 0.23831365156579296,
+        "volatility": 0.14495404835985173,
+        "volume_ratio": 0.2501347671481669
+      },
+      "Bear_Market": {
+        "returns": 2.0225681559777327,
+        "volatility": 4.01820404225751,
+        "volume_ratio": 0.6168227605349746
+      }
+    },
+    "model_performance": {
+      "log_likelihood": 9.999997829301545e-08,
+      "converged": true,
+      "n_iterations": 2
+    }
+  },
+  "model_info": {
+    "hmm_converged": true,
+    "hmm_iterations": 2,
+    "hmm_log_likelihood": 9.999997829301545e-08
+  }
+}

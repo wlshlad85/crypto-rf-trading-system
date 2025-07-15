@@ -1,0 +1,15 @@
+[2025-07-14 13:20:46] 🚀 Enhanced 24-Hour BTC Paper Trading Session Initialized
+[2025-07-14 13:20:46] 💰 Initial Capital: $100,000.00
+[2025-07-14 13:20:46] 📝 Log file: logs/enhanced_24hr_trading/enhanced_btc_24hr_20250714_132046.log
+[2025-07-14 13:20:46] 🕐 Session will run until: 2025-07-15 13:20:46
+[2025-07-14 13:20:46] ⏱️ Update interval: 300 seconds
+[2025-07-14 13:20:46] 🎯 Target Return: 4-6% (vs 2.82% baseline)
+[2025-07-14 13:20:46] 🤖 Enhanced Random Forest Models: ['entry', 'position', 'exit', 'profit']
+[2025-07-14 13:20:46] Press Ctrl+C to stop early and generate report
+[2025-07-14 13:20:46] ⏳ Next update in 300s... (24.0 hours remaining)
+[2025-07-14 13:25:58] ⏳ Next update in 300s... (23.9 hours remaining)
+[2025-07-14 13:31:09] ⏳ Next update in 300s... (23.8 hours remaining)
+[2025-07-14 13:36:20] ⏳ Next update in 300s... (23.7 hours remaining)
+[2025-07-14 13:41:31] ⏳ Next update in 300s... (23.7 hours remaining)
+[2025-07-14 13:46:41] ⏳ Next update in 300s... (23.6 hours remaining)
+[2025-07-14 13:51:51] ⏳ Next update in 300s... (23.5 hours remaining)

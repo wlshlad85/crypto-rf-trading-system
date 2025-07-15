@@ -1,0 +1,23 @@
+🚀 Starting 24-Hour BTC-USD Paper Trading Session
+============================================================
+[2025-07-13 07:50:13] 🚀 24-Hour BTC Paper Trading Session Initialized
+[2025-07-13 07:50:13] 💰 Initial Capital: $100,000.00
+[2025-07-13 07:50:13] 📝 Log file: logs/24hr_trading/btc_24hr_20250713_075013.log
+🚀 24-Hour BTC Paper Trading Session Starting!
+💰 Initial Capital: $100,000.00
+📝 Logs: logs/24hr_trading/btc_24hr_20250713_075013.log
+============================================================
+[2025-07-13 07:50:13] 🕐 Session will run until: 2025-07-14 07:50:13
+[2025-07-13 07:50:13] ⏱️ Update interval: 300 seconds
+[2025-07-13 07:50:13] Press Ctrl+C to stop early and generate report
+
+Traceback (most recent call last):
+  File "/home/richardw/crypto_rf_trading_system/btc_24hr_paper_trader.py", line 542, in <module>
+    main()
+  File "/home/richardw/crypto_rf_trading_system/btc_24hr_paper_trader.py", line 539, in main
+    trader.run_24_hour_session(update_interval=300)
+  File "/home/richardw/crypto_rf_trading_system/btc_24hr_paper_trader.py", line 399, in run_24_hour_session
+    if not hist:
+  File "/home/richardw/.local/lib/python3.10/site-packages/pandas/core/generic.py", line 1577, in __nonzero__
+    raise ValueError(
+ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().

@@ -1,0 +1,530 @@
+2025-07-08 19:54:03,552 - __main__ - INFO - Initialized Ultra-Optimized Trading System
+2025-07-08 19:54:03,552 - __main__ - INFO - Configuration: configs/ultra_btc_config.json
+2025-07-08 19:54:03,552 - __main__ - INFO - Initializing ultra-advanced components...
+2025-07-08 19:54:03,552 - data.multi_timeframe_fetcher - INFO - Initialized multi-timeframe fetcher: {'primary': '5m', 'higher': '15m', 'lower': '1m'}
+2025-07-08 19:54:03,552 - __main__ - INFO - Ultra-advanced components initialized successfully
+2025-07-08 19:54:03,552 - __main__ - INFO - Fetching ultra-optimized multi-timeframe data...
+2025-07-08 19:54:03,552 - data.multi_timeframe_fetcher - INFO - Fetching multi-timeframe data for bitcoin
+2025-07-08 19:54:03,552 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin primary timeframe: 5m, period: 60d
+2025-07-08 19:54:04,309 - data.multi_timeframe_fetcher - INFO - Fetched 17219 primary records for bitcoin
+2025-07-08 19:54:04,310 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin higher timeframe: 15m, period: 60d
+2025-07-08 19:54:04,484 - data.multi_timeframe_fetcher - INFO - Fetched 5740 higher records for bitcoin
+2025-07-08 19:54:04,485 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin lower timeframe: 1m, period: 7d
+2025-07-08 19:54:04,677 - data.multi_timeframe_fetcher - INFO - Fetched 7751 lower records for bitcoin
+2025-07-08 19:54:04,682 - data.multi_timeframe_fetcher - INFO - Aligning timeframes to primary: (17219, 18)
+2025-07-08 19:54:04,682 - data.multi_timeframe_fetcher - INFO - Aligning higher timeframe: (5740, 18)
+2025-07-08 19:54:22,051 - __main__ - INFO - Initialized Ultra-Optimized Trading System
+2025-07-08 19:54:22,051 - __main__ - INFO - Configuration: configs/ultra_btc_config.json
+2025-07-08 19:54:22,052 - __main__ - INFO - Initializing ultra-advanced components...
+2025-07-08 19:54:22,052 - data.multi_timeframe_fetcher - INFO - Initialized multi-timeframe fetcher: {'primary': '5m', 'higher': '15m', 'lower': '1m'}
+2025-07-08 19:54:22,052 - __main__ - INFO - Ultra-advanced components initialized successfully
+2025-07-08 19:54:22,052 - __main__ - INFO - Fetching ultra-optimized multi-timeframe data...
+2025-07-08 19:54:22,052 - data.multi_timeframe_fetcher - INFO - Fetching multi-timeframe data for bitcoin
+2025-07-08 19:54:22,052 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin primary timeframe: 5m, period: 60d
+2025-07-08 19:54:22,604 - data.multi_timeframe_fetcher - INFO - Fetched 17219 primary records for bitcoin
+2025-07-08 19:54:22,604 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin higher timeframe: 15m, period: 60d
+2025-07-08 19:54:22,780 - data.multi_timeframe_fetcher - INFO - Fetched 5740 higher records for bitcoin
+2025-07-08 19:54:22,781 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin lower timeframe: 1m, period: 7d
+2025-07-08 19:54:23,077 - data.multi_timeframe_fetcher - INFO - Fetched 7751 lower records for bitcoin
+2025-07-08 19:54:23,082 - data.multi_timeframe_fetcher - INFO - Aligning timeframes to primary: (17219, 18)
+2025-07-08 19:54:23,082 - data.multi_timeframe_fetcher - INFO - Aligning higher timeframe: (5740, 18)
+2025-07-08 19:54:23,100 - data.multi_timeframe_fetcher - INFO - Aligning lower timeframe: (7751, 18)
+2025-07-08 19:54:23,128 - data.multi_timeframe_fetcher - INFO - Final aligned dataset: (17219, 56)
+2025-07-08 19:54:23,173 - data.multi_timeframe_fetcher - INFO - Final multi-timeframe dataset: (16931, 40)
+2025-07-08 19:54:23,173 - __main__ - INFO - Data fetching completed in 1.12 seconds
+2025-07-08 19:54:23,173 - __main__ - INFO - Raw data shape: (16931, 40)
+2025-07-08 19:54:23,173 - __main__ - INFO - Engineering ultra-advanced features...
+2025-07-08 19:54:23,173 - features.ultra_feature_engineering - INFO - Starting ultra-advanced feature generation
+2025-07-08 19:54:23,175 - features.ultra_feature_engineering - INFO - Generating ultra features for bitcoin (1/1)
+2025-07-08 19:54:23,282 - features.ultra_feature_engineering - INFO - Generated 21 ultra-advanced features
+2025-07-08 19:54:23,282 - features.ultra_feature_engineering - INFO - Total features: 61
+2025-07-08 19:54:23,282 - __main__ - INFO - Feature engineering completed in 0.11 seconds
+2025-07-08 19:54:23,282 - __main__ - INFO - Feature data shape: (16931, 61)
+2025-07-08 19:54:23,282 - __main__ - INFO - Creating ultra-advanced target variables...
+2025-07-08 19:54:23,282 - models.ultra_target_engineering - INFO - Creating ultra-advanced target variables
+2025-07-08 19:54:23,283 - models.ultra_target_engineering - INFO - Created 0 ultra-advanced target variables
+2025-07-08 19:54:23,283 - __main__ - INFO - Target creation completed in 0.00 seconds
+2025-07-08 19:54:23,283 - __main__ - INFO - Target data shape: (16931, 0)
+2025-07-08 19:54:23,283 - __main__ - INFO - Preparing ultra-optimized training data...
+2025-07-08 19:54:40,360 - __main__ - INFO - Initialized Ultra-Optimized Trading System
+2025-07-08 19:54:40,361 - __main__ - INFO - Configuration: configs/ultra_btc_config.json
+2025-07-08 19:54:40,361 - __main__ - INFO - Initializing ultra-advanced components...
+2025-07-08 19:54:40,361 - data.multi_timeframe_fetcher - INFO - Initialized multi-timeframe fetcher: {'primary': '5m', 'higher': '15m', 'lower': '1m'}
+2025-07-08 19:54:40,361 - __main__ - INFO - Ultra-advanced components initialized successfully
+2025-07-08 19:54:40,361 - __main__ - INFO - Fetching ultra-optimized multi-timeframe data...
+2025-07-08 19:54:40,361 - data.multi_timeframe_fetcher - INFO - Fetching multi-timeframe data for bitcoin
+2025-07-08 19:54:40,361 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin primary timeframe: 5m, period: 60d
+2025-07-08 19:54:40,823 - data.multi_timeframe_fetcher - INFO - Fetched 17219 primary records for bitcoin
+2025-07-08 19:54:40,824 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin higher timeframe: 15m, period: 60d
+2025-07-08 19:54:41,017 - data.multi_timeframe_fetcher - INFO - Fetched 5740 higher records for bitcoin
+2025-07-08 19:54:41,017 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin lower timeframe: 1m, period: 7d
+2025-07-08 19:54:41,223 - data.multi_timeframe_fetcher - INFO - Fetched 7752 lower records for bitcoin
+2025-07-08 19:54:41,227 - data.multi_timeframe_fetcher - INFO - Aligning timeframes to primary: (17219, 18)
+2025-07-08 19:54:41,227 - data.multi_timeframe_fetcher - INFO - Aligning higher timeframe: (5740, 18)
+2025-07-08 19:54:41,235 - data.multi_timeframe_fetcher - INFO - Aligning lower timeframe: (7752, 18)
+2025-07-08 19:54:41,258 - data.multi_timeframe_fetcher - INFO - Final aligned dataset: (17219, 56)
+2025-07-08 19:54:41,287 - data.multi_timeframe_fetcher - INFO - Final multi-timeframe dataset: (16931, 40)
+2025-07-08 19:54:41,287 - __main__ - INFO - Data fetching completed in 0.93 seconds
+2025-07-08 19:54:41,287 - __main__ - INFO - Raw data shape: (16931, 40)
+2025-07-08 19:54:41,287 - __main__ - INFO - Raw data columns: ['bitcoin_primary_open', 'bitcoin_primary_high', 'bitcoin_primary_low', 'bitcoin_primary_close', 'bitcoin_primary_volume', 'Dividends', 'Stock Splits', 'bitcoin_primary_returns', 'bitcoin_primary_log_returns', 'bitcoin_primary_volatility', 'bitcoin_primary_momentum', 'bitcoin_primary_sma', 'bitcoin_primary_trend', 'bitcoin_primary_hl_ratio', 'bitcoin_primary_co_ratio', 'bitcoin_primary_volume_sma', 'bitcoin_primary_volume_ratio', 'bitcoin_primary_volume_price', 'bitcoin_higher_open', 'bitcoin_higher_high', 'bitcoin_higher_low', 'bitcoin_higher_close', 'bitcoin_higher_volume', 'bitcoin_higher_returns', 'bitcoin_higher_log_returns', 'bitcoin_higher_volatility', 'bitcoin_higher_momentum', 'bitcoin_higher_sma', 'bitcoin_higher_trend', 'bitcoin_higher_hl_ratio', 'bitcoin_higher_co_ratio', 'bitcoin_higher_volume_sma', 'bitcoin_higher_volume_ratio', 'bitcoin_higher_volume_price', 'bitcoin_trend_alignment', 'bitcoin_trend_convergence', 'bitcoin_vol_regime', 'bitcoin_vol_expansion', 'bitcoin_momentum_persistence', 'bitcoin_momentum_strength']
+2025-07-08 19:54:41,287 - __main__ - INFO - Engineering ultra-advanced features...
+2025-07-08 19:54:41,288 - features.ultra_feature_engineering - INFO - Starting ultra-advanced feature generation
+2025-07-08 19:54:41,288 - features.ultra_feature_engineering - INFO - Generating ultra features for bitcoin (1/1)
+2025-07-08 19:54:41,377 - features.ultra_feature_engineering - INFO - Generated 21 ultra-advanced features
+2025-07-08 19:54:41,378 - features.ultra_feature_engineering - INFO - Total features: 61
+2025-07-08 19:54:41,378 - __main__ - INFO - Feature engineering completed in 0.09 seconds
+2025-07-08 19:54:41,378 - __main__ - INFO - Feature data shape: (16931, 61)
+2025-07-08 19:54:41,378 - __main__ - INFO - Creating ultra-advanced target variables...
+2025-07-08 19:54:41,378 - models.ultra_target_engineering - INFO - Creating ultra-advanced target variables
+2025-07-08 19:54:41,378 - models.ultra_target_engineering - INFO - Created 0 ultra-advanced target variables
+2025-07-08 19:54:41,378 - __main__ - INFO - Target creation completed in 0.00 seconds
+2025-07-08 19:54:41,378 - __main__ - INFO - Target data shape: (16931, 0)
+2025-07-08 19:54:41,378 - __main__ - INFO - Preparing ultra-optimized training data...
+2025-07-08 19:55:36,853 - __main__ - INFO - Initialized Ultra-Optimized Trading System
+2025-07-08 19:55:36,853 - __main__ - INFO - Configuration: configs/ultra_btc_config.json
+2025-07-08 19:55:36,853 - __main__ - INFO - Initializing ultra-advanced components...
+2025-07-08 19:55:36,853 - data.multi_timeframe_fetcher - INFO - Initialized multi-timeframe fetcher: {'primary': '5m', 'higher': '15m', 'lower': '1m'}
+2025-07-08 19:55:36,853 - __main__ - INFO - Ultra-advanced components initialized successfully
+2025-07-08 19:55:36,853 - __main__ - INFO - Fetching ultra-optimized multi-timeframe data...
+2025-07-08 19:55:36,853 - data.multi_timeframe_fetcher - INFO - Fetching multi-timeframe data for bitcoin
+2025-07-08 19:55:36,853 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin primary timeframe: 5m, period: 60d
+2025-07-08 19:55:37,402 - data.multi_timeframe_fetcher - INFO - Fetched 17219 primary records for bitcoin
+2025-07-08 19:55:37,402 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin higher timeframe: 15m, period: 60d
+2025-07-08 19:55:37,607 - data.multi_timeframe_fetcher - INFO - Fetched 5740 higher records for bitcoin
+2025-07-08 19:55:37,607 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin lower timeframe: 1m, period: 7d
+2025-07-08 19:55:37,780 - data.multi_timeframe_fetcher - INFO - Fetched 7753 lower records for bitcoin
+2025-07-08 19:55:37,784 - data.multi_timeframe_fetcher - INFO - Aligning timeframes to primary: (17219, 18)
+2025-07-08 19:55:37,784 - data.multi_timeframe_fetcher - INFO - Aligning higher timeframe: (5740, 18)
+2025-07-08 19:55:37,797 - data.multi_timeframe_fetcher - INFO - Aligning lower timeframe: (7753, 18)
+2025-07-08 19:55:37,822 - data.multi_timeframe_fetcher - INFO - Final aligned dataset: (17219, 56)
+2025-07-08 19:55:37,855 - data.multi_timeframe_fetcher - INFO - Final multi-timeframe dataset: (16931, 40)
+2025-07-08 19:55:37,855 - __main__ - INFO - Data fetching completed in 1.00 seconds
+2025-07-08 19:55:37,855 - __main__ - INFO - Raw data shape: (16931, 40)
+2025-07-08 19:55:37,855 - __main__ - INFO - Raw data columns: ['bitcoin_primary_open', 'bitcoin_primary_high', 'bitcoin_primary_low', 'bitcoin_primary_close', 'bitcoin_primary_volume', 'Dividends', 'Stock Splits', 'bitcoin_primary_returns', 'bitcoin_primary_log_returns', 'bitcoin_primary_volatility', 'bitcoin_primary_momentum', 'bitcoin_primary_sma', 'bitcoin_primary_trend', 'bitcoin_primary_hl_ratio', 'bitcoin_primary_co_ratio', 'bitcoin_primary_volume_sma', 'bitcoin_primary_volume_ratio', 'bitcoin_primary_volume_price', 'bitcoin_higher_open', 'bitcoin_higher_high', 'bitcoin_higher_low', 'bitcoin_higher_close', 'bitcoin_higher_volume', 'bitcoin_higher_returns', 'bitcoin_higher_log_returns', 'bitcoin_higher_volatility', 'bitcoin_higher_momentum', 'bitcoin_higher_sma', 'bitcoin_higher_trend', 'bitcoin_higher_hl_ratio', 'bitcoin_higher_co_ratio', 'bitcoin_higher_volume_sma', 'bitcoin_higher_volume_ratio', 'bitcoin_higher_volume_price', 'bitcoin_trend_alignment', 'bitcoin_trend_convergence', 'bitcoin_vol_regime', 'bitcoin_vol_expansion', 'bitcoin_momentum_persistence', 'bitcoin_momentum_strength']
+2025-07-08 19:55:37,855 - __main__ - INFO - Engineering ultra-advanced features...
+2025-07-08 19:55:37,855 - features.ultra_feature_engineering - INFO - Starting ultra-advanced feature generation
+2025-07-08 19:55:37,856 - features.ultra_feature_engineering - INFO - Generating ultra features for bitcoin (1/1)
+2025-07-08 19:55:37,952 - features.ultra_feature_engineering - INFO - Generated 21 ultra-advanced features
+2025-07-08 19:55:37,952 - features.ultra_feature_engineering - INFO - Total features: 61
+2025-07-08 19:55:37,952 - __main__ - INFO - Feature engineering completed in 0.10 seconds
+2025-07-08 19:55:37,952 - __main__ - INFO - Feature data shape: (16931, 61)
+2025-07-08 19:55:37,952 - __main__ - INFO - Creating ultra-advanced target variables...
+2025-07-08 19:55:37,952 - models.ultra_target_engineering - INFO - Creating ultra-advanced target variables
+2025-07-08 19:55:37,953 - models.ultra_target_engineering - INFO - Creating ultra targets for bitcoin
+2025-07-08 19:56:06,695 - __main__ - INFO - Initialized Ultra-Optimized Trading System
+2025-07-08 19:56:06,696 - __main__ - INFO - Configuration: configs/ultra_btc_config.json
+2025-07-08 19:56:06,696 - __main__ - INFO - Initializing ultra-advanced components...
+2025-07-08 19:56:06,696 - data.multi_timeframe_fetcher - INFO - Initialized multi-timeframe fetcher: {'primary': '5m', 'higher': '15m', 'lower': '1m'}
+2025-07-08 19:56:06,696 - __main__ - INFO - Ultra-advanced components initialized successfully
+2025-07-08 19:56:06,696 - __main__ - INFO - Fetching ultra-optimized multi-timeframe data...
+2025-07-08 19:56:06,696 - data.multi_timeframe_fetcher - INFO - Fetching multi-timeframe data for bitcoin
+2025-07-08 19:56:06,696 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin primary timeframe: 5m, period: 60d
+2025-07-08 19:56:07,245 - data.multi_timeframe_fetcher - INFO - Fetched 17219 primary records for bitcoin
+2025-07-08 19:56:07,246 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin higher timeframe: 15m, period: 60d
+2025-07-08 19:56:07,407 - data.multi_timeframe_fetcher - INFO - Fetched 5740 higher records for bitcoin
+2025-07-08 19:56:07,408 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin lower timeframe: 1m, period: 7d
+2025-07-08 19:56:07,654 - data.multi_timeframe_fetcher - INFO - Fetched 7753 lower records for bitcoin
+2025-07-08 19:56:07,659 - data.multi_timeframe_fetcher - INFO - Aligning timeframes to primary: (17219, 18)
+2025-07-08 19:56:07,659 - data.multi_timeframe_fetcher - INFO - Aligning higher timeframe: (5740, 18)
+2025-07-08 19:56:07,671 - data.multi_timeframe_fetcher - INFO - Aligning lower timeframe: (7753, 18)
+2025-07-08 19:56:07,695 - data.multi_timeframe_fetcher - INFO - Final aligned dataset: (17219, 56)
+2025-07-08 19:56:07,728 - data.multi_timeframe_fetcher - INFO - Final multi-timeframe dataset: (16931, 40)
+2025-07-08 19:56:07,728 - __main__ - INFO - Data fetching completed in 1.03 seconds
+2025-07-08 19:56:07,728 - __main__ - INFO - Raw data shape: (16931, 40)
+2025-07-08 19:56:07,728 - __main__ - INFO - Raw data columns: ['bitcoin_primary_open', 'bitcoin_primary_high', 'bitcoin_primary_low', 'bitcoin_primary_close', 'bitcoin_primary_volume', 'Dividends', 'Stock Splits', 'bitcoin_primary_returns', 'bitcoin_primary_log_returns', 'bitcoin_primary_volatility', 'bitcoin_primary_momentum', 'bitcoin_primary_sma', 'bitcoin_primary_trend', 'bitcoin_primary_hl_ratio', 'bitcoin_primary_co_ratio', 'bitcoin_primary_volume_sma', 'bitcoin_primary_volume_ratio', 'bitcoin_primary_volume_price', 'bitcoin_higher_open', 'bitcoin_higher_high', 'bitcoin_higher_low', 'bitcoin_higher_close', 'bitcoin_higher_volume', 'bitcoin_higher_returns', 'bitcoin_higher_log_returns', 'bitcoin_higher_volatility', 'bitcoin_higher_momentum', 'bitcoin_higher_sma', 'bitcoin_higher_trend', 'bitcoin_higher_hl_ratio', 'bitcoin_higher_co_ratio', 'bitcoin_higher_volume_sma', 'bitcoin_higher_volume_ratio', 'bitcoin_higher_volume_price', 'bitcoin_trend_alignment', 'bitcoin_trend_convergence', 'bitcoin_vol_regime', 'bitcoin_vol_expansion', 'bitcoin_momentum_persistence', 'bitcoin_momentum_strength']
+2025-07-08 19:56:07,728 - __main__ - INFO - Engineering ultra-advanced features...
+2025-07-08 19:56:07,728 - features.ultra_feature_engineering - INFO - Starting ultra-advanced feature generation
+2025-07-08 19:56:07,729 - features.ultra_feature_engineering - INFO - Generating ultra features for bitcoin (1/1)
+2025-07-08 19:56:07,819 - features.ultra_feature_engineering - INFO - Generated 21 ultra-advanced features
+2025-07-08 19:56:07,819 - features.ultra_feature_engineering - INFO - Total features: 61
+2025-07-08 19:56:07,819 - __main__ - INFO - Feature engineering completed in 0.09 seconds
+2025-07-08 19:56:07,819 - __main__ - INFO - Feature data shape: (16931, 61)
+2025-07-08 19:56:07,819 - __main__ - INFO - Creating ultra-advanced target variables...
+2025-07-08 19:56:07,819 - models.ultra_target_engineering - INFO - Creating ultra-advanced target variables
+2025-07-08 19:56:07,819 - models.ultra_target_engineering - INFO - Creating ultra targets for bitcoin
+2025-07-08 19:56:07,832 - models.ultra_target_engineering - INFO - Created 24 ultra-advanced target variables
+2025-07-08 19:56:07,832 - __main__ - INFO - Target creation completed in 0.01 seconds
+2025-07-08 19:56:07,832 - __main__ - INFO - Target data shape: (16931, 24)
+2025-07-08 19:56:07,832 - __main__ - INFO - Preparing ultra-optimized training data...
+2025-07-08 19:56:07,836 - models.ultra_target_engineering - INFO - Prepared target bitcoin_return_6h: mean=0.000018, std=0.002535
+2025-07-08 19:57:11,906 - __main__ - INFO - Initialized Ultra-Optimized Trading System
+2025-07-08 19:57:11,906 - __main__ - INFO - Configuration: configs/ultra_btc_config.json
+2025-07-08 19:57:11,906 - __main__ - INFO - Initializing ultra-advanced components...
+2025-07-08 19:57:11,906 - data.multi_timeframe_fetcher - INFO - Initialized multi-timeframe fetcher: {'primary': '5m', 'higher': '15m', 'lower': '1m'}
+2025-07-08 19:57:11,906 - __main__ - INFO - Ultra-advanced components initialized successfully
+2025-07-08 19:57:11,906 - __main__ - INFO - Fetching ultra-optimized multi-timeframe data...
+2025-07-08 19:57:11,906 - data.multi_timeframe_fetcher - INFO - Fetching multi-timeframe data for bitcoin
+2025-07-08 19:57:11,906 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin primary timeframe: 5m, period: 60d
+2025-07-08 19:57:12,594 - data.multi_timeframe_fetcher - INFO - Fetched 17219 primary records for bitcoin
+2025-07-08 19:57:12,594 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin higher timeframe: 15m, period: 60d
+2025-07-08 19:57:12,809 - data.multi_timeframe_fetcher - INFO - Fetched 5740 higher records for bitcoin
+2025-07-08 19:57:12,809 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin lower timeframe: 1m, period: 7d
+2025-07-08 19:57:13,030 - data.multi_timeframe_fetcher - INFO - Fetched 7754 lower records for bitcoin
+2025-07-08 19:57:13,034 - data.multi_timeframe_fetcher - INFO - Aligning timeframes to primary: (17219, 18)
+2025-07-08 19:57:13,034 - data.multi_timeframe_fetcher - INFO - Aligning higher timeframe: (5740, 18)
+2025-07-08 19:57:13,047 - data.multi_timeframe_fetcher - INFO - Aligning lower timeframe: (7754, 18)
+2025-07-08 19:57:13,072 - data.multi_timeframe_fetcher - INFO - Final aligned dataset: (17219, 56)
+2025-07-08 19:57:13,104 - data.multi_timeframe_fetcher - INFO - Final multi-timeframe dataset: (16931, 40)
+2025-07-08 19:57:13,104 - __main__ - INFO - Data fetching completed in 1.20 seconds
+2025-07-08 19:57:13,104 - __main__ - INFO - Raw data shape: (16931, 40)
+2025-07-08 19:57:13,104 - __main__ - INFO - Raw data columns: ['bitcoin_primary_open', 'bitcoin_primary_high', 'bitcoin_primary_low', 'bitcoin_primary_close', 'bitcoin_primary_volume', 'Dividends', 'Stock Splits', 'bitcoin_primary_returns', 'bitcoin_primary_log_returns', 'bitcoin_primary_volatility', 'bitcoin_primary_momentum', 'bitcoin_primary_sma', 'bitcoin_primary_trend', 'bitcoin_primary_hl_ratio', 'bitcoin_primary_co_ratio', 'bitcoin_primary_volume_sma', 'bitcoin_primary_volume_ratio', 'bitcoin_primary_volume_price', 'bitcoin_higher_open', 'bitcoin_higher_high', 'bitcoin_higher_low', 'bitcoin_higher_close', 'bitcoin_higher_volume', 'bitcoin_higher_returns', 'bitcoin_higher_log_returns', 'bitcoin_higher_volatility', 'bitcoin_higher_momentum', 'bitcoin_higher_sma', 'bitcoin_higher_trend', 'bitcoin_higher_hl_ratio', 'bitcoin_higher_co_ratio', 'bitcoin_higher_volume_sma', 'bitcoin_higher_volume_ratio', 'bitcoin_higher_volume_price', 'bitcoin_trend_alignment', 'bitcoin_trend_convergence', 'bitcoin_vol_regime', 'bitcoin_vol_expansion', 'bitcoin_momentum_persistence', 'bitcoin_momentum_strength']
+2025-07-08 19:57:13,104 - __main__ - INFO - Engineering ultra-advanced features...
+2025-07-08 19:57:13,104 - features.ultra_feature_engineering - INFO - Starting ultra-advanced feature generation
+2025-07-08 19:57:13,105 - features.ultra_feature_engineering - INFO - Generating ultra features for bitcoin (1/1)
+2025-07-08 19:57:13,195 - features.ultra_feature_engineering - INFO - Generated 21 ultra-advanced features
+2025-07-08 19:57:13,195 - features.ultra_feature_engineering - INFO - Total features: 61
+2025-07-08 19:57:13,195 - __main__ - INFO - Feature engineering completed in 0.09 seconds
+2025-07-08 19:57:13,195 - __main__ - INFO - Feature data shape: (16931, 61)
+2025-07-08 19:57:13,195 - __main__ - INFO - Creating ultra-advanced target variables...
+2025-07-08 19:57:13,195 - models.ultra_target_engineering - INFO - Creating ultra-advanced target variables
+2025-07-08 19:57:13,195 - models.ultra_target_engineering - INFO - Creating ultra targets for bitcoin
+2025-07-08 19:57:13,207 - models.ultra_target_engineering - INFO - Created 24 ultra-advanced target variables
+2025-07-08 19:57:13,208 - __main__ - INFO - Target creation completed in 0.01 seconds
+2025-07-08 19:57:13,208 - __main__ - INFO - Target data shape: (16931, 24)
+2025-07-08 19:57:13,208 - __main__ - INFO - Target columns: ['bitcoin_return_1h', 'bitcoin_log_return_1h', 'bitcoin_direction_1h', 'bitcoin_magnitude_1h', 'bitcoin_return_3h', 'bitcoin_log_return_3h', 'bitcoin_direction_3h', 'bitcoin_magnitude_3h', 'bitcoin_return_6h', 'bitcoin_log_return_6h', 'bitcoin_direction_6h', 'bitcoin_magnitude_6h', 'bitcoin_return_12h', 'bitcoin_log_return_12h', 'bitcoin_direction_12h', 'bitcoin_magnitude_12h', 'bitcoin_return_24h', 'bitcoin_log_return_24h', 'bitcoin_direction_24h', 'bitcoin_magnitude_24h', 'bitcoin_return_48h', 'bitcoin_log_return_48h', 'bitcoin_direction_48h', 'bitcoin_magnitude_48h']
+2025-07-08 19:57:13,208 - __main__ - INFO - Preparing ultra-optimized training data...
+2025-07-08 19:57:13,212 - models.ultra_target_engineering - INFO - Prepared target bitcoin_return_6h: mean=0.000018, std=0.002535
+2025-07-08 19:57:41,872 - __main__ - INFO - Initialized Ultra-Optimized Trading System
+2025-07-08 19:57:41,872 - __main__ - INFO - Configuration: configs/ultra_btc_config.json
+2025-07-08 19:57:41,872 - __main__ - INFO - Starting ultra-optimized trading pipeline...
+2025-07-08 19:57:41,872 - __main__ - INFO - Initializing ultra-advanced components...
+2025-07-08 19:57:41,872 - data.multi_timeframe_fetcher - INFO - Initialized multi-timeframe fetcher: {'primary': '5m', 'higher': '15m', 'lower': '1m'}
+2025-07-08 19:57:41,873 - __main__ - INFO - Ultra-advanced components initialized successfully
+2025-07-08 19:57:41,873 - __main__ - INFO - Fetching ultra-optimized multi-timeframe data...
+2025-07-08 19:57:41,873 - data.multi_timeframe_fetcher - INFO - Fetching multi-timeframe data for bitcoin
+2025-07-08 19:57:41,873 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin primary timeframe: 5m, period: 60d
+2025-07-08 19:57:42,413 - data.multi_timeframe_fetcher - INFO - Fetched 17220 primary records for bitcoin
+2025-07-08 19:57:42,413 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin higher timeframe: 15m, period: 60d
+2025-07-08 19:57:42,601 - data.multi_timeframe_fetcher - INFO - Fetched 5740 higher records for bitcoin
+2025-07-08 19:57:42,601 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin lower timeframe: 1m, period: 7d
+2025-07-08 19:57:42,782 - data.multi_timeframe_fetcher - INFO - Fetched 7755 lower records for bitcoin
+2025-07-08 19:57:42,786 - data.multi_timeframe_fetcher - INFO - Aligning timeframes to primary: (17220, 18)
+2025-07-08 19:57:42,786 - data.multi_timeframe_fetcher - INFO - Aligning higher timeframe: (5740, 18)
+2025-07-08 19:57:42,795 - data.multi_timeframe_fetcher - INFO - Aligning lower timeframe: (7755, 18)
+2025-07-08 19:57:42,818 - data.multi_timeframe_fetcher - INFO - Final aligned dataset: (17220, 56)
+2025-07-08 19:57:42,851 - data.multi_timeframe_fetcher - INFO - Final multi-timeframe dataset: (16932, 40)
+2025-07-08 19:57:42,852 - __main__ - INFO - Data fetching completed in 0.98 seconds
+2025-07-08 19:57:42,852 - __main__ - INFO - Raw data shape: (16932, 40)
+2025-07-08 19:57:42,852 - __main__ - INFO - Raw data columns: ['bitcoin_primary_open', 'bitcoin_primary_high', 'bitcoin_primary_low', 'bitcoin_primary_close', 'bitcoin_primary_volume', 'Dividends', 'Stock Splits', 'bitcoin_primary_returns', 'bitcoin_primary_log_returns', 'bitcoin_primary_volatility', 'bitcoin_primary_momentum', 'bitcoin_primary_sma', 'bitcoin_primary_trend', 'bitcoin_primary_hl_ratio', 'bitcoin_primary_co_ratio', 'bitcoin_primary_volume_sma', 'bitcoin_primary_volume_ratio', 'bitcoin_primary_volume_price', 'bitcoin_higher_open', 'bitcoin_higher_high', 'bitcoin_higher_low', 'bitcoin_higher_close', 'bitcoin_higher_volume', 'bitcoin_higher_returns', 'bitcoin_higher_log_returns', 'bitcoin_higher_volatility', 'bitcoin_higher_momentum', 'bitcoin_higher_sma', 'bitcoin_higher_trend', 'bitcoin_higher_hl_ratio', 'bitcoin_higher_co_ratio', 'bitcoin_higher_volume_sma', 'bitcoin_higher_volume_ratio', 'bitcoin_higher_volume_price', 'bitcoin_trend_alignment', 'bitcoin_trend_convergence', 'bitcoin_vol_regime', 'bitcoin_vol_expansion', 'bitcoin_momentum_persistence', 'bitcoin_momentum_strength']
+2025-07-08 19:57:42,852 - __main__ - INFO - Engineering ultra-advanced features...
+2025-07-08 19:57:42,852 - features.ultra_feature_engineering - INFO - Starting ultra-advanced feature generation
+2025-07-08 19:57:42,853 - features.ultra_feature_engineering - INFO - Generating ultra features for bitcoin (1/1)
+2025-07-08 19:57:42,960 - features.ultra_feature_engineering - INFO - Generated 21 ultra-advanced features
+2025-07-08 19:57:42,961 - features.ultra_feature_engineering - INFO - Total features: 61
+2025-07-08 19:57:42,961 - __main__ - INFO - Feature engineering completed in 0.11 seconds
+2025-07-08 19:57:42,961 - __main__ - INFO - Feature data shape: (16932, 61)
+2025-07-08 19:57:42,961 - __main__ - INFO - Creating ultra-advanced target variables...
+2025-07-08 19:57:42,961 - models.ultra_target_engineering - INFO - Creating ultra-advanced target variables
+2025-07-08 19:57:42,961 - models.ultra_target_engineering - INFO - Creating ultra targets for bitcoin
+2025-07-08 19:57:42,976 - models.ultra_target_engineering - INFO - Created 24 ultra-advanced target variables
+2025-07-08 19:57:42,976 - __main__ - INFO - Target creation completed in 0.02 seconds
+2025-07-08 19:57:42,976 - __main__ - INFO - Target data shape: (16932, 24)
+2025-07-08 19:57:42,976 - __main__ - INFO - Target columns: ['bitcoin_return_1h', 'bitcoin_log_return_1h', 'bitcoin_direction_1h', 'bitcoin_magnitude_1h', 'bitcoin_return_3h', 'bitcoin_log_return_3h', 'bitcoin_direction_3h', 'bitcoin_magnitude_3h', 'bitcoin_return_6h', 'bitcoin_log_return_6h', 'bitcoin_direction_6h', 'bitcoin_magnitude_6h', 'bitcoin_return_12h', 'bitcoin_log_return_12h', 'bitcoin_direction_12h', 'bitcoin_magnitude_12h', 'bitcoin_return_24h', 'bitcoin_log_return_24h', 'bitcoin_direction_24h', 'bitcoin_magnitude_24h', 'bitcoin_return_48h', 'bitcoin_log_return_48h', 'bitcoin_direction_48h', 'bitcoin_magnitude_48h']
+2025-07-08 19:57:42,976 - __main__ - INFO - Preparing ultra-optimized training data...
+2025-07-08 19:57:42,980 - models.ultra_target_engineering - INFO - Prepared target bitcoin_return_6h: mean=0.000018, std=0.002534
+2025-07-08 19:57:43,022 - models.random_forest_model - INFO - Prepared data shape: X=(16827, 61), y=16827
+2025-07-08 19:57:43,022 - __main__ - INFO - Training data prepared: 16827 samples
+2025-07-08 19:57:43,022 - __main__ - INFO - Primary target: bitcoin_return_6h
+2025-07-08 19:57:43,022 - __main__ - INFO - Target statistics: {'mean': np.float64(1.7903221060100192e-05), 'std': np.float64(0.002534496020695467), 'skew': np.float64(-0.18517721253322336), 'kurt': np.float64(6.855267130756323), 'quantiles': {0.01: -0.007086893870509314, 0.05: -0.0037469403948943436, 0.25: -0.0011897640920723318, 0.5: 7.587344764137249e-06, 0.75: 0.001213460634481578, 0.95: 0.0038925909188348706, 0.99: 0.007224044813056996}}
+2025-07-08 19:57:43,023 - __main__ - INFO - Training ultra-optimized model...
+2025-07-08 19:57:43,023 - __main__ - INFO - Starting ultra-advanced hyperparameter optimization with Optuna...
+2025-07-08 19:57:43,026 - __main__ - ERROR - Pipeline failed: 'NoneType' object has no attribute 'set_params'
+2025-07-08 19:58:30,042 - __main__ - INFO - Initialized Ultra-Optimized Trading System
+2025-07-08 19:58:30,042 - __main__ - INFO - Configuration: configs/ultra_btc_config.json
+2025-07-08 19:58:30,042 - __main__ - INFO - Starting ultra-optimized trading pipeline...
+2025-07-08 19:58:30,042 - __main__ - INFO - Initializing ultra-advanced components...
+2025-07-08 19:58:30,042 - data.multi_timeframe_fetcher - INFO - Initialized multi-timeframe fetcher: {'primary': '5m', 'higher': '15m', 'lower': '1m'}
+2025-07-08 19:58:30,042 - __main__ - INFO - Ultra-advanced components initialized successfully
+2025-07-08 19:58:30,042 - __main__ - INFO - Fetching ultra-optimized multi-timeframe data...
+2025-07-08 19:58:30,042 - data.multi_timeframe_fetcher - INFO - Fetching multi-timeframe data for bitcoin
+2025-07-08 19:58:30,042 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin primary timeframe: 5m, period: 60d
+2025-07-08 19:58:30,670 - data.multi_timeframe_fetcher - INFO - Fetched 17220 primary records for bitcoin
+2025-07-08 19:58:30,670 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin higher timeframe: 15m, period: 60d
+2025-07-08 19:58:30,826 - data.multi_timeframe_fetcher - INFO - Fetched 5740 higher records for bitcoin
+2025-07-08 19:58:30,826 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin lower timeframe: 1m, period: 7d
+2025-07-08 19:58:31,002 - data.multi_timeframe_fetcher - INFO - Fetched 7755 lower records for bitcoin
+2025-07-08 19:58:31,007 - data.multi_timeframe_fetcher - INFO - Aligning timeframes to primary: (17220, 18)
+2025-07-08 19:58:31,007 - data.multi_timeframe_fetcher - INFO - Aligning higher timeframe: (5740, 18)
+2025-07-08 19:58:31,018 - data.multi_timeframe_fetcher - INFO - Aligning lower timeframe: (7755, 18)
+2025-07-08 19:58:31,041 - data.multi_timeframe_fetcher - INFO - Final aligned dataset: (17220, 56)
+2025-07-08 19:58:31,074 - data.multi_timeframe_fetcher - INFO - Final multi-timeframe dataset: (16932, 40)
+2025-07-08 19:58:31,074 - __main__ - INFO - Data fetching completed in 1.03 seconds
+2025-07-08 19:58:31,074 - __main__ - INFO - Raw data shape: (16932, 40)
+2025-07-08 19:58:31,074 - __main__ - INFO - Raw data columns: ['bitcoin_primary_open', 'bitcoin_primary_high', 'bitcoin_primary_low', 'bitcoin_primary_close', 'bitcoin_primary_volume', 'Dividends', 'Stock Splits', 'bitcoin_primary_returns', 'bitcoin_primary_log_returns', 'bitcoin_primary_volatility', 'bitcoin_primary_momentum', 'bitcoin_primary_sma', 'bitcoin_primary_trend', 'bitcoin_primary_hl_ratio', 'bitcoin_primary_co_ratio', 'bitcoin_primary_volume_sma', 'bitcoin_primary_volume_ratio', 'bitcoin_primary_volume_price', 'bitcoin_higher_open', 'bitcoin_higher_high', 'bitcoin_higher_low', 'bitcoin_higher_close', 'bitcoin_higher_volume', 'bitcoin_higher_returns', 'bitcoin_higher_log_returns', 'bitcoin_higher_volatility', 'bitcoin_higher_momentum', 'bitcoin_higher_sma', 'bitcoin_higher_trend', 'bitcoin_higher_hl_ratio', 'bitcoin_higher_co_ratio', 'bitcoin_higher_volume_sma', 'bitcoin_higher_volume_ratio', 'bitcoin_higher_volume_price', 'bitcoin_trend_alignment', 'bitcoin_trend_convergence', 'bitcoin_vol_regime', 'bitcoin_vol_expansion', 'bitcoin_momentum_persistence', 'bitcoin_momentum_strength']
+2025-07-08 19:58:31,074 - __main__ - INFO - Engineering ultra-advanced features...
+2025-07-08 19:58:31,074 - features.ultra_feature_engineering - INFO - Starting ultra-advanced feature generation
+2025-07-08 19:58:31,075 - features.ultra_feature_engineering - INFO - Generating ultra features for bitcoin (1/1)
+2025-07-08 19:58:31,164 - features.ultra_feature_engineering - INFO - Generated 21 ultra-advanced features
+2025-07-08 19:58:31,164 - features.ultra_feature_engineering - INFO - Total features: 61
+2025-07-08 19:58:31,164 - __main__ - INFO - Feature engineering completed in 0.09 seconds
+2025-07-08 19:58:31,164 - __main__ - INFO - Feature data shape: (16932, 61)
+2025-07-08 19:58:31,164 - __main__ - INFO - Creating ultra-advanced target variables...
+2025-07-08 19:58:31,164 - models.ultra_target_engineering - INFO - Creating ultra-advanced target variables
+2025-07-08 19:58:31,165 - models.ultra_target_engineering - INFO - Creating ultra targets for bitcoin
+2025-07-08 19:58:31,177 - models.ultra_target_engineering - INFO - Created 24 ultra-advanced target variables
+2025-07-08 19:58:31,177 - __main__ - INFO - Target creation completed in 0.01 seconds
+2025-07-08 19:58:31,177 - __main__ - INFO - Target data shape: (16932, 24)
+2025-07-08 19:58:31,177 - __main__ - INFO - Target columns: ['bitcoin_return_1h', 'bitcoin_log_return_1h', 'bitcoin_direction_1h', 'bitcoin_magnitude_1h', 'bitcoin_return_3h', 'bitcoin_log_return_3h', 'bitcoin_direction_3h', 'bitcoin_magnitude_3h', 'bitcoin_return_6h', 'bitcoin_log_return_6h', 'bitcoin_direction_6h', 'bitcoin_magnitude_6h', 'bitcoin_return_12h', 'bitcoin_log_return_12h', 'bitcoin_direction_12h', 'bitcoin_magnitude_12h', 'bitcoin_return_24h', 'bitcoin_log_return_24h', 'bitcoin_direction_24h', 'bitcoin_magnitude_24h', 'bitcoin_return_48h', 'bitcoin_log_return_48h', 'bitcoin_direction_48h', 'bitcoin_magnitude_48h']
+2025-07-08 19:58:31,177 - __main__ - INFO - Preparing ultra-optimized training data...
+2025-07-08 19:58:31,181 - models.ultra_target_engineering - INFO - Prepared target bitcoin_return_6h: mean=0.000018, std=0.002534
+2025-07-08 19:58:31,221 - models.random_forest_model - INFO - Prepared data shape: X=(16827, 61), y=16827
+2025-07-08 19:58:31,221 - __main__ - INFO - Training data prepared: 16827 samples
+2025-07-08 19:58:31,221 - __main__ - INFO - Primary target: bitcoin_return_6h
+2025-07-08 19:58:31,221 - __main__ - INFO - Target statistics: {'mean': np.float64(1.7903221060100192e-05), 'std': np.float64(0.002534496020695467), 'skew': np.float64(-0.18517721253322336), 'kurt': np.float64(6.855267130756323), 'quantiles': {0.01: -0.007086893870509314, 0.05: -0.0037469403948943436, 0.25: -0.0011897640920723318, 0.5: 7.587344764137249e-06, 0.75: 0.001213460634481578, 0.95: 0.0038925909188348706, 0.99: 0.007224044813056996}}
+2025-07-08 19:58:31,221 - __main__ - INFO - Training ultra-optimized model...
+2025-07-08 19:58:31,222 - __main__ - INFO - Optuna optimization disabled, using standard hyperparameter tuning
+2025-07-08 19:58:31,222 - models.random_forest_model - INFO - Starting hyperparameter tuning for ensemble with optuna
+2025-07-08 19:58:31,222 - models.random_forest_model - INFO - Starting hyperparameter tuning with optuna
+2025-07-08 22:05:30,789 - __main__ - INFO - Initialized Ultra-Optimized Trading System
+2025-07-08 22:05:30,789 - __main__ - INFO - Configuration: configs/ultra_btc_config.json
+2025-07-08 22:05:30,789 - __main__ - INFO - Starting ultra-optimized trading pipeline...
+2025-07-08 22:05:30,789 - __main__ - INFO - Initializing ultra-advanced components...
+2025-07-08 22:05:30,789 - data.multi_timeframe_fetcher - INFO - Initialized multi-timeframe fetcher: {'primary': '5m', 'higher': '15m', 'lower': '1m'}
+2025-07-08 22:05:30,790 - __main__ - INFO - Ultra-advanced components initialized successfully
+2025-07-08 22:05:30,790 - __main__ - INFO - Fetching ultra-optimized multi-timeframe data...
+2025-07-08 22:05:30,790 - data.multi_timeframe_fetcher - INFO - Fetching multi-timeframe data for bitcoin
+2025-07-08 22:05:30,790 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin primary timeframe: 5m, period: 60d
+2025-07-08 22:05:31,457 - data.multi_timeframe_fetcher - INFO - Fetched 17245 primary records for bitcoin
+2025-07-08 22:05:31,457 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin higher timeframe: 15m, period: 60d
+2025-07-08 22:05:31,654 - data.multi_timeframe_fetcher - INFO - Fetched 5749 higher records for bitcoin
+2025-07-08 22:05:31,654 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin lower timeframe: 1m, period: 7d
+2025-07-08 22:05:31,902 - data.multi_timeframe_fetcher - INFO - Fetched 7856 lower records for bitcoin
+2025-07-08 22:05:31,906 - data.multi_timeframe_fetcher - INFO - Aligning timeframes to primary: (17245, 18)
+2025-07-08 22:05:31,906 - data.multi_timeframe_fetcher - INFO - Aligning higher timeframe: (5749, 18)
+2025-07-08 22:05:31,918 - data.multi_timeframe_fetcher - INFO - Aligning lower timeframe: (7856, 18)
+2025-07-08 22:05:31,943 - data.multi_timeframe_fetcher - INFO - Final aligned dataset: (17245, 56)
+2025-07-08 22:05:31,980 - data.multi_timeframe_fetcher - INFO - Final multi-timeframe dataset: (16957, 40)
+2025-07-08 22:05:31,980 - __main__ - INFO - Data fetching completed in 1.19 seconds
+2025-07-08 22:05:31,980 - __main__ - INFO - Raw data shape: (16957, 40)
+2025-07-08 22:05:31,980 - __main__ - INFO - Raw data columns: ['bitcoin_primary_open', 'bitcoin_primary_high', 'bitcoin_primary_low', 'bitcoin_primary_close', 'bitcoin_primary_volume', 'Dividends', 'Stock Splits', 'bitcoin_primary_returns', 'bitcoin_primary_log_returns', 'bitcoin_primary_volatility', 'bitcoin_primary_momentum', 'bitcoin_primary_sma', 'bitcoin_primary_trend', 'bitcoin_primary_hl_ratio', 'bitcoin_primary_co_ratio', 'bitcoin_primary_volume_sma', 'bitcoin_primary_volume_ratio', 'bitcoin_primary_volume_price', 'bitcoin_higher_open', 'bitcoin_higher_high', 'bitcoin_higher_low', 'bitcoin_higher_close', 'bitcoin_higher_volume', 'bitcoin_higher_returns', 'bitcoin_higher_log_returns', 'bitcoin_higher_volatility', 'bitcoin_higher_momentum', 'bitcoin_higher_sma', 'bitcoin_higher_trend', 'bitcoin_higher_hl_ratio', 'bitcoin_higher_co_ratio', 'bitcoin_higher_volume_sma', 'bitcoin_higher_volume_ratio', 'bitcoin_higher_volume_price', 'bitcoin_trend_alignment', 'bitcoin_trend_convergence', 'bitcoin_vol_regime', 'bitcoin_vol_expansion', 'bitcoin_momentum_persistence', 'bitcoin_momentum_strength']
+2025-07-08 22:05:31,980 - __main__ - INFO - Engineering ultra-advanced features...
+2025-07-08 22:05:31,980 - features.ultra_feature_engineering - INFO - Starting ultra-advanced feature generation
+2025-07-08 22:05:31,981 - features.ultra_feature_engineering - INFO - Generating ultra features for bitcoin (1/1)
+2025-07-08 22:05:32,078 - features.ultra_feature_engineering - INFO - Generated 21 ultra-advanced features
+2025-07-08 22:05:32,078 - features.ultra_feature_engineering - INFO - Total features: 61
+2025-07-08 22:05:32,078 - __main__ - INFO - Feature engineering completed in 0.10 seconds
+2025-07-08 22:05:32,078 - __main__ - INFO - Feature data shape: (16957, 61)
+2025-07-08 22:05:32,078 - __main__ - INFO - Creating ultra-advanced target variables...
+2025-07-08 22:05:32,078 - models.ultra_target_engineering - INFO - Creating ultra-advanced target variables
+2025-07-08 22:05:32,079 - models.ultra_target_engineering - INFO - Creating ultra targets for bitcoin
+2025-07-08 22:05:32,090 - models.ultra_target_engineering - INFO - Created 24 ultra-advanced target variables
+2025-07-08 22:05:32,090 - __main__ - INFO - Target creation completed in 0.01 seconds
+2025-07-08 22:05:32,090 - __main__ - INFO - Target data shape: (16957, 24)
+2025-07-08 22:05:32,090 - __main__ - INFO - Target columns: ['bitcoin_return_1h', 'bitcoin_log_return_1h', 'bitcoin_direction_1h', 'bitcoin_magnitude_1h', 'bitcoin_return_3h', 'bitcoin_log_return_3h', 'bitcoin_direction_3h', 'bitcoin_magnitude_3h', 'bitcoin_return_6h', 'bitcoin_log_return_6h', 'bitcoin_direction_6h', 'bitcoin_magnitude_6h', 'bitcoin_return_12h', 'bitcoin_log_return_12h', 'bitcoin_direction_12h', 'bitcoin_magnitude_12h', 'bitcoin_return_24h', 'bitcoin_log_return_24h', 'bitcoin_direction_24h', 'bitcoin_magnitude_24h', 'bitcoin_return_48h', 'bitcoin_log_return_48h', 'bitcoin_direction_48h', 'bitcoin_magnitude_48h']
+2025-07-08 22:05:32,090 - __main__ - INFO - Preparing ultra-optimized training data...
+2025-07-08 22:05:32,095 - models.ultra_target_engineering - INFO - Prepared target bitcoin_return_6h: mean=0.000017, std=0.002533
+2025-07-08 22:05:32,135 - models.random_forest_model - INFO - Prepared data shape: X=(16852, 61), y=16852
+2025-07-08 22:05:32,135 - __main__ - INFO - Training data prepared: 16852 samples
+2025-07-08 22:05:32,135 - __main__ - INFO - Primary target: bitcoin_return_6h
+2025-07-08 22:05:32,135 - __main__ - INFO - Target statistics: {'mean': np.float64(1.6943395543010194e-05), 'std': np.float64(0.002533129848944102), 'skew': np.float64(-0.18429988025297464), 'kurt': np.float64(6.861896401650027), 'quantiles': {0.01: -0.007081801712684133, 0.05: -0.0037454516420751816, 0.25: -0.0011908113142963805, 0.5: 5.605195622537806e-06, 0.75: 0.0012127274219650985, 0.95: 0.0038888387997083607, 0.99: 0.007219516013683536}}
+2025-07-08 22:05:32,135 - __main__ - INFO - Training ultra-optimized model...
+2025-07-08 22:05:32,136 - __main__ - INFO - Using standard hyperparameter tuning for ensemble model
+2025-07-08 22:05:32,136 - models.random_forest_model - INFO - Starting hyperparameter tuning for ensemble with optuna
+2025-07-08 22:05:32,136 - models.random_forest_model - INFO - Starting hyperparameter tuning with optuna
+2025-07-08 22:11:42,631 - __main__ - INFO - Initialized Ultra-Optimized Trading System
+2025-07-08 22:11:42,631 - __main__ - INFO - Configuration: configs/ultra_btc_config.json
+2025-07-08 22:11:42,631 - __main__ - INFO - Starting ultra-optimized trading pipeline...
+2025-07-08 22:11:42,631 - __main__ - INFO - Initializing ultra-advanced components...
+2025-07-08 22:11:42,631 - data.multi_timeframe_fetcher - INFO - Initialized multi-timeframe fetcher: {'primary': '5m', 'higher': '15m', 'lower': '1m'}
+2025-07-08 22:11:42,631 - __main__ - INFO - Ultra-advanced components initialized successfully
+2025-07-08 22:11:42,631 - __main__ - INFO - Fetching ultra-optimized multi-timeframe data...
+2025-07-08 22:11:42,631 - data.multi_timeframe_fetcher - INFO - Fetching multi-timeframe data for bitcoin
+2025-07-08 22:11:42,631 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin primary timeframe: 5m, period: 60d
+2025-07-08 22:11:43,189 - data.multi_timeframe_fetcher - INFO - Fetched 17246 primary records for bitcoin
+2025-07-08 22:11:43,189 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin higher timeframe: 15m, period: 60d
+2025-07-08 22:11:43,380 - data.multi_timeframe_fetcher - INFO - Fetched 5749 higher records for bitcoin
+2025-07-08 22:11:43,380 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin lower timeframe: 1m, period: 7d
+2025-07-08 22:11:43,589 - data.multi_timeframe_fetcher - INFO - Fetched 7862 lower records for bitcoin
+2025-07-08 22:11:43,593 - data.multi_timeframe_fetcher - INFO - Aligning timeframes to primary: (17246, 18)
+2025-07-08 22:11:43,593 - data.multi_timeframe_fetcher - INFO - Aligning higher timeframe: (5749, 18)
+2025-07-08 22:11:43,603 - data.multi_timeframe_fetcher - INFO - Aligning lower timeframe: (7862, 18)
+2025-07-08 22:11:43,627 - data.multi_timeframe_fetcher - INFO - Final aligned dataset: (17246, 56)
+2025-07-08 22:11:43,661 - data.multi_timeframe_fetcher - INFO - Final multi-timeframe dataset: (16958, 40)
+2025-07-08 22:11:43,661 - __main__ - INFO - Data fetching completed in 1.03 seconds
+2025-07-08 22:11:43,661 - __main__ - INFO - Raw data shape: (16958, 40)
+2025-07-08 22:11:43,661 - __main__ - INFO - Raw data columns: ['bitcoin_primary_open', 'bitcoin_primary_high', 'bitcoin_primary_low', 'bitcoin_primary_close', 'bitcoin_primary_volume', 'Dividends', 'Stock Splits', 'bitcoin_primary_returns', 'bitcoin_primary_log_returns', 'bitcoin_primary_volatility', 'bitcoin_primary_momentum', 'bitcoin_primary_sma', 'bitcoin_primary_trend', 'bitcoin_primary_hl_ratio', 'bitcoin_primary_co_ratio', 'bitcoin_primary_volume_sma', 'bitcoin_primary_volume_ratio', 'bitcoin_primary_volume_price', 'bitcoin_higher_open', 'bitcoin_higher_high', 'bitcoin_higher_low', 'bitcoin_higher_close', 'bitcoin_higher_volume', 'bitcoin_higher_returns', 'bitcoin_higher_log_returns', 'bitcoin_higher_volatility', 'bitcoin_higher_momentum', 'bitcoin_higher_sma', 'bitcoin_higher_trend', 'bitcoin_higher_hl_ratio', 'bitcoin_higher_co_ratio', 'bitcoin_higher_volume_sma', 'bitcoin_higher_volume_ratio', 'bitcoin_higher_volume_price', 'bitcoin_trend_alignment', 'bitcoin_trend_convergence', 'bitcoin_vol_regime', 'bitcoin_vol_expansion', 'bitcoin_momentum_persistence', 'bitcoin_momentum_strength']
+2025-07-08 22:11:43,661 - __main__ - INFO - Engineering ultra-advanced features...
+2025-07-08 22:11:43,661 - features.ultra_feature_engineering - INFO - Starting ultra-advanced feature generation
+2025-07-08 22:11:43,662 - features.ultra_feature_engineering - INFO - Generating ultra features for bitcoin (1/1)
+2025-07-08 22:11:43,760 - features.ultra_feature_engineering - INFO - Generated 21 ultra-advanced features
+2025-07-08 22:11:43,760 - features.ultra_feature_engineering - INFO - Total features: 61
+2025-07-08 22:11:43,760 - __main__ - INFO - Feature engineering completed in 0.10 seconds
+2025-07-08 22:11:43,760 - __main__ - INFO - Feature data shape: (16958, 61)
+2025-07-08 22:11:43,760 - __main__ - INFO - Creating ultra-advanced target variables...
+2025-07-08 22:11:43,760 - models.ultra_target_engineering - INFO - Creating ultra-advanced target variables
+2025-07-08 22:11:43,761 - models.ultra_target_engineering - INFO - Creating ultra targets for bitcoin
+2025-07-08 22:11:43,774 - models.ultra_target_engineering - INFO - Created 24 ultra-advanced target variables
+2025-07-08 22:11:43,774 - __main__ - INFO - Target creation completed in 0.01 seconds
+2025-07-08 22:11:43,774 - __main__ - INFO - Target data shape: (16958, 24)
+2025-07-08 22:11:43,774 - __main__ - INFO - Target columns: ['bitcoin_return_1h', 'bitcoin_log_return_1h', 'bitcoin_direction_1h', 'bitcoin_magnitude_1h', 'bitcoin_return_3h', 'bitcoin_log_return_3h', 'bitcoin_direction_3h', 'bitcoin_magnitude_3h', 'bitcoin_return_6h', 'bitcoin_log_return_6h', 'bitcoin_direction_6h', 'bitcoin_magnitude_6h', 'bitcoin_return_12h', 'bitcoin_log_return_12h', 'bitcoin_direction_12h', 'bitcoin_magnitude_12h', 'bitcoin_return_24h', 'bitcoin_log_return_24h', 'bitcoin_direction_24h', 'bitcoin_magnitude_24h', 'bitcoin_return_48h', 'bitcoin_log_return_48h', 'bitcoin_direction_48h', 'bitcoin_magnitude_48h']
+2025-07-08 22:11:43,774 - __main__ - INFO - Preparing ultra-optimized training data...
+2025-07-08 22:11:43,778 - models.ultra_target_engineering - INFO - Prepared target bitcoin_return_6h: mean=0.000017, std=0.002533
+2025-07-08 22:11:43,819 - models.random_forest_model - INFO - Prepared data shape: X=(16853, 61), y=16853
+2025-07-08 22:11:43,819 - __main__ - INFO - Training data prepared: 16853 samples
+2025-07-08 22:11:43,819 - __main__ - INFO - Primary target: bitcoin_return_6h
+2025-07-08 22:11:43,819 - __main__ - INFO - Target statistics: {'mean': np.float64(1.693139683781497e-05), 'std': np.float64(0.002533050028452191), 'skew': np.float64(-0.184287288899894), 'kurt': np.float64(6.862549706502914), 'quantiles': {0.01: -0.0070815980263711255, 0.05: -0.0037453757165833656, 0.25: -0.0011907229734760272, 0.5: 5.544786048194972e-06, 0.75: 0.0012126576435004255, 0.95: 0.003888836445687571, 0.99: 0.007219334861708626}}
+2025-07-08 22:11:43,819 - __main__ - INFO - Training ultra-optimized model...
+2025-07-08 22:11:43,819 - __main__ - INFO - Using standard hyperparameter tuning for ensemble model
+2025-07-08 22:11:43,819 - models.random_forest_model - INFO - Starting hyperparameter tuning for ensemble with optuna
+2025-07-08 22:11:43,819 - models.random_forest_model - INFO - Starting hyperparameter tuning with optuna
+2025-07-08 22:32:34,089 - models.random_forest_model - INFO - Optuna tuning completed. Best score: -0.0000
+2025-07-08 22:32:34,089 - models.random_forest_model - INFO - Hyperparameter tuning completed for ensemble
+2025-07-08 22:32:34,089 - __main__ - ERROR - Pipeline failed: 'EnsembleRandomForestModel' object has no attribute 'model'
+2025-07-08 23:51:54,501 - __main__ - INFO - Initialized Ultra-Optimized Trading System
+2025-07-08 23:51:54,501 - __main__ - INFO - Configuration: configs/ultra_btc_config.json
+2025-07-08 23:51:54,501 - __main__ - INFO - Starting ultra-optimized trading pipeline...
+2025-07-08 23:51:54,501 - __main__ - INFO - Initializing ultra-advanced components...
+2025-07-08 23:51:54,501 - data.multi_timeframe_fetcher - INFO - Initialized multi-timeframe fetcher: {'primary': '5m', 'higher': '15m', 'lower': '1m'}
+2025-07-08 23:51:54,501 - __main__ - INFO - Ultra-advanced components initialized successfully
+2025-07-08 23:51:54,501 - __main__ - INFO - Fetching ultra-optimized multi-timeframe data...
+2025-07-08 23:51:54,501 - data.multi_timeframe_fetcher - INFO - Fetching multi-timeframe data for bitcoin
+2025-07-08 23:51:54,501 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin primary timeframe: 5m, period: 60d
+2025-07-08 23:51:55,175 - data.multi_timeframe_fetcher - INFO - Fetched 17267 primary records for bitcoin
+2025-07-08 23:51:55,175 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin higher timeframe: 15m, period: 60d
+2025-07-08 23:51:55,352 - data.multi_timeframe_fetcher - INFO - Fetched 5756 higher records for bitcoin
+2025-07-08 23:51:55,352 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin lower timeframe: 1m, period: 7d
+2025-07-08 23:51:55,535 - data.multi_timeframe_fetcher - INFO - Fetched 7945 lower records for bitcoin
+2025-07-08 23:51:55,540 - data.multi_timeframe_fetcher - INFO - Aligning timeframes to primary: (17267, 18)
+2025-07-08 23:51:55,540 - data.multi_timeframe_fetcher - INFO - Aligning higher timeframe: (5756, 18)
+2025-07-08 23:51:55,551 - data.multi_timeframe_fetcher - INFO - Aligning lower timeframe: (7945, 18)
+2025-07-08 23:51:55,575 - data.multi_timeframe_fetcher - INFO - Final aligned dataset: (17267, 56)
+2025-07-08 23:51:55,609 - data.multi_timeframe_fetcher - INFO - Final multi-timeframe dataset: (16979, 40)
+2025-07-08 23:51:55,610 - __main__ - INFO - Data fetching completed in 1.11 seconds
+2025-07-08 23:51:55,610 - __main__ - INFO - Raw data shape: (16979, 40)
+2025-07-08 23:51:55,610 - __main__ - INFO - Raw data columns: ['bitcoin_primary_open', 'bitcoin_primary_high', 'bitcoin_primary_low', 'bitcoin_primary_close', 'bitcoin_primary_volume', 'Dividends', 'Stock Splits', 'bitcoin_primary_returns', 'bitcoin_primary_log_returns', 'bitcoin_primary_volatility', 'bitcoin_primary_momentum', 'bitcoin_primary_sma', 'bitcoin_primary_trend', 'bitcoin_primary_hl_ratio', 'bitcoin_primary_co_ratio', 'bitcoin_primary_volume_sma', 'bitcoin_primary_volume_ratio', 'bitcoin_primary_volume_price', 'bitcoin_higher_open', 'bitcoin_higher_high', 'bitcoin_higher_low', 'bitcoin_higher_close', 'bitcoin_higher_volume', 'bitcoin_higher_returns', 'bitcoin_higher_log_returns', 'bitcoin_higher_volatility', 'bitcoin_higher_momentum', 'bitcoin_higher_sma', 'bitcoin_higher_trend', 'bitcoin_higher_hl_ratio', 'bitcoin_higher_co_ratio', 'bitcoin_higher_volume_sma', 'bitcoin_higher_volume_ratio', 'bitcoin_higher_volume_price', 'bitcoin_trend_alignment', 'bitcoin_trend_convergence', 'bitcoin_vol_regime', 'bitcoin_vol_expansion', 'bitcoin_momentum_persistence', 'bitcoin_momentum_strength']
+2025-07-08 23:51:55,610 - __main__ - INFO - Engineering ultra-advanced features...
+2025-07-08 23:51:55,610 - features.ultra_feature_engineering - INFO - Starting ultra-advanced feature generation
+2025-07-08 23:51:55,611 - features.ultra_feature_engineering - INFO - Generating ultra features for bitcoin (1/1)
+2025-07-08 23:51:55,707 - features.ultra_feature_engineering - INFO - Generated 21 ultra-advanced features
+2025-07-08 23:51:55,707 - features.ultra_feature_engineering - INFO - Total features: 61
+2025-07-08 23:51:55,707 - __main__ - INFO - Feature engineering completed in 0.10 seconds
+2025-07-08 23:51:55,707 - __main__ - INFO - Feature data shape: (16979, 61)
+2025-07-08 23:51:55,707 - __main__ - INFO - Creating ultra-advanced target variables...
+2025-07-08 23:51:55,707 - models.ultra_target_engineering - INFO - Creating ultra-advanced target variables
+2025-07-08 23:51:55,707 - models.ultra_target_engineering - INFO - Creating ultra targets for bitcoin
+2025-07-08 23:51:55,719 - models.ultra_target_engineering - INFO - Created 24 ultra-advanced target variables
+2025-07-08 23:51:55,719 - __main__ - INFO - Target creation completed in 0.01 seconds
+2025-07-08 23:51:55,719 - __main__ - INFO - Target data shape: (16979, 24)
+2025-07-08 23:51:55,719 - __main__ - INFO - Target columns: ['bitcoin_return_1h', 'bitcoin_log_return_1h', 'bitcoin_direction_1h', 'bitcoin_magnitude_1h', 'bitcoin_return_3h', 'bitcoin_log_return_3h', 'bitcoin_direction_3h', 'bitcoin_magnitude_3h', 'bitcoin_return_6h', 'bitcoin_log_return_6h', 'bitcoin_direction_6h', 'bitcoin_magnitude_6h', 'bitcoin_return_12h', 'bitcoin_log_return_12h', 'bitcoin_direction_12h', 'bitcoin_magnitude_12h', 'bitcoin_return_24h', 'bitcoin_log_return_24h', 'bitcoin_direction_24h', 'bitcoin_magnitude_24h', 'bitcoin_return_48h', 'bitcoin_log_return_48h', 'bitcoin_direction_48h', 'bitcoin_magnitude_48h']
+2025-07-08 23:51:55,719 - __main__ - INFO - Preparing ultra-optimized training data...
+2025-07-08 23:51:55,723 - models.ultra_target_engineering - INFO - Prepared target bitcoin_return_6h: mean=0.000017, std=0.002532
+2025-07-08 23:51:55,765 - models.random_forest_model - INFO - Prepared data shape: X=(16874, 61), y=16874
+2025-07-08 23:51:55,765 - __main__ - INFO - Training data prepared: 16874 samples
+2025-07-08 23:51:55,765 - __main__ - INFO - Primary target: bitcoin_return_6h
+2025-07-08 23:51:55,765 - __main__ - INFO - Target statistics: {'mean': np.float64(1.7470704852519606e-05), 'std': np.float64(0.0025317707755565994), 'skew': np.float64(-0.18481285130625216), 'kurt': np.float64(6.870598429994605), 'quantiles': {0.01: -0.007077320613797973, 0.05: -0.00374444991162477, 0.25: -0.001189323865975922, 0.5: 7.51100687512718e-06, 0.75: 0.0012122332610917663, 0.95: 0.003885557596443288, 0.99: 0.00721553067023487}}
+2025-07-08 23:51:55,766 - __main__ - INFO - Training ultra-optimized model...
+2025-07-08 23:51:55,766 - __main__ - INFO - Using standard hyperparameter tuning for ensemble model
+2025-07-08 23:51:55,766 - models.random_forest_model - INFO - Starting hyperparameter tuning for ensemble with optuna
+2025-07-08 23:51:55,766 - models.random_forest_model - INFO - Starting hyperparameter tuning with optuna
+2025-07-09 00:02:49,076 - models.random_forest_model - INFO - Optuna tuning completed. Best score: -0.0000
+2025-07-09 00:02:49,077 - models.random_forest_model - INFO - Hyperparameter tuning completed for ensemble
+2025-07-09 00:02:49,077 - models.random_forest_model - INFO - Training ensemble of 5 models
+2025-07-09 00:02:49,077 - models.random_forest_model - INFO - Training model 1/5
+2025-07-09 00:02:49,089 - models.random_forest_model - INFO - Starting model training
+2025-07-09 00:02:50,489 - models.random_forest_model - INFO - Training completed. Val R2: 0.0419
+2025-07-09 00:02:50,489 - models.random_forest_model - INFO - Training model 2/5
+2025-07-09 00:02:50,496 - models.random_forest_model - INFO - Starting model training
+2025-07-09 00:02:51,803 - models.random_forest_model - INFO - Training completed. Val R2: 0.0378
+2025-07-09 00:02:51,804 - models.random_forest_model - INFO - Training model 3/5
+2025-07-09 00:02:51,810 - models.random_forest_model - INFO - Starting model training
+2025-07-09 00:02:53,266 - models.random_forest_model - INFO - Training completed. Val R2: 0.0439
+2025-07-09 00:02:53,266 - models.random_forest_model - INFO - Training model 4/5
+2025-07-09 00:02:53,277 - models.random_forest_model - INFO - Starting model training
+2025-07-09 00:02:54,683 - models.random_forest_model - INFO - Training completed. Val R2: 0.0389
+2025-07-09 00:02:54,683 - models.random_forest_model - INFO - Training model 5/5
+2025-07-09 00:02:54,689 - models.random_forest_model - INFO - Starting model training
+2025-07-09 00:02:56,070 - models.random_forest_model - INFO - Training completed. Val R2: 0.0502
+2025-07-09 00:02:56,071 - __main__ - INFO - Model training completed in 660.30 seconds
+2025-07-09 00:02:56,071 - __main__ - ERROR - Pipeline failed: 'EnsembleRandomForestModel' object has no attribute 'model'
+2025-07-09 01:00:41,920 - __main__ - INFO - Initialized Ultra-Optimized Trading System
+2025-07-09 01:00:41,920 - __main__ - INFO - Configuration: configs/ultra_btc_config.json
+2025-07-09 01:00:41,920 - __main__ - INFO - Starting ultra-optimized trading pipeline...
+2025-07-09 01:00:41,920 - __main__ - INFO - Initializing ultra-advanced components...
+2025-07-09 01:00:41,921 - data.multi_timeframe_fetcher - INFO - Initialized multi-timeframe fetcher: {'primary': '5m', 'higher': '15m', 'lower': '1m'}
+2025-07-09 01:00:41,921 - __main__ - INFO - Ultra-advanced components initialized successfully
+2025-07-09 01:00:41,921 - __main__ - INFO - Fetching ultra-optimized multi-timeframe data...
+2025-07-09 01:00:41,921 - data.multi_timeframe_fetcher - INFO - Fetching multi-timeframe data for bitcoin
+2025-07-09 01:00:41,921 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin primary timeframe: 5m, period: 60d
+2025-07-09 01:00:42,502 - data.multi_timeframe_fetcher - INFO - Fetched 16992 primary records for bitcoin
+2025-07-09 01:00:42,502 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin higher timeframe: 15m, period: 60d
+2025-07-09 01:00:42,662 - data.multi_timeframe_fetcher - INFO - Fetched 5664 higher records for bitcoin
+2025-07-09 01:00:42,662 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin lower timeframe: 1m, period: 7d
+2025-07-09 01:00:42,817 - data.multi_timeframe_fetcher - INFO - Fetched 6837 lower records for bitcoin
+2025-07-09 01:00:42,822 - data.multi_timeframe_fetcher - INFO - Aligning timeframes to primary: (16992, 18)
+2025-07-09 01:00:42,822 - data.multi_timeframe_fetcher - INFO - Aligning higher timeframe: (5664, 18)
+2025-07-09 01:00:42,835 - data.multi_timeframe_fetcher - INFO - Aligning lower timeframe: (6837, 18)
+2025-07-09 01:00:42,861 - data.multi_timeframe_fetcher - INFO - Final aligned dataset: (16992, 56)
+2025-07-09 01:00:42,896 - data.multi_timeframe_fetcher - INFO - Final multi-timeframe dataset: (16704, 40)
+2025-07-09 01:00:42,896 - __main__ - INFO - Data fetching completed in 0.98 seconds
+2025-07-09 01:00:42,896 - __main__ - INFO - Raw data shape: (16704, 40)
+2025-07-09 01:00:42,896 - __main__ - INFO - Raw data columns: ['bitcoin_primary_open', 'bitcoin_primary_high', 'bitcoin_primary_low', 'bitcoin_primary_close', 'bitcoin_primary_volume', 'Dividends', 'Stock Splits', 'bitcoin_primary_returns', 'bitcoin_primary_log_returns', 'bitcoin_primary_volatility', 'bitcoin_primary_momentum', 'bitcoin_primary_sma', 'bitcoin_primary_trend', 'bitcoin_primary_hl_ratio', 'bitcoin_primary_co_ratio', 'bitcoin_primary_volume_sma', 'bitcoin_primary_volume_ratio', 'bitcoin_primary_volume_price', 'bitcoin_higher_open', 'bitcoin_higher_high', 'bitcoin_higher_low', 'bitcoin_higher_close', 'bitcoin_higher_volume', 'bitcoin_higher_returns', 'bitcoin_higher_log_returns', 'bitcoin_higher_volatility', 'bitcoin_higher_momentum', 'bitcoin_higher_sma', 'bitcoin_higher_trend', 'bitcoin_higher_hl_ratio', 'bitcoin_higher_co_ratio', 'bitcoin_higher_volume_sma', 'bitcoin_higher_volume_ratio', 'bitcoin_higher_volume_price', 'bitcoin_trend_alignment', 'bitcoin_trend_convergence', 'bitcoin_vol_regime', 'bitcoin_vol_expansion', 'bitcoin_momentum_persistence', 'bitcoin_momentum_strength']
+2025-07-09 01:00:42,896 - __main__ - INFO - Engineering ultra-advanced features...
+2025-07-09 01:00:42,896 - features.ultra_feature_engineering - INFO - Starting ultra-advanced feature generation
+2025-07-09 01:00:42,897 - features.ultra_feature_engineering - INFO - Generating ultra features for bitcoin (1/1)
+2025-07-09 01:00:42,985 - features.ultra_feature_engineering - INFO - Generated 21 ultra-advanced features
+2025-07-09 01:00:42,985 - features.ultra_feature_engineering - INFO - Total features: 61
+2025-07-09 01:00:42,985 - __main__ - INFO - Feature engineering completed in 0.09 seconds
+2025-07-09 01:00:42,985 - __main__ - INFO - Feature data shape: (16704, 61)
+2025-07-09 01:00:42,985 - __main__ - INFO - Creating ultra-advanced target variables...
+2025-07-09 01:00:42,986 - models.ultra_target_engineering - INFO - Creating ultra-advanced target variables
+2025-07-09 01:00:42,986 - models.ultra_target_engineering - INFO - Creating ultra targets for bitcoin
+2025-07-09 01:00:42,998 - models.ultra_target_engineering - INFO - Created 24 ultra-advanced target variables
+2025-07-09 01:00:42,999 - __main__ - INFO - Target creation completed in 0.01 seconds
+2025-07-09 01:00:42,999 - __main__ - INFO - Target data shape: (16704, 24)
+2025-07-09 01:00:42,999 - __main__ - INFO - Target columns: ['bitcoin_return_1h', 'bitcoin_log_return_1h', 'bitcoin_direction_1h', 'bitcoin_magnitude_1h', 'bitcoin_return_3h', 'bitcoin_log_return_3h', 'bitcoin_direction_3h', 'bitcoin_magnitude_3h', 'bitcoin_return_6h', 'bitcoin_log_return_6h', 'bitcoin_direction_6h', 'bitcoin_magnitude_6h', 'bitcoin_return_12h', 'bitcoin_log_return_12h', 'bitcoin_direction_12h', 'bitcoin_magnitude_12h', 'bitcoin_return_24h', 'bitcoin_log_return_24h', 'bitcoin_direction_24h', 'bitcoin_magnitude_24h', 'bitcoin_return_48h', 'bitcoin_log_return_48h', 'bitcoin_direction_48h', 'bitcoin_magnitude_48h']
+2025-07-09 01:00:42,999 - __main__ - INFO - Preparing ultra-optimized training data...
+2025-07-09 01:00:43,003 - models.ultra_target_engineering - INFO - Prepared target bitcoin_return_6h: mean=0.000019, std=0.002536
+2025-07-09 01:00:43,042 - models.random_forest_model - INFO - Prepared data shape: X=(16599, 61), y=16599
+2025-07-09 01:00:43,042 - __main__ - INFO - Training data prepared: 16599 samples
+2025-07-09 01:00:43,042 - __main__ - INFO - Primary target: bitcoin_return_6h
+2025-07-09 01:00:43,043 - __main__ - INFO - Target statistics: {'mean': np.float64(1.8784420510670215e-05), 'std': np.float64(0.0025355672211482263), 'skew': np.float64(-0.18884483248798298), 'kurt': np.float64(6.9359538334191235), 'quantiles': {0.01: -0.007107860042787528, 0.05: -0.0037463567965735412, 0.25: -0.0011852488380892923, 0.5: 8.546912435458687e-06, 0.75: 0.0012099275703481571, 0.95: 0.003889608055699976, 0.99: 0.007234932798596948}}
+2025-07-09 01:00:43,043 - __main__ - INFO - Training ultra-optimized model...
+2025-07-09 01:00:43,043 - __main__ - INFO - Using standard hyperparameter tuning for ensemble model
+2025-07-09 01:00:43,043 - models.random_forest_model - INFO - Starting hyperparameter tuning for ensemble with optuna
+2025-07-09 01:00:43,043 - models.random_forest_model - INFO - Starting hyperparameter tuning with optuna
+2025-07-09 01:22:54,995 - __main__ - INFO - Initialized Ultra-Optimized Trading System
+2025-07-09 01:22:54,995 - __main__ - INFO - Configuration: configs/ultra_btc_config.json
+2025-07-09 01:22:54,995 - __main__ - INFO - Starting ultra-optimized trading pipeline...
+2025-07-09 01:22:54,995 - __main__ - INFO - Initializing ultra-advanced components...
+2025-07-09 01:22:54,995 - data.multi_timeframe_fetcher - INFO - Initialized multi-timeframe fetcher: {'primary': '5m', 'higher': '15m', 'lower': '1m'}
+2025-07-09 01:22:54,996 - __main__ - INFO - Ultra-advanced components initialized successfully
+2025-07-09 01:22:54,996 - __main__ - INFO - Fetching ultra-optimized multi-timeframe data...
+2025-07-09 01:22:54,996 - data.multi_timeframe_fetcher - INFO - Fetching multi-timeframe data for bitcoin
+2025-07-09 01:22:54,996 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin primary timeframe: 5m, period: 60d
+2025-07-09 01:22:55,553 - data.multi_timeframe_fetcher - INFO - Fetched 16996 primary records for bitcoin
+2025-07-09 01:22:55,553 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin higher timeframe: 15m, period: 60d
+2025-07-09 01:22:55,703 - data.multi_timeframe_fetcher - INFO - Fetched 5666 higher records for bitcoin
+2025-07-09 01:22:55,703 - data.multi_timeframe_fetcher - INFO - Fetching bitcoin lower timeframe: 1m, period: 7d
+2025-07-09 01:22:55,862 - data.multi_timeframe_fetcher - INFO - Fetched 6854 lower records for bitcoin
+2025-07-09 01:22:55,867 - data.multi_timeframe_fetcher - INFO - Aligning timeframes to primary: (16996, 18)
+2025-07-09 01:22:55,867 - data.multi_timeframe_fetcher - INFO - Aligning higher timeframe: (5666, 18)
+2025-07-09 01:22:55,880 - data.multi_timeframe_fetcher - INFO - Aligning lower timeframe: (6854, 18)
+2025-07-09 01:22:55,906 - data.multi_timeframe_fetcher - INFO - Final aligned dataset: (16996, 56)
+2025-07-09 01:22:55,947 - data.multi_timeframe_fetcher - INFO - Final multi-timeframe dataset: (16708, 40)
+2025-07-09 01:22:55,948 - __main__ - INFO - Data fetching completed in 0.95 seconds
+2025-07-09 01:22:55,948 - __main__ - INFO - Raw data shape: (16708, 40)
+2025-07-09 01:22:55,948 - __main__ - INFO - Raw data columns: ['bitcoin_primary_open', 'bitcoin_primary_high', 'bitcoin_primary_low', 'bitcoin_primary_close', 'bitcoin_primary_volume', 'Dividends', 'Stock Splits', 'bitcoin_primary_returns', 'bitcoin_primary_log_returns', 'bitcoin_primary_volatility', 'bitcoin_primary_momentum', 'bitcoin_primary_sma', 'bitcoin_primary_trend', 'bitcoin_primary_hl_ratio', 'bitcoin_primary_co_ratio', 'bitcoin_primary_volume_sma', 'bitcoin_primary_volume_ratio', 'bitcoin_primary_volume_price', 'bitcoin_higher_open', 'bitcoin_higher_high', 'bitcoin_higher_low', 'bitcoin_higher_close', 'bitcoin_higher_volume', 'bitcoin_higher_returns', 'bitcoin_higher_log_returns', 'bitcoin_higher_volatility', 'bitcoin_higher_momentum', 'bitcoin_higher_sma', 'bitcoin_higher_trend', 'bitcoin_higher_hl_ratio', 'bitcoin_higher_co_ratio', 'bitcoin_higher_volume_sma', 'bitcoin_higher_volume_ratio', 'bitcoin_higher_volume_price', 'bitcoin_trend_alignment', 'bitcoin_trend_convergence', 'bitcoin_vol_regime', 'bitcoin_vol_expansion', 'bitcoin_momentum_persistence', 'bitcoin_momentum_strength']
+2025-07-09 01:22:55,948 - __main__ - INFO - Engineering ultra-advanced features...
+2025-07-09 01:22:55,948 - features.ultra_feature_engineering - INFO - Starting ultra-advanced feature generation
+2025-07-09 01:22:55,949 - features.ultra_feature_engineering - INFO - Generating ultra features for bitcoin (1/1)
+2025-07-09 01:22:56,039 - features.ultra_feature_engineering - INFO - Generated 21 ultra-advanced features
+2025-07-09 01:22:56,039 - features.ultra_feature_engineering - INFO - Total features: 61
+2025-07-09 01:22:56,039 - __main__ - INFO - Feature engineering completed in 0.09 seconds
+2025-07-09 01:22:56,039 - __main__ - INFO - Feature data shape: (16708, 61)
+2025-07-09 01:22:56,039 - __main__ - INFO - Creating ultra-advanced target variables...
+2025-07-09 01:22:56,039 - models.ultra_target_engineering - INFO - Creating ultra-advanced target variables
+2025-07-09 01:22:56,039 - models.ultra_target_engineering - INFO - Creating ultra targets for bitcoin
+2025-07-09 01:22:56,053 - models.ultra_target_engineering - INFO - Created 24 ultra-advanced target variables
+2025-07-09 01:22:56,053 - __main__ - INFO - Target creation completed in 0.01 seconds
+2025-07-09 01:22:56,053 - __main__ - INFO - Target data shape: (16708, 24)
+2025-07-09 01:22:56,053 - __main__ - INFO - Target columns: ['bitcoin_return_1h', 'bitcoin_log_return_1h', 'bitcoin_direction_1h', 'bitcoin_magnitude_1h', 'bitcoin_return_3h', 'bitcoin_log_return_3h', 'bitcoin_direction_3h', 'bitcoin_magnitude_3h', 'bitcoin_return_6h', 'bitcoin_log_return_6h', 'bitcoin_direction_6h', 'bitcoin_magnitude_6h', 'bitcoin_return_12h', 'bitcoin_log_return_12h', 'bitcoin_direction_12h', 'bitcoin_magnitude_12h', 'bitcoin_return_24h', 'bitcoin_log_return_24h', 'bitcoin_direction_24h', 'bitcoin_magnitude_24h', 'bitcoin_return_48h', 'bitcoin_log_return_48h', 'bitcoin_direction_48h', 'bitcoin_magnitude_48h']
+2025-07-09 01:22:56,053 - __main__ - INFO - Preparing ultra-optimized training data...
+2025-07-09 01:22:56,057 - models.ultra_target_engineering - INFO - Prepared target bitcoin_return_6h: mean=0.000019, std=0.002535
+2025-07-09 01:22:56,099 - models.random_forest_model - INFO - Prepared data shape: X=(16603, 61), y=16603
+2025-07-09 01:22:56,099 - __main__ - INFO - Training data prepared: 16603 samples
+2025-07-09 01:22:56,099 - __main__ - INFO - Primary target: bitcoin_return_6h
+2025-07-09 01:22:56,099 - __main__ - INFO - Target statistics: {'mean': np.float64(1.8596959198374618e-05), 'std': np.float64(0.0025353025240816393), 'skew': np.float64(-0.1886511525193258), 'kurt': np.float64(6.937673531990611), 'quantiles': {0.01: -0.007106842312363561, 0.05: -0.0037461349715015245, 0.25: -0.0011852488380892923, 0.5: 8.45611889455089e-06, 0.75: 0.0012095762534458654, 0.95: 0.0038888599858954652, 0.99: 0.007234487580357159}}
+2025-07-09 01:22:56,099 - __main__ - INFO - Training ultra-optimized model...
+2025-07-09 01:22:56,099 - __main__ - INFO - Using standard hyperparameter tuning for ensemble model
+2025-07-09 01:22:56,099 - models.random_forest_model - INFO - Starting hyperparameter tuning for ensemble with grid_search
+2025-07-09 01:22:56,099 - models.random_forest_model - INFO - Starting hyperparameter tuning with grid_search

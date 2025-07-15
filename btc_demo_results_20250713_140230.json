@@ -1,0 +1,19 @@
+{
+  "session_info": {
+    "start_time": "2025-07-13T13:32:28.010993",
+    "duration_minutes": 30.0354437,
+    "iterations": 57
+  },
+  "performance": {
+    "initial_capital": 100000,
+    "final_value": 100236.39211731566,
+    "total_return_pct": 0.23639211731565357,
+    "profit_loss": 236.39211731565592
+  },
+  "trades": 13,
+  "final_position": {
+    "cash": 4123.1686041600005,
+    "btc_position": 0.8113301931995105,
+    "btc_price": 118463.7578125
+  }
+}

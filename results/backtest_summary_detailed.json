@@ -1,0 +1,36 @@
+[
+  {
+    "model_name": "crypto_4h_dataset_20250714_130201.csv",
+    "cv_accuracy_mean": 0.7246963562753036,
+    "cv_accuracy_std": 0.0040913476309154375,
+    "final_accuracy": 0.7211717709720373,
+    "precision": 0.7259380097879282,
+    "recall": 0.7108626198083067,
+    "f1_score": 0.718321226795803,
+    "top_features": [
+      [
+        "rsi",
+        0.26432913886061843
+      ],
+      [
+        "momentum_1",
+        0.17692892665542195
+      ],
+      [
+        "momentum_4",
+        0.16823422679530387
+      ],
+      [
+        "macd",
+        0.08663738291708824
+      ],
+      [
+        "volatility",
+        0.0672824388063738
+      ]
+    ],
+    "sample_count": 18773,
+    "feature_count": 12,
+    "dataset": "crypto_4h_dataset_20250714_130201.csv"
+  }
+]

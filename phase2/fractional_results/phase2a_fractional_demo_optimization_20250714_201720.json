@@ -1,0 +1,194 @@
+{
+  "Close": {
+    "series_name": "Close",
+    "analysis_timestamp": "2025-07-14T20:17:17.788151",
+    "original_series_stats": {
+      "length": 2001,
+      "adf_test": {
+        "adf_statistic": 0.08680105554541193,
+        "p_value": 0.9651483011788431,
+        "critical_values": {
+          "1%": -3.433645303487856,
+          "5%": -2.8629956824317757,
+          "10%": -2.5675449439803617
+        },
+        "is_stationary": "False"
+      },
+      "autocorrelation": 0.9927405885070361
+    },
+    "optimization_results": [
+      {
+        "d": 0.1,
+        "adf_statistic": 0.07407425970042153,
+        "adf_pvalue": 0.9642457924544325,
+        "is_stationary": "False",
+        "memory_preservation": 1.000158370748518,
+        "data_retention": 0.9965017491254373,
+        "quality_score": 0.3875
+      },
+      {
+        "d": 0.2,
+        "adf_statistic": 0.16560389286462354,
+        "adf_pvalue": 0.9702650791974545,
+        "is_stationary": "False",
+        "memory_preservation": 1.0001290088173727,
+        "data_retention": 0.9950024987506247,
+        "quality_score": 0.375
+      },
+      {
+        "d": 0.30000000000000004,
+        "adf_statistic": 0.1723682842054317,
+        "adf_pvalue": 0.9706685298240987,
+        "is_stationary": "False",
+        "memory_preservation": 1.0003231845305498,
+        "data_retention": 0.9945027486256871,
+        "quality_score": 0.3625
+      },
+      {
+        "d": 0.4,
+        "adf_statistic": 0.09475536120512922,
+        "adf_pvalue": 0.9657011886896958,
+        "is_stationary": "False",
+        "memory_preservation": 1.0003037724655874,
+        "data_retention": 0.9950024987506247,
+        "quality_score": 0.35
+      },
+      {
+        "d": 0.5,
+        "adf_statistic": 0.09672294146824913,
+        "adf_pvalue": 0.9658366405798393,
+        "is_stationary": "False",
+        "memory_preservation": 1.0004688185382367,
+        "data_retention": 0.9955022488755623,
+        "quality_score": 0.3375
+      },
+      {
+        "d": 0.6,
+        "adf_statistic": 0.027566316304802607,
+        "adf_pvalue": 0.9607532903508447,
+        "is_stationary": "False",
+        "memory_preservation": 1.0004523593489,
+        "data_retention": 0.9960019990004998,
+        "quality_score": 0.325
+      },
+      {
+        "d": 0.7000000000000001,
+        "adf_statistic": 0.13918632288165117,
+        "adf_pvalue": 0.968636907045772,
+        "is_stationary": "False",
+        "memory_preservation": 1.0005186154336347,
+        "data_retention": 0.9970014992503748,
+        "quality_score": 0.3125
+      },
+      {
+        "d": 0.8,
+        "adf_statistic": 0.005679156442187706,
+        "adf_pvalue": 0.9589992359439367,
+        "is_stationary": "False",
+        "memory_preservation": 1.000633404635174,
+        "data_retention": 0.9975012493753124,
+        "quality_score": 0.3
+      }
+    ],
+    "optimal_d": 0.1,
+    "optimal_quality_score": 0.3875,
+    "optimal_memory_preservation": 1.000158370748518,
+    "recommendation": "MODERATE: d=0.10 preserves memory but may not be fully stationary"
+  },
+  "log_price": {
+    "series_name": "log_price",
+    "analysis_timestamp": "2025-07-14T20:17:19.759140",
+    "original_series_stats": {
+      "length": 2001,
+      "adf_test": {
+        "adf_statistic": -1.0724101774229258,
+        "p_value": 0.725948090155131,
+        "critical_values": {
+          "1%": -3.4336386745240652,
+          "5%": -2.8629927557359443,
+          "10%": -2.5675433856598793
+        },
+        "is_stationary": "False"
+      },
+      "autocorrelation": 0.9941355791017983
+    },
+    "optimization_results": [
+      {
+        "d": 0.1,
+        "adf_statistic": -1.0548795374143667,
+        "adf_pvalue": 0.7327261425916738,
+        "is_stationary": "False",
+        "memory_preservation": 1.0001003134455895,
+        "data_retention": 0.9965017491254373,
+        "quality_score": 0.3875
+      },
+      {
+        "d": 0.2,
+        "adf_statistic": -1.0441443881128927,
+        "adf_pvalue": 0.7368252470530374,
+        "is_stationary": "False",
+        "memory_preservation": 1.0000541895862005,
+        "data_retention": 0.9950024987506247,
+        "quality_score": 0.375
+      },
+      {
+        "d": 0.30000000000000004,
+        "adf_statistic": -1.135461987143534,
+        "adf_pvalue": 0.7007249532168156,
+        "is_stationary": "False",
+        "memory_preservation": 1.0002051090044677,
+        "data_retention": 0.9945027486256871,
+        "quality_score": 0.3625
+      },
+      {
+        "d": 0.4,
+        "adf_statistic": -1.1574030928940335,
+        "adf_pvalue": 0.6916463480222687,
+        "is_stationary": "False",
+        "memory_preservation": 1.0001858696608188,
+        "data_retention": 0.9950024987506247,
+        "quality_score": 0.35
+      },
+      {
+        "d": 0.5,
+        "adf_statistic": -1.1251892383217685,
+        "adf_pvalue": 0.7049229213195864,
+        "is_stationary": "False",
+        "memory_preservation": 1.0003230453920544,
+        "data_retention": 0.9955022488755623,
+        "quality_score": 0.3375
+      },
+      {
+        "d": 0.6,
+        "adf_statistic": -1.115472189744109,
+        "adf_pvalue": 0.708862500648742,
+        "is_stationary": "False",
+        "memory_preservation": 1.0003075792408753,
+        "data_retention": 0.9960019990004998,
+        "quality_score": 0.325
+      },
+      {
+        "d": 0.7000000000000001,
+        "adf_statistic": -1.1195045156859678,
+        "adf_pvalue": 0.7072313884604259,
+        "is_stationary": "False",
+        "memory_preservation": 1.0003669584250274,
+        "data_retention": 0.9970014992503748,
+        "quality_score": 0.3125
+      },
+      {
+        "d": 0.8,
+        "adf_statistic": -1.069759890396074,
+        "adf_pvalue": 0.7269794603376831,
+        "is_stationary": "False",
+        "memory_preservation": 1.0004578969397748,
+        "data_retention": 0.9975012493753124,
+        "quality_score": 0.3
+      }
+    ],
+    "optimal_d": 0.1,
+    "optimal_quality_score": 0.3875,
+    "optimal_memory_preservation": 1.0001003134455895,
+    "recommendation": "MODERATE: d=0.10 preserves memory but may not be fully stationary"
+  }
+}

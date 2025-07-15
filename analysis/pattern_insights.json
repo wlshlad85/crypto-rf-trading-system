@@ -1,0 +1,76 @@
+{
+  "profitable_stats": {
+    "count": 7,
+    "avg_return": 0.6750736335648265,
+    "avg_duration": 0.9125,
+    "avg_num_buys": 5.142857142857143,
+    "avg_btc_size": 0.6020249999999999,
+    "best_return": 1.306728719719772,
+    "worst_return": 0.21601563171198104
+  },
+  "unprofitable_stats": {
+    "count": 4,
+    "avg_return": -0.1611570578052183,
+    "avg_duration": 1.975486111111111
+  },
+  "optimal_ranges": {
+    "optimal_duration": {
+      "min": 0.5629166666666666,
+      "max": 1.2195833333333335,
+      "median": 0.8769444444444444
+    },
+    "optimal_position_size": {
+      "min": 0.46409100000000003,
+      "max": 0.7995680000000001,
+      "median": 0.588043
+    },
+    "optimal_num_buys": {
+      "min": 3.5,
+      "max": 7.5,
+      "median": 5.0
+    }
+  },
+  "price_momentum_patterns": {
+    "avg_price_change": 0.750794995800982,
+    "avg_momentum_strength": 1.229670956186329,
+    "high_momentum_threshold": 1.7800769510296812,
+    "optimal_price_change_range": {
+      "min": 0.41364650241003337,
+      "max": 0.9800901637563095
+    }
+  },
+  "position_sizing_patterns": {
+    "optimal_total_size": {
+      "min": 55445.380000000005,
+      "max": 95261.99500000002,
+      "median": 71100.45
+    },
+    "optimal_avg_buy_size": 14220.09,
+    "size_consistency_factor": 0.5442374437595504
+  },
+  "timing_patterns": {
+    "best_start_hours": [
+      3
+    ],
+    "optimal_duration": 0.8769444444444444,
+    "hour_performance": {
+      "mean": {
+        "3": 0.754450721160473,
+        "5": 1.306728719719772,
+        "6": 0.7551778982609915,
+        "12": 0.21601563171198104,
+        "14": 0.6868800686879822,
+        "19": 0.2518116742521127
+      },
+      "count": {
+        "3": 2,
+        "5": 1,
+        "6": 1,
+        "12": 1,
+        "14": 1,
+        "19": 1
+      }
+    },
+    "weekend_performance": 0.46934587147004747
+  }
+}

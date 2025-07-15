@@ -1,0 +1,2377 @@
+{
+  "strategy_name": "RandomForest_WalkForward_Demo",
+  "analysis_timestamp": "2025-07-14T16:58:14.011099",
+  "total_windows": 51,
+  "successful_windows": 51,
+  "mean_test_accuracy": 0.5546840958605666,
+  "std_test_accuracy": 0.06709532260481149,
+  "min_test_accuracy": 0.3888888888888889,
+  "max_test_accuracy": 0.7111111111111111,
+  "mean_sharpe_ratio": 0.10891397627080725,
+  "std_sharpe_ratio": 1.3596719614460437,
+  "mean_total_return": 0.014332053022855375,
+  "std_total_return": 0.1436388496203614,
+  "performance_consistency": 0.8790386760580972,
+  "positive_periods": 0.49019607843137253,
+  "window_results": [
+    {
+      "window_id": 1,
+      "train_period": [
+        "2020-02-19 00:00:00+00:00",
+        "2021-02-13 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2021-02-13 00:00:00+00:00",
+        "2021-05-14 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.8138888888888889,
+      "train_precision": 0.8011695906432749,
+      "train_recall": 0.8058823529411765,
+      "train_f1": 0.8035190615835777,
+      "test_accuracy": 0.4777777777777778,
+      "test_precision": 0.42105263157894735,
+      "test_recall": 0.631578947368421,
+      "test_f1": 0.5052631578947369,
+      "simulated_trades": {
+        "total_return": 0.15829736238538206,
+        "volatility": 0.4210710004533621,
+        "sharpe_ratio": 1.1963475581773393,
+        "max_drawdown": -0.1915750993634065,
+        "win_rate": 0.33707865168539325,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.2395746041899197,
+        "sma_10": 0.18714770751307497,
+        "sma_50": 0.20728475472335936,
+        "rsi": 0.1700475015626038,
+        "volume_ma": 0.1959454320110422
+      },
+      "market_conditions": {
+        "period_return": 0.05542187038208435,
+        "volatility": 0.6382834651243925,
+        "max_drawdown_period": -0.22832147733098931,
+        "trending_strength": 0.173534019890539,
+        "average_volume": 63879774620.23333
+      },
+      "test_auc": 0.5301113360323888,
+      "test_log_loss": 0.7494928145093561
+    },
+    {
+      "window_id": 2,
+      "train_period": [
+        "2020-03-20 00:00:00+00:00",
+        "2021-03-15 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2021-03-15 00:00:00+00:00",
+        "2021-06-13 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.8611111111111112,
+      "train_precision": 0.8587570621468926,
+      "train_recall": 0.8587570621468926,
+      "train_f1": 0.8587570621468926,
+      "test_accuracy": 0.5111111111111111,
+      "test_precision": 0.38461538461538464,
+      "test_recall": 0.42857142857142855,
+      "test_f1": 0.40540540540540543,
+      "simulated_trades": {
+        "total_return": -0.15959450859952828,
+        "volatility": 0.5874330021672908,
+        "sharpe_ratio": -0.5444219993518953,
+        "max_drawdown": -0.3133286692958489,
+        "win_rate": 0.16853932584269662,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.22549817517499046,
+        "sma_10": 0.19525029237334013,
+        "sma_50": 0.18352333642821034,
+        "rsi": 0.19407231477386014,
+        "volume_ma": 0.20165588124959874
+      },
+      "market_conditions": {
+        "period_return": -0.3640798301146787,
+        "volatility": 0.722766685082427,
+        "max_drawdown_period": -0.4729006202602774,
+        "trending_strength": 0.6859863799171689,
+        "average_volume": 58477122990.35555
+      },
+      "test_auc": 0.5688311688311688,
+      "test_log_loss": 0.6869885627862717
+    },
+    {
+      "window_id": 3,
+      "train_period": [
+        "2020-04-19 00:00:00+00:00",
+        "2021-04-14 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2021-04-14 00:00:00+00:00",
+        "2021-07-13 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.8666666666666667,
+      "train_precision": 0.8532608695652174,
+      "train_recall": 0.8820224719101124,
+      "train_f1": 0.8674033149171271,
+      "test_accuracy": 0.5111111111111111,
+      "test_precision": 0.4307692307692308,
+      "test_recall": 0.8,
+      "test_f1": 0.56,
+      "simulated_trades": {
+        "total_return": -0.017643032118055735,
+        "volatility": 0.6417218543620243,
+        "sharpe_ratio": 0.24098359623451976,
+        "max_drawdown": -0.3172548216948212,
+        "win_rate": 0.3595505617977528,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.2626530151298407,
+        "sma_10": 0.18240604959199763,
+        "sma_50": 0.16334028600462985,
+        "rsi": 0.17900344184621664,
+        "volume_ma": 0.21259720742731514
+      },
+      "market_conditions": {
+        "period_return": -0.47463147315048293,
+        "volatility": 0.7860172703816678,
+        "max_drawdown_period": -0.5003036699456892,
+        "trending_strength": 0.7852700028954582,
+        "average_volume": 50890318416.922226
+      },
+      "test_auc": 0.6415584415584417,
+      "test_log_loss": 0.7368577623477413
+    },
+    {
+      "window_id": 4,
+      "train_period": [
+        "2020-05-19 00:00:00+00:00",
+        "2021-05-14 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2021-05-14 00:00:00+00:00",
+        "2021-08-12 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.8305555555555556,
+      "train_precision": 0.8353658536585366,
+      "train_recall": 0.8011695906432749,
+      "train_f1": 0.817910447761194,
+      "test_accuracy": 0.5444444444444444,
+      "test_precision": 0.49019607843137253,
+      "test_recall": 0.625,
+      "test_f1": 0.5494505494505495,
+      "simulated_trades": {
+        "total_return": 0.6431068471039423,
+        "volatility": 0.47784124818671403,
+        "sharpe_ratio": 3.1810686035493303,
+        "max_drawdown": -0.10234365648024901,
+        "win_rate": 0.3258426966292135,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.2535536619173859,
+        "sma_10": 0.23960798623981225,
+        "sma_50": 0.17049399101240884,
+        "rsi": 0.17643365146663972,
+        "volume_ma": 0.1599107093637532
+      },
+      "market_conditions": {
+        "period_return": -0.08594331283879286,
+        "volatility": 0.7439662671013657,
+        "max_drawdown_period": -0.4024252634243208,
+        "trending_strength": 0.002947100206305535,
+        "average_volume": 38897041582.68889
+      },
+      "test_auc": 0.5582499999999999,
+      "test_log_loss": 0.7296288883150931
+    },
+    {
+      "window_id": 5,
+      "train_period": [
+        "2020-06-18 00:00:00+00:00",
+        "2021-06-13 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2021-06-13 00:00:00+00:00",
+        "2021-09-11 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.8277777777777777,
+      "train_precision": 0.8375,
+      "train_recall": 0.788235294117647,
+      "train_f1": 0.8121212121212121,
+      "test_accuracy": 0.4888888888888889,
+      "test_precision": 0.4358974358974359,
+      "test_recall": 0.4146341463414634,
+      "test_f1": 0.425,
+      "simulated_trades": {
+        "total_return": 0.1652369426521152,
+        "volatility": 0.3442616177842578,
+        "sharpe_ratio": 1.4285488793167278,
+        "max_drawdown": -0.08343820081743163,
+        "win_rate": 0.23595505617977527,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.2954745249743404,
+        "sma_10": 0.21644054757353326,
+        "sma_50": 0.16014352546338126,
+        "rsi": 0.17170125398713879,
+        "volume_ma": 0.15624014800160635
+      },
+      "market_conditions": {
+        "period_return": 0.14798894041113986,
+        "volatility": 0.582717379374362,
+        "max_drawdown_period": -0.2623088445916258,
+        "trending_strength": 0.6901534745293483,
+        "average_volume": 33070755245.944443
+      },
+      "test_auc": 0.4995022399203584,
+      "test_log_loss": 0.7269097178758871
+    },
+    {
+      "window_id": 6,
+      "train_period": [
+        "2020-07-18 00:00:00+00:00",
+        "2021-07-13 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2021-07-13 00:00:00+00:00",
+        "2021-10-11 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.8361111111111111,
+      "train_precision": 0.8641975308641975,
+      "train_recall": 0.7909604519774012,
+      "train_f1": 0.8259587020648967,
+      "test_accuracy": 0.4777777777777778,
+      "test_precision": 0.4444444444444444,
+      "test_recall": 0.2727272727272727,
+      "test_f1": 0.3380281690140845,
+      "simulated_trades": {
+        "total_return": 0.1553864784753074,
+        "volatility": 0.3334086798724342,
+        "sharpe_ratio": 1.3936055166377088,
+        "max_drawdown": -0.13894440488069046,
+        "win_rate": 0.20224719101123595,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.28117380220442767,
+        "sma_10": 0.1909057831464664,
+        "sma_50": 0.16642796440163468,
+        "rsi": 0.1650591481978476,
+        "volume_ma": 0.19643330204962356
+      },
+      "market_conditions": {
+        "period_return": 0.674868069202279,
+        "volatility": 0.5772332654554705,
+        "max_drawdown_period": -0.22684889661229973,
+        "trending_strength": 0.5282450809406146,
+        "average_volume": 32992181481.966667
+      },
+      "test_auc": 0.45306324110671936,
+      "test_log_loss": 0.7332335877277575
+    },
+    {
+      "window_id": 7,
+      "train_period": [
+        "2020-08-17 00:00:00+00:00",
+        "2021-08-12 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2021-08-12 00:00:00+00:00",
+        "2021-11-10 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.8277777777777777,
+      "train_precision": 0.869281045751634,
+      "train_recall": 0.76,
+      "train_f1": 0.8109756097560976,
+      "test_accuracy": 0.5222222222222223,
+      "test_precision": 0.5,
+      "test_recall": 0.09302325581395349,
+      "test_f1": 0.1568627450980392,
+      "simulated_trades": {
+        "total_return": -0.05330942547338946,
+        "volatility": 0.2407530008787101,
+        "sharpe_ratio": -0.5217489916941471,
+        "max_drawdown": -0.163432893801881,
+        "win_rate": 0.0449438202247191,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.26352139763017995,
+        "sma_10": 0.21881910777830169,
+        "sma_50": 0.17598036872989045,
+        "rsi": 0.15183240328776648,
+        "volume_ma": 0.1898467225738614
+      },
+      "market_conditions": {
+        "period_return": 0.5074140719393136,
+        "volatility": 0.5639602446080447,
+        "max_drawdown_period": -0.22684889661229973,
+        "trending_strength": 0.6110643407709554,
+        "average_volume": 35780544770.977776
+      },
+      "test_auc": 0.5413161801088571,
+      "test_log_loss": 0.7408637173373258
+    },
+    {
+      "window_id": 8,
+      "train_period": [
+        "2020-09-16 00:00:00+00:00",
+        "2021-09-11 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2021-09-11 00:00:00+00:00",
+        "2021-12-10 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.8027777777777778,
+      "train_precision": 0.8269230769230769,
+      "train_recall": 0.7456647398843931,
+      "train_f1": 0.78419452887538,
+      "test_accuracy": 0.5222222222222223,
+      "test_precision": 0.3333333333333333,
+      "test_recall": 0.10256410256410256,
+      "test_f1": 0.1568627450980392,
+      "simulated_trades": {
+        "total_return": -0.10330645274484962,
+        "volatility": 0.2751039890824457,
+        "sharpe_ratio": -0.9802113967784426,
+        "max_drawdown": -0.14676888153718695,
+        "win_rate": 0.06741573033707865,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.2406667284635502,
+        "sma_10": 0.21703850146639758,
+        "sma_50": 0.1973770279599495,
+        "rsi": 0.13226243306683938,
+        "volume_ma": 0.21265530904326346
+      },
+      "market_conditions": {
+        "period_return": 0.05465894740498989,
+        "volatility": 0.5613380161115691,
+        "max_drawdown_period": -0.29444488639372546,
+        "trending_strength": 0.27304541483092776,
+        "average_volume": 35833216952.73333
+      },
+      "test_auc": 0.5769230769230769,
+      "test_log_loss": 0.6950505201138178
+    },
+    {
+      "window_id": 9,
+      "train_period": [
+        "2020-10-16 00:00:00+00:00",
+        "2021-10-11 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2021-10-11 00:00:00+00:00",
+        "2022-01-09 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7944444444444444,
+      "train_precision": 0.8435374149659864,
+      "train_recall": 0.7085714285714285,
+      "train_f1": 0.7701863354037267,
+      "test_accuracy": 0.5888888888888889,
+      "test_precision": 0.2222222222222222,
+      "test_recall": 0.0625,
+      "test_f1": 0.0975609756097561,
+      "simulated_trades": {
+        "total_return": -0.0112982008689545,
+        "volatility": 0.11940825136209543,
+        "sharpe_ratio": -0.20998111069908842,
+        "max_drawdown": -0.053637306288472776,
+        "win_rate": 0.0449438202247191,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.17379854128119449,
+        "sma_10": 0.23188796853912627,
+        "sma_50": 0.19906724549933358,
+        "rsi": 0.1724427604050632,
+        "volume_ma": 0.22280348427528246
+      },
+      "market_conditions": {
+        "period_return": -0.2740002688211134,
+        "volatility": 0.49116508561048994,
+        "max_drawdown_period": -0.38493631420928864,
+        "trending_strength": 0.7440834174706943,
+        "average_volume": 34542170549.95556
+      },
+      "test_auc": 0.5431034482758621,
+      "test_log_loss": 0.6594399119851636
+    },
+    {
+      "window_id": 10,
+      "train_period": [
+        "2020-11-15 00:00:00+00:00",
+        "2021-11-10 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2021-11-10 00:00:00+00:00",
+        "2022-02-08 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.8166666666666667,
+      "train_precision": 0.8741258741258742,
+      "train_recall": 0.7225433526011561,
+      "train_f1": 0.7911392405063291,
+      "test_accuracy": 0.5888888888888889,
+      "test_precision": 0.4444444444444444,
+      "test_recall": 0.35294117647058826,
+      "test_f1": 0.39344262295081966,
+      "simulated_trades": {
+        "total_return": 0.06380864697023436,
+        "volatility": 0.3196313168540784,
+        "sharpe_ratio": 0.7071622864805788,
+        "max_drawdown": -0.19958359751484905,
+        "win_rate": 0.19101123595505617,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.18912861693316751,
+        "sma_10": 0.21680138647219846,
+        "sma_50": 0.20437961950268327,
+        "rsi": 0.16029568887001616,
+        "volume_ma": 0.22939468822193462
+      },
+      "market_conditions": {
+        "period_return": -0.32548458032888106,
+        "volatility": 0.5129350164203156,
+        "max_drawdown_period": -0.46491613030952994,
+        "trending_strength": 0.8747331989406177,
+        "average_volume": 30840361340.511112
+      },
+      "test_auc": 0.5987394957983193,
+      "test_log_loss": 0.6656831586748336
+    },
+    {
+      "window_id": 11,
+      "train_period": [
+        "2020-12-15 00:00:00+00:00",
+        "2021-12-10 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2021-12-10 00:00:00+00:00",
+        "2022-03-10 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7583333333333333,
+      "train_precision": 0.9148936170212766,
+      "train_recall": 0.5212121212121212,
+      "train_f1": 0.6640926640926641,
+      "test_accuracy": 0.5666666666666667,
+      "test_precision": 0.4411764705882353,
+      "test_recall": 0.42857142857142855,
+      "test_f1": 0.43478260869565216,
+      "simulated_trades": {
+        "total_return": 0.08091573799504981,
+        "volatility": 0.42874636341036476,
+        "sharpe_ratio": 0.7216815122549789,
+        "max_drawdown": -0.1682532293564282,
+        "win_rate": 0.19101123595505617,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.16841264697229036,
+        "sma_10": 0.22475215323851438,
+        "sma_50": 0.2013108055923876,
+        "rsi": 0.1917717561903395,
+        "volume_ma": 0.21375263800646818
+      },
+      "market_conditions": {
+        "period_return": -0.11134654827907986,
+        "volatility": 0.5747592387028451,
+        "max_drawdown_period": -0.3107293027268321,
+        "trending_strength": 0.4754530604395344,
+        "average_volume": 27263976100.0
+      },
+      "test_auc": 0.5548051948051947,
+      "test_log_loss": 0.6879752559194462
+    },
+    {
+      "window_id": 12,
+      "train_period": [
+        "2021-01-14 00:00:00+00:00",
+        "2022-01-09 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2022-01-09 00:00:00+00:00",
+        "2022-04-09 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7722222222222223,
+      "train_precision": 0.9493670886075949,
+      "train_recall": 0.49019607843137253,
+      "train_f1": 0.646551724137931,
+      "test_accuracy": 0.5,
+      "test_precision": 0.4166666666666667,
+      "test_recall": 0.24390243902439024,
+      "test_f1": 0.3076923076923077,
+      "simulated_trades": {
+        "total_return": 0.0713589759185913,
+        "volatility": 0.4120163932671556,
+        "sharpe_ratio": 0.6726643224085513,
+        "max_drawdown": -0.1682532293564282,
+        "win_rate": 0.12359550561797752,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.20220910842356837,
+        "sma_10": 0.19829732139215422,
+        "sma_50": 0.17114553275034325,
+        "rsi": 0.1567702496004593,
+        "volume_ma": 0.27157778783347486
+      },
+      "market_conditions": {
+        "period_return": 0.008972754225085033,
+        "volatility": 0.5627039945493667,
+        "max_drawdown_period": -0.2029359246358314,
+        "trending_strength": 0.16775444154314342,
+        "average_volume": 26295573555.544445
+      },
+      "test_auc": 0.42807366849178696,
+      "test_log_loss": 0.7565068585322853
+    },
+    {
+      "window_id": 13,
+      "train_period": [
+        "2021-02-13 00:00:00+00:00",
+        "2022-02-08 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2022-02-08 00:00:00+00:00",
+        "2022-05-09 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7888888888888889,
+      "train_precision": 0.9540229885057471,
+      "train_recall": 0.535483870967742,
+      "train_f1": 0.6859504132231405,
+      "test_accuracy": 0.5,
+      "test_precision": 0.375,
+      "test_recall": 0.42857142857142855,
+      "test_f1": 0.4,
+      "simulated_trades": {
+        "total_return": -0.0369431953187398,
+        "volatility": 0.39259965726355206,
+        "sharpe_ratio": -0.07962698647247052,
+        "max_drawdown": -0.16825322935642825,
+        "win_rate": 0.19101123595505617,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.19523849046743835,
+        "sma_10": 0.16049163565730848,
+        "sma_50": 0.18593732620403747,
+        "rsi": 0.2066895645753238,
+        "volume_ma": 0.25164298309589184
+      },
+      "market_conditions": {
+        "period_return": -0.2280039474702421,
+        "volatility": 0.5382509393162168,
+        "max_drawdown_period": -0.28244513907937036,
+        "trending_strength": 0.048235922767778654,
+        "average_volume": 27183988978.011112
+      },
+      "test_auc": 0.48363636363636364,
+      "test_log_loss": 0.8116582420899023
+    },
+    {
+      "window_id": 14,
+      "train_period": [
+        "2021-03-15 00:00:00+00:00",
+        "2022-03-10 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2022-03-10 00:00:00+00:00",
+        "2022-06-08 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7833333333333333,
+      "train_precision": 0.95,
+      "train_recall": 0.5066666666666667,
+      "train_f1": 0.6608695652173913,
+      "test_accuracy": 0.6,
+      "test_precision": 0.5652173913043478,
+      "test_recall": 0.3333333333333333,
+      "test_f1": 0.41935483870967744,
+      "simulated_trades": {
+        "total_return": 0.16764945934912512,
+        "volatility": 0.23422528962844966,
+        "sharpe_ratio": 1.9926279822530983,
+        "max_drawdown": -0.0783701188181285,
+        "win_rate": 0.19101123595505617,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.20020075619616254,
+        "sma_10": 0.18241566702222492,
+        "sma_50": 0.17582944574725673,
+        "rsi": 0.2065846763381939,
+        "volume_ma": 0.23496945469616193
+      },
+      "market_conditions": {
+        "period_return": -0.21000293185710361,
+        "volatility": 0.5095611477593047,
+        "max_drawdown_period": -0.3968790970656708,
+        "trending_strength": 0.71100826585216,
+        "average_volume": 30347116972.61111
+      },
+      "test_auc": 0.5158371040723982,
+      "test_log_loss": 0.7064930292515205
+    },
+    {
+      "window_id": 15,
+      "train_period": [
+        "2021-04-14 00:00:00+00:00",
+        "2022-04-09 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2022-04-09 00:00:00+00:00",
+        "2022-07-08 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.775,
+      "train_precision": 0.9733333333333334,
+      "train_recall": 0.48026315789473684,
+      "train_f1": 0.6431718061674009,
+      "test_accuracy": 0.4666666666666667,
+      "test_precision": 0.38461538461538464,
+      "test_recall": 0.7575757575757576,
+      "test_f1": 0.5102040816326531,
+      "simulated_trades": {
+        "total_return": -0.32725446966976957,
+        "volatility": 0.5495813620806187,
+        "sharpe_ratio": -1.7519362727250958,
+        "max_drawdown": -0.46613216490277637,
+        "win_rate": 0.34831460674157305,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.18129909514368517,
+        "sma_10": 0.20729578413144978,
+        "sma_50": 0.24471146184825582,
+        "rsi": 0.17306368640242717,
+        "volume_ma": 0.1936299724741821
+      },
+      "market_conditions": {
+        "period_return": -0.4942377929164543,
+        "volatility": 0.6215142207355631,
+        "max_drawdown_period": -0.555477027640132,
+        "trending_strength": 0.9094722940096499,
+        "average_volume": 30844021330.0
+      },
+      "test_auc": 0.5534290271132376,
+      "test_log_loss": 0.7757959657307961
+    },
+    {
+      "window_id": 16,
+      "train_period": [
+        "2021-05-14 00:00:00+00:00",
+        "2022-05-09 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2022-05-09 00:00:00+00:00",
+        "2022-08-07 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7444444444444445,
+      "train_precision": 1.0,
+      "train_recall": 0.39473684210526316,
+      "train_f1": 0.5660377358490566,
+      "test_accuracy": 0.3888888888888889,
+      "test_precision": 0.38202247191011235,
+      "test_recall": 1.0,
+      "test_f1": 0.5528455284552846,
+      "simulated_trades": {
+        "total_return": -0.21322365058301695,
+        "volatility": 0.6005972965433195,
+        "sharpe_ratio": -0.8221841862205448,
+        "max_drawdown": -0.40181628038373807,
+        "win_rate": 0.4606741573033708,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.1598420179180225,
+        "sma_10": 0.2195330169932193,
+        "sma_50": 0.2389901719134565,
+        "rsi": 0.18462502743708223,
+        "volume_ma": 0.19700976573821935
+      },
+      "market_conditions": {
+        "period_return": -0.24212579389944844,
+        "volatility": 0.6068153133926474,
+        "max_drawdown_period": -0.4018162803837381,
+        "trending_strength": 0.5423314088482696,
+        "average_volume": 31574107635.4
+      },
+      "test_auc": 0.5291491596638656,
+      "test_log_loss": 0.8902466279786517
+    },
+    {
+      "window_id": 17,
+      "train_period": [
+        "2021-06-13 00:00:00+00:00",
+        "2022-06-08 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2022-06-08 00:00:00+00:00",
+        "2022-09-06 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7805555555555556,
+      "train_precision": 0.9629629629629629,
+      "train_recall": 0.5064935064935064,
+      "train_f1": 0.6638297872340425,
+      "test_accuracy": 0.4777777777777778,
+      "test_precision": 0.33962264150943394,
+      "test_recall": 0.6,
+      "test_f1": 0.43373493975903615,
+      "simulated_trades": {
+        "total_return": -0.37326362508882016,
+        "volatility": 0.47360568013340215,
+        "sharpe_ratio": -2.537178286338093,
+        "max_drawdown": -0.3794497831945395,
+        "win_rate": 0.24719101123595505,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.17458125019340787,
+        "sma_10": 0.16358223338949843,
+        "sma_50": 0.1859019300300632,
+        "rsi": 0.23741836740560668,
+        "volume_ma": 0.23851621898142386
+      },
+      "market_conditions": {
+        "period_return": -0.3442729197304417,
+        "volatility": 0.5682023550869295,
+        "max_drawdown_period": -0.37057593044490056,
+        "trending_strength": 0.030467213223062395,
+        "average_volume": 29774743761.788887
+      },
+      "test_auc": 0.5844444444444444,
+      "test_log_loss": 0.7191367230970042
+    },
+    {
+      "window_id": 18,
+      "train_period": [
+        "2021-07-13 00:00:00+00:00",
+        "2022-07-08 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2022-07-08 00:00:00+00:00",
+        "2022-10-06 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7833333333333333,
+      "train_precision": 0.9864864864864865,
+      "train_recall": 0.4866666666666667,
+      "train_f1": 0.6517857142857143,
+      "test_accuracy": 0.5666666666666667,
+      "test_precision": 0.3333333333333333,
+      "test_recall": 0.18181818181818182,
+      "test_f1": 0.23529411764705882,
+      "simulated_trades": {
+        "total_return": -0.0285828702671429,
+        "volatility": 0.11598841520419405,
+        "sharpe_ratio": -0.6498931197121707,
+        "max_drawdown": -0.060474158188753874,
+        "win_rate": 0.06741573033707865,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.2026537501420518,
+        "sma_10": 0.16883487635817646,
+        "sma_50": 0.16241981580641615,
+        "rsi": 0.2260058912735584,
+        "volume_ma": 0.2400856664197971
+      },
+      "market_conditions": {
+        "period_return": -0.07226505554570906,
+        "volatility": 0.48995447266090814,
+        "max_drawdown_period": -0.24060970851706137,
+        "trending_strength": 0.3699016124781438,
+        "average_volume": 32446062964.31111
+      },
+      "test_auc": 0.5217969165337586,
+      "test_log_loss": 0.6732868248675086
+    },
+    {
+      "window_id": 19,
+      "train_period": [
+        "2021-08-12 00:00:00+00:00",
+        "2022-08-07 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2022-08-07 00:00:00+00:00",
+        "2022-11-05 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7555555555555555,
+      "train_precision": 0.9833333333333333,
+      "train_recall": 0.4041095890410959,
+      "train_f1": 0.5728155339805825,
+      "test_accuracy": 0.5666666666666667,
+      "test_precision": 0.3333333333333333,
+      "test_recall": 0.14705882352941177,
+      "test_f1": 0.20408163265306123,
+      "simulated_trades": {
+        "total_return": -0.06506635613500211,
+        "volatility": 0.09849988757258771,
+        "sharpe_ratio": -1.8838375369984826,
+        "max_drawdown": -0.07397749205304416,
+        "win_rate": 0.056179775280898875,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.18022263706475908,
+        "sma_10": 0.16195167667591065,
+        "sma_50": 0.13419338006066686,
+        "rsi": 0.26204808703104404,
+        "volume_ma": 0.26158421916761937
+      },
+      "market_conditions": {
+        "period_return": -0.08753321238328893,
+        "volatility": 0.4252307340109949,
+        "max_drawdown_period": -0.24060970851706137,
+        "trending_strength": 0.3882870046103496,
+        "average_volume": 33639277356.7
+      },
+      "test_auc": 0.5651260504201681,
+      "test_log_loss": 0.6626857759631205
+    },
+    {
+      "window_id": 20,
+      "train_period": [
+        "2021-09-11 00:00:00+00:00",
+        "2022-09-06 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2022-09-06 00:00:00+00:00",
+        "2022-12-05 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.8,
+      "train_precision": 0.9863013698630136,
+      "train_recall": 0.5034965034965035,
+      "train_f1": 0.6666666666666666,
+      "test_accuracy": 0.4888888888888889,
+      "test_precision": 0.19047619047619047,
+      "test_recall": 0.12121212121212122,
+      "test_f1": 0.14814814814814814,
+      "simulated_trades": {
+        "total_return": -0.1857046240842547,
+        "volatility": 0.20527236360204718,
+        "sharpe_ratio": -2.7228211215835443,
+        "max_drawdown": -0.21730165676800034,
+        "win_rate": 0.06741573033707865,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.17256715816304094,
+        "sma_10": 0.17971257405846408,
+        "sma_50": 0.1556927182280743,
+        "rsi": 0.24867928611833892,
+        "volume_ma": 0.24334826343208185
+      },
+      "market_conditions": {
+        "period_return": -0.09062595452139088,
+        "volatility": 0.5092688101448593,
+        "max_drawdown_period": -0.2942795191410264,
+        "trending_strength": 0.451340444011337,
+        "average_volume": 36046735743.41111
+      },
+      "test_auc": 0.42503987240829344,
+      "test_log_loss": 0.7013293398663949
+    },
+    {
+      "window_id": 21,
+      "train_period": [
+        "2021-10-11 00:00:00+00:00",
+        "2022-10-06 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2022-10-06 00:00:00+00:00",
+        "2023-01-04 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.8,
+      "train_precision": 0.9855072463768116,
+      "train_recall": 0.4892086330935252,
+      "train_f1": 0.6538461538461539,
+      "test_accuracy": 0.6111111111111112,
+      "test_precision": 0.3125,
+      "test_recall": 0.1724137931034483,
+      "test_f1": 0.2222222222222222,
+      "simulated_trades": {
+        "total_return": 0.013319487558177245,
+        "volatility": 0.20861345010950055,
+        "sharpe_ratio": 0.27896507166232987,
+        "max_drawdown": -0.08222507702890888,
+        "win_rate": 0.06741573033707865,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.17864885251298598,
+        "sma_10": 0.15793053077565955,
+        "sma_50": 0.1345800599145784,
+        "rsi": 0.26560688379615116,
+        "volume_ma": 0.263233673000625
+      },
+      "market_conditions": {
+        "period_return": -0.16414498432885682,
+        "volatility": 0.4314328545874248,
+        "max_drawdown_period": -0.2582101634452439,
+        "trending_strength": 0.5343046895648385,
+        "average_volume": 29110617938.622223
+      },
+      "test_auc": 0.4850197851893725,
+      "test_log_loss": 0.6731227943057011
+    },
+    {
+      "window_id": 22,
+      "train_period": [
+        "2021-11-10 00:00:00+00:00",
+        "2022-11-05 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2022-11-05 00:00:00+00:00",
+        "2023-02-03 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.8027777777777778,
+      "train_precision": 0.9852941176470589,
+      "train_recall": 0.48905109489051096,
+      "train_f1": 0.6536585365853659,
+      "test_accuracy": 0.3888888888888889,
+      "test_precision": 0.3625,
+      "test_recall": 0.8787878787878788,
+      "test_f1": 0.5132743362831859,
+      "simulated_trades": {
+        "total_return": 0.14066432692710484,
+        "volatility": 0.3895539732999257,
+        "sharpe_ratio": 1.158312402317187,
+        "max_drawdown": -0.20778261908561524,
+        "win_rate": 0.4606741573033708,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.17198093246883434,
+        "sma_10": 0.16359014182708964,
+        "sma_50": 0.18494761897161635,
+        "rsi": 0.21521634358153283,
+        "volume_ma": 0.2642649631509268
+      },
+      "market_conditions": {
+        "period_return": 0.10286197575824985,
+        "volatility": 0.4717499633595231,
+        "max_drawdown_period": -0.2582101634452439,
+        "trending_strength": 0.4201525667606457,
+        "average_volume": 25699550275.77778
+      },
+      "test_auc": 0.37825624667729935,
+      "test_log_loss": 0.7563781787705199
+    },
+    {
+      "window_id": 23,
+      "train_period": [
+        "2021-12-10 00:00:00+00:00",
+        "2022-12-05 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2022-12-05 00:00:00+00:00",
+        "2023-03-05 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7944444444444444,
+      "train_precision": 0.9701492537313433,
+      "train_recall": 0.4744525547445255,
+      "train_f1": 0.6372549019607843,
+      "test_accuracy": 0.5888888888888889,
+      "test_precision": 0.0,
+      "test_recall": 0.0,
+      "test_f1": 0.0,
+      "simulated_trades": {
+        "total_return": -0.008180274029996437,
+        "volatility": 0.010494415019897058,
+        "sharpe_ratio": -2.2108026239904883,
+        "max_drawdown": -0.008671644839273074,
+        "win_rate": 0.011235955056179775,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.184886047333535,
+        "sma_10": 0.19268278756538598,
+        "sma_50": 0.15148378364697818,
+        "rsi": 0.22995862826659022,
+        "volume_ma": 0.24098875318751067
+      },
+      "market_conditions": {
+        "period_return": 0.31685293169078155,
+        "volatility": 0.3643766199435263,
+        "max_drawdown_period": -0.09971340073772919,
+        "trending_strength": 0.793943318959795,
+        "average_volume": 21812439674.133335
+      },
+      "test_auc": 0.4498922413793104,
+      "test_log_loss": 0.6839694895564861
+    },
+    {
+      "window_id": 24,
+      "train_period": [
+        "2022-01-09 00:00:00+00:00",
+        "2023-01-04 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2023-01-04 00:00:00+00:00",
+        "2023-04-04 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7944444444444444,
+      "train_precision": 0.984375,
+      "train_recall": 0.4632352941176471,
+      "train_f1": 0.63,
+      "test_accuracy": 0.5222222222222223,
+      "test_precision": 0.2,
+      "test_recall": 0.05405405405405406,
+      "test_f1": 0.0851063829787234,
+      "simulated_trades": {
+        "total_return": -0.007981551289854116,
+        "volatility": 0.17304525438564475,
+        "sharpe_ratio": -0.045308590808961643,
+        "max_drawdown": -0.10021029890964413,
+        "win_rate": 0.0449438202247191,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.19870182284696056,
+        "sma_10": 0.1585007073005411,
+        "sma_50": 0.150620291604536,
+        "rsi": 0.2722150308574797,
+        "volume_ma": 0.2199621473904827
+      },
+      "market_conditions": {
+        "period_return": 0.6479765178924477,
+        "volatility": 0.4678048363718502,
+        "max_drawdown_period": -0.18695382600654284,
+        "trending_strength": 0.6621192832094854,
+        "average_volume": 25619274373.81111
+      },
+      "test_auc": 0.4370219275879653,
+      "test_log_loss": 0.7440441480252438
+    },
+    {
+      "window_id": 25,
+      "train_period": [
+        "2022-02-08 00:00:00+00:00",
+        "2023-02-03 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2023-02-03 00:00:00+00:00",
+        "2023-05-04 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7416666666666667,
+      "train_precision": 0.9777777777777777,
+      "train_recall": 0.3235294117647059,
+      "train_f1": 0.4861878453038674,
+      "test_accuracy": 0.6,
+      "test_precision": 0.2222222222222222,
+      "test_recall": 0.06451612903225806,
+      "test_f1": 0.1,
+      "simulated_trades": {
+        "total_return": -0.06503604316429179,
+        "volatility": 0.12498472460274809,
+        "sharpe_ratio": -1.4585519342649746,
+        "max_drawdown": -0.10399455660723556,
+        "win_rate": 0.033707865168539325,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.19186399162141643,
+        "sma_10": 0.15722047801799016,
+        "sma_50": 0.13431052370421243,
+        "rsi": 0.250109077825687,
+        "volume_ma": 0.26649592883069406
+      },
+      "market_conditions": {
+        "period_return": 0.23697854740438018,
+        "volatility": 0.45495200735150726,
+        "max_drawdown_period": -0.18695382600654284,
+        "trending_strength": 0.7075652612723634,
+        "average_volume": 23491887801.6
+      },
+      "test_auc": 0.4904319300164024,
+      "test_log_loss": 0.6736259599833464
+    },
+    {
+      "window_id": 26,
+      "train_period": [
+        "2022-03-10 00:00:00+00:00",
+        "2023-03-05 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2023-03-05 00:00:00+00:00",
+        "2023-06-03 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7611111111111111,
+      "train_precision": 0.98,
+      "train_recall": 0.3656716417910448,
+      "train_f1": 0.532608695652174,
+      "test_accuracy": 0.5777777777777777,
+      "test_precision": 0.4230769230769231,
+      "test_recall": 0.3235294117647059,
+      "test_f1": 0.36666666666666664,
+      "simulated_trades": {
+        "total_return": -0.024082451217553036,
+        "volatility": 0.18292565417061596,
+        "sharpe_ratio": -0.28494650335905186,
+        "max_drawdown": -0.09997939748708562,
+        "win_rate": 0.14606741573033707,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.22849415763047445,
+        "sma_10": 0.1845727178515692,
+        "sma_50": 0.1278414489916108,
+        "rsi": 0.21050166729632858,
+        "volume_ma": 0.248590008230017
+      },
+      "market_conditions": {
+        "period_return": 0.2145739224999288,
+        "volatility": 0.4141924293923309,
+        "max_drawdown_period": -0.1361582960453153,
+        "trending_strength": 0.15146681895369937,
+        "average_volume": 19839464069.633335
+      },
+      "test_auc": 0.534138655462185,
+      "test_log_loss": 0.7175489211403241
+    },
+    {
+      "window_id": 27,
+      "train_period": [
+        "2022-04-09 00:00:00+00:00",
+        "2023-04-04 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2023-04-04 00:00:00+00:00",
+        "2023-07-03 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7444444444444445,
+      "train_precision": 0.9761904761904762,
+      "train_recall": 0.3106060606060606,
+      "train_f1": 0.47126436781609193,
+      "test_accuracy": 0.5888888888888889,
+      "test_precision": 0.43333333333333335,
+      "test_recall": 0.3939393939393939,
+      "test_f1": 0.4126984126984127,
+      "simulated_trades": {
+        "total_return": 0.05882007677202172,
+        "volatility": 0.22269326016297158,
+        "sharpe_ratio": 0.8374277727471598,
+        "max_drawdown": -0.10542647486403024,
+        "win_rate": 0.19101123595505617,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.18199644459169523,
+        "sma_10": 0.19174994227544073,
+        "sma_50": 0.1347436657081842,
+        "rsi": 0.20166334526652988,
+        "volume_ma": 0.2898466021581499
+      },
+      "market_conditions": {
+        "period_return": 0.08707298581853284,
+        "volatility": 0.33877231448920037,
+        "max_drawdown_period": -0.17585371419667956,
+        "trending_strength": 0.018944741690177045,
+        "average_volume": 15707221780.622223
+      },
+      "test_auc": 0.6193514088250931,
+      "test_log_loss": 0.671597453522036
+    },
+    {
+      "window_id": 28,
+      "train_period": [
+        "2022-05-09 00:00:00+00:00",
+        "2023-05-04 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2023-05-04 00:00:00+00:00",
+        "2023-08-02 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7611111111111111,
+      "train_precision": 0.96,
+      "train_recall": 0.36363636363636365,
+      "train_f1": 0.5274725274725275,
+      "test_accuracy": 0.4777777777777778,
+      "test_precision": 0.32,
+      "test_recall": 0.5517241379310345,
+      "test_f1": 0.4050632911392405,
+      "simulated_trades": {
+        "total_return": 0.08655556737766013,
+        "volatility": 0.25393412560060774,
+        "sharpe_ratio": 1.0516577438897032,
+        "max_drawdown": -0.10542647486403066,
+        "win_rate": 0.29213483146067415,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.21969591322882426,
+        "sma_10": 0.18226232975095172,
+        "sma_50": 0.15510908699800321,
+        "rsi": 0.20442122443622002,
+        "volume_ma": 0.23851144558600088
+      },
+      "market_conditions": {
+        "period_return": 0.028703195417097316,
+        "volatility": 0.30093442815165883,
+        "max_drawdown_period": -0.14930762971258674,
+        "trending_strength": 0.4171996428943392,
+        "average_volume": 14127695712.933332
+      },
+      "test_auc": 0.5226116449971736,
+      "test_log_loss": 0.7678660920233529
+    },
+    {
+      "window_id": 29,
+      "train_period": [
+        "2022-06-08 00:00:00+00:00",
+        "2023-06-03 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2023-06-03 00:00:00+00:00",
+        "2023-09-01 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7333333333333333,
+      "train_precision": 1.0,
+      "train_recall": 0.2558139534883721,
+      "train_f1": 0.4074074074074074,
+      "test_accuracy": 0.6777777777777778,
+      "test_precision": 0.3,
+      "test_recall": 0.2857142857142857,
+      "test_f1": 0.2926829268292683,
+      "simulated_trades": {
+        "total_return": 0.1007054689386555,
+        "volatility": 0.16950493758409976,
+        "sharpe_ratio": 1.6862495640594508,
+        "max_drawdown": -0.05544217107965007,
+        "win_rate": 0.11235955056179775,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.2327352589034305,
+        "sma_10": 0.2059742357354186,
+        "sma_50": 0.15094025978620806,
+        "rsi": 0.17773270397346771,
+        "volume_ma": 0.2326175416014751
+      },
+      "market_conditions": {
+        "period_return": -0.04224010360061481,
+        "volatility": 0.3271613146715975,
+        "max_drawdown_period": -0.176152229339558,
+        "trending_strength": 0.0020401400002946594,
+        "average_volume": 14135183193.322222
+      },
+      "test_auc": 0.5217391304347826,
+      "test_log_loss": 0.6301807292629048
+    },
+    {
+      "window_id": 30,
+      "train_period": [
+        "2022-07-08 00:00:00+00:00",
+        "2023-07-03 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2023-07-03 00:00:00+00:00",
+        "2023-10-01 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7638888888888888,
+      "train_precision": 1.0,
+      "train_recall": 0.3560606060606061,
+      "train_f1": 0.5251396648044693,
+      "test_accuracy": 0.7111111111111111,
+      "test_precision": 0.1,
+      "test_recall": 0.05555555555555555,
+      "test_f1": 0.07142857142857142,
+      "simulated_trades": {
+        "total_return": -0.059422267858410094,
+        "volatility": 0.10115281103644831,
+        "sharpe_ratio": -1.6625892145608079,
+        "max_drawdown": -0.08570355599800139,
+        "win_rate": 0.0449438202247191,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.2201861729168235,
+        "sma_10": 0.15195310176609023,
+        "sma_50": 0.16363313953883588,
+        "rsi": 0.21279275705730197,
+        "volume_ma": 0.2514348287209486
+      },
+      "market_conditions": {
+        "period_return": -0.13443524070847868,
+        "volatility": 0.2548589105185881,
+        "max_drawdown_period": -0.20057773342913204,
+        "trending_strength": 0.759847106365333,
+        "average_volume": 12644066083.955555
+      },
+      "test_auc": 0.4930555555555555,
+      "test_log_loss": 0.6075539198036486
+    },
+    {
+      "window_id": 31,
+      "train_period": [
+        "2022-08-07 00:00:00+00:00",
+        "2023-08-02 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2023-08-02 00:00:00+00:00",
+        "2023-10-31 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7722222222222223,
+      "train_precision": 1.0,
+      "train_recall": 0.3543307086614173,
+      "train_f1": 0.5232558139534884,
+      "test_accuracy": 0.7111111111111111,
+      "test_precision": 0.25,
+      "test_recall": 0.041666666666666664,
+      "test_f1": 0.07142857142857142,
+      "simulated_trades": {
+        "total_return": 0.01620688501991774,
+        "volatility": 0.046686615304477826,
+        "sharpe_ratio": 0.9981071038691405,
+        "max_drawdown": -0.010620522802521324,
+        "win_rate": 0.02247191011235955,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.21651009348579628,
+        "sma_10": 0.18640021736008727,
+        "sma_50": 0.1979235308590177,
+        "rsi": 0.17267789523497312,
+        "volume_ma": 0.22648826306012565
+      },
+      "market_conditions": {
+        "period_return": 0.18353498300895432,
+        "volatility": 0.3214157230556507,
+        "max_drawdown_period": -0.15463671360213418,
+        "trending_strength": 0.1389054530693325,
+        "average_volume": 13530627276.666666
+      },
+      "test_auc": 0.5192550505050505,
+      "test_log_loss": 0.607388277767706
+    },
+    {
+      "window_id": 32,
+      "train_period": [
+        "2022-09-06 00:00:00+00:00",
+        "2023-09-01 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2023-09-01 00:00:00+00:00",
+        "2023-11-30 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7583333333333333,
+      "train_precision": 1.0,
+      "train_recall": 0.275,
+      "train_f1": 0.43137254901960786,
+      "test_accuracy": 0.5777777777777777,
+      "test_precision": 0.2222222222222222,
+      "test_recall": 0.06060606060606061,
+      "test_f1": 0.09523809523809523,
+      "simulated_trades": {
+        "total_return": 0.03129919172184814,
+        "volatility": 0.057299658376847966,
+        "sharpe_ratio": 1.5514452418911118,
+        "max_drawdown": -0.011290169881189928,
+        "win_rate": 0.0449438202247191,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.17575304570871533,
+        "sma_10": 0.20254577446260644,
+        "sma_50": 0.24183285504632185,
+        "rsi": 0.15501315614319902,
+        "volume_ma": 0.22485516863915744
+      },
+      "market_conditions": {
+        "period_return": 0.46734220688296735,
+        "volatility": 0.3204067572437264,
+        "max_drawdown_period": -0.05456013135027851,
+        "trending_strength": 0.8831673262388345,
+        "average_volume": 15186780370.61111
+      },
+      "test_auc": 0.4120148856990962,
+      "test_log_loss": 0.7312235113682803
+    },
+    {
+      "window_id": 33,
+      "train_period": [
+        "2022-10-06 00:00:00+00:00",
+        "2023-10-01 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2023-10-01 00:00:00+00:00",
+        "2023-12-30 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7944444444444444,
+      "train_precision": 1.0,
+      "train_recall": 0.36752136752136755,
+      "train_f1": 0.5375,
+      "test_accuracy": 0.6,
+      "test_precision": 1.0,
+      "test_recall": 0.02702702702702703,
+      "test_f1": 0.05263157894736842,
+      "simulated_trades": {
+        "total_return": 0.05006744695824206,
+        "volatility": 0.0837735744323249,
+        "sharpe_ratio": 1.6922282244532976,
+        "max_drawdown": 0.0,
+        "win_rate": 0.011235955056179775,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.19405793965284193,
+        "sma_10": 0.1749165897226693,
+        "sma_50": 0.22197785569012293,
+        "rsi": 0.1980358659227444,
+        "volume_ma": 0.21101174901162145
+      },
+      "market_conditions": {
+        "period_return": 0.504423186447492,
+        "volatility": 0.3669066861530041,
+        "max_drawdown_period": -0.06617601146228105,
+        "trending_strength": 0.924210945012689,
+        "average_volume": 19295359866.27778
+      },
+      "test_auc": 0.5137684854665987,
+      "test_log_loss": 0.7245466021745841
+    },
+    {
+      "window_id": 34,
+      "train_period": [
+        "2022-11-05 00:00:00+00:00",
+        "2023-10-31 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2023-10-31 00:00:00+00:00",
+        "2024-01-29 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7944444444444444,
+      "train_precision": 1.0,
+      "train_recall": 0.36752136752136755,
+      "train_f1": 0.5375,
+      "test_accuracy": 0.5777777777777777,
+      "test_precision": 0.0,
+      "test_recall": 0.0,
+      "test_f1": 0.0,
+      "simulated_trades": {
+        "total_return": 0.0,
+        "volatility": 0.0,
+        "sharpe_ratio": 0,
+        "max_drawdown": 0.0,
+        "win_rate": 0.0,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.18136376568566018,
+        "sma_10": 0.14913788397031238,
+        "sma_50": 0.2258066660703746,
+        "rsi": 0.2243529708236005,
+        "volume_ma": 0.2193387134500524
+      },
+      "market_conditions": {
+        "period_return": 0.21252621986011877,
+        "volatility": 0.3960201620588796,
+        "max_drawdown_period": -0.15888985848748663,
+        "trending_strength": 0.5741617374013216,
+        "average_volume": 22945116334.755554
+      },
+      "test_auc": 0.5984311740890689,
+      "test_log_loss": 0.782217231512503
+    },
+    {
+      "window_id": 35,
+      "train_period": [
+        "2022-12-05 00:00:00+00:00",
+        "2023-11-30 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2023-11-30 00:00:00+00:00",
+        "2024-02-28 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7805555555555556,
+      "train_precision": 0.9767441860465116,
+      "train_recall": 0.35,
+      "train_f1": 0.5153374233128835,
+      "test_accuracy": 0.5444444444444444,
+      "test_precision": 0.0,
+      "test_recall": 0.0,
+      "test_f1": 0.0,
+      "simulated_trades": {
+        "total_return": 0.0,
+        "volatility": 0.0,
+        "sharpe_ratio": 0,
+        "max_drawdown": 0.0,
+        "win_rate": 0.0,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.21149357227224505,
+        "sma_10": 0.17330908981078708,
+        "sma_50": 0.20166501898287653,
+        "rsi": 0.19500369465382408,
+        "volume_ma": 0.21852862428026731
+      },
+      "market_conditions": {
+        "period_return": 0.5136890575892206,
+        "volatility": 0.386257466258998,
+        "max_drawdown_period": -0.15888985848748663,
+        "trending_strength": 0.46598549103595815,
+        "average_volume": 24974732538.566666
+      },
+      "test_auc": 0.5627177700348434,
+      "test_log_loss": 0.7448985406762598
+    },
+    {
+      "window_id": 36,
+      "train_period": [
+        "2023-01-04 00:00:00+00:00",
+        "2023-12-30 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2023-12-30 00:00:00+00:00",
+        "2024-03-29 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7722222222222223,
+      "train_precision": 0.9574468085106383,
+      "train_recall": 0.36,
+      "train_f1": 0.5232558139534884,
+      "test_accuracy": 0.5666666666666667,
+      "test_precision": 0.6153846153846154,
+      "test_recall": 0.19047619047619047,
+      "test_f1": 0.2909090909090909,
+      "simulated_trades": {
+        "total_return": 0.1589151804330895,
+        "volatility": 0.23444929067110457,
+        "sharpe_ratio": 1.8969159202747048,
+        "max_drawdown": -0.08517880536142536,
+        "win_rate": 0.10112359550561797,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.19230622464992428,
+        "sma_10": 0.2604092492842483,
+        "sma_50": 0.17256313942212967,
+        "rsi": 0.18004790026537307,
+        "volume_ma": 0.19467348637832466
+      },
+      "market_conditions": {
+        "period_return": 0.6781345210836711,
+        "volatility": 0.5068325278690614,
+        "max_drawdown_period": -0.15888985848748663,
+        "trending_strength": 0.8082666495399049,
+        "average_volume": 34145089318.377777
+      },
+      "test_auc": 0.6418650793650794,
+      "test_log_loss": 0.7288082619040708
+    },
+    {
+      "window_id": 37,
+      "train_period": [
+        "2023-02-03 00:00:00+00:00",
+        "2024-01-29 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2024-01-29 00:00:00+00:00",
+        "2024-04-28 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7583333333333333,
+      "train_precision": 1.0,
+      "train_recall": 0.28688524590163933,
+      "train_f1": 0.445859872611465,
+      "test_accuracy": 0.5222222222222223,
+      "test_precision": 0.4666666666666667,
+      "test_recall": 0.16666666666666666,
+      "test_f1": 0.24561403508771928,
+      "simulated_trades": {
+        "total_return": -0.038041685417073534,
+        "volatility": 0.22263061269896967,
+        "sharpe_ratio": -0.38021564995076695,
+        "max_drawdown": -0.13991879996785292,
+        "win_rate": 0.11235955056179775,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.23082505300017597,
+        "sma_10": 0.22464309118909218,
+        "sma_50": 0.17565223868614177,
+        "rsi": 0.17315469523066324,
+        "volume_ma": 0.1957249218939268
+      },
+      "market_conditions": {
+        "period_return": 0.4650429700397707,
+        "volatility": 0.5019444125370772,
+        "max_drawdown_period": -0.16155231473246356,
+        "trending_strength": 0.6221429434618065,
+        "average_volume": 36450904211.566666
+      },
+      "test_auc": 0.5314980158730159,
+      "test_log_loss": 0.7019819113104435
+    },
+    {
+      "window_id": 38,
+      "train_period": [
+        "2023-03-05 00:00:00+00:00",
+        "2024-02-28 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2024-02-28 00:00:00+00:00",
+        "2024-05-28 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.8055555555555556,
+      "train_precision": 1.0,
+      "train_recall": 0.4573643410852713,
+      "train_f1": 0.6276595744680851,
+      "test_accuracy": 0.4888888888888889,
+      "test_precision": 0.4583333333333333,
+      "test_recall": 0.825,
+      "test_f1": 0.5892857142857143,
+      "simulated_trades": {
+        "total_return": 0.11386766366136736,
+        "volatility": 0.4821781847512251,
+        "sharpe_ratio": 0.8729791473229841,
+        "max_drawdown": -0.19073504322041315,
+        "win_rate": 0.42696629213483145,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.2187635014428899,
+        "sma_10": 0.2007861191175294,
+        "sma_50": 0.20146834934475888,
+        "rsi": 0.179965181070285,
+        "volume_ma": 0.19901684902453678
+      },
+      "market_conditions": {
+        "period_return": 0.11022780379453434,
+        "volatility": 0.5220992368717557,
+        "max_drawdown_period": -0.20291157759617423,
+        "trending_strength": 0.04019055895192554,
+        "average_volume": 37435412442.67778
+      },
+      "test_auc": 0.53625,
+      "test_log_loss": 0.7370335330343191
+    },
+    {
+      "window_id": 39,
+      "train_period": [
+        "2023-04-04 00:00:00+00:00",
+        "2024-03-29 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2024-03-29 00:00:00+00:00",
+        "2024-06-27 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7888888888888889,
+      "train_precision": 0.9655172413793104,
+      "train_recall": 0.4307692307692308,
+      "train_f1": 0.5957446808510638,
+      "test_accuracy": 0.5666666666666667,
+      "test_precision": 0.4,
+      "test_recall": 0.29411764705882354,
+      "test_f1": 0.3389830508474576,
+      "simulated_trades": {
+        "total_return": 0.08343298860076942,
+        "volatility": 0.26312600176234996,
+        "sharpe_ratio": 0.991893130598091,
+        "max_drawdown": -0.10377631211022945,
+        "win_rate": 0.1348314606741573,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.22242036721837677,
+        "sma_10": 0.21138524061819844,
+        "sma_50": 0.179211967817928,
+        "rsi": 0.1947937917192729,
+        "volume_ma": 0.19218863262622396
+      },
+      "market_conditions": {
+        "period_return": -0.1299353742705629,
+        "volatility": 0.40071117279743296,
+        "max_drawdown_period": -0.18675267051987313,
+        "trending_strength": 0.0011451597646071324,
+        "average_volume": 28926390004.41111
+      },
+      "test_auc": 0.5806197478991597,
+      "test_log_loss": 0.6585879663115098
+    },
+    {
+      "window_id": 40,
+      "train_period": [
+        "2023-05-04 00:00:00+00:00",
+        "2024-04-28 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2024-04-28 00:00:00+00:00",
+        "2024-07-27 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7916666666666666,
+      "train_precision": 0.967741935483871,
+      "train_recall": 0.45112781954887216,
+      "train_f1": 0.6153846153846154,
+      "test_accuracy": 0.6333333333333333,
+      "test_precision": 0.5625,
+      "test_recall": 0.2571428571428571,
+      "test_f1": 0.35294117647058826,
+      "simulated_trades": {
+        "total_return": 0.031133281653122458,
+        "volatility": 0.16452398145271765,
+        "sharpe_ratio": 0.6107429165848388,
+        "max_drawdown": -0.06158823811011137,
+        "win_rate": 0.11235955056179775,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.25199794965441086,
+        "sma_10": 0.2003793589854761,
+        "sma_50": 0.18745310436879803,
+        "rsi": 0.171353582558699,
+        "volume_ma": 0.18881600443261592
+      },
+      "market_conditions": {
+        "period_return": 0.07603527811218758,
+        "volatility": 0.39220173369413386,
+        "max_drawdown_period": -0.21832722113235672,
+        "trending_strength": 0.03027997163254183,
+        "average_volume": 27556484396.255554
+      },
+      "test_auc": 0.6280519480519481,
+      "test_log_loss": 0.664052459107647
+    },
+    {
+      "window_id": 41,
+      "train_period": [
+        "2023-06-03 00:00:00+00:00",
+        "2024-05-28 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2024-05-28 00:00:00+00:00",
+        "2024-08-26 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.8083333333333333,
+      "train_precision": 0.9230769230769231,
+      "train_recall": 0.5333333333333333,
+      "train_f1": 0.676056338028169,
+      "test_accuracy": 0.6666666666666666,
+      "test_precision": 0.5555555555555556,
+      "test_recall": 0.45454545454545453,
+      "test_f1": 0.5,
+      "simulated_trades": {
+        "total_return": 0.13043373724769602,
+        "volatility": 0.3067584549256366,
+        "sharpe_ratio": 1.2822026884967206,
+        "max_drawdown": -0.08509977055101947,
+        "win_rate": 0.1797752808988764,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.23414358247972497,
+        "sma_10": 0.17842244402308363,
+        "sma_50": 0.1877348282948939,
+        "rsi": 0.1960118575669214,
+        "volume_ma": 0.20368728763537625
+      },
+      "market_conditions": {
+        "period_return": -0.05802189131078361,
+        "volatility": 0.4307690060206429,
+        "max_drawdown_period": -0.24044295381234984,
+        "trending_strength": 0.2883345437599205,
+        "average_volume": 29506718378.433334
+      },
+      "test_auc": 0.659223817118554,
+      "test_log_loss": 0.650204289050192
+    },
+    {
+      "window_id": 42,
+      "train_period": [
+        "2023-07-03 00:00:00+00:00",
+        "2024-06-27 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2024-06-27 00:00:00+00:00",
+        "2024-09-25 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7777777777777778,
+      "train_precision": 0.9047619047619048,
+      "train_recall": 0.4351145038167939,
+      "train_f1": 0.5876288659793815,
+      "test_accuracy": 0.6111111111111112,
+      "test_precision": 0.5416666666666666,
+      "test_recall": 0.35135135135135137,
+      "test_f1": 0.4262295081967213,
+      "simulated_trades": {
+        "total_return": 0.05892413874416058,
+        "volatility": 0.3075900927978051,
+        "sharpe_ratio": 0.6779423543602976,
+        "max_drawdown": -0.10967997589715128,
+        "win_rate": 0.15730337078651685,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.2360251333777877,
+        "sma_10": 0.19076796538759702,
+        "sma_50": 0.1607613983398705,
+        "rsi": 0.19610184022477326,
+        "volume_ma": 0.2163436626699715
+      },
+      "market_conditions": {
+        "period_return": 0.04378178217517914,
+        "volatility": 0.4564289439656847,
+        "max_drawdown_period": -0.20961001406586957,
+        "trending_strength": 0.03605883639121736,
+        "average_volume": 31007050933.711113
+      },
+      "test_auc": 0.5515043345232025,
+      "test_log_loss": 0.684842378382085
+    },
+    {
+      "window_id": 43,
+      "train_period": [
+        "2023-08-02 00:00:00+00:00",
+        "2024-07-27 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2024-07-27 00:00:00+00:00",
+        "2024-10-25 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.8,
+      "train_precision": 0.9466666666666667,
+      "train_recall": 0.5107913669064749,
+      "train_f1": 0.6635514018691588,
+      "test_accuracy": 0.5888888888888889,
+      "test_precision": 0.47058823529411764,
+      "test_recall": 0.45714285714285713,
+      "test_f1": 0.463768115942029,
+      "simulated_trades": {
+        "total_return": 0.09268172478484571,
+        "volatility": 0.3265544307793629,
+        "sharpe_ratio": 0.9290201558642196,
+        "max_drawdown": -0.09956672820735897,
+        "win_rate": 0.20224719101123595,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.21987864936418605,
+        "sma_10": 0.19811182677166647,
+        "sma_50": 0.16999884591367012,
+        "rsi": 0.20121788353932374,
+        "volume_ma": 0.21079279441115364
+      },
+      "market_conditions": {
+        "period_return": 0.005127586560856878,
+        "volatility": 0.4339680874707798,
+        "max_drawdown_period": -0.20961001406586957,
+        "trending_strength": 0.1672150298052871,
+        "average_volume": 31286101999.333332
+      },
+      "test_auc": 0.5750649350649352,
+      "test_log_loss": 0.6824582844667192
+    },
+    {
+      "window_id": 44,
+      "train_period": [
+        "2023-09-01 00:00:00+00:00",
+        "2024-08-26 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2024-08-26 00:00:00+00:00",
+        "2024-11-24 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.8222222222222222,
+      "train_precision": 0.9662921348314607,
+      "train_recall": 0.5850340136054422,
+      "train_f1": 0.7288135593220338,
+      "test_accuracy": 0.5222222222222223,
+      "test_precision": 0.42857142857142855,
+      "test_recall": 0.225,
+      "test_f1": 0.29508196721311475,
+      "simulated_trades": {
+        "total_return": -0.05225283231878375,
+        "volatility": 0.1840230601658059,
+        "sharpe_ratio": -0.732373566233418,
+        "max_drawdown": -0.08442738993149605,
+        "win_rate": 0.11235955056179775,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.24939751576528646,
+        "sma_10": 0.1580629445618511,
+        "sma_50": 0.15605022660788084,
+        "rsi": 0.23096351527575246,
+        "volume_ma": 0.20552579778922916
+      },
+      "market_conditions": {
+        "period_return": 0.55496588310359,
+        "volatility": 0.4067356712912552,
+        "max_drawdown_period": -0.1420453638337354,
+        "trending_strength": 0.7355327824879618,
+        "average_volume": 40870905993.32222
+      },
+      "test_auc": 0.44725,
+      "test_log_loss": 0.7409483674990429
+    },
+    {
+      "window_id": 45,
+      "train_period": [
+        "2023-10-01 00:00:00+00:00",
+        "2024-09-25 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2024-09-25 00:00:00+00:00",
+        "2024-12-24 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.8444444444444444,
+      "train_precision": 0.9895833333333334,
+      "train_recall": 0.6333333333333333,
+      "train_f1": 0.7723577235772358,
+      "test_accuracy": 0.5444444444444444,
+      "test_precision": 0.375,
+      "test_recall": 0.07692307692307693,
+      "test_f1": 0.1276595744680851,
+      "simulated_trades": {
+        "total_return": 0.07371740465958809,
+        "volatility": 0.08349016343371816,
+        "sharpe_ratio": 2.454015773785618,
+        "max_drawdown": -0.006751042143319913,
+        "win_rate": 0.056179775280898875,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.22063656758807,
+        "sma_10": 0.16454681586075423,
+        "sma_50": 0.168911000341612,
+        "rsi": 0.239924737846782,
+        "volume_ma": 0.2059808783627818
+      },
+      "market_conditions": {
+        "period_return": 0.49954904670037603,
+        "volatility": 0.4150839596996919,
+        "max_drawdown_period": -0.10791684997427867,
+        "trending_strength": 0.8883483749627016,
+        "average_volume": 54824503319.44444
+      },
+      "test_auc": 0.444947209653092,
+      "test_log_loss": 0.7401707996335846
+    },
+    {
+      "window_id": 46,
+      "train_period": [
+        "2023-10-31 00:00:00+00:00",
+        "2024-10-25 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2024-10-25 00:00:00+00:00",
+        "2025-01-23 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.8222222222222222,
+      "train_precision": 0.9777777777777777,
+      "train_recall": 0.5866666666666667,
+      "train_f1": 0.7333333333333333,
+      "test_accuracy": 0.5222222222222223,
+      "test_precision": 0.0,
+      "test_recall": 0.0,
+      "test_f1": 0.0,
+      "simulated_trades": {
+        "total_return": -0.05585414311129833,
+        "volatility": 0.05665215589623342,
+        "sharpe_ratio": -2.842898722883071,
+        "max_drawdown": -0.05585414311129833,
+        "win_rate": 0.0,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.2692612351308242,
+        "sma_10": 0.18340458252928746,
+        "sma_50": 0.14404845079988343,
+        "rsi": 0.19572753411620802,
+        "volume_ma": 0.20755819742379691
+      },
+      "market_conditions": {
+        "period_return": 0.5553618783270649,
+        "volatility": 0.43525153592868654,
+        "max_drawdown_period": -0.12866483041325566,
+        "trending_strength": 0.573972003700652,
+        "average_volume": 61824561211.41111
+      },
+      "test_auc": 0.49025,
+      "test_log_loss": 0.757123878470431
+    },
+    {
+      "window_id": 47,
+      "train_period": [
+        "2023-11-30 00:00:00+00:00",
+        "2024-11-24 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2024-11-24 00:00:00+00:00",
+        "2025-02-22 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.8222222222222222,
+      "train_precision": 0.9787234042553191,
+      "train_recall": 0.5974025974025974,
+      "train_f1": 0.7419354838709677,
+      "test_accuracy": 0.5777777777777777,
+      "test_precision": 0.3333333333333333,
+      "test_recall": 0.15151515151515152,
+      "test_f1": 0.20833333333333334,
+      "simulated_trades": {
+        "total_return": -0.04632769196607689,
+        "volatility": 0.14375906866878194,
+        "sharpe_ratio": -0.862617933204618,
+        "max_drawdown": -0.06549913980067812,
+        "win_rate": 0.056179775280898875,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.2032887457609917,
+        "sma_10": 0.17890202086565615,
+        "sma_50": 0.13986167883119946,
+        "rsi": 0.19982330024091396,
+        "volume_ma": 0.2781242543012387
+      },
+      "market_conditions": {
+        "period_return": -0.019265379427917062,
+        "volatility": 0.35412592770901585,
+        "max_drawdown_period": -0.12866483041325566,
+        "trending_strength": 0.011979288285055177,
+        "average_volume": 56059373021.655556
+      },
+      "test_auc": 0.4774056353003722,
+      "test_log_loss": 0.6808391339650699
+    },
+    {
+      "window_id": 48,
+      "train_period": [
+        "2023-12-30 00:00:00+00:00",
+        "2024-12-24 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2024-12-24 00:00:00+00:00",
+        "2025-03-24 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.8111111111111111,
+      "train_precision": 0.9285714285714286,
+      "train_recall": 0.5986842105263158,
+      "train_f1": 0.728,
+      "test_accuracy": 0.5555555555555556,
+      "test_precision": 0.29411764705882354,
+      "test_recall": 0.15151515151515152,
+      "test_f1": 0.2,
+      "simulated_trades": {
+        "total_return": -0.09030963432765093,
+        "volatility": 0.17240535577576538,
+        "sharpe_ratio": -1.4660723035437697,
+        "max_drawdown": -0.12329643826011083,
+        "win_rate": 0.07865168539325842,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.21007095465503323,
+        "sma_10": 0.18608398894127387,
+        "sma_50": 0.14411076521469743,
+        "rsi": 0.2235033523748938,
+        "volume_ma": 0.23623093881410173
+      },
+      "market_conditions": {
+        "period_return": -0.12791060398051068,
+        "volatility": 0.4343612736652351,
+        "max_drawdown_period": -0.26015296404828187,
+        "trending_strength": 0.47944230319895553,
+        "average_volume": 45541780804.655556
+      },
+      "test_auc": 0.512227538543328,
+      "test_log_loss": 0.6743868964447761
+    },
+    {
+      "window_id": 49,
+      "train_period": [
+        "2024-01-29 00:00:00+00:00",
+        "2025-01-23 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2025-01-23 00:00:00+00:00",
+        "2025-04-23 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7777777777777778,
+      "train_precision": 0.9285714285714286,
+      "train_recall": 0.5131578947368421,
+      "train_f1": 0.6610169491525424,
+      "test_accuracy": 0.5777777777777777,
+      "test_precision": 0.36363636363636365,
+      "test_recall": 0.25,
+      "test_f1": 0.2962962962962963,
+      "simulated_trades": {
+        "total_return": -0.040174233804509574,
+        "volatility": 0.21825028806839777,
+        "sharpe_ratio": -0.42193320586466965,
+        "max_drawdown": -0.16987757429719696,
+        "win_rate": 0.11235955056179775,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.18440200779948848,
+        "sma_10": 0.22560929945510957,
+        "sma_50": 0.17625917190610946,
+        "rsi": 0.21025132149719203,
+        "volume_ma": 0.2034781993421004
+      },
+      "market_conditions": {
+        "period_return": -0.10117606637517884,
+        "volatility": 0.46644490330717786,
+        "max_drawdown_period": -0.27234947223999834,
+        "trending_strength": 0.7027589150783683,
+        "average_volume": 40061597686.3
+      },
+      "test_auc": 0.5614224137931034,
+      "test_log_loss": 0.6572093759543768
+    },
+    {
+      "window_id": 50,
+      "train_period": [
+        "2024-02-28 00:00:00+00:00",
+        "2025-02-22 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2025-02-22 00:00:00+00:00",
+        "2025-05-23 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7416666666666667,
+      "train_precision": 0.9491525423728814,
+      "train_recall": 0.3835616438356164,
+      "train_f1": 0.5463414634146342,
+      "test_accuracy": 0.5888888888888889,
+      "test_precision": 0.38461538461538464,
+      "test_recall": 0.14705882352941177,
+      "test_f1": 0.2127659574468085,
+      "simulated_trades": {
+        "total_return": 0.05773896064818662,
+        "volatility": 0.1640082137769761,
+        "sharpe_ratio": 1.0506099413170666,
+        "max_drawdown": -0.04946290046952739,
+        "win_rate": 0.07865168539325842,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.19989575925511288,
+        "sma_10": 0.22645068708340182,
+        "sma_50": 0.1551563588682304,
+        "rsi": 0.20055315262775342,
+        "volume_ma": 0.21794404216550137
+      },
+      "market_conditions": {
+        "period_return": 0.1563043477029884,
+        "volatility": 0.4682601596698018,
+        "max_drawdown_period": -0.2102534284024539,
+        "trending_strength": 0.4656739238530764,
+        "average_volume": 39033464693.36667
+      },
+      "test_auc": 0.5903361344537815,
+      "test_log_loss": 0.6566143406192293
+    },
+    {
+      "window_id": 51,
+      "train_period": [
+        "2024-03-29 00:00:00+00:00",
+        "2025-03-24 00:00:00+00:00"
+      ],
+      "test_period": [
+        "2025-03-24 00:00:00+00:00",
+        "2025-06-22 00:00:00+00:00"
+      ],
+      "train_samples": 360,
+      "test_samples": 90,
+      "train_accuracy": 0.7666666666666667,
+      "train_precision": 0.9682539682539683,
+      "train_recall": 0.42657342657342656,
+      "train_f1": 0.5922330097087378,
+      "test_accuracy": 0.6444444444444445,
+      "test_precision": 0.25,
+      "test_recall": 0.03333333333333333,
+      "test_f1": 0.058823529411764705,
+      "simulated_trades": {
+        "total_return": -0.01045605893355428,
+        "volatility": 0.03150982851523521,
+        "sharpe_ratio": -0.9286413637570113,
+        "max_drawdown": -0.02280075575604436,
+        "win_rate": 0.02247191011235955,
+        "number_of_trades": 89
+      },
+      "feature_importance": {
+        "returns": 0.18601460049462168,
+        "sma_10": 0.2403463957267642,
+        "sma_50": 0.19142969785542893,
+        "rsi": 0.18965299843939323,
+        "volume_ma": 0.19255630748379204
+      },
+      "market_conditions": {
+        "period_return": 0.1686705754651776,
+        "volatility": 0.35040549755056677,
+        "max_drawdown_period": -0.1283097174152429,
+        "trending_strength": 0.7989048572890876,
+        "average_volume": 41824293313.82222
+      },
+      "test_auc": 0.5800000000000001,
+      "test_log_loss": 0.6308927502550161
+    }
+  ],
+  "statistical_analysis": {
+    "accuracy_t_test": {
+      "t_statistic": 5.763068646947518,
+      "p_value": 5.098007988296542e-07,
+      "significant": true
+    },
+    "returns_t_test": {
+      "t_statistic": 0.7055397552661558,
+      "p_value": 0.48374865607558293,
+      "significant": false
+    },
+    "consistency_metrics": {
+      "accuracy_coefficient_of_variation": 0.12096132394190286,
+      "performance_stability": true
+    },
+    "deflated_sharpe_ratio": 0.0444639446201788,
+    "sample_size": 51
+  },
+  "attribution_analysis": {
+    "market_condition_analysis": {
+      "sideways_market": {
+        "count": 15,
+        "mean_accuracy": 0.5659259259259259,
+        "std_accuracy": 0.06252132695113835
+      },
+      "bear_market": {
+        "count": 15,
+        "mean_accuracy": 0.5481481481481482,
+        "std_accuracy": 0.07310476913466862
+      },
+      "bull_market": {
+        "count": 21,
+        "mean_accuracy": 0.5513227513227513,
+        "std_accuracy": 0.06474080646748119
+      }
+    },
+    "feature_importance_analysis": {
+      "returns": {
+        "mean_importance": 0.2113718791584425,
+        "std_importance": 0.031608341506403265
+      },
+      "sma_10": {
+        "mean_importance": 0.1926319770236227,
+        "std_importance": 0.025938046455582155
+      },
+      "sma_50": {
+        "mean_importance": 0.17592623011829708,
+        "std_importance": 0.028359040029475
+      },
+      "rsi": {
+        "mean_importance": 0.19872853097188625,
+        "std_importance": 0.03051023771895975
+      },
+      "volume_ma": {
+        "mean_importance": 0.22134138272775153,
+        "std_importance": 0.028394396695569233
+      }
+    },
+    "temporal_analysis": {
+      "performance_trend_slope": 0.0018139768728003983,
+      "performance_degradation": -0.059615384615384626,
+      "temporal_variance": 0.004501782315443728
+    }
+  }
+}

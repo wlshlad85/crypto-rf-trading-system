@@ -1,0 +1,170 @@
+{
+  "best_individual": {
+    "profit_threshold": 0.019562384664554757,
+    "loss_threshold": 0.03,
+    "max_holding_period": "9",
+    "fitness": 0.22992096717986146,
+    "metrics": {
+      "total_return": 2.257171439136275,
+      "avg_return": 0.0022776704733968468,
+      "sharpe_ratio": 0.03783656205714162,
+      "win_rate": 0.5882946518668012,
+      "trade_count": 991,
+      "return_std": 0.06019760648330199
+    }
+  },
+  "fitness_history": [
+    0.22435242110609124,
+    0.22435242110609124,
+    0.22435242110609124,
+    0.22435242110609124,
+    0.22435242110609124,
+    0.22435242110609124,
+    0.22992096717986146,
+    0.22992096717986146,
+    0.22992096717986146,
+    0.22992096717986146
+  ],
+  "final_population": [
+    {
+      "profit_threshold": 0.019562384664554757,
+      "loss_threshold": 0.03,
+      "max_holding_period": "9",
+      "fitness": 0.22992096717986146,
+      "metrics": {
+        "total_return": 2.257171439136275,
+        "avg_return": 0.0022776704733968468,
+        "sharpe_ratio": 0.03783656205714162,
+        "win_rate": 0.5882946518668012,
+        "trade_count": 991,
+        "return_std": 0.06019760648330199
+      }
+    },
+    {
+      "profit_threshold": 0.019562384664554757,
+      "loss_threshold": 0.03,
+      "max_holding_period": "9",
+      "fitness": 0.22992096717986146,
+      "metrics": {
+        "total_return": 2.257171439136275,
+        "avg_return": 0.0022776704733968468,
+        "sharpe_ratio": 0.03783656205714162,
+        "win_rate": 0.5882946518668012,
+        "trade_count": 991,
+        "return_std": 0.06019760648330199
+      }
+    },
+    {
+      "profit_threshold": 0.01968804292343022,
+      "loss_threshold": 0.03,
+      "max_holding_period": "8",
+      "fitness": 0.2284075356020967,
+      "metrics": {
+        "total_return": 2.143936295587984,
+        "avg_return": 0.002161226104423371,
+        "sharpe_ratio": 0.03603058064195136,
+        "win_rate": 0.5836693548387096,
+        "trade_count": 992,
+        "return_std": 0.05998310507122381
+      }
+    },
+    {
+      "profit_threshold": 0.01957174954398408,
+      "loss_threshold": 0.02950622697477448,
+      "max_holding_period": "8",
+      "fitness": 0.22721792684467262,
+      "metrics": {
+        "total_return": 2.0337879496932443,
+        "avg_return": 0.002050189465416577,
+        "sharpe_ratio": 0.03422939600147149,
+        "win_rate": 0.5806451612903226,
+        "trade_count": 992,
+        "return_std": 0.05989557821377979
+      }
+    },
+    {
+      "profit_threshold": 0.019569122218224298,
+      "loss_threshold": 0.029644755462882706,
+      "max_holding_period": "8",
+      "fitness": 0.22715702539508048,
+      "metrics": {
+        "total_return": 2.0228444483321644,
+        "avg_return": 0.0020391577100122623,
+        "sharpe_ratio": 0.034041100176703434,
+        "win_rate": 0.5806451612903226,
+        "trade_count": 992,
+        "return_std": 0.059902814522069775
+      }
+    },
+    {
+      "profit_threshold": 0.019574876406072157,
+      "loss_threshold": 0.02934135991328747,
+      "max_holding_period": "8",
+      "fitness": 0.22701569705490574,
+      "metrics": {
+        "total_return": 2.0658312840470296,
+        "avg_return": 0.0020824912137570864,
+        "sharpe_ratio": 0.03485631372596663,
+        "win_rate": 0.5786290322580645,
+        "trade_count": 992,
+        "return_std": 0.059745021522620435
+      }
+    },
+    {
+      "profit_threshold": 0.019593717656979166,
+      "loss_threshold": 0.02834793532842221,
+      "max_holding_period": "8",
+      "fitness": 0.22576767820718968,
+      "metrics": {
+        "total_return": 2.0087868751644447,
+        "avg_return": 0.0020249867693189964,
+        "sharpe_ratio": 0.03413313854659396,
+        "win_rate": 0.5735887096774194,
+        "trade_count": 992,
+        "return_std": 0.0593261228103814
+      }
+    },
+    {
+      "profit_threshold": 0.01957675978760652,
+      "loss_threshold": 0.029242056659583467,
+      "max_holding_period": "8",
+      "fitness": 0.22562986146624658,
+      "metrics": {
+        "total_return": 1.884533494121242,
+        "avg_return": 0.0018997313448802843,
+        "sharpe_ratio": 0.03182462761044385,
+        "win_rate": 0.5766129032258065,
+        "trade_count": 992,
+        "return_std": 0.059693749385989724
+      }
+    },
+    {
+      "profit_threshold": 0.019576980542607158,
+      "loss_threshold": 0.029230417122169138,
+      "max_holding_period": "8",
+      "fitness": 0.22562986146624658,
+      "metrics": {
+        "total_return": 1.884533494121242,
+        "avg_return": 0.0018997313448802843,
+        "sharpe_ratio": 0.03182462761044385,
+        "win_rate": 0.5766129032258065,
+        "trade_count": 992,
+        "return_std": 0.059693749385989724
+      }
+    },
+    {
+      "profit_threshold": 0.01959349690197853,
+      "loss_threshold": 0.02835957486583654,
+      "max_holding_period": "8",
+      "fitness": 0.2256091885744227,
+      "metrics": {
+        "total_return": 1.9806621263720183,
+        "avg_return": 0.0019966352080363087,
+        "sharpe_ratio": 0.033642641852414244,
+        "win_rate": 0.5735887096774194,
+        "trade_count": 992,
+        "return_std": 0.0593483477544742
+      }
+    }
+  ]
+}

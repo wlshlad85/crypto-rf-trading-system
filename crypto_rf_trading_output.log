@@ -1,0 +1,46 @@
+Warning: plotly not installed. Some interactive visualizations will be unavailable.
+2025-07-05 07:55:00,938 - __main__ - INFO - Starting Crypto Random Forest Trading System
+2025-07-05 07:55:00,938 - __main__ - INFO - Execution mode: full
+2025-07-05 07:55:00,938 - __main__ - INFO - Starting full pipeline execution
+2025-07-05 07:55:00,938 - __main__ - INFO - Starting data fetching process
+2025-07-05 07:55:00,939 - data.yfinance_fetcher - INFO - Fetching data for 9 symbols using yfinance
+2025-07-05 07:55:00,939 - data.yfinance_fetcher - INFO - Fetching bitcoin (BTC-USD) data - period: 2y, interval: 1h
+2025-07-05 07:55:01,734 - data.yfinance_fetcher - INFO - Fetched 17543 records for bitcoin
+2025-07-05 07:55:02,235 - data.yfinance_fetcher - INFO - Fetching ethereum (ETH-USD) data - period: 2y, interval: 1h
+2025-07-05 07:55:02,643 - data.yfinance_fetcher - INFO - Fetched 17542 records for ethereum
+2025-07-05 07:55:03,144 - data.yfinance_fetcher - INFO - Fetching tether (USDT-USD) data - period: 2y, interval: 1h
+2025-07-05 07:55:03,550 - data.yfinance_fetcher - INFO - Fetched 17534 records for tether
+2025-07-05 07:55:04,051 - data.yfinance_fetcher - INFO - Fetching solana (SOL-USD) data - period: 2y, interval: 1h
+2025-07-05 07:55:04,498 - data.yfinance_fetcher - INFO - Fetched 17542 records for solana
+2025-07-05 07:55:04,999 - data.yfinance_fetcher - INFO - Fetching binancecoin (BNB-USD) data - period: 2y, interval: 1h
+2025-07-05 07:55:05,462 - data.yfinance_fetcher - INFO - Fetched 17543 records for binancecoin
+2025-07-05 07:55:05,963 - data.yfinance_fetcher - INFO - Fetching usd-coin (USDC-USD) data - period: 2y, interval: 1h
+2025-07-05 07:55:06,317 - data.yfinance_fetcher - INFO - Fetched 17543 records for usd-coin
+2025-07-05 07:55:06,818 - data.yfinance_fetcher - INFO - Fetching ripple (XRP-USD) data - period: 2y, interval: 1h
+2025-07-05 07:55:07,228 - data.yfinance_fetcher - INFO - Fetched 17543 records for ripple
+2025-07-05 07:55:07,729 - data.yfinance_fetcher - INFO - Fetching dogecoin (DOGE-USD) data - period: 2y, interval: 1h
+2025-07-05 07:55:08,204 - data.yfinance_fetcher - INFO - Fetched 17536 records for dogecoin
+2025-07-05 07:55:08,705 - data.yfinance_fetcher - INFO - Fetching cardano (ADA-USD) data - period: 2y, interval: 1h
+2025-07-05 07:55:09,186 - data.yfinance_fetcher - INFO - Fetched 17543 records for cardano
+2025-07-05 07:55:09,187 - data.yfinance_fetcher - INFO - Successfully fetched data for 9 symbols
+2025-07-05 07:55:09,286 - data.yfinance_fetcher - INFO - Combined data shape: (17543, 82)
+2025-07-05 07:55:09,549 - data.yfinance_fetcher - INFO - Clean data shape: (17543, 82)
+2025-07-05 07:55:09,549 - __main__ - INFO - Fetched data shape: (17543, 82)
+2025-07-05 07:55:09,550 - __main__ - INFO - Date range: 2023-07-05 06:00:00+00:00 to 2025-07-05 06:00:00+00:00
+2025-07-05 07:55:09,550 - __main__ - INFO - Starting feature engineering
+2025-07-05 07:55:09,551 - features.feature_engineering - INFO - Starting feature generation
+2025-07-05 07:55:09,552 - features.feature_engineering - INFO - Generating features for binancecoin
+2025-07-05 07:55:17,493 - features.feature_engineering - INFO - Generating features for bitcoin
+2025-07-05 07:55:25,387 - features.feature_engineering - INFO - Generating features for cardano
+2025-07-05 07:55:33,605 - features.feature_engineering - INFO - Generating features for dogecoin
+2025-07-05 07:55:41,052 - features.feature_engineering - INFO - Generating features for ethereum
+2025-07-05 07:55:48,954 - features.feature_engineering - INFO - Generating features for ripple
+2025-07-05 07:55:56,875 - features.feature_engineering - INFO - Generating features for solana
+2025-07-05 07:56:05,021 - features.feature_engineering - INFO - Generating features for tether
+2025-07-05 07:56:12,954 - features.feature_engineering - INFO - Generating features for usd-coin
+2025-07-05 07:56:26,729 - features.feature_engineering - INFO - Generated 652 features
+2025-07-05 07:56:26,729 - __main__ - INFO - Generated features shape: (17543, 652)
+2025-07-05 07:56:26,729 - __main__ - INFO - Preparing ensemble Random Forest model
+2025-07-05 07:56:26,730 - __main__ - INFO - Starting model training
+2025-07-05 07:56:26,730 - __main__ - ERROR - Pipeline execution failed: 'EnsembleRandomForestModel' object has no attribute 'create_targets'
+2025-07-05 07:56:26,730 - __main__ - ERROR - Execution failed: 'EnsembleRandomForestModel' object has no attribute 'create_targets'

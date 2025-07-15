@@ -1,0 +1,35 @@
+{
+  "entry_features": [
+    "momentum_1",
+    "momentum_4",
+    "momentum_strength",
+    "rsi",
+    "macd",
+    "volume_ratio",
+    "market_structure",
+    "bb_position",
+    "is_optimal_hour",
+    "hour",
+    "day_of_week",
+    "volatility",
+    "success_probability"
+  ],
+  "position_features": [
+    "momentum_strength",
+    "is_high_momentum",
+    "volatility",
+    "rsi",
+    "market_structure",
+    "success_probability",
+    "volume_ratio"
+  ],
+  "exit_features": [
+    "momentum_1",
+    "rsi",
+    "bb_position",
+    "market_structure",
+    "volatility",
+    "volume_ratio",
+    "macd"
+  ]
+}

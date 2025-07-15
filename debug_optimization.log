@@ -1,0 +1,390 @@
+2025-07-07 09:54:57,942 - INFO - main:434 - Starting debug optimization...
+2025-07-07 09:54:57,942 - INFO - run_debug_optimization:46 - ================================================================================
+2025-07-07 09:54:57,943 - INFO - run_debug_optimization:47 - 🔍 DEBUG OPTIMIZATION START
+2025-07-07 09:54:57,943 - INFO - run_debug_optimization:48 - ================================================================================
+2025-07-07 09:54:57,943 - INFO - run_debug_optimization:52 - Step 1: Preparing data...
+2025-07-07 09:54:57,943 - INFO - _debug_data_preparation:81 - Fetching 30 days of data for ['bitcoin', 'ethereum']
+2025-07-07 09:54:57,943 - INFO - fetch_all_symbols:136 - Fetching data for 2 symbols using yfinance
+2025-07-07 09:54:57,943 - INFO - fetch_crypto_data:74 - Fetching bitcoin (BTC-USD) data - period: 1mo, interval: 1h
+2025-07-07 09:54:57,943 - DEBUG - wrapper:89 - Entering history()
+2025-07-07 09:54:57,945 - DEBUG - execute_sql:3319 - ('CREATE TABLE IF NOT EXISTS "_tz_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+2025-07-07 09:54:57,945 - DEBUG - execute_sql:3319 - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['BTC-USD', 1, 0])
+2025-07-07 09:54:57,945 - DEBUG - wrapper:89 -  Entering history()
+2025-07-07 09:54:57,945 - DEBUG - history:167 - BTC-USD: Yahoo GET parameters: {'range': '1mo', 'interval': '1h', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-07-07 09:54:57,946 - DEBUG - wrapper:89 -   Entering get()
+2025-07-07 09:54:57,946 - DEBUG - wrapper:89 -    Entering _make_request()
+2025-07-07 09:54:57,946 - DEBUG - _make_request:383 - url=https://query2.finance.yahoo.com/v8/finance/chart/BTC-USD
+2025-07-07 09:54:57,946 - DEBUG - _make_request:384 - params={'range': '1mo', 'interval': '1h', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-07-07 09:54:57,946 - DEBUG - wrapper:89 -     Entering _get_cookie_and_crumb()
+2025-07-07 09:54:57,946 - DEBUG - _get_cookie_and_crumb:349 - cookie_mode = 'basic'
+2025-07-07 09:54:57,946 - DEBUG - wrapper:89 -      Entering _get_cookie_and_crumb_basic()
+2025-07-07 09:54:57,946 - DEBUG - wrapper:89 -       Entering _get_cookie_basic()
+2025-07-07 09:54:57,946 - DEBUG - wrapper:89 -        Entering _load_cookie_curlCffi()
+2025-07-07 09:54:57,947 - DEBUG - execute_sql:3319 - ('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+2025-07-07 09:54:57,948 - DEBUG - execute_sql:3319 - ('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['curlCffi', 1, 0])
+2025-07-07 09:54:57,948 - DEBUG - wrapper:94 -        Exiting _load_cookie_curlCffi()
+2025-07-07 09:54:57,948 - DEBUG - _get_cookie_basic:190 - reusing persistent cookie
+2025-07-07 09:54:57,948 - DEBUG - wrapper:94 -       Exiting _get_cookie_basic()
+2025-07-07 09:54:57,948 - DEBUG - wrapper:89 -       Entering _get_crumb_basic()
+2025-07-07 09:54:57,948 - DEBUG - wrapper:89 -        Entering _get_cookie_basic()
+2025-07-07 09:54:57,948 - DEBUG - _get_cookie_basic:187 - reusing cookie
+2025-07-07 09:54:57,948 - DEBUG - wrapper:94 -        Exiting _get_cookie_basic()
+2025-07-07 09:54:58,142 - DEBUG - _get_crumb_basic:234 - crumb = 'tk06B98XmMP'
+2025-07-07 09:54:58,142 - DEBUG - wrapper:94 -       Exiting _get_crumb_basic()
+2025-07-07 09:54:58,142 - DEBUG - wrapper:94 -      Exiting _get_cookie_and_crumb_basic()
+2025-07-07 09:54:58,142 - DEBUG - wrapper:94 -     Exiting _get_cookie_and_crumb()
+2025-07-07 09:54:58,297 - DEBUG - _make_request:407 - response code=200
+2025-07-07 09:54:58,298 - DEBUG - wrapper:94 -    Exiting _make_request()
+2025-07-07 09:54:58,298 - DEBUG - wrapper:94 -   Exiting get()
+2025-07-07 09:54:58,301 - DEBUG - history:283 - BTC-USD: yfinance received OHLC data: 2025-06-07 08:00:00 -> 2025-07-07 08:52:00
+2025-07-07 09:54:58,308 - DEBUG - history:320 - BTC-USD: OHLC after cleaning: 2025-06-07 08:00:00+00:00 -> 2025-07-07 08:52:00+00:00
+2025-07-07 09:54:58,310 - DEBUG - history:390 - BTC-USD: OHLC after combining events: 2025-06-07 08:00:00+00:00 -> 2025-07-07 08:52:00+00:00
+2025-07-07 09:54:58,318 - DEBUG - history:469 - BTC-USD: yfinance returning OHLC: 2025-06-07 08:00:00+00:00 -> 2025-07-07 08:00:00+00:00
+2025-07-07 09:54:58,318 - DEBUG - wrapper:94 -  Exiting history()
+2025-07-07 09:54:58,318 - DEBUG - wrapper:94 - Exiting history()
+2025-07-07 09:54:58,320 - INFO - fetch_crypto_data:90 - Fetched 721 records for bitcoin
+2025-07-07 09:54:58,821 - INFO - fetch_crypto_data:74 - Fetching ethereum (ETH-USD) data - period: 1mo, interval: 1h
+2025-07-07 09:54:58,821 - DEBUG - wrapper:89 - Entering history()
+2025-07-07 09:54:58,822 - DEBUG - execute_sql:3319 - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['ETH-USD', 1, 0])
+2025-07-07 09:54:58,822 - DEBUG - wrapper:89 -  Entering history()
+2025-07-07 09:54:58,822 - DEBUG - history:167 - ETH-USD: Yahoo GET parameters: {'range': '1mo', 'interval': '1h', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-07-07 09:54:58,822 - DEBUG - wrapper:89 -   Entering get()
+2025-07-07 09:54:58,822 - DEBUG - wrapper:89 -    Entering _make_request()
+2025-07-07 09:54:58,822 - DEBUG - _make_request:383 - url=https://query2.finance.yahoo.com/v8/finance/chart/ETH-USD
+2025-07-07 09:54:58,823 - DEBUG - _make_request:384 - params={'range': '1mo', 'interval': '1h', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-07-07 09:54:58,823 - DEBUG - wrapper:89 -     Entering _get_cookie_and_crumb()
+2025-07-07 09:54:58,823 - DEBUG - _get_cookie_and_crumb:349 - cookie_mode = 'basic'
+2025-07-07 09:54:58,823 - DEBUG - wrapper:89 -      Entering _get_cookie_and_crumb_basic()
+2025-07-07 09:54:58,823 - DEBUG - wrapper:89 -       Entering _get_cookie_basic()
+2025-07-07 09:54:58,823 - DEBUG - _get_cookie_basic:187 - reusing cookie
+2025-07-07 09:54:58,823 - DEBUG - wrapper:94 -       Exiting _get_cookie_basic()
+2025-07-07 09:54:58,823 - DEBUG - wrapper:89 -       Entering _get_crumb_basic()
+2025-07-07 09:54:58,823 - DEBUG - _get_crumb_basic:209 - reusing crumb
+2025-07-07 09:54:58,823 - DEBUG - wrapper:94 -       Exiting _get_crumb_basic()
+2025-07-07 09:54:58,823 - DEBUG - wrapper:94 -      Exiting _get_cookie_and_crumb_basic()
+2025-07-07 09:54:58,823 - DEBUG - wrapper:94 -     Exiting _get_cookie_and_crumb()
+2025-07-07 09:54:58,913 - DEBUG - _make_request:407 - response code=200
+2025-07-07 09:54:58,914 - DEBUG - wrapper:94 -    Exiting _make_request()
+2025-07-07 09:54:58,914 - DEBUG - wrapper:94 -   Exiting get()
+2025-07-07 09:54:58,916 - DEBUG - history:283 - ETH-USD: yfinance received OHLC data: 2025-06-07 08:00:00 -> 2025-07-07 08:52:00
+2025-07-07 09:54:58,921 - DEBUG - history:320 - ETH-USD: OHLC after cleaning: 2025-06-07 08:00:00+00:00 -> 2025-07-07 08:52:00+00:00
+2025-07-07 09:54:58,923 - DEBUG - history:390 - ETH-USD: OHLC after combining events: 2025-06-07 08:00:00+00:00 -> 2025-07-07 08:52:00+00:00
+2025-07-07 09:54:58,931 - DEBUG - history:469 - ETH-USD: yfinance returning OHLC: 2025-06-07 08:00:00+00:00 -> 2025-07-07 08:00:00+00:00
+2025-07-07 09:54:58,932 - DEBUG - wrapper:94 -  Exiting history()
+2025-07-07 09:54:58,932 - DEBUG - wrapper:94 - Exiting history()
+2025-07-07 09:54:58,934 - INFO - fetch_crypto_data:90 - Fetched 721 records for ethereum
+2025-07-07 09:54:58,934 - INFO - fetch_all_symbols:156 - Successfully fetched data for 2 symbols
+2025-07-07 09:54:58,934 - INFO - _debug_data_preparation:87 - Raw data fetched: 2 symbols
+2025-07-07 09:54:58,934 - INFO - _debug_data_preparation:89 -   bitcoin: (721, 10) - columns: ['open', 'high', 'low', 'close', 'volume', 'dividends', 'stock splits', 'symbol', 'price', 'market_cap']
+2025-07-07 09:54:58,934 - INFO - _debug_data_preparation:89 -   ethereum: (721, 10) - columns: ['open', 'high', 'low', 'close', 'volume', 'dividends', 'stock splits', 'symbol', 'price', 'market_cap']
+2025-07-07 09:54:58,934 - DEBUG - get_raw_json:431 - get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/BTC-USD
+2025-07-07 09:54:58,934 - DEBUG - wrapper:89 - Entering get()
+2025-07-07 09:54:58,934 - DEBUG - wrapper:89 -  Entering _make_request()
+2025-07-07 09:54:58,934 - DEBUG - _make_request:383 - url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/BTC-USD
+2025-07-07 09:54:58,934 - DEBUG - _make_request:384 - params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'BTC-USD'}
+2025-07-07 09:54:58,934 - DEBUG - wrapper:89 -   Entering _get_cookie_and_crumb()
+2025-07-07 09:54:58,934 - DEBUG - _get_cookie_and_crumb:349 - cookie_mode = 'basic'
+2025-07-07 09:54:58,934 - DEBUG - wrapper:89 -    Entering _get_cookie_and_crumb_basic()
+2025-07-07 09:54:58,935 - DEBUG - wrapper:89 -     Entering _get_cookie_basic()
+2025-07-07 09:54:58,935 - DEBUG - _get_cookie_basic:187 - reusing cookie
+2025-07-07 09:54:58,935 - DEBUG - wrapper:94 -     Exiting _get_cookie_basic()
+2025-07-07 09:54:58,935 - DEBUG - wrapper:89 -     Entering _get_crumb_basic()
+2025-07-07 09:54:58,935 - DEBUG - _get_crumb_basic:209 - reusing crumb
+2025-07-07 09:54:58,935 - DEBUG - wrapper:94 -     Exiting _get_crumb_basic()
+2025-07-07 09:54:58,935 - DEBUG - wrapper:94 -    Exiting _get_cookie_and_crumb_basic()
+2025-07-07 09:54:58,935 - DEBUG - wrapper:94 -   Exiting _get_cookie_and_crumb()
+2025-07-07 09:54:59,010 - DEBUG - _make_request:407 - response code=200
+2025-07-07 09:54:59,010 - DEBUG - wrapper:94 -  Exiting _make_request()
+2025-07-07 09:54:59,010 - DEBUG - wrapper:94 - Exiting get()
+2025-07-07 09:54:59,010 - DEBUG - get_raw_json:431 - get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+2025-07-07 09:54:59,011 - DEBUG - wrapper:89 - Entering get()
+2025-07-07 09:54:59,011 - DEBUG - wrapper:89 -  Entering _make_request()
+2025-07-07 09:54:59,011 - DEBUG - _make_request:383 - url=https://query1.finance.yahoo.com/v7/finance/quote?
+2025-07-07 09:54:59,011 - DEBUG - _make_request:384 - params={'symbols': 'BTC-USD', 'formatted': 'false'}
+2025-07-07 09:54:59,011 - DEBUG - wrapper:89 -   Entering _get_cookie_and_crumb()
+2025-07-07 09:54:59,011 - DEBUG - _get_cookie_and_crumb:349 - cookie_mode = 'basic'
+2025-07-07 09:54:59,011 - DEBUG - wrapper:89 -    Entering _get_cookie_and_crumb_basic()
+2025-07-07 09:54:59,011 - DEBUG - wrapper:89 -     Entering _get_cookie_basic()
+2025-07-07 09:54:59,011 - DEBUG - _get_cookie_basic:187 - reusing cookie
+2025-07-07 09:54:59,011 - DEBUG - wrapper:94 -     Exiting _get_cookie_basic()
+2025-07-07 09:54:59,011 - DEBUG - wrapper:89 -     Entering _get_crumb_basic()
+2025-07-07 09:54:59,011 - DEBUG - _get_crumb_basic:209 - reusing crumb
+2025-07-07 09:54:59,011 - DEBUG - wrapper:94 -     Exiting _get_crumb_basic()
+2025-07-07 09:54:59,011 - DEBUG - wrapper:94 -    Exiting _get_cookie_and_crumb_basic()
+2025-07-07 09:54:59,011 - DEBUG - wrapper:94 -   Exiting _get_cookie_and_crumb()
+2025-07-07 09:54:59,055 - DEBUG - _make_request:407 - response code=200
+2025-07-07 09:54:59,055 - DEBUG - wrapper:94 -  Exiting _make_request()
+2025-07-07 09:54:59,055 - DEBUG - wrapper:94 - Exiting get()
+2025-07-07 09:54:59,056 - DEBUG - wrapper:89 - Entering get()
+2025-07-07 09:54:59,056 - DEBUG - wrapper:89 -  Entering _make_request()
+2025-07-07 09:54:59,056 - DEBUG - _make_request:383 - url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/BTC-USD?symbol=BTC-USD&type=trailingPegRatio&period1=1736121600&period2=1751932800
+2025-07-07 09:54:59,056 - DEBUG - _make_request:384 - params=None
+2025-07-07 09:54:59,056 - DEBUG - wrapper:89 -   Entering _get_cookie_and_crumb()
+2025-07-07 09:54:59,056 - DEBUG - _get_cookie_and_crumb:349 - cookie_mode = 'basic'
+2025-07-07 09:54:59,056 - DEBUG - wrapper:89 -    Entering _get_cookie_and_crumb_basic()
+2025-07-07 09:54:59,056 - DEBUG - wrapper:89 -     Entering _get_cookie_basic()
+2025-07-07 09:54:59,056 - DEBUG - _get_cookie_basic:187 - reusing cookie
+2025-07-07 09:54:59,056 - DEBUG - wrapper:94 -     Exiting _get_cookie_basic()
+2025-07-07 09:54:59,056 - DEBUG - wrapper:89 -     Entering _get_crumb_basic()
+2025-07-07 09:54:59,056 - DEBUG - _get_crumb_basic:209 - reusing crumb
+2025-07-07 09:54:59,057 - DEBUG - wrapper:94 -     Exiting _get_crumb_basic()
+2025-07-07 09:54:59,057 - DEBUG - wrapper:94 -    Exiting _get_cookie_and_crumb_basic()
+2025-07-07 09:54:59,057 - DEBUG - wrapper:94 -   Exiting _get_cookie_and_crumb()
+2025-07-07 09:54:59,101 - DEBUG - _make_request:407 - response code=200
+2025-07-07 09:54:59,102 - DEBUG - wrapper:94 -  Exiting _make_request()
+2025-07-07 09:54:59,102 - DEBUG - wrapper:94 - Exiting get()
+2025-07-07 09:54:59,102 - INFO - get_latest_prices:233 - bitcoin: $109008.09
+2025-07-07 09:54:59,102 - DEBUG - get_raw_json:431 - get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/ETH-USD
+2025-07-07 09:54:59,102 - DEBUG - wrapper:89 - Entering get()
+2025-07-07 09:54:59,102 - DEBUG - wrapper:89 -  Entering _make_request()
+2025-07-07 09:54:59,102 - DEBUG - _make_request:383 - url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/ETH-USD
+2025-07-07 09:54:59,102 - DEBUG - _make_request:384 - params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'ETH-USD'}
+2025-07-07 09:54:59,102 - DEBUG - wrapper:89 -   Entering _get_cookie_and_crumb()
+2025-07-07 09:54:59,102 - DEBUG - _get_cookie_and_crumb:349 - cookie_mode = 'basic'
+2025-07-07 09:54:59,103 - DEBUG - wrapper:89 -    Entering _get_cookie_and_crumb_basic()
+2025-07-07 09:54:59,103 - DEBUG - wrapper:89 -     Entering _get_cookie_basic()
+2025-07-07 09:54:59,103 - DEBUG - _get_cookie_basic:187 - reusing cookie
+2025-07-07 09:54:59,103 - DEBUG - wrapper:94 -     Exiting _get_cookie_basic()
+2025-07-07 09:54:59,103 - DEBUG - wrapper:89 -     Entering _get_crumb_basic()
+2025-07-07 09:54:59,103 - DEBUG - _get_crumb_basic:209 - reusing crumb
+2025-07-07 09:54:59,103 - DEBUG - wrapper:94 -     Exiting _get_crumb_basic()
+2025-07-07 09:54:59,103 - DEBUG - wrapper:94 -    Exiting _get_cookie_and_crumb_basic()
+2025-07-07 09:54:59,103 - DEBUG - wrapper:94 -   Exiting _get_cookie_and_crumb()
+2025-07-07 09:54:59,144 - DEBUG - _make_request:407 - response code=200
+2025-07-07 09:54:59,144 - DEBUG - wrapper:94 -  Exiting _make_request()
+2025-07-07 09:54:59,144 - DEBUG - wrapper:94 - Exiting get()
+2025-07-07 09:54:59,144 - DEBUG - get_raw_json:431 - get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+2025-07-07 09:54:59,144 - DEBUG - wrapper:89 - Entering get()
+2025-07-07 09:54:59,144 - DEBUG - wrapper:89 -  Entering _make_request()
+2025-07-07 09:54:59,145 - DEBUG - _make_request:383 - url=https://query1.finance.yahoo.com/v7/finance/quote?
+2025-07-07 09:54:59,145 - DEBUG - _make_request:384 - params={'symbols': 'ETH-USD', 'formatted': 'false'}
+2025-07-07 09:54:59,145 - DEBUG - wrapper:89 -   Entering _get_cookie_and_crumb()
+2025-07-07 09:54:59,145 - DEBUG - _get_cookie_and_crumb:349 - cookie_mode = 'basic'
+2025-07-07 09:54:59,145 - DEBUG - wrapper:89 -    Entering _get_cookie_and_crumb_basic()
+2025-07-07 09:54:59,145 - DEBUG - wrapper:89 -     Entering _get_cookie_basic()
+2025-07-07 09:54:59,145 - DEBUG - _get_cookie_basic:187 - reusing cookie
+2025-07-07 09:54:59,145 - DEBUG - wrapper:94 -     Exiting _get_cookie_basic()
+2025-07-07 09:54:59,145 - DEBUG - wrapper:89 -     Entering _get_crumb_basic()
+2025-07-07 09:54:59,145 - DEBUG - _get_crumb_basic:209 - reusing crumb
+2025-07-07 09:54:59,145 - DEBUG - wrapper:94 -     Exiting _get_crumb_basic()
+2025-07-07 09:54:59,145 - DEBUG - wrapper:94 -    Exiting _get_cookie_and_crumb_basic()
+2025-07-07 09:54:59,145 - DEBUG - wrapper:94 -   Exiting _get_cookie_and_crumb()
+2025-07-07 09:54:59,200 - DEBUG - _make_request:407 - response code=200
+2025-07-07 09:54:59,201 - DEBUG - wrapper:94 -  Exiting _make_request()
+2025-07-07 09:54:59,201 - DEBUG - wrapper:94 - Exiting get()
+2025-07-07 09:54:59,201 - DEBUG - wrapper:89 - Entering get()
+2025-07-07 09:54:59,201 - DEBUG - wrapper:89 -  Entering _make_request()
+2025-07-07 09:54:59,201 - DEBUG - _make_request:383 - url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/ETH-USD?symbol=ETH-USD&type=trailingPegRatio&period1=1736121600&period2=1751932800
+2025-07-07 09:54:59,201 - DEBUG - _make_request:384 - params=None
+2025-07-07 09:54:59,201 - DEBUG - wrapper:89 -   Entering _get_cookie_and_crumb()
+2025-07-07 09:54:59,201 - DEBUG - _get_cookie_and_crumb:349 - cookie_mode = 'basic'
+2025-07-07 09:54:59,201 - DEBUG - wrapper:89 -    Entering _get_cookie_and_crumb_basic()
+2025-07-07 09:54:59,202 - DEBUG - wrapper:89 -     Entering _get_cookie_basic()
+2025-07-07 09:54:59,202 - DEBUG - _get_cookie_basic:187 - reusing cookie
+2025-07-07 09:54:59,202 - DEBUG - wrapper:94 -     Exiting _get_cookie_basic()
+2025-07-07 09:54:59,202 - DEBUG - wrapper:89 -     Entering _get_crumb_basic()
+2025-07-07 09:54:59,202 - DEBUG - _get_crumb_basic:209 - reusing crumb
+2025-07-07 09:54:59,202 - DEBUG - wrapper:94 -     Exiting _get_crumb_basic()
+2025-07-07 09:54:59,202 - DEBUG - wrapper:94 -    Exiting _get_cookie_and_crumb_basic()
+2025-07-07 09:54:59,202 - DEBUG - wrapper:94 -   Exiting _get_cookie_and_crumb()
+2025-07-07 09:54:59,237 - DEBUG - _make_request:407 - response code=200
+2025-07-07 09:54:59,237 - DEBUG - wrapper:94 -  Exiting _make_request()
+2025-07-07 09:54:59,237 - DEBUG - wrapper:94 - Exiting get()
+2025-07-07 09:54:59,237 - INFO - get_latest_prices:233 - ethereum: $2581.04
+2025-07-07 09:54:59,238 - INFO - _debug_data_preparation:93 - Latest prices: {'bitcoin': 109008.086, 'ethereum': 2581.04}
+2025-07-07 09:54:59,242 - INFO - combine_data:276 - Combined data shape: (721, 19)
+2025-07-07 09:54:59,242 - INFO - _debug_data_preparation:97 - Combined raw data shape: (721, 19)
+2025-07-07 09:54:59,243 - INFO - _debug_data_preparation:98 - Combined raw data columns: ['bitcoin_open', 'bitcoin_high', 'bitcoin_low', 'bitcoin_close', 'bitcoin_volume', 'bitcoin_dividends', 'bitcoin_stock splits', 'symbol', 'bitcoin_price', 'bitcoin_market_cap', 'ethereum_open', 'ethereum_high', 'ethereum_low', 'ethereum_close', 'ethereum_volume', 'ethereum_dividends', 'ethereum_stock splits', 'ethereum_price', 'ethereum_market_cap']
+2025-07-07 09:54:59,244 - INFO - get_clean_data:295 - Clean data shape: (721, 19)
+2025-07-07 09:54:59,245 - INFO - _debug_data_preparation:101 - Clean data shape: (721, 19)
+2025-07-07 09:54:59,245 - INFO - _debug_data_preparation:102 - Clean data columns: ['bitcoin_open', 'bitcoin_high', 'bitcoin_low', 'bitcoin_close', 'bitcoin_volume', 'bitcoin_dividends', 'bitcoin_stock splits', 'symbol', 'bitcoin_price', 'bitcoin_market_cap', 'ethereum_open', 'ethereum_high', 'ethereum_low', 'ethereum_close', 'ethereum_volume', 'ethereum_dividends', 'ethereum_stock splits', 'ethereum_price', 'ethereum_market_cap']
+2025-07-07 09:54:59,246 - INFO - _debug_data_preparation:103 - Clean data dtypes:
+bitcoin_open             float64
+bitcoin_high             float64
+bitcoin_low              float64
+bitcoin_close            float64
+bitcoin_volume             int64
+bitcoin_dividends        float64
+bitcoin_stock splits     float64
+symbol                    object
+bitcoin_price            float64
+bitcoin_market_cap       float64
+ethereum_open            float64
+ethereum_high            float64
+ethereum_low             float64
+ethereum_close           float64
+ethereum_volume            int64
+ethereum_dividends       float64
+ethereum_stock splits    float64
+ethereum_price           float64
+ethereum_market_cap      float64
+dtype: object
+2025-07-07 09:54:59,247 - INFO - _debug_data_preparation:107 - NaN counts:
+Series([], dtype: int64)
+2025-07-07 09:54:59,247 - INFO - generate_features:25 - Starting feature generation
+2025-07-07 09:54:59,247 - INFO - generate_features:35 - Generating features for bitcoin
+2025-07-07 09:54:59,528 - INFO - generate_features:35 - Generating features for ethereum
+2025-07-07 09:54:59,842 - INFO - generate_features:64 - Generated 146 features
+2025-07-07 09:54:59,842 - INFO - _debug_data_preparation:112 - Features shape: (721, 146)
+2025-07-07 09:54:59,844 - INFO - _debug_data_preparation:113 - Features dtypes: float64    135
+int64        7
+int32        3
+object       1
+Name: count, dtype: int64
+2025-07-07 09:54:59,848 - INFO - _debug_data_preparation:118 - Features with NaN: Series([], dtype: int64)
+2025-07-07 09:54:59,849 - INFO - _debug_data_preparation:119 - Features with inf: Series([], dtype: int64)
+2025-07-07 09:54:59,849 - INFO - _debug_target_preparation:132 - Preparing targets...
+2025-07-07 09:54:59,850 - INFO - _debug_target_preparation:135 - Processing targets for bitcoin
+2025-07-07 09:54:59,850 - INFO - _debug_target_preparation:144 - Close series for bitcoin: shape=(721,), non-null=721
+2025-07-07 09:54:59,850 - INFO - _debug_target_preparation:149 - Creating target bitcoin_6h
+2025-07-07 09:54:59,852 - INFO - _debug_target_preparation:154 - Target bitcoin_6h: shape=(721,), non-null=715
+2025-07-07 09:54:59,852 - INFO - _debug_target_preparation:155 - Target bitcoin_6h stats: mean=0.000336, std=0.008074
+2025-07-07 09:54:59,853 - INFO - _debug_target_preparation:156 - Target bitcoin_6h range: [-0.033127, 0.050482]
+2025-07-07 09:54:59,854 - INFO - _debug_target_preparation:160 - Target bitcoin_6h after dropna: (715,)
+2025-07-07 09:54:59,855 - INFO - _debug_target_preparation:164 - Common index size for bitcoin_6h: 715
+2025-07-07 09:54:59,857 - INFO - _debug_target_preparation:172 - Target bitcoin_6h prepared successfully
+2025-07-07 09:54:59,858 - INFO - _debug_target_preparation:149 - Creating target bitcoin_12h
+2025-07-07 09:54:59,859 - INFO - _debug_target_preparation:154 - Target bitcoin_12h: shape=(721,), non-null=709
+2025-07-07 09:54:59,859 - INFO - _debug_target_preparation:155 - Target bitcoin_12h stats: mean=0.000652, std=0.011233
+2025-07-07 09:54:59,859 - INFO - _debug_target_preparation:156 - Target bitcoin_12h range: [-0.038728, 0.042246]
+2025-07-07 09:54:59,860 - INFO - _debug_target_preparation:160 - Target bitcoin_12h after dropna: (709,)
+2025-07-07 09:54:59,861 - INFO - _debug_target_preparation:164 - Common index size for bitcoin_12h: 709
+2025-07-07 09:54:59,864 - INFO - _debug_target_preparation:172 - Target bitcoin_12h prepared successfully
+2025-07-07 09:54:59,864 - INFO - _debug_target_preparation:135 - Processing targets for ethereum
+2025-07-07 09:54:59,865 - INFO - _debug_target_preparation:144 - Close series for ethereum: shape=(721,), non-null=721
+2025-07-07 09:54:59,865 - INFO - _debug_target_preparation:149 - Creating target ethereum_6h
+2025-07-07 09:54:59,866 - INFO - _debug_target_preparation:154 - Target ethereum_6h: shape=(721,), non-null=715
+2025-07-07 09:54:59,867 - INFO - _debug_target_preparation:155 - Target ethereum_6h stats: mean=0.000397, std=0.016542
+2025-07-07 09:54:59,867 - INFO - _debug_target_preparation:156 - Target ethereum_6h range: [-0.074103, 0.087895]
+2025-07-07 09:54:59,868 - INFO - _debug_target_preparation:160 - Target ethereum_6h after dropna: (715,)
+2025-07-07 09:54:59,869 - INFO - _debug_target_preparation:164 - Common index size for ethereum_6h: 715
+2025-07-07 09:54:59,873 - INFO - _debug_target_preparation:172 - Target ethereum_6h prepared successfully
+2025-07-07 09:54:59,873 - INFO - _debug_target_preparation:149 - Creating target ethereum_12h
+2025-07-07 09:54:59,874 - INFO - _debug_target_preparation:154 - Target ethereum_12h: shape=(721,), non-null=709
+2025-07-07 09:54:59,875 - INFO - _debug_target_preparation:155 - Target ethereum_12h stats: mean=0.000739, std=0.023724
+2025-07-07 09:54:59,875 - INFO - _debug_target_preparation:156 - Target ethereum_12h range: [-0.104124, 0.083466]
+2025-07-07 09:54:59,876 - INFO - _debug_target_preparation:160 - Target ethereum_12h after dropna: (709,)
+2025-07-07 09:54:59,877 - INFO - _debug_target_preparation:164 - Common index size for ethereum_12h: 709
+2025-07-07 09:54:59,881 - INFO - _debug_target_preparation:172 - Target ethereum_12h prepared successfully
+2025-07-07 09:54:59,882 - INFO - _debug_target_preparation:179 - Total targets prepared: 4
+2025-07-07 09:54:59,882 - INFO - _debug_target_preparation:181 -   bitcoin_6h: X=(715, 146), y=(715,)
+2025-07-07 09:54:59,882 - INFO - _debug_target_preparation:181 -   bitcoin_12h: X=(709, 146), y=(709,)
+2025-07-07 09:54:59,882 - INFO - _debug_target_preparation:181 -   ethereum_6h: X=(715, 146), y=(715,)
+2025-07-07 09:54:59,882 - INFO - _debug_target_preparation:181 -   ethereum_12h: X=(709, 146), y=(709,)
+2025-07-07 09:54:59,882 - INFO - run_debug_optimization:56 - Step 2: Testing single model training...
+2025-07-07 09:54:59,883 - INFO - _debug_model_training:198 - Testing model training with target: bitcoin_6h
+2025-07-07 09:54:59,883 - INFO - _debug_model_training:203 - Training data: X=(715, 146), y=(715,)
+2025-07-07 09:54:59,884 - INFO - _debug_model_training:204 - X dtypes: float64    135
+int64        7
+int32        3
+object       1
+Name: count, dtype: int64
+2025-07-07 09:54:59,885 - INFO - _debug_model_training:205 - y dtype: float64
+2025-07-07 09:54:59,885 - INFO - _debug_model_training:213 - Model created with config: ModelConfig(n_estimators=10, max_depth=5, min_samples_split=10, min_samples_leaf=5, max_features='sqrt', bootstrap=True, n_jobs=-1, random_state=42, use_grid_search=True, cv_folds=5, scoring='neg_mean_squared_error', test_size=0.2, validation_size=0.2, walk_forward_splits=10, target_horizon=6, target_type='returns')
+2025-07-07 09:54:59,885 - INFO - _debug_model_training:216 - Preparing data for model...
+2025-07-07 09:54:59,889 - INFO - _debug_model_training:220 - Data with target shape: (715, 147)
+2025-07-07 09:54:59,894 - INFO - _debug_model_training:221 - Target column stats: count    715.000000
+mean       0.000336
+std        0.008074
+min       -0.033127
+25%       -0.003586
+50%        0.000150
+75%        0.004430
+max        0.050482
+Name: target, dtype: float64
+2025-07-07 09:54:59,947 - INFO - prepare_data:77 - Prepared data shape: X=(715, 145), y=715
+2025-07-07 09:54:59,947 - INFO - _debug_model_training:226 - Clean data: X=(715, 145), y=(715,)
+2025-07-07 09:54:59,949 - INFO - _debug_model_training:227 - X_clean dtypes: float64    135
+int64        7
+int32        3
+Name: count, dtype: int64
+2025-07-07 09:54:59,949 - INFO - _debug_model_training:228 - y_clean dtype: float64
+2025-07-07 09:54:59,951 - INFO - _debug_model_training:241 - Train set: X=(572, 145), y=(572,)
+2025-07-07 09:54:59,951 - INFO - _debug_model_training:242 - Test set: X=(143, 145), y=(143,)
+2025-07-07 09:54:59,952 - INFO - _debug_model_training:246 - Training model...
+2025-07-07 09:54:59,952 - INFO - train:107 - Starting model training
+2025-07-07 09:55:00,061 - INFO - train:141 - Training completed. Val R2: -0.3339
+2025-07-07 09:55:00,062 - INFO - _debug_model_training:248 - Model training completed successfully
+2025-07-07 09:55:00,062 - INFO - _debug_model_training:256 - Testing prediction...
+2025-07-07 09:55:00,083 - INFO - _debug_model_training:258 - Predictions: shape=(143,), dtype=<class 'numpy.ndarray'>
+2025-07-07 09:55:00,084 - INFO - _debug_model_training:259 - Prediction stats: mean=-0.002345, std=0.002358
+2025-07-07 09:55:00,085 - INFO - _debug_model_training:260 - Prediction completed successfully
+2025-07-07 09:55:00,086 - INFO - run_debug_optimization:60 - Step 3: Testing simple optimization trial...
+2025-07-07 09:55:00,086 - INFO - _debug_optimization_trial:278 - Testing single optimization trial...
+2025-07-07 09:55:00,087 - INFO - _debug_optimization_trial:294 - Testing with parameters: {'n_estimators': 10, 'max_depth': 5, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'bootstrap': True, 'random_state': 42}
+2025-07-07 09:55:00,087 - INFO - _debug_optimization_trial:295 - Using target: bitcoin_6h
+2025-07-07 09:55:00,087 - INFO - _test_objective_function:323 - Objective function input: X=(715, 146), y=(715,)
+2025-07-07 09:55:00,089 - ERROR - _test_objective_function:372 - Objective function failed: could not convert string to float: 'bitcoin'
+2025-07-07 09:55:00,100 - ERROR - _test_objective_function:373 - Traceback (most recent call last):
+  File "/home/richardw/.local/lib/python3.10/site-packages/pandas/core/nanops.py", line 85, in _f
+    return f(*args, **kwargs)
+  File "/home/richardw/.local/lib/python3.10/site-packages/pandas/core/nanops.py", line 147, in f
+    result = alt(values, axis=axis, skipna=skipna, **kwds)
+  File "/home/richardw/.local/lib/python3.10/site-packages/pandas/core/nanops.py", line 1013, in nanvar
+    avg = _ensure_numeric(values.sum(axis=axis, dtype=np.float64)) / count
+  File "/home/richardw/.local/lib/python3.10/site-packages/numpy/_core/_methods.py", line 53, in _sum
+    return umr_sum(a, axis, dtype, out, keepdims, initial, where)
+ValueError: could not convert string to float: 'bitcoin'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/richardw/crypto_rf_trading_system/debug_optimization.py", line 327, in _test_objective_function
+    feature_vars = X.var()
+  File "/home/richardw/.local/lib/python3.10/site-packages/pandas/core/frame.py", line 11741, in var
+    result = super().var(axis, skipna, ddof, numeric_only, **kwargs)
+  File "/home/richardw/.local/lib/python3.10/site-packages/pandas/core/generic.py", line 12365, in var
+    return self._stat_function_ddof(
+  File "/home/richardw/.local/lib/python3.10/site-packages/pandas/core/generic.py", line 12341, in _stat_function_ddof
+    return self._reduce(
+  File "/home/richardw/.local/lib/python3.10/site-packages/pandas/core/frame.py", line 11569, in _reduce
+    res = df._mgr.reduce(blk_func)
+  File "/home/richardw/.local/lib/python3.10/site-packages/pandas/core/internals/managers.py", line 1500, in reduce
+    nbs = blk.reduce(func)
+  File "/home/richardw/.local/lib/python3.10/site-packages/pandas/core/internals/blocks.py", line 406, in reduce
+    result = func(self.values)
+  File "/home/richardw/.local/lib/python3.10/site-packages/pandas/core/frame.py", line 11488, in blk_func
+    return op(values, axis=axis, skipna=skipna, **kwds)
+  File "/home/richardw/.local/lib/python3.10/site-packages/pandas/core/nanops.py", line 92, in _f
+    raise TypeError(e) from e
+TypeError: could not convert string to float: 'bitcoin'
+
+2025-07-07 09:55:00,100 - INFO - _debug_optimization_trial:300 - Objective function returned: -100
+2025-07-07 09:55:00,100 - ERROR - _debug_optimization_trial:303 - Objective function returned penalty value (-100)
+2025-07-07 09:55:00,100 - INFO - run_debug_optimization:64 - Step 4: Analyzing data quality...
+2025-07-07 09:55:00,100 - INFO - _analyze_data_quality:379 - Analyzing data quality...
+2025-07-07 09:55:00,100 - INFO - _analyze_data_quality:382 - Raw data shape: (721, 19)
+2025-07-07 09:55:00,100 - INFO - _analyze_data_quality:383 - Clean data shape: (721, 19)
+2025-07-07 09:55:00,100 - INFO - _analyze_data_quality:384 - Features shape: (721, 146)
+2025-07-07 09:55:00,100 - INFO - _analyze_data_quality:389 - Duplicate indices in data: 0
+2025-07-07 09:55:00,100 - INFO - _analyze_data_quality:392 - Data date range: 2025-06-07 08:00:00+00:00 to 2025-07-07 08:00:00+00:00
+2025-07-07 09:55:00,102 - INFO - _analyze_data_quality:396 - Total missing values in data: 0
+2025-07-07 09:55:00,102 - INFO - _analyze_data_quality:401 - Numeric features: 145/146
+2025-07-07 09:55:00,106 - INFO - _analyze_data_quality:405 - Constant features: 5
+2025-07-07 09:55:00,107 - INFO - _analyze_data_quality:409 - Infinite values in features: 0
+2025-07-07 09:55:00,107 - INFO - _analyze_data_quality:415 - Target bitcoin_6h:
+2025-07-07 09:55:00,107 - INFO - _analyze_data_quality:416 -   X shape: (715, 146)
+2025-07-07 09:55:00,107 - INFO - _analyze_data_quality:417 -   y shape: (715,)
+2025-07-07 09:55:00,107 - INFO - _analyze_data_quality:418 -   y stats: mean=0.000336, std=0.008074
+2025-07-07 09:55:00,108 - INFO - _analyze_data_quality:419 -   y range: [-0.033127, 0.050482]
+2025-07-07 09:55:00,108 - INFO - _analyze_data_quality:424 -   Extreme values (>50.0%): 0/715
+2025-07-07 09:55:00,108 - INFO - _analyze_data_quality:415 - Target bitcoin_12h:
+2025-07-07 09:55:00,108 - INFO - _analyze_data_quality:416 -   X shape: (709, 146)
+2025-07-07 09:55:00,108 - INFO - _analyze_data_quality:417 -   y shape: (709,)
+2025-07-07 09:55:00,109 - INFO - _analyze_data_quality:418 -   y stats: mean=0.000652, std=0.011233
+2025-07-07 09:55:00,109 - INFO - _analyze_data_quality:419 -   y range: [-0.038728, 0.042246]
+2025-07-07 09:55:00,109 - INFO - _analyze_data_quality:424 -   Extreme values (>50.0%): 0/709
+2025-07-07 09:55:00,109 - INFO - _analyze_data_quality:415 - Target ethereum_6h:
+2025-07-07 09:55:00,109 - INFO - _analyze_data_quality:416 -   X shape: (715, 146)
+2025-07-07 09:55:00,109 - INFO - _analyze_data_quality:417 -   y shape: (715,)
+2025-07-07 09:55:00,110 - INFO - _analyze_data_quality:418 -   y stats: mean=0.000397, std=0.016542
+2025-07-07 09:55:00,110 - INFO - _analyze_data_quality:419 -   y range: [-0.074103, 0.087895]
+2025-07-07 09:55:00,110 - INFO - _analyze_data_quality:424 -   Extreme values (>50.0%): 0/715
+2025-07-07 09:55:00,110 - INFO - _analyze_data_quality:415 - Target ethereum_12h:
+2025-07-07 09:55:00,110 - INFO - _analyze_data_quality:416 -   X shape: (709, 146)
+2025-07-07 09:55:00,110 - INFO - _analyze_data_quality:417 -   y shape: (709,)
+2025-07-07 09:55:00,111 - INFO - _analyze_data_quality:418 -   y stats: mean=0.000739, std=0.023724
+2025-07-07 09:55:00,111 - INFO - _analyze_data_quality:419 -   y range: [-0.104124, 0.083466]
+2025-07-07 09:55:00,111 - INFO - _analyze_data_quality:424 -   Extreme values (>50.0%): 0/709
+2025-07-07 09:55:00,111 - INFO - run_debug_optimization:67 - ✅ Debug optimization completed successfully!
+2025-07-07 09:55:00,111 - INFO - main:437 - Debug optimization completed successfully!

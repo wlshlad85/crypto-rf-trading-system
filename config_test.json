@@ -1,0 +1,67 @@
+{
+    "symbols": ["BTC-USD", "ETH-USD", "SOL-USD"],
+    "interval": "1m",
+    "period_months": 1,
+    "initial_capital": 50000,
+    
+    "data": {
+        "cache_dir": "data/cache_minute",
+        "max_age_hours": 24,
+        "validation_enabled": true
+    },
+    
+    "features": {
+        "enable_all_features": true,
+        "high_frequency_features": true,
+        "microstructure_features": true,
+        "intraday_seasonality": true,
+        "volume_profile": true,
+        "order_flow_features": true,
+        "memory_efficient": true
+    },
+    
+    "model": {
+        "type": "single",
+        "n_models": 1,
+        "prediction_horizons": [1, 5, 15],
+        "retrain_frequency": 1440,
+        "online_learning": false
+    },
+    
+    "strategy": {
+        "ensemble_weights": [0.5, 0.3, 0.2],
+        "rebalance_frequency": 15,
+        "max_total_exposure": 0.6,
+        "max_single_position": 0.3,
+        "risk_management": true
+    },
+    
+    "backtest": {
+        "commission": 0.001,
+        "slippage": 0.0005,
+        "parallel_processing": false,
+        "batch_size": 720,
+        "memory_efficient": true
+    },
+    
+    "analytics": {
+        "risk_free_rate": 0.02,
+        "confidence_levels": [0.95, 0.99],
+        "rolling_windows": [60, 240, 720],
+        "generate_report": true
+    },
+    
+    "visualization": {
+        "create_charts": true,
+        "interactive_dashboard": false,
+        "pdf_report": true,
+        "save_format": "png"
+    },
+    
+    "execution": {
+        "checkpoint_frequency": 30,
+        "max_memory_gb": 6,
+        "verbose": true,
+        "save_intermediate_results": true
+    }
+}

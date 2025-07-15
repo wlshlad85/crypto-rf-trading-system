@@ -1,0 +1,16 @@
+2025-07-13 03:16:02,993 - MinuteBacktest - INFO - Logging initialized. Log file: logs/minute_backtest_20250713_031602.log
+2025-07-13 03:16:02,994 - MinuteBacktest - INFO - Running in test mode with reduced scope
+2025-07-13 03:16:02,994 - MinuteBacktest - INFO - ================================================================================
+2025-07-13 03:16:02,994 - MinuteBacktest - INFO - STARTING 6-MONTH MINUTE-LEVEL CRYPTOCURRENCY BACKTESTING
+2025-07-13 03:16:02,994 - MinuteBacktest - INFO - ================================================================================
+2025-07-13 03:16:02,994 - MinuteBacktest - INFO - Start time: 2025-07-13 03:16:02.994099
+2025-07-13 03:16:02,994 - MinuteBacktest - INFO - Symbols: ['BTC-USD', 'ETH-USD']
+2025-07-13 03:16:02,994 - MinuteBacktest - INFO - Period: 1 months
+2025-07-13 03:16:02,994 - MinuteBacktest - INFO - Initial capital: $50,000
+2025-07-13 03:16:02,994 - MinuteBacktest - INFO - 
+============================================================
+2025-07-13 03:16:02,994 - MinuteBacktest - INFO - STEP 1: DATA COLLECTION
+2025-07-13 03:16:02,994 - MinuteBacktest - INFO - ============================================================
+2025-07-13 03:16:02,994 - MinuteBacktest - INFO - Initializing minute data manager...
+2025-07-13 03:16:02,994 - MinuteBacktest - INFO - Fetching 1 months of 1m data...
+2025-07-13 03:16:02,994 - MinuteBacktest - INFO - Symbols: BTC-USD, ETH-USD
