@@ -1,0 +1,17 @@
+deployment:
+  deployment_timeout_minutes: 30
+  health_check_retries: 3
+  health_check_timeout_seconds: 30
+  max_concurrent_deployments: 3
+  rollback_timeout_minutes: 10
+monitoring:
+  alert_thresholds:
+    cpu_percent: 80
+    disk_percent: 90
+    memory_percent: 85
+    response_time_ms: 1000
+  metrics_retention_days: 30
+security:
+  api_key_rotation_days: 30
+  audit_log_retention_days: 90
+  tls_enabled: true

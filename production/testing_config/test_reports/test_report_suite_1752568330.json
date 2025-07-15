@@ -1,0 +1,67 @@
+{
+  "suite_id": "suite_1752568330",
+  "suite_name": "Test Suite - development",
+  "total_tests": 4,
+  "passed_tests": 3,
+  "failed_tests": 1,
+  "skipped_tests": 0,
+  "error_tests": 0,
+  "execution_time_seconds": 0.7834692001342773,
+  "test_results": [
+    {
+      "test_id": "data_pipeline_001",
+      "test_name": "Test Data Fetching",
+      "result": "passed",
+      "execution_time_seconds": 0.3820827007293701,
+      "error_message": null,
+      "output_data": {
+        "status": "success",
+        "data_length": 1
+      },
+      "executed_at": "2025-07-15T09:32:10.875074",
+      "environment": "development"
+    },
+    {
+      "test_id": "trading_engine_001",
+      "test_name": "Test Signal Generation",
+      "result": "failed",
+      "execution_time_seconds": 4.76837158203125e-05,
+      "error_message": null,
+      "output_data": {
+        "signal": "HOLD",
+        "confidence": 0.552735231139073
+      },
+      "executed_at": "2025-07-15T09:32:10.875339",
+      "environment": "development"
+    },
+    {
+      "test_id": "risk_management_001",
+      "test_name": "Test Risk Limits",
+      "result": "passed",
+      "execution_time_seconds": 1.3589859008789062e-05,
+      "error_message": null,
+      "output_data": {
+        "risk_check": "failed",
+        "action": "reduce_position"
+      },
+      "executed_at": "2025-07-15T09:32:10.875421",
+      "environment": "development"
+    },
+    {
+      "test_id": "integration_001",
+      "test_name": "Test End-to-End Trading Flow",
+      "result": "passed",
+      "execution_time_seconds": 0.4007279872894287,
+      "error_message": null,
+      "output_data": {
+        "flow_completed": true,
+        "no_errors": true,
+        "errors": []
+      },
+      "executed_at": "2025-07-15T09:32:11.276195",
+      "environment": "development"
+    }
+  ],
+  "executed_at": "2025-07-15T09:32:11.276407",
+  "environment": "development"
+}

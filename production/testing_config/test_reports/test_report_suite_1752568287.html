@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Report - Test Suite - development</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .header { background-color: #f0f0f0; padding: 20px; border-radius: 5px; }
+        .summary { display: flex; justify-content: space-around; margin: 20px 0; }
+        .metric { text-align: center; padding: 10px; background-color: #e8f4f8; border-radius: 5px; }
+        .passed { background-color: #d4edda; color: #155724; }
+        .failed { background-color: #f8d7da; color: #721c24; }
+        .error { background-color: #f8d7da; color: #721c24; }
+        .test-results { margin: 20px 0; }
+        .test-case { margin: 10px 0; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+        .test-name { font-weight: bold; margin-bottom: 5px; }
+        .test-details { font-size: 0.9em; color: #666; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Test Report: Test Suite - development</h1>
+        <p>Executed: 2025-07-15 09:31:28</p>
+        <p>Environment: development</p>
+        <p>Duration: 1.00 seconds</p>
+    </div>
+    
+    <div class="summary">
+        <div class="metric">
+            <h3>Total Tests</h3>
+            <p>4</p>
+        </div>
+        <div class="metric passed">
+            <h3>Passed</h3>
+            <p>3</p>
+        </div>
+        <div class="metric failed">
+            <h3>Failed</h3>
+            <p>1</p>
+        </div>
+        <div class="metric error">
+            <h3>Errors</h3>
+            <p>0</p>
+        </div>
+        <div class="metric">
+            <h3>Success Rate</h3>
+            <p>75.0%</p>
+        </div>
+    </div>
+    
+    <div class="test-results">
+        <h2>Test Results</h2>
+
+        <div class="test-case passed">
+            <div class="test-name">
+                ✅ Test Data Fetching
+            </div>
+            <div class="test-details">
+                <p>Test ID: data_pipeline_001</p>
+                <p>Result: PASSED</p>
+                <p>Execution Time: 0.600s</p>
+                <p>Executed: 2025-07-15 09:31:27</p>
+            <p>Output: {
+  "status": "success",
+  "data_length": 1
+}</p></div></div>
+        <div class="test-case failed">
+            <div class="test-name">
+                ❌ Test Signal Generation
+            </div>
+            <div class="test-details">
+                <p>Test ID: trading_engine_001</p>
+                <p>Result: FAILED</p>
+                <p>Execution Time: 0.000s</p>
+                <p>Executed: 2025-07-15 09:31:27</p>
+            <p>Output: {
+  "signal": "SELL",
+  "confidence": 0.9408152356585009
+}</p></div></div>
+        <div class="test-case passed">
+            <div class="test-name">
+                ✅ Test Risk Limits
+            </div>
+            <div class="test-details">
+                <p>Test ID: risk_management_001</p>
+                <p>Result: PASSED</p>
+                <p>Execution Time: 0.000s</p>
+                <p>Executed: 2025-07-15 09:31:27</p>
+            <p>Output: {
+  "risk_check": "failed",
+  "action": "reduce_position"
+}</p></div></div>
+        <div class="test-case passed">
+            <div class="test-name">
+                ✅ Test End-to-End Trading Flow
+            </div>
+            <div class="test-details">
+                <p>Test ID: integration_001</p>
+                <p>Result: PASSED</p>
+                <p>Execution Time: 0.401s</p>
+                <p>Executed: 2025-07-15 09:31:28</p>
+            <p>Output: {
+  "flow_completed": true,
+  "no_errors": true,
+  "errors": []
+}</p></div></div>
+    </div>
+</body>
+</html>

@@ -2718,3 +2718,892 @@ e an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'s
         ✅ config_20250715_025607_7961: -999.000
 ❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
         ✅ config_20250715_025607_5057: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [15404, 181188]
+        ✅ config_20250715_025607_8560: -999.000
+📁 Results saved to meta_optim/meta_logs/hyperband_results_20250715_025607.json
+============================================================
+✅ Hyperband optimization complete!
+❌ Hyperband optimization failed
+
+🔬 OPTIMIZATION PHASE STARTED - 09:05:08
+📊 Running Hyperband parameter exploration...
+🚀 Starting Hyperband Meta-Optimization
+============================================================
+
+🔄 Hyperband Iteration 1/2
+  📊 Successive Halving: s=4
+    Configurations: 81, Initial resource: 1.0
+      Round 1: 81 configs, resource 1.0
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090508_8241: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090508_7707: -999.000
+        ✅ config_20250715_090508_1698: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090508_7292: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+        ✅ config_20250715_090508_4483: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090508_5656: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+        ✅ config_20250715_090508_6312: -999.000
+        ✅ config_20250715_090508_2294: -999.000
+        ✅ config_20250715_090508_2045: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090508_6429: -999.000
+        ✅ config_20250715_090508_6287: -999.000
+        ✅ config_20250715_090508_8055: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090508_9443: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090508_8335: -999.000
+        ✅ config_20250715_090508_2333: -999.000
+        ✅ config_20250715_090508_5789: -999.000
+        ✅ config_20250715_090508_8760: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090508_8755: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+        ✅ config_20250715_090508_5917: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090508_2031: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090508_7554: -999.000
+        ✅ config_20250715_090508_9983: -999.000
+        ✅ config_20250715_090508_2988: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090508_7144: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090508_5127: -999.000
+        ✅ config_20250715_090508_1968: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090508_9450: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+        ✅ config_20250715_090508_8675: -999.000
+        ✅ config_20250715_090508_1620: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090508_3844: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090508_2022: -999.000
+        ✅ config_20250715_090508_6240: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090508_1043: -999.000
+        ✅ config_20250715_090508_3814: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090508_2056: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+        ✅ config_20250715_090508_9961: -999.000
+        ✅ config_20250715_090508_3844: -999.000
+        ✅ config_20250715_090508_9473: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090508_6085: -999.000
+        ✅ config_20250715_090508_1069: -999.000
+        ✅ config_20250715_090508_7392: -999.000
+        ✅ config_20250715_090508_5895: -999.000
+        ✅ config_20250715_090508_8190: -999.000
+        ✅ config_20250715_090508_5795: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090508_7749: -999.000
+        ✅ config_20250715_090508_4639: -999.000
+        ✅ config_20250715_090508_1830: -999.000
+        ✅ config_20250715_090508_4870: -999.000
+        ✅ config_20250715_090508_8912: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090508_6051: -999.000
+        ✅ config_20250715_090508_8331: -999.000
+        ✅ config_20250715_090508_2600: -999.000
+        ✅ config_20250715_090508_2657: -999.000
+        ✅ config_20250715_090508_1875: -999.000
+        ✅ config_20250715_090508_3929: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090508_5273: -999.000
+        ✅ config_20250715_090508_8889: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+        ✅ config_20250715_090508_7931: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090508_8557: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090508_8222: -999.000
+        ✅ config_20250715_090508_5092: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090508_2752: -999.000
+        ✅ config_20250715_090508_8577: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+        ✅ config_20250715_090508_4310: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090508_6048: -999.000
+        ✅ config_20250715_090508_3095: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_025        ✅ config_20250715_090508_7790: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090508_6636: -999.000
+        ✅ config_20250715_090508_2352: -999.000
+        ✅ config_20250715_090508_4705: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090508_7311: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090508_2147: -999.000
+        ✅ config_20250715_090508_5052: -999.000
+        ✅ config_20250715_090508_9174: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090508_2231: -999.000
+        ✅ config_20250715_090508_3017: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090508_3289: -999.000
+        ✅ config_20250715_090508_9887: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+        ✅ config_20250715_090508_2568: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090508_3980: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+        ✅ config_20250715_090508_2547: -999.000
+        Keeping top 27 configurations
+      Round 2: 27 configs, resource 3.0
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090508_8241: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090508_7292: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090508_7707: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090508_1698: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090508_5656: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090508_4483: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090508_6312: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090508_2294: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090508_2045: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090508_6429: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090508_6287: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090508_8055: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090508_8335: -999.000
+        ✅ config_20250715_090508_9443: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090508_2333: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090508_8755: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090508_5789: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090508_8760: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090508_5917: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090508_2031: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090508_7554: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090508_2988: -999.000
+        ✅ config_20250715_090508_9983: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090508_7144: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090508_5127: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090508_9450: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090508_1968: -999.000
+        Keeping top 9 configurations
+      Round 3: 9 configs, resource 9.0
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090508_1698: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090508_7707: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090508_8241: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090508_7292: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090508_6312: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090508_2294: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090508_5656: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090508_4483: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090508_2045: -999.000
+        Keeping top 3 configurations
+      Round 4: 3 configs, resource 27.0
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090508_8241: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090508_1698: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [5134, 23372]
+        ✅ config_20250715_090508_7707: -999.000
+        Keeping top 1 configurations
+      Round 5: 1 configs, resource 81.0
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090508_8241: -999.000
+  📊 Successive Halving: s=3
+    Configurations: 34, Initial resource: 3.0
+      Round 1: 34 configs, resource 3.0
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090509_8709: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090509_6421: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090509_1515: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090509_6160: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090509_3930: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090509_8753: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090509_3738: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090509_6375: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090509_6139: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090509_6344: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090509_3077: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090509_2914: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090509_3031: -999.000
+        ✅ config_20250715_090509_2000: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090509_9511: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090509_5525: -999.000
+        ✅ config_20250715_090509_3494: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090509_7855: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090509_4383: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090509_3274: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090509_6675: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090509_5584: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090509_9603: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090509_4444: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090509_2518: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090509_8450: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090509_9095: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090509_9182: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090509_4008: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090509_8054: -999.000
+        ✅ config_20250715_090509_8655: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090509_1440: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090509_7988: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090509_4878: -999.000
+        Keeping top 11 configurations
+      Round 2: 11 configs, resource 9.0
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090509_1515: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090509_8709: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090509_6421: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090509_6160: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090509_3930: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090509_8753: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090509_3738: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090509_6375: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090509_6139: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090509_6344: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090509_3077: -999.000
+        Keeping top 3 configurations
+      Round 3: 3 configs, resource 27.0
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090509_8709: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090509_1515: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090509_6421: -999.000
+        Keeping top 1 configurations
+      Round 4: 1 configs, resource 81.0
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090509_8709: -999.000
+  📊 Successive Halving: s=2
+    Configurations: 15, Initial resource: 9.0
+      Round 1: 15 configs, resource 9.0
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090510_6749: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090510_6035: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090510_7066: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090510_2350: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090510_2583: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090510_6036: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090510_3954: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090510_6380: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090510_8748: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090510_9859: -999.000
+        ✅ config_20250715_090510_7075: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090510_7489: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090510_7428: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090510_3870: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090510_6584: -999.000
+        Keeping top 5 configurations
+      Round 2: 5 configs, resource 27.0
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [5134, 23372]
+        ✅ config_20250715_090510_6035: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090510_2350: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [5134, 23372]
+        ✅ config_20250715_090510_6749: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090510_7066: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090510_2583: -999.000
+        Keeping top 1 configurations
+      Round 3: 1 configs, resource 81.0
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [15404, 181188]
+        ✅ config_20250715_090510_6035: -999.000
+  📊 Successive Halving: s=1
+    Configurations: 8, Initial resource: 27.0
+      Round 1: 8 configs, resource 27.0
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090511_1784: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090511_6412: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [5134, 23372]
+        ✅ config_20250715_090511_7384: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090511_4384: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090511_1288: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090511_9308: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090511_2697: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090511_8894: -999.000
+        Keeping top 2 configurations
+      Round 2: 2 configs, resource 81.0
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090511_1784: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090511_6412: -999.000
+  📊 Successive Halving: s=0
+    Configurations: 5, Initial resource: 81.0
+      Round 1: 5 configs, resource 81.0
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090511_5509: -999.000
+        ✅ config_20250715_090511_3315: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090511_7997: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [15404, 181188]
+        ✅ config_20250715_090511_2161: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090511_2767: -999.000
+
+🔄 Hyperband Iteration 2/2
+  📊 Successive Halving: s=4
+    Configurations: 81, Initial resource: 1.0
+      Round 1: 81 configs, resource 1.0
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090511_5111: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090511_5370: -999.000
+        ✅ config_20250715_090511_6568: -999.000
+        ✅ config_20250715_090511_5266: -999.000
+        ✅ config_20250715_090511_6957: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+        ✅ config_20250715_090511_4919: -999.000
+        ✅ config_20250715_090511_2670: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090511_7987: -999.000
+        ✅ config_20250715_090511_7833: -999.000
+        ✅ config_20250715_090511_6554: -999.000
+        ✅ config_20250715_090511_1870: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090511_4169: -999.000
+        ✅ config_20250715_090511_7509: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090511_9318: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090511_3808: -999.000
+        ✅ config_20250715_090511_5831: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090511_3940: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090511_5021: -999.000
+        ✅ config_20250715_090511_4762: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+        ✅ config_20250715_090511_4389: -999.000
+        ✅ config_20250715_090511_5815: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090511_5882: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090511_1835: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090511_5995: -999.000
+        ✅ config_20250715_090511_4143: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+B��l@۶)��~l@۶)��~l@I�B���y@  �6~�y@  �6~�y@۶��e{l@n�6�2�l@n�6�2�l@  ���	i@�m[�s�i@n�Ʒ?i@�m���h@�m���h@  l�)�h@  l�)�h@�$�-��h@�m����$@۶���6$@۶���6$@۶���6$@�$сZ�h@۶5��h@۶5��h@%IZ"h�g@�-q9��@�-q9��@��^����@I        ✅ config_20250715_090511_1774: -999.000
+        ✅ config_20250715_090511_6750: -999.000
+        ✅ config_20250715_090511_2547: -999.000
+        ✅ config_20250715_090511_1208: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090511_1735: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+        ✅ config_20250715_090511_7570: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090511_7897: -999.000
+        ✅ config_20250715_090511_9699: -999.000
+        ✅ config_20250715_090511_1043: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090511_7618: -999.000
+        ✅ config_20250715_090511_5309: -999.000
+        ✅ config_20250715_090511_7591: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+        ✅ config_20250715_090511_2688: -999.000
+        ✅ config_20250715_090511_9044: -999.000
+        ✅ config_20250715_090511_3689: -999.000
+        ✅ config_20250715_090511_1622: -999.000
+        ✅ config_20250715_090511_3189: -999.000
+        ✅ config_20250715_090511_4911: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090511_1481: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090511_8030: -999.000
+        ✅ config_20250715_090511_8161: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090511_9836: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090511_7364: -999.000
+        ✅ config_20250715_090511_2562: -999.000
+        ✅ config_20250715_090511_8875: -999.000
+        ✅ config_20250715_090511_4882: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+        ✅ config_20250715_090511_8604: -999.000
+        ✅ config_20250715_090511_9652: -999.000
+        ✅ config_20250715_090511_9270: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+        ✅ config_20250715_090511_3140: -999.000
+        ✅ config_20250715_090511_6007: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090511_9294: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+        ✅ config_20250715_090511_3540: -999.000
+        ✅ config_20250715_090511_7970: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090511_1354: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090511_8851: -999.000
+        ✅ config_20250715_090511_8851: -999.000
+        ✅ config_20250715_090511_7173: -999.000
+        ✅ config_20250715_090511_9294: -999.000
+        ✅ config_20250715_090511_1979: -999.000
+        ✅ config_20250715_090511_7189: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090511_8546: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+        ✅ config_20250715_090511_2154: -999.000
+        ✅ config_20250715_090511_9544: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090511_5222: -999.000
+        ✅ config_20250715_090511_8702: -999.000
+        ✅ config_20250715_090511_6066: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+        ✅ config_20250715_090511_6689: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090511_1845: -999.000
+        ✅ config_20250715_090511_2745: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090511_4222: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+        ✅ config_20250715_090511_9153: -999.000
+        ✅ config_20250715_090511_2605: -999.000
+        ✅ config_20250715_090511_3795: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [190, 212]
+        ✅ config_20250715_090511_5268: -999.000
+        ✅ config_20250715_090511_1110: -999.000
+        Keeping top 27 configurations
+      Round 2: 27 configs, resource 3.0
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090511_5370: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090511_5266: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090511_5111: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090511_6568: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090511_6957: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090511_2670: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090511_4919: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090511_7987: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090511_7833: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090511_6554: -999.000
+        ✅ config_20250715_090511_1870: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090511_4169: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090511_7509: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090511_3808: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090511_5831: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090511_9318: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090511_3940: -999.000
+        ��@A      � @�  � @�  ��
+@�  ��
+@�  ����٤4@y��� .�@�ĚT;5^@�z��	�?Ƭ��"@Cp����y?yJ��@Q�5�2@��$�:�"@xY��ę@��1r��<@�U�;CF@�Z�*阇@�9< ��?%���hE@v�@��,\��@J6��ߦ?� ���@9S~�i�@�r�@��ڟ9��@��q?hxAN �Q�@2�����+@�N>��?!1;?���@�ŧ^w{�@����M@�ym���g@d�*=�-�@4=@dD�?�����?�w�m&�;@&�f�@@��e�q)�? ���1��@ah/�)҈@hb��A�H?�s�0$��@4__�P4�@�#��E@�nW�1&<@'-'L��F@>�2X�A@�[��>Z=@0w�Q?�@F�	�*g@u��
+�@&�����G@�q���?)y�;V�wA����`Ry@���]�g@٢��]@�U��^�@�����6@�E�o�q@끭pDm@�U��ө?�a��U�t@�S�\p�?ΣJ2���@yz��=�@E��n�@��Kz)�G@����5@Y����!�?���A�?l笅���@����l�@"fc��*,A�D�Ψ�b?�6ד��J@�}�V�V?Ǩ�
+�Jn?<�q�.�@�|�ARx�P�?�6���@g�h9-A�-�2Ah@qm�u�&�?<,X�s^g@��,�+�@���{�c�@씉㡀%A���$;7@��1`�@�*��❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090511_4389: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090511_5815: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090511_5021: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090511_4762: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090511_1835: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090511_4143: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090511_5882: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090511_5995: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090511_1774: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090511_6750: -999.000
+        Keeping top 9 configurations
+      Round 3: 9 configs, resource 9.0
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090511_5370: -999.000
+        ✅ config_20250715_090511_5266: -999.000
+        ✅ config_20250715_090511_6568: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090511_5111: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090511_2670: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090511_4919: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090511_7987: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090511_6957: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090511_7833: -999.000
+        Keeping top 3 configurations
+      Round 4: 3 configs, resource 27.0
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [5134, 23372]
+        ✅ config_20250715_090511_5370: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [5134, 23372]
+        ✅ config_20250715_090511_6568: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090511_5266: -999.000
+        Keeping top 1 configurations
+      Round 5: 1 configs, resource 81.0
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [15404, 181188]
+        ✅ config_20250715_090511_5370: -999.000
+  📊 Successive Halving: s=3
+    Configurations: 34, Initial resource: 3.0
+      Round 1: 34 configs, resource 3.0
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090514_6028: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090514_5519: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090514_7304: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090514_1587: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090514_1708: -999.000
+        ✅ config_20250715_090514_3610: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090514_6794: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090514_6538: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090514_6922: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090514_5047: -999.000
+        ✅ config_20250715_090514_5788: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090514_4784: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090514_8437: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090514_8976: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090514_8038: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090514_3615: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090514_3766: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090514_4602: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090514_4346: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090514_8850: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090514_8226: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090514_4613: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090514_6858: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090514_8424: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090514_3707: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090514_7562: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090514_5319: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090514_1090: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090514_8346: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090514_8883: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090514_1411: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090514_7641: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090514_3286: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [570, 804]
+        ✅ config_20250715_090514_2930: -999.000
+        Keeping top 11 configurations
+      Round 2: 11 configs, resource 9.0
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090514_1587: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090514_5519: -999.000
+        ✅ config_20250715_090514_6028: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090514_7304: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090514_3610: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090514_1708: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090514_6794: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090514_6538: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090514_5047: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090514_5788: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090514_6922: -999.000
+        Keeping top 3 configurations
+      Round 3: 3 configs, resource 27.0
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [5134, 23372]
+        ✅ config_20250715_090514_1587: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [5134, 23372]
+        ✅ config_20250715_090514_6028: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090514_5519: -999.000
+        Keeping top 1 configurations
+      Round 4: 1 configs, resource 81.0
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [15404, 181188]
+        ✅ config_20250715_090514_1587: -999.000
+  📊 Successive Halving: s=2
+    Configurations: 15, Initial resource: 9.0
+      Round 1: 15 configs, resource 9.0
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090515_4451: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090515_3640: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090515_5480: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090515_2005: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090515_7939: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090515_3881: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090515_4441: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090515_3888: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090515_6866: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090515_9609: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090515_3314: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090515_3994: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090515_1398: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [1711, 3773]
+        ✅ config_20250715_090515_2027: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090515_4538: -999.000
+        Keeping top 5 configurations
+      Round 2: 5 configs, resource 27.0
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090515_3640: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090515_5480: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090515_4451: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090515_2005: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090515_7939: -999.000
+        Keeping top 1 configurations
+      Round 3: 1 configs, resource 81.0
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+        ✅ config_20250715_090515_3640: -999.000
+  📊 Successive Halving: s=1
+    Configurations: 8, Initial resource: 27.0
+      Round 1: 8 configs, resource 27.0
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.7') instead.
+        ✅ config_20250715_090516_1628: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [5134, 23372]
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [5134, 23372]
+        ✅ config_20250715_090516_9141: -999.000
+        ✅ config_20250715_090516_1220: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090516_9569: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.5') instead.
+        ✅ config_20250715_090516_1306: -999.000
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('1.0') instead.
+❌ Training/evaluation error: The 'max_features' parameter of RandomForestClassifier must be an int in the range [1, inf), a float in the range (0.0, 1.0], a str among {'sqrt', 'log2'} or None. Got np.str_('0.3') instead.
+        ✅ config_20250715_090516_7886: -999.000
+        ✅ config_20250715_090516_7042: -999.000
+❌ Training/evaluation error: Found input variables with inconsistent numbers of samples: [5134, 23372]
+        ✅ config_20250715_090516_1792: -999.000
