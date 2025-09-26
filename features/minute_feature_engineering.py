@@ -156,9 +156,8 @@ class MinuteFeatureEngine:
         # Quote instability (using price volatility as proxy)
         for period in [5, 10]:
             price_changes = df['close'].diff()
-            df[f'quote_instability_{period}m'] = (
-                price_changes.rolling(period).apply(lambda x: (x != 0).sum()) / period
-            )
+            nonzero = (price_changes != 0).astype(int)
+            df[f'quote_instability_{period}m'] = nonzero.rolling(period).sum() / period
         
         # Effective spread estimation
         df['effective_spread_proxy'] = 2 * abs(
@@ -328,11 +327,10 @@ class MinuteFeatureEngine:
         
         # Persistence measures
         for period in [30, 60]:
-            df[f'trend_persistence_{period}m'] = (
-                df[f'regime_score_{period}m'].rolling(period).apply(
-                    lambda x: (x == x.iloc[-1]).sum() / len(x)
-                )
-            )
+            score = df[f'regime_score_{period}m']
+            same_as_last = (score == score.shift(1)).astype(int)
+            # Count of consecutive equal signs in window approximated by sum of equals
+            df[f'trend_persistence_{period}m'] = same_as_last.rolling(period).mean()
         
         return df
     
@@ -388,10 +386,9 @@ class MinuteFeatureEngine:
         # Momentum persistence
         for period in [5, 10, 15]:
             returns = df['close'].pct_change()
-            same_direction = (returns.rolling(period).apply(
-                lambda x: (x > 0).sum() if x.iloc[-1] > 0 else (x < 0).sum()
-            ))
-            df[f'momentum_persistence_{period}m'] = same_direction / period
+            sign = np.sign(returns)
+            same_direction = (sign == sign.shift(1)).astype(int)
+            df[f'momentum_persistence_{period}m'] = same_direction.rolling(period).mean()
         
         # Momentum mean reversion signals
         for period in [10, 15, 30]:
@@ -422,10 +419,8 @@ class MinuteFeatureEngine:
             
             # Volatility persistence
             vol_change = vol.diff()
-            same_direction_vol = vol_change.rolling(period).apply(
-                lambda x: (x > 0).sum() if x.iloc[-1] > 0 else (x < 0).sum()
-            )
-            df[f'vol_persistence_{period}m'] = same_direction_vol / period
+            same_direction_vol = (np.sign(vol_change) == np.sign(vol_change.shift(1))).astype(int)
+            df[f'vol_persistence_{period}m'] = same_direction_vol.rolling(period).mean()
         
         # GARCH-like approximations
         # Simple EWMA volatility

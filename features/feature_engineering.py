@@ -4,7 +4,6 @@ import pandas as pd
 import numpy as np
 from typing import Dict, List, Tuple, Optional
 import logging
-from scipy import stats
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -462,34 +461,25 @@ class CryptoFeatureEngine:
         """Calculate Commodity Channel Index."""
         tp = (high + low + close) / 3
         sma_tp = tp.rolling(window=period).mean()
-        mad = tp.rolling(window=period).apply(lambda x: np.abs(x - x.mean()).mean())
+        # Vectorized mean absolute deviation around rolling mean
+        mad = (tp - sma_tp).abs().rolling(window=period).mean()
         cci = (tp - sma_tp) / (0.015 * mad)
         return cci
     
     def _calculate_obv(self, close: pd.Series, volume: pd.Series) -> pd.Series:
         """Calculate On-Balance Volume."""
-        obv = pd.Series(index=close.index, data=0.0)
-        obv.iloc[0] = volume.iloc[0]
-        
-        for i in range(1, len(close)):
-            if close.iloc[i] > close.iloc[i-1]:
-                obv.iloc[i] = obv.iloc[i-1] + volume.iloc[i]
-            elif close.iloc[i] < close.iloc[i-1]:
-                obv.iloc[i] = obv.iloc[i-1] - volume.iloc[i]
-            else:
-                obv.iloc[i] = obv.iloc[i-1]
-        
-        return obv
+        close_diff = close.diff()
+        flow = np.where(close_diff > 0, volume, np.where(close_diff < 0, -volume, 0))
+        obv = pd.Series(flow, index=close.index)
+        if len(obv) > 0:
+            obv.iloc[0] = volume.iloc[0]
+        return obv.cumsum()
     
     def _calculate_pvt(self, close: pd.Series, volume: pd.Series) -> pd.Series:
         """Calculate Price-Volume Trend."""
-        pvt = pd.Series(index=close.index, data=0.0)
-        pvt.iloc[0] = volume.iloc[0]
-        
-        for i in range(1, len(close)):
-            pvt.iloc[i] = pvt.iloc[i-1] + volume.iloc[i] * (close.iloc[i] - close.iloc[i-1]) / close.iloc[i-1]
-        
-        return pvt
+        increment = (volume * close.pct_change()).fillna(0)
+        base = volume.iloc[0] if len(volume) > 0 else 0.0
+        return increment.cumsum() + base
     
     def _calculate_adx(self, high: pd.Series, low: pd.Series, close: pd.Series, period: int) -> pd.Series:
         """Calculate Average Directional Index."""
@@ -500,18 +490,11 @@ class CryptoFeatureEngine:
             abs(low - close.shift())
         ], axis=1).max(axis=1)
         
-        # Calculate directional movements
-        dm_plus = pd.Series(index=high.index, data=0.0)
-        dm_minus = pd.Series(index=high.index, data=0.0)
-        
-        for i in range(1, len(high)):
-            high_diff = high.iloc[i] - high.iloc[i-1]
-            low_diff = low.iloc[i-1] - low.iloc[i]
-            
-            if high_diff > low_diff and high_diff > 0:
-                dm_plus.iloc[i] = high_diff
-            if low_diff > high_diff and low_diff > 0:
-                dm_minus.iloc[i] = low_diff
+        # Calculate directional movements (vectorized)
+        up_move = high.diff()
+        down_move = low.shift(1) - low
+        dm_plus = pd.Series(np.where((up_move > down_move) & (up_move > 0), up_move, 0.0), index=high.index)
+        dm_minus = pd.Series(np.where((down_move > up_move) & (down_move > 0), down_move, 0.0), index=high.index)
         
         # Calculate directional indicators
         atr = tr.rolling(window=period).mean()

@@ -155,7 +155,7 @@ class UltraFeatureEngine:
         for period in [20, 50]:
             typical_price = (df['high'] + df['low'] + df['close']) / 3
             ma_tp = typical_price.rolling(period).mean()
-            mad = typical_price.rolling(period).apply(lambda x: np.mean(np.abs(x - x.mean())))
+            mad = (typical_price - ma_tp).abs().rolling(period).mean()
             df[f'cci_{period}'] = (typical_price - ma_tp) / (0.015 * mad)
         
         # Price acceleration
@@ -297,11 +297,9 @@ class UltraFeatureEngine:
         # Price efficiency measures
         returns = df['close'].pct_change()
         
-        # Auto-correlation of returns (momentum vs mean reversion)
+        # Auto-correlation of returns (momentum vs mean reversion) - vectorized
         for lag in [1, 5]:
-            df[f'return_autocorr_{lag}'] = returns.rolling(50).apply(
-                lambda x: x.autocorr(lag=lag) if len(x.dropna()) > lag else np.nan
-            )
+            df[f'return_autocorr_{lag}'] = returns.rolling(50).corr(returns.shift(lag))
         
         # Variance ratio test (random walk hypothesis)
         def variance_ratio(returns_series, k=2):

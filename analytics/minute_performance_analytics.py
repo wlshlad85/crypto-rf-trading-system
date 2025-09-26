@@ -626,7 +626,7 @@ class MinutePerformanceAnalytics:
                 rolling_sharpe = (rolling_returns.mean() - self.risk_free_rate / self.minutes_per_year * window) / rolling_vol
                 
                 # Rolling maximum drawdown
-                rolling_cumulative = (1 + returns).rolling(window).apply(lambda x: x.prod())
+                rolling_cumulative = (1 + returns).rolling(window).apply(np.prod, raw=True)
                 rolling_max = rolling_cumulative.rolling(window).max()
                 rolling_dd = (rolling_cumulative - rolling_max) / rolling_max
                 rolling_max_dd = rolling_dd.rolling(window).min()
