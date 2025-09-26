@@ -2,8 +2,9 @@
 
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
+import importlib
+plt = importlib.import_module('matplotlib.pyplot')
+sns = importlib.import_module('seaborn')
 from typing import Dict, List, Optional, Tuple, Any
 import logging
 from datetime import datetime
@@ -171,9 +172,11 @@ class CryptoTradingVisualizer:
         
         # Rolling Sharpe ratio
         ax2 = axes[0, 1]
-        rolling_sharpe = returns.rolling(window=720).apply(  # 30-day rolling window
-            lambda x: x.mean() / x.std() * np.sqrt(365*24) if x.std() > 0 else 0
-        )
+        window = 720
+        rolling_mean = returns.rolling(window).mean()
+        rolling_std = returns.rolling(window).std()
+        rolling_sharpe = np.where(rolling_std > 0, rolling_mean / rolling_std * np.sqrt(365*24), 0)
+        rolling_sharpe = pd.Series(rolling_sharpe, index=returns.index)
         ax2.plot(rolling_sharpe.index, rolling_sharpe, color=self.colors['success'], linewidth=2)
         ax2.axhline(y=1.0, color=self.colors['danger'], linestyle='--', alpha=0.7, label='Sharpe = 1.0')
         ax2.set_title('Rolling Sharpe Ratio (30-day)')
@@ -183,7 +186,7 @@ class CryptoTradingVisualizer:
         
         # Monthly returns heatmap
         ax3 = axes[1, 0]
-        monthly_returns = returns.resample('M').apply(lambda x: (1 + x).prod() - 1)
+        monthly_returns = (1 + returns).resample('M').prod() - 1
         monthly_returns_pivot = monthly_returns.groupby([
             monthly_returns.index.year, 
             monthly_returns.index.month
