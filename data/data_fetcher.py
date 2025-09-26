@@ -10,8 +10,11 @@ import logging
 import json
 import os
 import time
+import hashlib
 from pathlib import Path
 import pickle
+import gc
+from collections import defaultdict
 
 from utils.config import Config, DataConfig
 
@@ -28,11 +31,15 @@ class CryptoDataFetcher:
         self.coingecko_base_url = "https://api.coingecko.com/api/v3"
         self.coinmarketcap_base_url = "https://pro-api.coinmarketcap.com/v1"
         
-        # Rate limiting
+        # Rate limiting with burst handling
         self.last_request_time = 0
         self.min_request_interval = 60 / config.requests_per_minute
-        
-        # Create cache directory
+        self.request_timestamps = []  # Track recent requests for burst detection
+        self.burst_limit = 10  # Max requests per burst window
+        self.burst_window = 60  # Burst window in seconds
+
+        # Enhanced caching with metadata
+        self.cache_metadata = {}
         os.makedirs(config.cache_dir, exist_ok=True)
     
     async def __aenter__(self):
@@ -47,29 +54,85 @@ class CryptoDataFetcher:
     
     def _get_cache_path(self, symbol: str, days: int) -> str:
         """Get cache file path for a symbol."""
+        # Create deterministic cache key
+        cache_key = f"{symbol}_{days}d_{self.config.interval}_{self.config.vs_currency}"
+        cache_hash = hashlib.md5(cache_key.encode()).hexdigest()
         return os.path.join(
             self.config.cache_dir,
-            f"{symbol}_{days}d_{self.config.interval}.pkl"
+            f"{cache_hash}.pkl"
         )
-    
+
+    def _get_cache_metadata_path(self, cache_path: str) -> str:
+        """Get metadata file path for cache."""
+        return cache_path.replace('.pkl', '_meta.json')
+
     def _is_cache_valid(self, cache_path: str) -> bool:
         """Check if cache file is still valid."""
         if not os.path.exists(cache_path):
             return False
-        
+
+        # Check metadata if available
+        meta_path = self._get_cache_metadata_path(cache_path)
+        if os.path.exists(meta_path):
+            try:
+                with open(meta_path, 'r') as f:
+                    metadata = json.load(f)
+
+                # Check if data is still fresh
+                cache_time = datetime.fromisoformat(metadata['cache_time'])
+                expiry_time = datetime.now() - timedelta(hours=self.config.cache_expiry_hours)
+
+                if cache_time <= expiry_time:
+                    return False
+
+                # Check if parameters changed
+                current_params = {
+                    'days': self.config.days,
+                    'interval': self.config.interval,
+                    'vs_currency': self.config.vs_currency
+                }
+
+                return metadata['parameters'] == current_params
+
+            except Exception as e:
+                self.logger.warning(f"Error reading cache metadata: {e}")
+                return False
+
+        # Fallback to file modification time
         file_time = datetime.fromtimestamp(os.path.getmtime(cache_path))
         expiry_time = datetime.now() - timedelta(hours=self.config.cache_expiry_hours)
-        
+
         return file_time > expiry_time
     
-    def _save_to_cache(self, data: pd.DataFrame, cache_path: str):
-        """Save data to cache file."""
+    def _save_to_cache(self, data: pd.DataFrame, cache_path: str, symbol: str = None):
+        """Save data to cache file with metadata."""
         try:
+            # Save data
             with open(cache_path, 'wb') as f:
-                pickle.dump(data, f)
+                pickle.dump(data, f, protocol=pickle.HIGHEST_PROTOCOL)
+
+            # Save metadata
+            metadata = {
+                'cache_time': datetime.now().isoformat(),
+                'data_shape': data.shape,
+                'parameters': {
+                    'days': self.config.days,
+                    'interval': self.config.interval,
+                    'vs_currency': self.config.vs_currency
+                },
+                'symbol': symbol
+            }
+
+            meta_path = self._get_cache_metadata_path(cache_path)
+            with open(meta_path, 'w') as f:
+                json.dump(metadata, f, indent=2)
+
+            # Update in-memory metadata
+            self.cache_metadata[cache_path] = metadata
+
         except Exception as e:
             self.logger.warning(f"Failed to save cache {cache_path}: {e}")
-    
+
     def _load_from_cache(self, cache_path: str) -> Optional[pd.DataFrame]:
         """Load data from cache file."""
         try:
@@ -77,17 +140,40 @@ class CryptoDataFetcher:
                 return pickle.load(f)
         except Exception as e:
             self.logger.warning(f"Failed to load cache {cache_path}: {e}")
+            # Clean up corrupted cache files
+            try:
+                os.remove(cache_path)
+                meta_path = self._get_cache_metadata_path(cache_path)
+                if os.path.exists(meta_path):
+                    os.remove(meta_path)
+            except:
+                pass
             return None
     
     async def _rate_limit(self):
-        """Apply rate limiting between requests."""
+        """Apply intelligent rate limiting between requests."""
         current_time = time.time()
+
+        # Clean old timestamps
+        cutoff_time = current_time - self.burst_window
+        self.request_timestamps = [t for t in self.request_timestamps if t > cutoff_time]
+
+        # Check burst limit
+        if len(self.request_timestamps) >= self.burst_limit:
+            # Calculate sleep time to respect burst limit
+            oldest_request = min(self.request_timestamps)
+            sleep_time = self.burst_window - (current_time - oldest_request)
+            if sleep_time > 0:
+                await asyncio.sleep(sleep_time)
+
+        # Apply minimum interval rate limiting
         elapsed = current_time - self.last_request_time
-        
         if elapsed < self.min_request_interval:
             await asyncio.sleep(self.min_request_interval - elapsed)
-        
+
+        # Update tracking
         self.last_request_time = time.time()
+        self.request_timestamps.append(self.last_request_time)
     
     async def fetch_coingecko_data(self, symbol: str, days: int = None) -> pd.DataFrame:
         """Fetch historical data from CoinGecko API."""
@@ -98,7 +184,7 @@ class CryptoDataFetcher:
         if self._is_cache_valid(cache_path):
             cached_data = self._load_from_cache(cache_path)
             if cached_data is not None:
-                self.logger.info(f"Loaded {symbol} data from cache")
+                self.logger.info(f"Loaded {symbol} data from cache ({cached_data.shape})")
                 return cached_data
         
         await self._rate_limit()
@@ -122,10 +208,10 @@ class CryptoDataFetcher:
                     
                     # Convert to DataFrame
                     df = self._parse_coingecko_response(data, symbol)
-                    
+
                     # Save to cache
-                    self._save_to_cache(df, cache_path)
-                    
+                    self._save_to_cache(df, cache_path, symbol)
+
                     self.logger.info(f"Fetched {len(df)} records for {symbol} from CoinGecko")
                     return df
                 else:
@@ -232,10 +318,10 @@ class CryptoDataFetcher:
                     
                     # Convert to DataFrame
                     df = self._parse_coinmarketcap_response(data, symbol)
-                    
+
                     # Save to cache
-                    self._save_to_cache(df, cache_path)
-                    
+                    self._save_to_cache(df, cache_path, symbol)
+
                     self.logger.info(f"Fetched {len(df)} records for {symbol} from CoinMarketCap")
                     return df
                 else:

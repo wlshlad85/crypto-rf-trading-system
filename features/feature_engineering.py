@@ -5,6 +5,9 @@ import numpy as np
 from typing import Dict, List, Tuple, Optional
 import logging
 import warnings
+import functools
+from concurrent.futures import ThreadPoolExecutor
+import gc
 warnings.filterwarnings('ignore')
 
 from utils.config import FeatureConfig
@@ -12,59 +15,100 @@ from utils.config import FeatureConfig
 
 class CryptoFeatureEngine:
     """Advanced feature engineering for cryptocurrency trading."""
-    
+
     def __init__(self, config: FeatureConfig):
         self.config = config
         self.logger = logging.getLogger(__name__)
         self.feature_names = []
         self.feature_importance = {}
+
+        # Cache for expensive computations
+        self._rolling_cache = {}
+        self._technical_cache = {}
     
     def generate_features(self, data: pd.DataFrame) -> pd.DataFrame:
         """Generate all features for the cryptocurrency data."""
-        self.logger.info("Starting feature generation")
-        
+        self.logger.info("Starting optimized feature generation")
+
         # Make a copy to avoid modifying original data
         df = data.copy()
-        
+
         # Get list of symbols from column names
         symbols = self._extract_symbols(df.columns)
-        
-        # Generate features for each symbol
-        total_symbols = len(symbols)
-        for i, symbol in enumerate(symbols, 1):
-            self.logger.info(f"Generating features for {symbol} ({i}/{total_symbols})")
-            
-            # Technical indicators
-            df = self._add_technical_indicators(df, symbol)
-            
-            # Price and return features
-            df = self._add_price_features(df, symbol)
-            
-            # Volume features
-            df = self._add_volume_features(df, symbol)
-            
-            # Volatility features
-            df = self._add_volatility_features(df, symbol)
-            
-            # Momentum features
-            df = self._add_momentum_features(df, symbol)
-        
+
+        # Clear caches at start
+        self._rolling_cache.clear()
+        self._technical_cache.clear()
+
+        # Generate features for each symbol in parallel
+        with ThreadPoolExecutor(max_workers=min(len(symbols), 4)) as executor:
+            # Submit all symbol processing tasks
+            future_to_symbol = {
+                executor.submit(self._process_symbol_features, df, symbol): symbol
+                for symbol in symbols
+            }
+
+            # Collect results
+            symbol_results = {}
+            for future in future_to_symbol:
+                symbol = future_to_symbol[future]
+                try:
+                    result_df = future.result()
+                    symbol_results[symbol] = result_df
+                except Exception as exc:
+                    self.logger.error(f'Symbol {symbol} generated an exception: {exc}')
+                    continue
+
+        # Combine all symbol-specific features
+        for symbol, symbol_df in symbol_results.items():
+            df = pd.concat([df, symbol_df], axis=1)
+
         # Cross-asset features
         df = self._add_cross_asset_features(df, symbols)
-        
+
         # Temporal features
         df = self._add_temporal_features(df)
-        
+
         # Market regime features
         df = self._add_market_regime_features(df, symbols)
-        
+
         # Clean up features
         df = self._clean_features(df)
-        
+
+        # Clean up caches
+        self._rolling_cache.clear()
+        self._technical_cache.clear()
+        gc.collect()
+
         self.logger.info(f"Generated {len(df.columns)} features")
-        
+
         return df
-    
+
+    def _process_symbol_features(self, df: pd.DataFrame, symbol: str) -> pd.DataFrame:
+        """Process all features for a single symbol efficiently."""
+        symbol_df = pd.DataFrame(index=df.index)
+
+        # Technical indicators
+        symbol_df = pd.concat([symbol_df, self._add_technical_indicators_optimized(df, symbol)], axis=1)
+
+        # Price and return features
+        symbol_df = pd.concat([symbol_df, self._add_price_features_optimized(df, symbol)], axis=1)
+
+        # Volume features
+        symbol_df = pd.concat([symbol_df, self._add_volume_features_optimized(df, symbol)], axis=1)
+
+        # Volatility features
+        symbol_df = pd.concat([symbol_df, self._add_volatility_features_optimized(df, symbol)], axis=1)
+
+        # Momentum features
+        symbol_df = pd.concat([symbol_df, self._add_momentum_features_optimized(df, symbol)], axis=1)
+
+        return symbol_df
+
+    def _get_rolling_cache_key(self, series_id: str, window: int) -> str:
+        """Generate cache key for rolling calculations."""
+        return f"{series_id}_{window}"
+
     def _extract_symbols(self, columns: List[str]) -> List[str]:
         """Extract unique symbols from column names."""
         symbols = set()
@@ -74,64 +118,100 @@ class CryptoFeatureEngine:
                 symbols.add(symbol)
         return sorted(list(symbols))
     
-    def _add_technical_indicators(self, df: pd.DataFrame, symbol: str) -> pd.DataFrame:
-        """Add technical indicators for a symbol."""
-        # Price columns
+    def _add_technical_indicators_optimized(self, df: pd.DataFrame, symbol: str) -> pd.DataFrame:
+        """Add technical indicators for a symbol using optimized calculations."""
         close_col = f"{symbol}_close"
         high_col = f"{symbol}_high"
         low_col = f"{symbol}_low"
         volume_col = f"{symbol}_volume"
-        
+
         if close_col not in df.columns:
-            return df
-        
+            return pd.DataFrame(index=df.index)
+
         close = df[close_col]
         high = df[high_col] if high_col in df.columns else close
         low = df[low_col] if low_col in df.columns else close
         volume = df[volume_col] if volume_col in df.columns else pd.Series(index=df.index, data=0)
-        
-        # RSI
-        df[f"{symbol}_rsi"] = self._calculate_rsi(close, self.config.rsi_period)
-        
-        # MACD
-        macd, signal, histogram = self._calculate_macd(
-            close, self.config.macd_fast, self.config.macd_slow, self.config.macd_signal
-        )
-        df[f"{symbol}_macd"] = macd
-        df[f"{symbol}_macd_signal"] = signal
-        df[f"{symbol}_macd_histogram"] = histogram
-        
-        # Bollinger Bands
-        bb_upper, bb_middle, bb_lower = self._calculate_bollinger_bands(
-            close, self.config.bb_period, self.config.bb_std
-        )
-        df[f"{symbol}_bb_upper"] = bb_upper
-        df[f"{symbol}_bb_middle"] = bb_middle
-        df[f"{symbol}_bb_lower"] = bb_lower
-        df[f"{symbol}_bb_width"] = (bb_upper - bb_lower) / bb_middle
-        df[f"{symbol}_bb_position"] = (close - bb_lower) / (bb_upper - bb_lower)
-        
-        # ATR
-        df[f"{symbol}_atr"] = self._calculate_atr(high, low, close, self.config.atr_period)
-        
-        # Moving Averages
-        for period in self.config.ema_periods:
-            df[f"{symbol}_ema_{period}"] = close.ewm(span=period).mean()
-        
-        for period in self.config.sma_periods:
-            df[f"{symbol}_sma_{period}"] = close.rolling(window=period).mean()
-        
+
+        indicators = {}
+
+        # RSI using cached rolling calculation
+        cache_key = self._get_rolling_cache_key(f"{symbol}_rsi", self.config.rsi_period)
+        if cache_key not in self._rolling_cache:
+            indicators[f"{symbol}_rsi"] = self._calculate_rsi_optimized(close, self.config.rsi_period)
+            self._rolling_cache[cache_key] = indicators[f"{symbol}_rsi"]
+
+        # MACD using optimized calculation
+        macd_key = f"{symbol}_macd_{self.config.macd_fast}_{self.config.macd_slow}_{self.config.macd_signal}"
+        if macd_key not in self._technical_cache:
+            macd, signal, histogram = self._calculate_macd_optimized(
+                close, self.config.macd_fast, self.config.macd_slow, self.config.macd_signal
+            )
+            indicators[f"{symbol}_macd"] = macd
+            indicators[f"{symbol}_macd_signal"] = signal
+            indicators[f"{symbol}_macd_histogram"] = histogram
+            self._technical_cache[macd_key] = (macd, signal, histogram)
+
+        # Bollinger Bands using cached rolling calculation
+        bb_key = self._get_rolling_cache_key(f"{symbol}_bb", self.config.bb_period)
+        if bb_key not in self._rolling_cache:
+            bb_upper, bb_middle, bb_lower = self._calculate_bollinger_bands_optimized(
+                close, self.config.bb_period, self.config.bb_std
+            )
+            indicators[f"{symbol}_bb_upper"] = bb_upper
+            indicators[f"{symbol}_bb_middle"] = bb_middle
+            indicators[f"{symbol}_bb_lower"] = bb_lower
+            indicators[f"{symbol}_bb_width"] = (bb_upper - bb_lower) / bb_middle
+            indicators[f"{symbol}_bb_position"] = (close - bb_lower) / (bb_upper - bb_lower)
+            self._rolling_cache[bb_key] = (bb_upper, bb_middle, bb_lower)
+
+        # ATR using cached calculation
+        atr_key = self._get_rolling_cache_key(f"{symbol}_atr", self.config.atr_period)
+        if atr_key not in self._rolling_cache:
+            indicators[f"{symbol}_atr"] = self._calculate_atr_optimized(high, low, close, self.config.atr_period)
+            self._rolling_cache[atr_key] = indicators[f"{symbol}_atr"]
+
+        # Moving Averages - batch calculation
+        ema_periods = self.config.ema_periods
+        sma_periods = self.config.sma_periods
+
+        # Calculate all EMAs in one pass
+        ema_results = self._calculate_multiple_emas(close, ema_periods)
+        for period, ema_values in ema_results.items():
+            indicators[f"{symbol}_ema_{period}"] = ema_values
+
+        # Calculate all SMAs in one pass
+        sma_results = self._calculate_multiple_smas(close, sma_periods)
+        for period, sma_values in sma_results.items():
+            indicators[f"{symbol}_sma_{period}"] = sma_values
+
         # Stochastic Oscillator
-        df[f"{symbol}_stoch_k"], df[f"{symbol}_stoch_d"] = self._calculate_stochastic(
-            high, low, close, 14, 3
-        )
-        
+        stoch_key = f"{symbol}_stoch_14_3"
+        if stoch_key not in self._technical_cache:
+            stoch_k, stoch_d = self._calculate_stochastic_optimized(high, low, close, 14, 3)
+            indicators[f"{symbol}_stoch_k"] = stoch_k
+            indicators[f"{symbol}_stoch_d"] = stoch_d
+            self._technical_cache[stoch_key] = (stoch_k, stoch_d)
+
         # Williams %R
-        df[f"{symbol}_williams_r"] = self._calculate_williams_r(high, low, close, 14)
-        
+        williams_key = f"{symbol}_williams_14"
+        if williams_key not in self._technical_cache:
+            indicators[f"{symbol}_williams_r"] = self._calculate_williams_r_optimized(high, low, close, 14)
+            self._technical_cache[williams_key] = indicators[f"{symbol}_williams_r"]
+
         # Commodity Channel Index
-        df[f"{symbol}_cci"] = self._calculate_cci(high, low, close, 20)
-        
+        cci_key = f"{symbol}_cci_20"
+        if cci_key not in self._technical_cache:
+            indicators[f"{symbol}_cci"] = self._calculate_cci_optimized(high, low, close, 20)
+            self._technical_cache[cci_key] = indicators[f"{symbol}_cci"]
+
+        return pd.DataFrame(indicators, index=df.index)
+
+    def _add_technical_indicators(self, df: pd.DataFrame, symbol: str) -> pd.DataFrame:
+        """Legacy method - kept for compatibility."""
+        optimized_df = self._add_technical_indicators_optimized(df, symbol)
+        for col in optimized_df.columns:
+            df[col] = optimized_df[col]
         return df
     
     def _add_price_features(self, df: pd.DataFrame, symbol: str) -> pd.DataFrame:
@@ -506,7 +586,107 @@ class CryptoFeatureEngine:
         adx = dx.rolling(window=period).mean()
         
         return adx
-    
+
+    # Optimized calculation methods
+    def _calculate_rsi_optimized(self, prices: pd.Series, period: int) -> pd.Series:
+        """Calculate RSI using vectorized operations."""
+        delta = prices.diff()
+        gain = np.where(delta > 0, delta, 0)
+        loss = np.where(delta < 0, -delta, 0)
+
+        # Use exponential weighted moving average for efficiency
+        avg_gain = pd.Series(gain).ewm(alpha=1/period).mean()
+        avg_loss = pd.Series(loss).ewm(alpha=1/period).mean()
+
+        rs = avg_gain / avg_loss
+        rsi = 100 - (100 / (1 + rs))
+        return rsi.fillna(50)  # Neutral RSI for NaN values
+
+    def _calculate_macd_optimized(self, prices: pd.Series, fast: int, slow: int, signal: int) -> Tuple[pd.Series, pd.Series, pd.Series]:
+        """Calculate MACD using optimized vectorized operations."""
+        ema_fast = prices.ewm(span=fast).mean()
+        ema_slow = prices.ewm(span=slow).mean()
+        macd = ema_fast - ema_slow
+        signal_line = macd.ewm(span=signal).mean()
+        histogram = macd - signal_line
+        return macd, signal_line, histogram
+
+    def _calculate_bollinger_bands_optimized(self, prices: pd.Series, period: int, std_dev: float) -> Tuple[pd.Series, pd.Series, pd.Series]:
+        """Calculate Bollinger Bands using vectorized operations."""
+        sma = prices.rolling(window=period).mean()
+        std = prices.rolling(window=period).std()
+        upper_band = sma + (std * std_dev)
+        lower_band = sma - (std * std_dev)
+        return upper_band, sma, lower_band
+
+    def _calculate_atr_optimized(self, high: pd.Series, low: pd.Series, close: pd.Series, period: int) -> pd.Series:
+        """Calculate ATR using vectorized operations."""
+        high_low = high - low
+        high_close = np.abs(high - close.shift())
+        low_close = np.abs(low - close.shift())
+        true_range = pd.concat([high_low, high_close, low_close], axis=1).max(axis=1)
+        atr = true_range.ewm(alpha=1/period).mean()
+        return atr
+
+    def _calculate_multiple_emas(self, prices: pd.Series, periods: List[int]) -> Dict[int, pd.Series]:
+        """Calculate multiple EMAs efficiently in one pass."""
+        results = {}
+        # Calculate the longest period first
+        max_period = max(periods)
+        ema_long = prices.ewm(span=max_period).mean()
+
+        # Calculate shorter periods using the longer one
+        for period in periods:
+            if period == max_period:
+                results[period] = ema_long.copy()
+            else:
+                # Use formula: EMA_short = (price * alpha) + (EMA_long * (1-alpha))
+                # where alpha = 2/(period+1)
+                alpha = 2 / (period + 1)
+                ema_short = prices * alpha + ema_long * (1 - alpha)
+                results[period] = ema_short
+
+        return results
+
+    def _calculate_multiple_smas(self, prices: pd.Series, periods: List[int]) -> Dict[int, pd.Series]:
+        """Calculate multiple SMAs efficiently."""
+        results = {}
+        # Calculate the longest period first
+        max_period = max(periods)
+        sma_long = prices.rolling(window=max_period).mean()
+
+        results[max_period] = sma_long
+
+        # For shorter periods, we need to calculate individually since they don't have the same relationship as EMAs
+        for period in periods:
+            if period != max_period:
+                results[period] = prices.rolling(window=period).mean()
+
+        return results
+
+    def _calculate_stochastic_optimized(self, high: pd.Series, low: pd.Series, close: pd.Series, k_period: int, d_period: int) -> Tuple[pd.Series, pd.Series]:
+        """Calculate Stochastic Oscillator using vectorized operations."""
+        lowest_low = low.rolling(window=k_period).min()
+        highest_high = high.rolling(window=k_period).max()
+        k_percent = 100 * ((close - lowest_low) / (highest_high - lowest_low))
+        d_percent = k_percent.rolling(window=d_period).mean()
+        return k_percent, d_percent
+
+    def _calculate_williams_r_optimized(self, high: pd.Series, low: pd.Series, close: pd.Series, period: int) -> pd.Series:
+        """Calculate Williams %R using vectorized operations."""
+        highest_high = high.rolling(window=period).max()
+        lowest_low = low.rolling(window=period).min()
+        williams_r = -100 * (highest_high - close) / (highest_high - lowest_low)
+        return williams_r
+
+    def _calculate_cci_optimized(self, high: pd.Series, low: pd.Series, close: pd.Series, period: int) -> pd.Series:
+        """Calculate CCI using vectorized operations."""
+        tp = (high + low + close) / 3
+        sma_tp = tp.rolling(window=period).mean()
+        mad = (tp - sma_tp).abs().rolling(window=period).mean()
+        cci = (tp - sma_tp) / (0.015 * mad)
+        return cci
+
     def get_feature_names(self) -> List[str]:
         """Get list of generated feature names."""
         return self.feature_names

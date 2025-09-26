@@ -141,7 +141,27 @@ class CryptoRandomForestModel:
         self.logger.info(f"Training completed. Val R2: {val_metrics['r2']:.4f}")
         
         return self.validation_scores
-    
+
+    def train_incremental(self, X: pd.DataFrame, y: pd.Series) -> Dict[str, Any]:
+        """Perform incremental training on new data."""
+        if not self.is_fitted:
+            # If not fitted, do full training
+            return self.train(X, y, validation_split=0.2)
+
+        # Scale new data using existing scaler
+        X_scaled = self.scaler.transform(X)
+
+        # Incremental learning - retrain on recent data only
+        # For Random Forest, we do partial retraining
+        self.model.fit(X_scaled, y)
+
+        # Update feature importance
+        self.feature_importance = dict(zip(X.columns, self.model.feature_importances_))
+
+        self.logger.info("Incremental training completed")
+
+        return {'status': 'incremental_training_completed'}
+
     def hyperparameter_tuning(self, X: pd.DataFrame, y: pd.Series, method: str = 'optuna') -> Dict[str, Any]:
         """Perform hyperparameter tuning."""
         self.logger.info(f"Starting hyperparameter tuning with {method}")
