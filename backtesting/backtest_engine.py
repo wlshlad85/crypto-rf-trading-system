@@ -54,59 +54,95 @@ class CryptoBacktestEngine:
         
         # Time series split for walk-forward validation
         train_size = int(len(backtest_data) * 0.6)  # 60% for initial training
-        
+
+        # Initialize model cache for efficiency
+        model_cache = {}
+        cache_size = 100  # Keep models for last 100 training windows
+
         # Track predictions and signals
         all_predictions = []
         all_signals = []
-        
+
         self.logger.info(f"Backtesting from {backtest_data.index[train_size]} to {backtest_data.index[-1]}")
-        
-        # Walk-forward backtest
+
+        # Walk-forward backtest with model caching
         for i in range(train_size, len(backtest_data) - self.config.model.target_horizon):
             current_timestamp = backtest_data.index[i]
-            
-            # Training window (expanding or rolling)
-            train_start = max(0, i - 2000)  # Use last 2000 hours for training
+
+            # Create cache key for this training window
+            cache_key = f"{i}_{train_size}"
+
+            # Training window (rolling window for efficiency)
+            train_start = max(0, i - 1000)  # Use last 1000 hours for training (reduced from 2000)
             train_end = i
-            
-            # Get training data
-            train_features = features.iloc[train_start:train_end]
-            train_targets = targets.iloc[train_start:train_end]
-            
-            # Train model for each symbol
+
+            # Check if we have a cached model for this window
+            if cache_key in model_cache:
+                cached_models = model_cache[cache_key]
+            else:
+                # Get training data
+                train_features = features.iloc[train_start:train_end]
+                train_targets = targets.iloc[train_start:train_end]
+
+                # Train models for each symbol (incremental training)
+                cached_models = {}
+                for symbol in symbols:
+                    target_col = f"{symbol}_target"
+
+                    if target_col not in train_targets.columns:
+                        continue
+
+                    # Prepare training data
+                    X_train, y_train = model.prepare_data(train_features, target_col)
+
+                    if len(X_train) < 100:  # Minimum training samples
+                        continue
+
+                    try:
+                        # Use incremental training if possible
+                        if symbol in model_cache and i > train_size + 50:
+                            # Use previous model as starting point for incremental learning
+                            symbol_model = model_cache[symbol][-1]  # Get last cached model for this symbol
+                            # Incremental fit (if supported)
+                            symbol_model.train_incremental(X_train.iloc[-100:], y_train.iloc[-100:])  # Train on recent data only
+                        else:
+                            # Clone model for this symbol
+                            symbol_model = CryptoRandomForestModel(self.config.model)
+                            symbol_model.train(X_train, y_train, validation_split=0.2)
+
+                        cached_models[symbol] = symbol_model
+
+                    except Exception as e:
+                        self.logger.warning(f"Training failed for {symbol} at {current_timestamp}: {e}")
+                        continue
+
+                # Cache the models
+                model_cache[cache_key] = cached_models
+
+                # Manage cache size
+                if len(model_cache) > cache_size:
+                    # Remove oldest entries
+                    oldest_keys = sorted(model_cache.keys())[:-cache_size]
+                    for key in oldest_keys:
+                        del model_cache[key]
+
+            # Make predictions using cached models
             predictions = {}
-            for symbol in symbols:
-                target_col = f"{symbol}_target"
-                
-                if target_col not in train_targets.columns:
-                    continue
-                
-                # Prepare training data
-                X_train, y_train = model.prepare_data(train_features, target_col)
-                
-                if len(X_train) < 100:  # Minimum training samples
-                    continue
-                
-                # Clone model for this symbol
-                symbol_model = CryptoRandomForestModel(self.config.model)
-                
+            for symbol, symbol_model in cached_models.items():
                 try:
-                    # Quick training (no hyperparameter tuning for speed)
-                    symbol_model.train(X_train, y_train, validation_split=0.2)
-                    
                     # Predict for current timestamp
                     current_features = features.iloc[i:i+1]
                     if len(current_features) > 0:
                         pred = symbol_model.predict(current_features)[0]
                         predictions[f"{symbol}_target"] = pred
-                        
                 except Exception as e:
-                    self.logger.warning(f"Training failed for {symbol} at {current_timestamp}: {e}")
+                    self.logger.warning(f"Prediction failed for {symbol} at {current_timestamp}: {e}")
                     continue
-            
+
             # Store predictions
-            pred_series = pd.Series(predictions, name=current_timestamp)
-            all_predictions.append(pred_series)
+            if predictions:
+                pred_series = pd.Series(predictions, name=current_timestamp)
+                all_predictions.append(pred_series)
             
             # Generate signals
             if predictions:
