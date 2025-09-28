@@ -1,0 +1,28 @@
+name: CI
+on: [push, pull_request]
+
+jobs:
+  tests:
+    strategy:
+      matrix:
+        mode: [cpu, gpu]
+    runs-on: ${{ matrix.mode == gpu && self-hosted || ubuntu-latest }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          # Optional RAPIDS/cuDF if available on GPU runner (example, adjust to your env)
+          if [ "${{ matrix.mode }}" = "gpu" ]; then
+            echo "GPU mode: ensure CUDA and RAPIDS are installed on the runner"
+          fi
+      - name: Generate golden if missing
+        run: |
+          python scripts/generate_golden.py || true
+      - name: Run pytest
+        run: |
+          pytest -q
