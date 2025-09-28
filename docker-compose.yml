@@ -1,0 +1,84 @@
+version: '3.8'
+
+services:
+  rapids-notebook:
+    image: rapidsai/notebooks:25.08-cuda12.5-py3.11
+    container_name: rapids-jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/home/rapids/notebooks
+      - ./data:/home/rapids/data
+      - ./models:/home/rapids/models
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - GRANT_SUDO=yes
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    command: >
+      bash -c "
+        echo 'Starting RAPIDS JupyterLab...';
+        echo 'Access at http://localhost:8888';
+        echo 'Token will be displayed below:';
+        jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root
+      "
+
+  rapids-dev:
+    image: rapidsai/base:25.08-cuda12.5-py3.11
+    container_name: rapids-dev
+    volumes:
+      - ./code:/workspace
+      - ./data:/data
+    working_dir: /workspace
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+
+# Optional services for common use cases
+
+  # PostgreSQL with PostGIS for spatial data
+  postgres:
+    image: postgis/postgis:16-3.4
+    container_name: rapids-postgres
+    environment:
+      POSTGRES_USER: rapids
+      POSTGRES_PASSWORD: rapids123
+      POSTGRES_DB: rapids_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    profiles:
+      - extras
+
+  # MinIO for S3-compatible object storage
+  minio:
+    image: minio/minio:latest
+    container_name: rapids-minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio_data:/data
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin123
+    command: server /data --console-address ":9001"
+    profiles:
+      - extras
+
+volumes:
+  postgres_data:
+  minio_data:
