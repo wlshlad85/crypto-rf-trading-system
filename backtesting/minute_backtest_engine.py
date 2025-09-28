@@ -273,7 +273,8 @@ class MinuteBacktestEngine:
             for col in ['open', 'high', 'low', 'close', 'volume']:
                 col_name = f'{symbol}_{col}'
                 if col_name in batch_data.columns:
-                    symbol_data[col.title()] = batch_data[col_name]
+                    # Keep lowercase OHLCV column names for compatibility with feature engines
+                    symbol_data[col] = batch_data[col_name]
             
             if symbol_data.empty:
                 continue
@@ -284,7 +285,8 @@ class MinuteBacktestEngine:
                 
                 # Add to combined features with symbol prefix
                 for col in symbol_features.columns:
-                    if col not in ['Open', 'High', 'Low', 'Close', 'Volume']:
+                    # Exclude raw OHLCV columns from feature set
+                    if col not in ['open', 'high', 'low', 'close', 'volume']:
                         all_features[f'{symbol}_{col}'] = symbol_features[col]
                 
             except Exception as e:
@@ -549,26 +551,29 @@ class FastPortfolioTracker:
         
         trades_executed = 0
         
-        for symbol in signals.index:
-            if f'{symbol}_signal' in signals.index:
-                signal = signals[f'{symbol}_signal']
-                
-                if signal == 0:  # No action
-                    continue
-                
-                # Get current price
-                price_col = f'{symbol}_close'
-                if price_col not in prices.index:
-                    continue
-                
-                current_price = prices[price_col]
-                
-                if pd.isna(current_price) or current_price <= 0:
-                    continue
-                
-                # Execute trade
-                if self._execute_trade(symbol, signal, current_price, timestamp):
-                    trades_executed += 1
+        # signals is a Series with columns like "{SYMBOL}_signal"
+        for signal_key, signal_value in signals.items():
+            if not isinstance(signal_key, str) or not signal_key.endswith('_signal'):
+                continue
+            symbol = signal_key[:-7]
+            signal = signal_value
+            
+            if signal == 0:  # No action
+                continue
+            
+            # Get current price
+            price_col = f'{symbol}_close'
+            if price_col not in prices.index:
+                continue
+            
+            current_price = prices[price_col]
+            
+            if pd.isna(current_price) or current_price <= 0:
+                continue
+            
+            # Execute trade
+            if self._execute_trade(symbol, signal, current_price, timestamp):
+                trades_executed += 1
         
         # Update portfolio value
         self._update_portfolio_value(prices, timestamp)

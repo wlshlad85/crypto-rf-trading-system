@@ -346,9 +346,9 @@ class MinuteFeatureEngine:
             df[col_name] = df['close'].pct_change(tf)
             momentum_cols.append(col_name)
         
-        # Momentum alignment score
-        momentum_signs = df[momentum_cols].apply(np.sign, axis=1)
-        df['momentum_alignment'] = momentum_signs.sum(axis=1) / len(timeframes)
+        # Momentum alignment score (vectorized without per-row apply)
+        momentum_signs = np.sign(df[momentum_cols])
+        df['momentum_alignment'] = momentum_signs.sum(axis=1) / float(len(timeframes))
         
         # Volatility term structure
         vol_timeframes = [5, 15, 30, 60]
@@ -425,8 +425,8 @@ class MinuteFeatureEngine:
         # GARCH-like approximations
         # Simple EWMA volatility
         for alpha in [0.06, 0.12, 0.25]:  # Different decay rates
-            ewma_vol = squared_returns.ewm(alpha=alpha).mean().apply(np.sqrt)
-            df[f'ewma_vol_alpha_{int(alpha*100)}'] = ewma_vol
+            ewma_vol = squared_returns.ewm(alpha=alpha).mean()
+            df[f'ewma_vol_alpha_{int(alpha*100)}'] = np.sqrt(ewma_vol)
         
         # Volatility regime changes
         vol_5m = returns.rolling(5).std()
