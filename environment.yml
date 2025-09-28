@@ -1,0 +1,50 @@
+# RAPIDS Conda Environment File
+# Usage: mamba env create -f environment.yml
+# Or: conda env create -f environment.yml
+
+name: rapids-25.08
+channels:
+  - rapidsai
+  - conda-forge
+  - nvidia
+
+dependencies:
+  # Core RAPIDS packages
+  - rapids=25.08
+  - python=3.11
+  - cuda-version=12.5
+  
+  # Additional useful packages
+  - jupyterlab
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - pandas
+  - numpy
+  
+  # Development tools
+  - ipykernel
+  - ipywidgets
+  - nodejs
+  
+  # Optional: Dask for distributed computing
+  - dask
+  - dask-ml
+  - dask-cuda
+  
+  # Optional: Visualization
+  - bokeh
+  - holoviews
+  - panel
+  - hvplot
+  
+  # Optional: Data formats
+  - pyarrow
+  - fastparquet
+  
+  # pip dependencies
+  - pip
+  - pip:
+    # Add any pip-only packages here
+    - streamlit
+    - plotly
