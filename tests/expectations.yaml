@@ -1,0 +1,69 @@
+# Expected metrics and tolerances for regression testing
+# These values should be updated when making intentional model changes
+
+metrics:
+  # ML metrics
+  auc:
+    expected: 0.7312
+    atol: 1.0e-3
+  accuracy:
+    expected: 0.6821
+    atol: 5.0e-3
+  logloss:
+    expected: 0.5834
+    atol: 1.0e-2
+  
+  # Trading metrics
+  sharpe_1d:
+    expected: 1.84
+    atol: 0.05
+  pnl_sum:
+    expected: 1275.40
+    atol: 10.0
+  max_drawdown:
+    expected: -0.0234
+    atol: 0.002
+  win_rate:
+    expected: 0.5234
+    atol: 0.01
+
+# Latency budgets (milliseconds)
+latency_ms:
+  cpu_max: 5000
+  gpu_max: 1000
+  # Relative speedup expectation
+  gpu_speedup_min: 3.0
+
+# CPU/GPU parity tolerances
+parity:
+  # RMSE tolerance for predictions
+  yhat_rmse_atol: 1.0e-3
+  # Max absolute difference for any single prediction
+  yhat_max_diff: 1.0e-2
+  # Metric differences between CPU/GPU
+  metric_rtol: 1.0e-3
+
+# Data quality checks
+data_quality:
+  # Expected feature statistics (for drift detection)
+  features:
+    return_0:
+      mean: 0.0
+      std: 0.025
+      atol: 0.005
+    volume_0:
+      mean: 22026.0
+      std: 60000.0
+      rtol: 0.1
+  # Missing data tolerance
+  max_missing_pct: 0.03
+
+# Feature importance stability (top 10 features should be stable)
+feature_importance:
+  top_10_overlap_min: 0.7
+
+# Version info for tracking
+version:
+  model_version: "1.0.0"
+  data_version: "2024.01"
+  last_updated: "2024-01-15"

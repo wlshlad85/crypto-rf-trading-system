@@ -1,0 +1,13 @@
+# GPU dependencies for CUDA 12.1
+# Install base requirements first: pip install -r requirements.txt
+
+# RAPIDS (cuDF, cuML) for CUDA 12
+--extra-index-url https://pypi.nvidia.com
+cudf-cu12==23.12.*
+cuml-cu12==23.12.*
+cupy-cuda12x>=12.0.0
+
+# GPU-enabled libraries
+torch==2.1.0+cu121 --index-url https://download.pytorch.org/whl/cu121
+
+# XGBoost is already in base requirements and auto-detects GPU
