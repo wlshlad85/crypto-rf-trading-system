@@ -39,8 +39,28 @@ pytest-cov>=4.0.0
 jupyter>=1.0.0
 ipykernel>=6.0.0
 
-# Optional: GPU acceleration
-# xgboost>=1.6.0  # Uncomment if you want to use XGBoost
+# GPU acceleration and reproducibility
+torch>=2.0.0  # PyTorch for GPU operations and reproducibility
+xgboost>=1.7.0  # XGBoost with GPU support
+lightgbm>=4.0.0  # LightGBM with GPU support
+catboost>=1.2.0  # CatBoost with GPU support
+
+# GPU monitoring and management
+gputil>=1.4.0  # GPU utilization monitoring
+py3nvml>=0.2.7  # NVIDIA Management Library bindings
+pynvml>=11.5.0  # Alternative NVIDIA ML bindings
+
+# Optional GPU-accelerated libraries
+cupy-cuda11x>=12.0.0  # GPU arrays (adjust version based on CUDA)
+# cupy-cuda12x>=12.0.0  # For CUDA 12.x
+# tensorflow>=2.13.0  # TensorFlow with GPU support (optional)
+
+# Distributed computing (optional)
+# ray[default]>=2.5.0  # For distributed GPU sweeps
+# dask[complete]>=2023.5.0  # Alternative distributed computing
+
+# System monitoring
+psutil>=5.9.0  # CPU/Memory monitoring
 
 # Context Management (CGRAG)
 tree-sitter>=0.24.0

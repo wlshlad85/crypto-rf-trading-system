@@ -7,6 +7,7 @@ Implements sophisticated parameter exploration using:
 - Random search with early stopping
 - Bayesian optimization (optional)
 - Progressive halving for efficient resource allocation
+- GPU-accelerated training with full reproducibility
 
 Usage: python3 hyperband_runner.py
 """
@@ -28,13 +29,27 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from meta_optim.objective_fn import MetaObjectiveFunction
 from meta_optim.retrain_worker import RetrainWorker
+from meta_optim.crypto_gpu_reproducibility import CryptoGPUReproducibility, setup_crypto_gpu_reproducibility
 
 class HyperbandRunner:
-    """Hyperband algorithm implementation for Random Forest hyperparameter optimization."""
+    """Hyperband algorithm implementation for Random Forest hyperparameter optimization with GPU reproducibility."""
     
-    def __init__(self, config: Dict[str, Any] = None):
-        """Initialize Hyperband runner with configuration."""
+    def __init__(self, config: Dict[str, Any] = None, seed: int = 123456, enable_gpu: bool = True):
+        """
+        Initialize Hyperband runner with configuration and reproducibility.
+        
+        Args:
+            config: Hyperband configuration
+            seed: Master seed for reproducibility
+            enable_gpu: Enable GPU acceleration if available
+        """
         self.config = config or self._get_default_config()
+        self.seed = seed
+        self.enable_gpu = enable_gpu
+        
+        # Setup reproducibility BEFORE any other initialization
+        self.reproducibility = CryptoGPUReproducibility(seed=seed)
+        self.reproducibility.setup_environment(force_deterministic=True)
         
         # Hyperband parameters
         self.max_iter = self.config.get('max_iter', 81)  # Maximum iterations per configuration
@@ -55,7 +70,19 @@ class HyperbandRunner:
         self.log_dir = "meta_optim/meta_logs"
         os.makedirs(self.log_dir, exist_ok=True)
         
+        # Log reproducibility info
+        self.reproducibility.log_system_info(
+            os.path.join(self.log_dir, f"hyperband_repro_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"),
+            extra_config={
+                "hyperband_config": self.config,
+                "max_iter": self.max_iter,
+                "eta": self.eta,
+                "enable_gpu": self.enable_gpu
+            }
+        )
+        
         print(f"🎯 Hyperband initialized: s_max={self.s_max}, B={self.B}")
+        print(f"🌱 Reproducibility seed: {seed}, GPU enabled: {enable_gpu}")
     
     def _get_default_config(self) -> Dict[str, Any]:
         """Get default configuration for Hyperband."""
@@ -97,6 +124,12 @@ class HyperbandRunner:
                     'confidence_threshold': [0.5, 0.6, 0.65, 0.7],
                     'exit_threshold': [0.4, 0.5, 0.55, 0.6]
                 }
+            },
+            'gpu_config': {
+                'use_gpu': self.enable_gpu,
+                'gpu_memory_fraction': 0.8,
+                'allow_growth': True,
+                'deterministic': True
             }
         }
     
@@ -142,21 +175,26 @@ class HyperbandRunner:
         return optimization_results
     
     def _sample_configurations(self, n: int) -> List[Dict[str, Any]]:
-        """Sample random configurations from parameter space."""
+        """Sample random configurations from parameter space using reproducible RNG."""
         configurations = []
         param_space = self.config['parameter_space']
         
-        for _ in range(n):
+        # Use reproducible numpy generator
+        rng = self.reproducibility.np_generator if hasattr(self.reproducibility, 'np_generator') else np.random.default_rng(self.seed)
+        
+        for i in range(n):
             config = {}
             
             for model_name, model_params in param_space.items():
                 config[model_name] = {}
                 for param_name, param_values in model_params.items():
-                    config[model_name][param_name] = np.random.choice(param_values)
+                    # Use reproducible random choice
+                    config[model_name][param_name] = rng.choice(param_values)
             
-            # Add unique ID
-            config['config_id'] = f"config_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{np.random.randint(1000, 9999)}"
+            # Add unique ID with deterministic counter
+            config['config_id'] = f"config_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{self.seed}_{i:04d}"
             config['timestamp'] = datetime.now().isoformat()
+            config['seed'] = self.seed + i  # Unique seed for each config
             
             configurations.append(config)
         
@@ -189,18 +227,25 @@ class HyperbandRunner:
         return results
     
     def _evaluate_configurations(self, configurations: List[Dict], resource: float) -> List[Dict]:
-        """Evaluate configurations using parallel processing."""
+        """Evaluate configurations using parallel processing with reproducible seeds."""
         results = []
         
         # Use thread pool for parallel evaluation
         max_workers = min(self.config.get('max_parallel', 4), len(configurations))
         
+        # Generate worker seeds for parallel execution
+        worker_seeds = self.reproducibility.get_worker_seeds(max_workers)
+        
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
-            # Submit jobs
-            future_to_config = {
-                executor.submit(self._evaluate_single_config, config, resource): config
-                for config in configurations
-            }
+            # Submit jobs with worker-specific seeds
+            future_to_config = {}
+            for i, config in enumerate(configurations):
+                worker_id = i % max_workers
+                config_with_seed = config.copy()
+                config_with_seed['worker_seed'] = worker_seeds[worker_id]
+                
+                future = executor.submit(self._evaluate_single_config, config_with_seed, resource)
+                future_to_config[future] = config
             
             # Collect results
             for future in as_completed(future_to_config, timeout=3600):  # 1 hour timeout
@@ -459,17 +504,34 @@ Alpha Persistence: {best.get('individual_metrics', {}).get('alpha_persistence', 
         return summary
 
 def main():
-    """Run Hyperband optimization."""
+    """Run Hyperband optimization with GPU reproducibility."""
     
-    print("🎯 Random Forest Meta-Optimization with Hyperband")
+    print("🎯 Random Forest Meta-Optimization with Hyperband (GPU-Reproducible)")
     print("=" * 60)
     
+    # Parse command line arguments
+    import argparse
+    parser = argparse.ArgumentParser(description='Hyperband optimization with GPU reproducibility')
+    parser.add_argument('--seed', type=int, default=123456, help='Random seed for reproducibility')
+    parser.add_argument('--iterations', type=int, default=2, help='Number of Hyperband iterations')
+    parser.add_argument('--no-gpu', action='store_true', help='Disable GPU acceleration')
+    args = parser.parse_args()
+    
     try:
-        # Initialize Hyperband runner
-        runner = HyperbandRunner()
+        # Initialize Hyperband runner with reproducibility
+        runner = HyperbandRunner(
+            seed=args.seed,
+            enable_gpu=not args.no_gpu
+        )
+        
+        # Create reproducibility checkpoint
+        runner.reproducibility.checkpoint(
+            checkpoint_dir=os.path.join(runner.log_dir, "checkpoints"),
+            iteration=0
+        )
         
         # Run optimization
-        results = runner.run_hyperband_optimization(n_iterations=2)  # Reduced for demo
+        results = runner.run_hyperband_optimization(n_iterations=args.iterations)
         
         if results['success']:
             print(f"\n🎉 Optimization successful!")
@@ -479,6 +541,12 @@ def main():
             
             # Print summary
             print(runner.get_optimization_summary())
+            
+            # Save final checkpoint
+            runner.reproducibility.checkpoint(
+                checkpoint_dir=os.path.join(runner.log_dir, "checkpoints"),
+                iteration=args.iterations
+            )
             
         else:
             print(f"\n❌ Optimization failed: {results.get('reason', 'Unknown error')}")

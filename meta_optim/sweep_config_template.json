@@ -1,0 +1,101 @@
+{
+    "sweep_type": "hyperband",
+    "description": "Nightly GPU-accelerated hyperparameter sweep for crypto RF trading models",
+    "hyperband": {
+        "iterations": 10,
+        "max_iter": 81,
+        "eta": 3,
+        "max_parallel": 4
+    },
+    "models": {
+        "enable_catboost": true,
+        "enable_lightgbm": true,
+        "enable_xgboost": false,
+        "enable_rf": true
+    },
+    "parameter_ranges": {
+        "entry_model": {
+            "n_estimators": [100, 200, 300, 400, 500],
+            "max_depth": [6, 8, 10, 12, 15, 20],
+            "min_samples_split": [5, 10, 15, 20, 30],
+            "min_samples_leaf": [2, 5, 8, 10, 15],
+            "max_features": ["sqrt", "log2", 0.3, 0.5, 0.7],
+            "learning_rate": [0.01, 0.05, 0.1, 0.15, 0.2]
+        },
+        "position_model": {
+            "n_estimators": [100, 150, 200, 250, 300],
+            "max_depth": [4, 6, 8, 10, 12],
+            "min_samples_split": [5, 10, 15, 20],
+            "min_samples_leaf": [2, 5, 8, 10],
+            "learning_rate": [0.01, 0.05, 0.1, 0.15]
+        },
+        "exit_model": {
+            "n_estimators": [100, 150, 200, 300],
+            "max_depth": [6, 8, 10, 12, 15],
+            "min_samples_split": [5, 10, 15, 25],
+            "min_samples_leaf": [2, 5, 8, 12],
+            "learning_rate": [0.01, 0.05, 0.1, 0.15]
+        },
+        "profit_model": {
+            "n_estimators": [100, 150, 200, 250, 300],
+            "max_depth": [8, 10, 12, 15, 18],
+            "min_samples_split": [8, 12, 16, 20],
+            "min_samples_leaf": [3, 6, 9, 12],
+            "learning_rate": [0.01, 0.05, 0.1, 0.15]
+        },
+        "trading_params": {
+            "momentum_threshold": [1.2, 1.5, 1.78, 2.0, 2.5],
+            "position_range_min": [0.3, 0.4, 0.464, 0.5],
+            "position_range_max": [0.7, 0.8, 0.85, 0.9],
+            "confidence_threshold": [0.5, 0.6, 0.65, 0.7, 0.75],
+            "exit_threshold": [0.4, 0.5, 0.55, 0.6]
+        }
+    },
+    "gpu_settings": {
+        "memory_fraction": 0.8,
+        "allow_growth": true,
+        "per_process_gpu_memory_fraction": 0.25,
+        "deterministic": true,
+        "benchmark": false
+    },
+    "data_settings": {
+        "train_months": 12,
+        "validation_months": 3,
+        "test_months": 1,
+        "symbols": ["BTC", "ETH", "ADA"],
+        "data_path": "data/4h_training/crypto_4h_dataset_20250714_130201.csv",
+        "resample_frequency": "4H"
+    },
+    "optimization_targets": {
+        "primary": "sharpe_ratio",
+        "secondary": ["profit_factor", "max_drawdown", "win_rate", "alpha_persistence"],
+        "weights": {
+            "sharpe_ratio": 0.4,
+            "profit_factor": 0.3,
+            "max_drawdown": 0.2,
+            "win_rate": 0.1
+        }
+    },
+    "early_stopping": {
+        "patience": 10,
+        "min_improvement": 0.001,
+        "check_interval": 5
+    },
+    "resource_limits": {
+        "max_runtime_hours": 8,
+        "max_memory_gb": 32,
+        "max_gpu_memory_gb": 16
+    },
+    "reproducibility": {
+        "master_seed": 123456,
+        "force_deterministic": true,
+        "log_system_info": true,
+        "checkpoint_interval": 100
+    },
+    "reporting": {
+        "save_top_n": 20,
+        "generate_plots": true,
+        "email_results": false,
+        "slack_webhook": null
+    }
+}
