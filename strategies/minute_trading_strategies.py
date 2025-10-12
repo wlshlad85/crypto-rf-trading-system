@@ -562,7 +562,7 @@ class MinuteStrategyEnsemble:
     def generate_signals(self, predictions: pd.DataFrame, market_data: pd.DataFrame,
                         features: pd.DataFrame, symbols: List[str]) -> pd.DataFrame:
         """Generate ensemble signals from all strategies."""
-        
+
         ensemble_signals = pd.DataFrame(index=market_data.index)
         
         # Get signals from each strategy
@@ -595,11 +595,16 @@ class MinuteStrategyEnsemble:
         ensemble_signals = self._apply_ensemble_risk_management(
             ensemble_signals, market_data, symbols
         )
-        
+
+        # Overlay cross-market and psychological behaviours
+        ensemble_signals = self._apply_cross_market_psychological_overlays(
+            ensemble_signals, market_data, symbols
+        )
+
         return ensemble_signals
-    
-    def _apply_ensemble_risk_management(self, signals: pd.DataFrame, 
-                                      market_data: pd.DataFrame, 
+
+    def _apply_ensemble_risk_management(self, signals: pd.DataFrame,
+                                      market_data: pd.DataFrame,
                                       symbols: List[str]) -> pd.DataFrame:
         """Apply risk management at the ensemble level."""
         
@@ -634,9 +639,9 @@ class MinuteStrategyEnsemble:
                         adjusted_signals.loc[timestamp, signal_col] = (
                             np.sign(signal_value) * max_single_position
                         )
-        
+
         return adjusted_signals
-    
+
     def update_strategy_weights(self, performance_data: Dict[str, float]):
         """Dynamically update strategy weights based on performance."""
         
@@ -658,8 +663,84 @@ class MinuteStrategyEnsemble:
             # Normalize to sum to 1
             total_weight = sum(normalized_perfs)
             self.weights = [w / total_weight for w in normalized_perfs]
-            
+
             self.logger.info(f"Updated strategy weights: {self.weights}")
+
+    def _apply_cross_market_psychological_overlays(
+        self,
+        signals: pd.DataFrame,
+        market_data: pd.DataFrame,
+        symbols: List[str]
+    ) -> pd.DataFrame:
+        """Use BTC leadership and contrarian overlays to refine signals.
+
+        Cross-market influence: Align altcoin exposure with BTC behaviour when
+        statistically meaningful correlations exist. Psychological overlay:
+        fade positions in low-momentum or failed-pattern environments by
+        introducing contrarian pressure.
+        """
+
+        if signals.empty or market_data.empty:
+            return signals
+
+        adjusted = signals.copy()
+
+        # Identify BTC symbol within the traded universe
+        btc_symbol = next((s for s in symbols if "BTC" in s.upper()), None)
+        if not btc_symbol:
+            return adjusted
+
+        btc_signal_col = f"{btc_symbol}_signal"
+        btc_price_col = f"{btc_symbol}_close"
+
+        if btc_signal_col not in adjusted.columns or btc_price_col not in market_data.columns:
+            return adjusted
+
+        btc_signal = adjusted[btc_signal_col].fillna(0)
+        btc_returns = market_data[btc_price_col].pct_change().fillna(0)
+
+        for symbol in symbols:
+            if symbol == btc_symbol:
+                continue
+
+            signal_col = f"{symbol}_signal"
+            price_col = f"{symbol}_close"
+
+            if signal_col not in adjusted.columns or price_col not in market_data.columns:
+                continue
+
+            alt_returns = market_data[price_col].pct_change().fillna(0)
+
+            # Cross-market leadership: project BTC conviction onto correlated assets
+            rolling_corr = btc_returns.rolling(window=60, min_periods=10).corr(alt_returns).fillna(0)
+            cross_bias = (btc_signal * rolling_corr).where(rolling_corr.abs() > 0.1, 0.0)
+
+            # Moderate the influence to avoid overfitting to BTC moves
+            adjusted_signal = adjusted[signal_col] + cross_bias * 0.5
+            adjusted[signal_col] = adjusted_signal.clip(-1, 1)
+
+            # Psychological overlays: contrarian behaviour in sluggish or failed moves
+            recent_vol = alt_returns.rolling(window=15, min_periods=5).std().fillna(0)
+            low_momentum_mask = recent_vol < 0.0005
+
+            recent_signal = adjusted[signal_col].rolling(window=5, min_periods=3).mean().fillna(0)
+            realised_move = alt_returns.rolling(window=5, min_periods=3).sum().fillna(0)
+
+            failed_bull = (recent_signal > 0.1) & (realised_move < -0.001)
+            failed_bear = (recent_signal < -0.1) & (realised_move > 0.001)
+            contrarian_mask = (low_momentum_mask | failed_bull | failed_bear)
+
+            if contrarian_mask.any():
+                contrarian_bias = (-np.sign(recent_signal)).fillna(0) * 0.2
+                current_signal = adjusted[signal_col]
+                blend = current_signal.copy()
+                idx = contrarian_mask[contrarian_mask].index
+                blend.loc[idx] = (
+                    0.5 * current_signal.loc[idx] + 0.5 * contrarian_bias.loc[idx]
+                ).clip(-1, 1)
+                adjusted[signal_col] = blend
+
+        return adjusted
 
 
 # Utility functions
