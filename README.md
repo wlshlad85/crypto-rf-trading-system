@@ -189,6 +189,31 @@ Modify `model_fit_predict()` in `scripts/run_pipeline.py` to use your model:
 4. **Version control expectations.yaml**
 5. **Monitor CI times** - keep under 5 minutes
 
+## Data Artifact Collection Workflow
+
+Use `scripts/collect_data_artifacts.py` to consolidate logs, training data, and result files into a portable archive. The utility scans the key project directories (training data, experiment outputs, logs, and analysis folders) and copies relevant artifacts into a structured destination folder while generating a manifest for traceability.
+
+### Collecting artifacts
+
+```bash
+python scripts/collect_data_artifacts.py --dest artifacts/data_archive
+```
+
+This command will:
+
+1. Gather `.csv`, `.json`, `.log`, `.txt`, `.html`, `.pdf`, and `.png` files from the predefined source roots.
+2. Mirror their relative paths under `artifacts/data_archive/` to avoid naming conflicts.
+3. Generate `manifest.json` summarizing each file's original location, size, and modification timestamp.
+
+### Optional flags
+
+- `--clean` – remove any existing archive contents before copying.
+- `--compress {zip,gztar,tar}` – create a compressed bundle (e.g., `artifacts/data_archive.zip`) after collection.
+- `--extensions` – override the default list of file extensions to capture additional artifact types.
+- `--verbose` – enable debug logging for troubleshooting.
+
+The destination directory and any compressed bundle are ignored by Git (see `.gitignore`).
+
 ## License
 
 MIT
