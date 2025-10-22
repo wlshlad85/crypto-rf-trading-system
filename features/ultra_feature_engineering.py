@@ -302,22 +302,22 @@ class UltraFeatureEngine:
             df[f'return_autocorr_{lag}'] = returns.rolling(50).corr(returns.shift(lag))
         
         # Variance ratio test (random walk hypothesis)
-        def variance_ratio(returns_series, k=2):
-            """Calculate variance ratio for random walk test."""
-            if len(returns_series) < k * 10:
+        def _variance_ratio_window(arr: np.ndarray, k: int) -> float:
+            # Expect raw numpy array from rolling(..., raw=True)
+            if arr.size < k * 10:
                 return np.nan
-            
-            n = len(returns_series)
-            var_1 = returns_series.var()
-            
-            # Calculate k-period returns
-            k_returns = returns_series.rolling(k).sum().dropna()
-            var_k = k_returns.var() / k
-            
-            return var_k / var_1 if var_1 != 0 else np.nan
-        
-        df['variance_ratio_2'] = returns.rolling(100).apply(lambda x: variance_ratio(x, 2))
-        df['variance_ratio_5'] = returns.rolling(100).apply(lambda x: variance_ratio(x, 5))
+            var_1 = np.var(arr)
+            if var_1 == 0:
+                return np.nan
+            # Compute k-period summed returns via sliding window sum
+            # Use convolution for efficiency
+            kernel = np.ones(k, dtype=np.float64)
+            k_returns = np.convolve(arr, kernel, mode='valid')
+            var_k = np.var(k_returns) / k
+            return float(var_k / var_1)
+
+        df['variance_ratio_2'] = returns.rolling(100).apply(lambda x: _variance_ratio_window(x, 2), raw=True)
+        df['variance_ratio_5'] = returns.rolling(100).apply(lambda x: _variance_ratio_window(x, 5), raw=True)
         
         # Round number effects
         df['round_number'] = (df['close'] % 1000 == 0).astype(int)  # For BTC-like prices
